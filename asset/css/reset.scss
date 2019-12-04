@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+/* font */
+//@font-face {
+//  font-family: 'Roboto B';
+//  font-style: normal;
+//  font-weight: normal;
+//  src: url('/common/font/Roboto-Bold-webfont.eot');
+//  src: url('/common/font/Roboto-Bold-webfont.eot?#iefix') format('embedded-opentype'), url('/common/font/Roboto-Bold-webfont.woff') format('woff'), url('/common/font/Roboto-Bold-webfont.ttf') format('truetype');
+//}
+
+/* reset */
+html, body {height:100%;}
+*{margin:0;padding:0;letter-spacing:0;font-family:"RixSGo M","Malgun Gothic","Dotum",sans-serif;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,
+article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0}
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display:block}
+body{font-family:"RixSGo M","Malgun Gothic","Dotum",sans-serif;letter-spacing:0;font-size:16px;line-height:24px;color:#333;background-color:#fff;overflow-y:scroll}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal !important;line-height:21px;font-family:"RixSGo B";}
+img{vertical-align:top;border:0}
+button,input,select,textarea{margin:0;font-size:100%;vertical-align:middle}
+fieldset{border:0}
+legend,caption{/*visibility:hidden;*/width:0;height:0;font-size:0;line-height:0}
+address,cite,code,dfn,em,var{font-style:normal;font-weight:normal}
+strong{font-style:normal;font-family:"RixSGo B";font-weight:normal;}
+ol,ul{list-style:none}
+table{border-collapse:collapse;border-spacing:0;width:100%;}
+caption,hr,legend{width:0px;height:0px;font-size:1px;text-indent:-9999em;line-height:0}
+th{text-align:left;font-size:14px;color:#333;line-height:18px;font-family:"RixSGo EB","Dotum",sans-serif;letter-spacing:0;vertical-align:top;font-weight:normal;}
+th label{font-family:"RixSGo EB","Dotum",sans-serif;}
+td{text-align:left;color:#333;line-height:22px;vertical-align:top}
+dt {font-weight:normal;}
+label em{color:#929292;}
