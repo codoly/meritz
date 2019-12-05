@@ -1,11 +1,9 @@
 {
   "name": "meritz",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "dependencies": {
-    "http-server": "^0.12.0",
-    "package": "^1.0.1"
+    "http-server": "^0.12.0"
   },
   "devDependencies": {},
   "scripts": {
@@ -20,5 +18,6 @@
   "bugs": {
     "url": "https://github.com/codoly/meritz/issues"
   },
-  "homepage": "https://github.com/codoly/meritz#readme"
+  "homepage": "https://github.com/codoly/meritz#readme",
+  "description": ""
 }
