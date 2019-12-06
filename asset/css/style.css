@@ -62,8 +62,7 @@ html, body {
   margin: 0;
   padding: 0;
   letter-spacing: 0;
-  font-family: "NotoSansKR","Malgun Gothic","Dotum",sans-serif;
-  color: #666666; }
+  box-sizing: border-box; }
 
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td,
 article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
@@ -76,14 +75,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
 body {
   font-size: 16px;
   line-height: 24px;
-  color: #333333;
+  font-family: "NotoSansKR","Malgun Gothic","Dotum",sans-serif;
+  color: #666666;
   background-color: #fff;
   overflow-y: scroll; }
 
 h1, h2, h3, h4, h5, h6 {
   font-size: 100%;
-  font-weight: normal !important;
-  line-height: 21px; }
+  font-weight: normal; }
 
 img {
   vertical-align: top;
@@ -268,21 +267,60 @@ a {
 .no-csspointerevents .nice-select.open .list {
   display: block; }
 
-/*가이드 관련*/
+/***************************가이드 관련****************************/
 .guideTitle {
   font-size: 1.625rem;
   font-weight: bold;
-  padding-bottom: 30px;
-  font-weight: bold; }
+  padding: 30px;
+  color: #000000;
+  border-bottom: 1px solid #888888; }
 
-/*button 관련*/
+.guideContent {
+  padding: 0 30px; }
+  .guideContent .inTitle {
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 30px 0 10px 0;
+    color: #000000; }
+
+/***************************button 관련*************************/
 .btnText {
   display: inline-block;
   min-width: 130px;
   border: 1px solid #e0e4ea;
   color: #333333;
-  height: 40px;
+  padding: 0 10px;
   line-height: 38px;
   text-align: center;
   font-size: 1.125rem;
   letter-spacing: -1px; }
+  .btnText.fillGray {
+    border: 1px solid #3c444d;
+    background: #3c444d;
+    color: #ffffff; }
+  .btnText.fillRed {
+    border: 1px solid #fe5855;
+    background: #fe5855;
+    color: #ffffff; }
+  .btnText.sizeSmall {
+    min-width: auto;
+    line-height: 26px;
+    font-size: 0.875rem; }
+  .btnText.sizeMiddle {
+    min-width: 70px;
+    line-height: 32px;
+    font-size: 0.875rem; }
+  .btnText.sizeBig {
+    min-width: 174px;
+    line-height: 53px;
+    font-size: 1.125rem; }
+
+.btnClose {
+  overflow: hidden;
+  text-indent: -99999px;
+  display: inline-block;
+  background: url("/asset/images/common/btn_close.png") no-repeat;
+  width: 35px;
+  height: 35px; }
+  .btnClose.white {
+    background: url("/asset/images/common/btn_close_w.png") no-repeat; }

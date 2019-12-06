@@ -45,6 +45,7 @@ $colorLevel5: #aaaaaa;
 $colorPoint1: #3c444d;
 $colorPoint2: #b1bac7;
 $colorPoint3: #adbfec;
+$colorButtonRed: #fe5855;
 $colorWhite: #ffffff;
 
 $lineColor1: #cad2db;
@@ -57,5 +58,6 @@ $bgcolor: #e6edf8;
 @mixin bgBtn(){
   overflow:hidden;
   text-indent: -99999px;
+  display: inline-block;
 }
 

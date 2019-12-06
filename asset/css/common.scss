@@ -170,22 +170,69 @@ $arrow_color: $gray !default;
     }
   }
 }
-/*가이드 관련*/
+/***************************가이드 관련****************************/
 .guideTitle{
   font-size: $_26px;
   font-weight: bold;
-  padding-bottom: 30px;
-  font-weight: bold;
+  padding: 30px;
+  color: $colorLevel1;
+  border-bottom: 1px solid $colorLevel4;
 }
-/*button 관련*/
+.guideContent{
+  padding:0 30px;
+  .inTitle{
+    font-size: $_20px;
+    font-weight: bold;
+    padding: 30px 0 10px 0;
+    color: $colorLevel1;
+  }
+}
+/***************************button 관련*************************/
 .btnText{
   display: inline-block;
   min-width:130px;
   border:1px solid $lineColor3;
   color: $colorLevel2;
-  height: 40px;
+  padding:0 10px;
   line-height: 38px;
   text-align: center;
   font-size: $_18px;
   letter-spacing:-1px;
+  //버튼 색상 정의
+  &.fillGray{
+    border:1px solid $colorPoint1;
+    background: $colorPoint1;
+    color: $colorWhite;
+  }
+  &.fillRed{
+    border:1px solid $colorButtonRed;
+    background: $colorButtonRed;
+    color: $colorWhite;
+  }
+
+  //버튼 크기 정의
+  &.sizeSmall{
+    min-width:auto;
+    line-height: 26px;
+    font-size: $_14px;
+  }
+  &.sizeMiddle{
+    min-width:70px;
+    line-height: 32px;
+    font-size: $_14px;
+  }
+  &.sizeBig{
+    min-width:174px;
+    line-height: 53px;
+    font-size: $_18px;
+  }
+}
+.btnClose{
+  @include bgBtn;
+  background: url("/asset/images/common/btn_close.png") no-repeat;
+  width: 35px;
+  height: 35px;
+  &.white{
+    background: url("/asset/images/common/btn_close_w.png") no-repeat;
+  }
 }
