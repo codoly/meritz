@@ -88,6 +88,25 @@
 }
 
 /* 가입현황 */
+.insuranceList{
+    margin-bottom: 30px;
+    .titBox{
+      margin-bottom: 15px; 
+      text-align: center;
+      font-size:$_22px;
+      color: $colorLevel1;
+      .count{
+          display: inline-block;
+          padding:0 10px;
+          height: 27px;
+          line-height: 25px;
+          border:1px solid #01a7c4;
+          border-radius: 15px;
+          font-size:$_16px;
+          color:#01a7c4;
+      }
+    }
+}
 .insurance{
     width:782px;
     height: 130px;   
@@ -106,9 +125,10 @@
         box-shadow: 7px 7px 9px 0px rgba(0,0,0,0.12);
     }
     &:after{
-        display: block;
-        content: "";
-        clear: both;
+        @include clearline();
+    }
+    &:last-child{
+        margin-bottom: 0;
     }
     .info{
         float: left;
@@ -120,6 +140,7 @@
         .logo{
             display: block;
             height:34px;
+            margin-bottom:5px;
             img{
                 height: 100%;
             }
@@ -127,6 +148,7 @@
         .name{
             font-size: $_20px;
             color:$colorLevel2;
+            margin-bottom:6px;
         }
         .date{
             .state{
@@ -154,16 +176,17 @@
             width: 100%;
             line-height: 22px;            
             color:$colorLevel5;
-            letter-spacing:-0.025em;
             span{
                 display: table-cell;
-                font-size:$_14px;
+                font-size:$_14px;                
             }
             .th{
                 width:70px;
+                letter-spacing:-0.075em;
             }
             .td{
                 text-align: right;
+                letter-spacing:-0.025em;
             }
             &.top{
                 color:$colorLevel2;
@@ -172,7 +195,27 @@
                     strong{
                         font-size:$_22px;
                         font-weight: 700;
+                        letter-spacing:-0.075em;
                     }
+                }
+            }
+        }
+    }
+    &.disabled{
+        .name{
+            color:$colorLevel5;
+        }
+        .date{
+            color:$colorLevel5;
+            .state{
+                background:#e7e7e7;
+                color:$colorLevel5;
+            }
+        }
+        .payment{
+            li{
+                &.top{
+                    color:$colorLevel5;
                 }
             }
         }
