@@ -100,6 +100,10 @@
 
 /* 가입현황 */
 .customerStateInfo{
+  overflow: hidden;
+  >div{
+    float: left;
+  }  
   dl{
     
   }
