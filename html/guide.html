@@ -2,15 +2,114 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Guide</title>
     <link rel="stylesheet" href="/asset/css/style.css">
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
     <script src="/asset/js/lib/jquery-3.4.1.min.js"></script>
     <script src="/asset/js/lib/jquery.mCustomScrollbar.min.js"></script>
     <script src="/asset/js/lib/jquery.mousewheel-3.0.6.min.js"></script>
     <script src="/asset/js/lib/jquery.nice-select.min.js"></script>
+    <script src="/asset/js/lib/jquery.placeholder.min.js"></script>
     <script src="/asset/js/default.js"></script>
 </head>
 <body>
+<!--form-->
+<h2 class="guideTitle">form</h2>
+<div class="guideContent">
+    <h3 class="inTitle">search</h3>
+    <div class="sampleBg">
+        <div class="searchArea"><input type="text" placeholder="고객검색"><a href="#" class="btnSearch">검색</a></div>
+    </div>
+
+    <h3 class="inTitle">checkbox</h3>
+    <ul class="sortingList">
+        <li>
+            <div class="checkBoxSet">
+                <input type="checkbox" id="checkbox1">
+                <label for="checkbox1">즐겨찾기</label>
+            </div>
+        </li>
+        <li>
+            <div class="checkBoxSet">
+                <input type="checkbox" id="checkbox2">
+                <label for="checkbox2">동의종료D-7</label>
+            </div>
+        </li>
+        <li>
+            <div class="checkBoxSet">
+                <input type="checkbox" id="checkbox3">
+                <label for="checkbox3">보장분석</label>
+            </div>
+        </li>
+    </ul>
+    <br>
+    <div class="sampleBg">
+        <ul class="sortingList">
+            <li>
+                <div class="checkBoxSet bgType">
+                    <input type="checkbox" id="checkbox2_1">
+                    <label for="checkbox2_1">즐겨찾기</label>
+                </div>
+            </li>
+            <li>
+                <div class="checkBoxSet bgType">
+                    <input type="checkbox" id="checkbox2_2">
+                    <label for="checkbox2_2">동의종료D-7</label>
+                </div>
+            </li>
+            <li>
+                <div class="checkBoxSet bgType">
+                    <input type="checkbox" id="checkbox2_3">
+                    <label for="checkbox2_3">보장분석</label>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <h3 class="inTitle">radio</h3>
+    <ul class="sortingList">
+        <li>
+            <div class="radioSet">
+                <input type="radio" id="radio1">
+                <label for="radio1">즐겨찾기</label>
+            </div>
+        </li>
+        <li>
+            <div class="radioSet">
+                <input type="radio" id="radio2">
+                <label for="radio2">동의종료D-7</label>
+            </div>
+        </li>
+        <li>
+            <div class="radioSet">
+                <input type="radio" id="radio3">
+                <label for="radio3">보장분석</label>
+            </div>
+        </li>
+    </ul>
+
+
+    <h3 class="inTitle">select</h3>
+    <div class="sampleBg">
+        <div class="selectBox bgType">
+            <select name="" id="">
+                <option value="1">최근 동의 순</option>
+                <option value="1">동의 종료 순</option>
+                <option value="1">최근 등록 순</option>
+                <option value="1">최근 분석 순</option>
+                <option value="1">최근 상령일 순</option>
+            </select>
+        </div>
+    </div>
+
+    <h3 class="inTitle">input</h3>
+    <ul class="sortingList">
+        <li>
+            <div class="inputSet right"><input type="text" data-value="100,000" value="100,000" style="width: 95px;"></div>
+        </li>
+    </ul>
+</div>
+<!--button-->
 <h2 class="guideTitle">button</h2>
 <div class="guideContent">
     <h3 class="inTitle">기본형</h3>

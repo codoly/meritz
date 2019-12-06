@@ -61,7 +61,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display
 body{font-size:16px;line-height:24px;font-family:"NotoSansKR","Malgun Gothic","Dotum",sans-serif;color: $colorLevel3;background-color:#fff;overflow-y:scroll}
 h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}
 img{vertical-align:top;border:0}
-button,input,select,textarea{margin:0;font-size:100%;vertical-align:middle}
+button,input,select,textarea{margin:0;font-size:100%;vertical-align:middle;font-family:"NotoSansKR","Malgun Gothic","Dotum",sans-serif;color: $colorLevel3;width: 100%;}
 fieldset{border:0}
 legend,caption{/*visibility:hidden;*/width:0;height:0;font-size:0;line-height:0}
 address,cite,code,dfn,em,var{font-style:normal;font-weight:normal}
