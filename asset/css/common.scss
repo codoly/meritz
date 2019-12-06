@@ -170,3 +170,22 @@ $arrow_color: $gray !default;
     }
   }
 }
+/*가이드 관련*/
+.guideTitle{
+  font-size: $_26px;
+  font-weight: bold;
+  padding-bottom: 30px;
+  font-weight: bold;
+}
+/*button 관련*/
+.btnText{
+  display: inline-block;
+  min-width:130px;
+  border:1px solid $lineColor3;
+  color: $colorLevel2;
+  height: 40px;
+  line-height: 38px;
+  text-align: center;
+  font-size: $_18px;
+  letter-spacing:-1px;
+}
