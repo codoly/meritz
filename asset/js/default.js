@@ -20,4 +20,11 @@ $(function(){
             $(this).parent().removeClass("change")
         }
     })
+
+    //팝업테스트함수
+    $(".logo").click(function(){
+        var popUrl =window.location;
+        var popOption = "width=1300px, height=920px, resizable=no, location=no, top=0px, left=0px, scrollable=no;"
+        window.open(popUrl,"index",popOption);
+    });
 })

@@ -58,7 +58,7 @@ html, body {height:100%;font-size: 16px;}
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,
 article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0}
 article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display:block}
-body{font-size:16px;line-height:24px;font-family:"NotoSansKR","Malgun Gothic","Dotum",sans-serif;color: $colorLevel3;background-color:#fff;overflow-y:scroll}
+body{font-size:16px;line-height:24px;font-family:"NotoSansKR","Malgun Gothic","Dotum",sans-serif;color: $colorLevel3;background-color:#fff;overflow-y:hidden}
 h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}
 img{vertical-align:top;border:0}
 button,input,select,textarea{margin:0;font-size:100%;vertical-align:middle;font-family:"NotoSansKR","Malgun Gothic","Dotum",sans-serif;color: $colorLevel3;width: 100%;}
