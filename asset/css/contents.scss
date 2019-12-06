@@ -11,30 +11,29 @@
         >div{
             display: table-cell;
             padding: 0 8px;
-            width: 45px;
+            width: 64px;
             font-size: $_14px;
-            letter-spacing: -0.075em;
+            letter-spacing: -0.1em;
             vertical-align: middle;
         }
         .name{
-            width:auto;
             padding-left:0;
-            width:70px;
+            width:auto;
         }
         .birth{
-            width:66px;
+            width:88px;
         }
         .date{
-            width:66px;
+            width:88px;
         }
         .gender{
-            width: 28px;
+            width: 44px;
         }
         .old{
-            width: 28px;
+            width: 44px;
         }        
         .attend{
-            width: 70px;
+            width: 78px;
             padding-right:0;
         }
     }
