@@ -1,4 +1,5 @@
 .selectBox{
+  display: inline-block;
   // custome select 관련 구문
   // Default variables
   $font_size: 14px !default;
@@ -53,7 +54,7 @@
       content: '';
       display: block;
       height: 7px;
-      margin-top: -4px;
+      margin-top: -6px;
       pointer-events: none;
       position: absolute;
       right: 15px;
@@ -139,6 +140,7 @@
     .option {
       cursor: pointer;
       font-weight: 400;
+      color: $colorLevel4;
       line-height: $input_height;
       list-style: none;
       min-height: $input_height;
@@ -152,7 +154,7 @@
         color: $colorLevel2;
       }
       &.selected {
-        font-weight: bold;
+
       }
       &.disabled {
         background-color: transparent;
@@ -167,7 +169,7 @@
     line-height: 34px;
     background: transparent;
     > .current{
-      color: $colorWhite;
+      color: #fff;
     }
     &.open:after{
       border-color:#ff4858
@@ -234,12 +236,12 @@
   &.fillGray{
     border:1px solid $colorPoint1;
     background: $colorPoint1;
-    color: $colorWhite;
+    color: #fff;
   }
   &.fillRed{
     border:1px solid $colorButtonRed;
     background: $colorButtonRed;
-    color: $colorWhite;
+    color: #fff;
   }
 
   //버튼 크기 정의
@@ -283,7 +285,7 @@
     line-height: 38px;
     height: 38px;
     outline:none;
-    color: $colorWhite;
+    color: #fff;
     &.placeholder {
       color: #adbfec;
     }
@@ -334,6 +336,7 @@
     padding-left: 33px;
     line-height: 24px;
     display: inline-block;
+    font-size: $_14px;
     &:after{
       content:"";
       display: block;
@@ -349,9 +352,9 @@
   }
   &.bgType{
     input[type='checkbox']:checked + label{
-      color: $colorWhite;
+      color: #fff;
       &:after{
-        border:1px solid $colorWhite;
+        border:1px solid #fff;
         background: url("/asset/images/common/main_checkbox.png") no-repeat center center;
       }
     }
@@ -383,6 +386,7 @@
     padding-left: 33px;
     line-height: 24px;
     display: inline-block;
+    font-size: $_14px;
     &:after{
       content:"";
       display: block;
