@@ -52,7 +52,7 @@
         }
     }
     .tbodyBox{
-        padding-top: 1px;
+        padding: 1px 0;
         border-radius: 8px;        
         background:#fff;
         .item{
@@ -94,6 +94,11 @@
 }
 
 /* 가입현황 */
+.customerStateInfo{
+    dl{
+        
+    }
+}
 .insuranceList{
     margin-bottom: 30px;
     .titBox{
