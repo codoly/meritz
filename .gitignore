@@ -4,3 +4,4 @@ node_modules
 *.css
 asset/css/*.css
 style.css
+asset/css/style.css
