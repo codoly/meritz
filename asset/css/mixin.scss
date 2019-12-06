@@ -60,4 +60,11 @@ $bgcolor: #e6edf8;
   text-indent: -99999px;
   display: inline-block;
 }
+@mixin clearline(){
+  &:after{
+    content:"";
+    display: block;
+    clear: both;
+  }
+}
 
