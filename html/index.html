@@ -4,11 +4,72 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="/asset/css/style.css">
-    <script src="/asset/js/jquery-3.4.1.min.js"></script>
-    <script src="/asset/js/jquery.mCustomScrollbar.min.js"></script>
-    <script src="/asset/js/jquery.mousewheel-3.0.6.min.js"></script>
+    <script src="/asset/js/lib/jquery-3.4.1.min.js"></script>
+    <script src="/asset/js/lib/jquery.mCustomScrollbar.min.js"></script>
+    <script src="/asset/js/lib/jquery.mousewheel-3.0.6.min.js"></script>
+    <script src="/asset/js/lib/jquery.nice-select.min.js"></script>
+    <script src="/asset/js/default.js"></script>
 </head>
 <body>
+<div class="wrap">
+    <div class="contentWrap main">
+        <div class="leftArea">
+            <h1 class="logo"><a href="#"><img src="/asset/images/common/main_logo.png" alt="meritz 메리츠 화재"></a></h1>
+            <div class="nameArea">
+              <strong class="name">홍길동</strong> 설계사님<br>
+              반갑습니다.
+            </div>
+            <div class="manyArea">설계사님의　고객은  <strong class="many">163</strong>명 입니다.</div>
+            <div class="infoText">오늘은<br>어떤 고객님과 마주 할까요?</div>
+            <div class="memberSerach"><input type="text"><a href="#" class="btnSearch">검색</a></div>
+            <div class="sorting">
+                <div class="selectBox">
+                    <select name="" id="">
+                        <option value="1">최근 동의 순</option>
+                        <option value="1">동의 종료 순</option>
+                        <option value="1">최근 등록 순</option>
+                        <option value="1">최근 분석 순</option>
+                        <option value="1">최근 상령일 순</option>
+                    </select>
+                </div>
+                <ul class="sortingList">
+                    <li>
+                        <div class="checkBoxSet">
+                            <input type="checkbox" id="checkbox1">
+                            <label for="checkbox1">즐겨찾기</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkBoxSet">
+                            <input type="checkbox" id="checkbox2">
+                            <label for="checkbox2">동의종료D-7</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkBoxSet">
+                            <input type="checkbox" id="checkbox3">
+                            <label for="checkbox3">보장분석</label>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="bottomBtnArea">
+                   <li>
+                       <a href="#">
+                           <span class="icon"><img src="/asset/images/common/main_left_icon_01.png" alt=""></span>
+                           <span class="text">고객등록</span>
+                       </a>
+                   </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><img src="/asset/images/common/main_left_icon_02.png" alt=""></span>
+                            <span class="text">권장금액 담보군 설정</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>

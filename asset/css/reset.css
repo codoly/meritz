@@ -67,7 +67,8 @@ html, body {
   margin: 0;
   padding: 0;
   letter-spacing: 0;
-  font-family: "NotoSansKR","Malgun Gothic","Dotum",sans-serif; }
+  font-family: "NotoSansKR","Malgun Gothic","Dotum",sans-serif;
+  color: #333; }
 
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td,
 article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
@@ -157,5 +158,5 @@ td {
 dt {
   font-weight: normal; }
 
-label em {
-  color: #929292; }
+a {
+  text-decoration: none; }
