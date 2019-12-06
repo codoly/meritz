@@ -1,6 +1,5 @@
 /* 테이블형 리스트 */
 .listTableType{
-    width:782px;
     .contentScroll{
         height: 759px !important;
     }
@@ -42,6 +41,7 @@
     }
 
     .theadBox{
+        width:782px;
         border-radius: 8px;
         margin-bottom:10px;
         background:#fff;
@@ -52,11 +52,21 @@
         }
     }
     .tbodyBox{
+<<<<<<< HEAD
         padding: 1px 0;
+=======
+        width:782px;
+        padding-top: 1px;
+>>>>>>> 882a8ba82997829687dc2c03d259f1d500dc2e74
         border-radius: 8px;        
         background:#fff;
+        margin-bottom: 15px;
         .item{
-            position: relative; 
+            position: relative;
+            border-bottom:1px solid #ededf4;
+            &:last-child{
+                border-bottom: 0;
+            }
             &:hover{
                 z-index:5;
                 .td{
@@ -80,7 +90,6 @@
         .td{
             padding-top:13px;
             padding-bottom:13px;
-            border-bottom:1px solid #ededf4;
             letter-spacing: -0.025em;
         }
         .name{
