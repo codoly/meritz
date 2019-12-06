@@ -23,6 +23,7 @@
     background-repeat: no-repeat;
   }
   .contentWrap{
+    @include clearline;
     margin:0 auto;
     width: 1280px;
     position: relative;
@@ -135,7 +136,7 @@
       float: left;
       position: relative;
       width: 862px;
-      padding:30px;
+      padding:30px 0 30px 30px;
       .contentScroll{
         height:815px;
       }
