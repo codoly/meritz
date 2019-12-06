@@ -58,7 +58,11 @@
         background:#fff;
         margin-bottom: 15px;
         .item{
-            position: relative; 
+            position: relative;
+            border-bottom:1px solid #ededf4;
+            &:last-child{
+                border-bottom: 0;
+            }
             &:hover{
                 z-index:5;
                 .td{
@@ -82,7 +86,6 @@
         .td{
             padding-top:13px;
             padding-bottom:13px;
-            border-bottom:1px solid #ededf4;
             letter-spacing: -0.025em;
         }
         .name{
