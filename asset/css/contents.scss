@@ -87,6 +87,98 @@
     }
 }
 
+/* 가입현황 */
+.insurance{
+    width:782px;
+    height: 130px;   
+    position: relative;
+    margin-bottom:10px;
+    &:hover:before{
+        display: block;
+        content: "";
+        width:calc(100% - 4px);
+        height:calc(100% - 4px);
+        border:2px solid #fd5856;
+        border-radius: 8px;
+        position: absolute;
+        top:0;
+        left:0;
+        box-shadow: 7px 7px 9px 0px rgba(0,0,0,0.12);
+    }
+    &:after{
+        display: block;
+        content: "";
+        clear: both;
+    }
+    .info{
+        float: left;
+        width:527px;
+        height: 100%;
+        padding:17px 30px 0;
+        background:#fff;        
+        border-radius: 8px 0 0 8px;
+        .logo{
+            display: block;
+            height:34px;
+            img{
+                height: 100%;
+            }
+        }
+        .name{
+            font-size: $_20px;
+            color:$colorLevel2;
+        }
+        .date{
+            .state{
+                display:inline-block;
+                background:#ffeeed;
+                width:47px;
+                height: 22px;
+                line-height: 20px;
+                text-align: center;
+                color:#fd795c;
+                font-size:$_14px;
+                margin-right:10px;
+            }
+        }
+    }
+    .payment{
+        float: right;
+        width:253px;
+        height: 100%;
+        padding:17px 30px 0;
+        background:#fff;        
+        border-radius: 0 8px 8px 0;
+        li{
+            display: table;
+            width: 100%;
+            line-height: 22px;            
+            color:$colorLevel5;
+            letter-spacing:-0.025em;
+            span{
+                display: table-cell;
+                font-size:$_14px;
+            }
+            .th{
+                width:70px;
+            }
+            .td{
+                text-align: right;
+            }
+            &.top{
+                color:$colorLevel2;
+                .td{
+                    font-size:$_20px;
+                    strong{
+                        font-size:$_22px;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+}
+
 /* btnCircle */
 .btnCircle{
     display: inline-block;
