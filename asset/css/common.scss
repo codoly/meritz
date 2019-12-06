@@ -19,173 +19,173 @@
 
   // Style the dropdown
   .nice-select {
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    background-color: #fff;
-    border-radius: $input_border_radius;
-    border: solid 1px $gray_light;
-    box-sizing: border-box;
-    clear: both;
-    cursor: pointer;
-    display: inline-block;
-    font-family: inherit;
-    font-size: $font_size;
-    font-weight: normal;
-    height: $input_height;
-    line-height: $input_height - 2;
-    outline: none;
-    padding-left: $dropdown_padding;
-    padding-right: 55px;
-    position: relative;
-    text-align: left !important;
-    transition: all 0.2s ease-in-out;
-    user-select: none;
-    white-space: nowrap;
-    width: auto;
-    &:hover {
-      border-color: darken($gray_light, 5%);
-    }
-    &:active, &:focus {
-      border-color: $primary_light;
-    }
-    // Arrow
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  background-color: #fff;
+  border-radius: $input_border_radius;
+  border: solid 1px $gray_light;
+  box-sizing: border-box;
+  clear: both;
+  cursor: pointer;
+  display: inline-block;
+  font-family: inherit;
+  font-size: $font_size;
+  font-weight: normal;
+  height: $input_height;
+  line-height: $input_height - 2;
+  outline: none;
+  padding-left: $dropdown_padding;
+  padding-right: 55px;
+  position: relative;
+  text-align: left !important;
+  transition: all 0.2s ease-in-out;
+  user-select: none;
+  white-space: nowrap;
+  width: auto;
+  &:hover {
+    border-color: darken($gray_light, 5%);
+  }
+  &:active, &:focus {
+    border-color: $primary_light;
+  }
+  // Arrow
+  &:after {
+    border-bottom: 2px solid $arrow_color;
+    border-right: 2px solid $arrow_color;
+    content: '';
+    display: block;
+    height: 7px;
+    margin-top: -6px;
+    pointer-events: none;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform-origin: 66% 66%;
+    transform: rotate(45deg);
+    transition: all 0.15s ease-in-out;
+    width: 7px;
+  }
+
+  &.open {
+    @extend :active;
     &:after {
-      border-bottom: 2px solid $arrow_color;
-      border-right: 2px solid $arrow_color;
-      content: '';
-      display: block;
-      height: 7px;
-      margin-top: -6px;
-      pointer-events: none;
-      position: absolute;
-      right: 15px;
-      top: 50%;
-      transform-origin: 66% 66%;
-      transform: rotate(45deg);
-      transition: all 0.15s ease-in-out;
-      width: 7px;
+    transform: rotate(-135deg);
     }
-
-    &.open {
-      @extend :active;
-      &:after {
-        transform: rotate(-135deg);
-      }
-      .list {
-        opacity: 1;
-        pointer-events: auto;
-        top:100%;
-        transform: scale(1) translateY(0);
-      }
-    }
-    &.disabled {
-      border-color: lighten($gray_light, 2%);
-      color: $gray;
-      pointer-events: none;
-      &:after {
-        border-color: lighten($arrow_color, 20%);
-      }
-    }
-
-    // Modifiers
-    &.wide {
-      width: 100%;
-      .list {
-        left: 0 !important;
-        right: 0 !important;
-      }
-    }
-    &.right {
-      float: right;
-      .list {
-        left: auto;
-        right: 0;
-      }
-    }
-    &.small {
-      font-size: $font_size_small;
-      height: $input_height_small;
-      line-height: $input_height_small - 2;
-      &:after {
-        height: 4px;
-        width: 4px;
-      }
-      .option {
-        line-height: $input_height_small - 2;
-        min-height: $input_height_small - 2;
-      }
-    }
-
-    // List and options
     .list {
-      background-color: #fff;
-      border-radius: $input_border_radius;
-      box-shadow: 0 0 0 1px rgba($gray_dark, .11);
-      box-sizing: border-box;
-      margin-top: 4px;
-      opacity: 0;
-      overflow: hidden;
-      padding: 7px 0;
-      pointer-events: none;
-      position: absolute;
-      top: -999999px; left: 0;
-      min-width:100%;
-      transform-origin: 50% 0;
-      transform: scale(.75) translateY(- $input_height / 2);
-      transition: transform .2s cubic-bezier(0.5, 0, 0, 1.25), opacity .15s ease-out;
-      z-index: 9;
-      &:hover .option:not(:hover) {
-        background-color: transparent !important;
-      }
-    }
-    .option {
-      cursor: pointer;
-      font-weight: 400;
-      color: $colorLevel4;
-      line-height: $input_height;
-      list-style: none;
-      min-height: $input_height;
-      outline: none;
-      padding-left: $dropdown_padding;
-      padding-right: $dropdown_padding;
-      text-align: left;
-      transition: all 0.2s;
-      &:hover, &.focus, &.selected.focus {
-        background-color: $gray_lighter;
-        color: $colorLevel2;
-      }
-      &.selected {
-
-      }
-      &.disabled {
-        background-color: transparent;
-        color: $gray;
-        cursor: default;
-      }
+    opacity: 1;
+    pointer-events: auto;
+    top:100%;
+    transform: scale(1) translateY(0);
     }
   }
+  &.disabled {
+    border-color: lighten($gray_light, 2%);
+    color: $gray;
+    pointer-events: none;
+    &:after {
+    border-color: lighten($arrow_color, 20%);
+    }
+  }
+
+  // Modifiers
+  &.wide {
+    width: 100%;
+    .list {
+    left: 0 !important;
+    right: 0 !important;
+    }
+  }
+  &.right {
+    float: right;
+    .list {
+    left: auto;
+    right: 0;
+    }
+  }
+  &.small {
+    font-size: $font_size_small;
+    height: $input_height_small;
+    line-height: $input_height_small - 2;
+    &:after {
+    height: 4px;
+    width: 4px;
+    }
+    .option {
+    line-height: $input_height_small - 2;
+    min-height: $input_height_small - 2;
+    }
+  }
+
+  // List and options
+  .list {
+    background-color: #fff;
+    border-radius: $input_border_radius;
+    box-shadow: 0 0 0 1px rgba($gray_dark, .11);
+    box-sizing: border-box;
+    margin-top: 4px;
+    opacity: 0;
+    overflow: hidden;
+    padding: 7px 0;
+    pointer-events: none;
+    position: absolute;
+    top: -999999px; left: 0;
+    min-width:100%;
+    transform-origin: 50% 0;
+    transform: scale(.75) translateY(- $input_height / 2);
+    transition: transform .2s cubic-bezier(0.5, 0, 0, 1.25), opacity .15s ease-out;
+    z-index: 9;
+    &:hover .option:not(:hover) {
+    background-color: transparent !important;
+    }
+  }
+  .option {
+    cursor: pointer;
+    font-weight: 400;
+    color: $colorLevel4;
+    line-height: $input_height;
+    list-style: none;
+    min-height: $input_height;
+    outline: none;
+    padding-left: $dropdown_padding;
+    padding-right: $dropdown_padding;
+    text-align: left;
+    transition: all 0.2s;
+    &:hover, &.focus, &.selected.focus {
+    background-color: $gray_lighter;
+    color: $colorLevel2;
+    }
+    &.selected {
+
+    }
+    &.disabled {
+    background-color: transparent;
+    color: $gray;
+    cursor: default;
+    }
+  }
+  }
   &.bgType .nice-select{
-    border:0;
-    height: 34px;
-    line-height: 34px;
-    background: transparent;
-    > .current{
-      color: #fff;
-    }
-    &.open:after{
-      border-color:#ff4858
-    }
+  border:0;
+  height: 34px;
+  line-height: 34px;
+  background: transparent;
+  > .current{
+    color: #fff;
+  }
+  &.open:after{
+    border-color:#ff4858
+  }
 
   }
 }
 // Use display instead of opacity for IE <= 10
 .no-csspointerevents .nice-select {
   .list {
-    display: none;
+  display: none;
   }
   &.open {
-    .list {
-      display: block;
-    }
+  .list {
+    display: block;
+  }
   }
 }
 /***************************가이드 관련****************************/
@@ -202,23 +202,23 @@
   padding:0 30px;
   margin-bottom: 50px;
   .inTitle{
-    font-size: $_20px;
-    font-weight: bold;
-    padding: 30px 0 10px 0;
-    color: $colorLevel1;
+  font-size: $_20px;
+  font-weight: bold;
+  padding: 30px 0 10px 0;
+  color: $colorLevel1;
   }
   .sampleBg{
-    background: $colorPoint1;
-    padding:20px;
+  background: $colorPoint1;
+  padding:20px;
   }
 
   //소팅리스트
   .sortingList{
-    @include clearline;
-    li{
-      float: left;
-      margin-right: 20px;
-    }
+  @include clearline;
+  li{
+    float: left;
+    margin-right: 20px;
+  }
   }
 }
 /***************************button 관련*************************/
@@ -234,31 +234,31 @@
   letter-spacing:-1px;
   //버튼 색상 정의
   &.fillGray{
-    border:1px solid $colorPoint1;
-    background: $colorPoint1;
-    color: #fff;
+  border:1px solid $colorPoint1;
+  background: $colorPoint1;
+  color: #fff;
   }
   &.fillRed{
-    border:1px solid $colorButtonRed;
-    background: $colorButtonRed;
-    color: #fff;
+  border:1px solid $colorButtonRed;
+  background: $colorButtonRed;
+  color: #fff;
   }
 
   //버튼 크기 정의
   &.sizeSmall{
-    min-width:auto;
-    line-height: 26px;
-    font-size: $_14px;
+  min-width:auto;
+  line-height: 26px;
+  font-size: $_14px;
   }
   &.sizeMiddle{
-    min-width:70px;
-    line-height: 32px;
-    font-size: $_14px;
+  min-width:70px;
+  line-height: 32px;
+  font-size: $_14px;
   }
   &.sizeBig{
-    min-width:174px;
-    line-height: 53px;
-    font-size: $_18px;
+  min-width:174px;
+  line-height: 53px;
+  font-size: $_18px;
   }
 }
 .btnClose{
@@ -267,7 +267,7 @@
   width: 35px;
   height: 35px;
   &.white{
-    background: url("/asset/images/common/btn_close_w.png") no-repeat;
+  background: url("/asset/images/common/btn_close_w.png") no-repeat;
   }
 }
 
@@ -278,93 +278,93 @@
   position: relative;
   border-radius:5px;
   input{
-    width: 100%;
-    padding:0 0 0 15px;
-    background: transparent;
-    border:0;
-    line-height: 38px;
-    height: 38px;
-    outline:none;
-    color: #fff;
-    &.placeholder {
-      color: #adbfec;
-    }
-    &::placeholder {
-      color: #adbfec;
-    }
-    :-ms-input-placeholder {
-      color: #adbfec;
-    }
-    ::-webkit-input-placeholder {
-      color: #adbfec;
-    }
-    ::-moz-placeholder {
-      color: #adbfec;
-    }
+  width: 100%;
+  padding:0 0 0 15px;
+  background: transparent;
+  border:0;
+  line-height: 38px;
+  height: 38px;
+  outline:none;
+  color: #fff;
+  &.placeholder {
+    color: #adbfec;
+  }
+  &::placeholder {
+    color: #adbfec;
+  }
+  :-ms-input-placeholder {
+    color: #adbfec;
+  }
+  ::-webkit-input-placeholder {
+    color: #adbfec;
+  }
+  ::-moz-placeholder {
+    color: #adbfec;
+  }
   }
   .btnSearch{
-    @include bgBtn;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 38px;
-    height: 38px;
-    background: url("/asset/images/common/btn_main_search_off.png") no-repeat center center;
+  @include bgBtn;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 38px;
+  height: 38px;
+  background: url("/asset/images/common/btn_main_search_off.png") no-repeat center center;
   }
   &.focus{
-    border:1px solid #01a7c4;
-    .btnSearch{
-      background: url("/asset/images/common/btn_main_search_on.png") no-repeat center center;
-    }
+  border:1px solid #01a7c4;
+  .btnSearch{
+    background: url("/asset/images/common/btn_main_search_on.png") no-repeat center center;
+  }
   }
 }
 .checkBoxSet{
   position: relative;
   overflow: hidden;
   input[type='checkbox']{
+  position: absolute;
+  left: -999999px;
+  top:0;
+  width: 0;
+  height: 0;
+  &:checked + label:after{
+    background: url("/asset/images/common/checkbox_on.png") no-repeat;
+  }
+  }
+  label{
+  position: relative;
+  padding-left: 33px;
+  line-height: 24px;
+  display: inline-block;
+  font-size: $_14px;
+  &:after{
+    content:"";
+    display: block;
     position: absolute;
-    left: -999999px;
-    top:0;
-    width: 0;
-    height: 0;
-    &:checked + label:after{
-      background: url("/asset/images/common/checkbox_on.png") no-repeat;
+    left: 0;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    box-sizing:border-box;
+    border-radius:3px;
+    background: url("/asset/images/common/checkbox_off.png") no-repeat;
+  }
+  }
+  &.bgType{
+  input[type='checkbox']:checked + label{
+    color: #fff;
+    &:after{
+    border:1px solid #fff;
+    background: url("/asset/images/common/main_checkbox.png") no-repeat center center;
     }
   }
   label{
-    position: relative;
-    padding-left: 33px;
-    line-height: 24px;
-    display: inline-block;
-    font-size: $_14px;
+    color: #bbccf5;
     &:after{
-      content:"";
-      display: block;
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 24px;
-      height: 24px;
-      box-sizing:border-box;
-      border-radius:3px;
-      background: url("/asset/images/common/checkbox_off.png") no-repeat;
+    border:1px solid #7180a0;    
+    background: none;
     }
   }
-  &.bgType{
-    input[type='checkbox']:checked + label{
-      color: #fff;
-      &:after{
-        border:1px solid #fff;
-        background: url("/asset/images/common/main_checkbox.png") no-repeat center center;
-      }
-    }
-    label{
-      color: #bbccf5;
-      &:after{
-        border:1px solid #7180a0;        
-        background: none;
-      }
-    }
   }
 }
 
@@ -372,33 +372,33 @@
   position: relative;
   overflow: hidden;
   input[type='radio']{
-    position: absolute;
-    left: -999999px;
-    top:0;
-    width: 0;
-    height: 0;
-    &:checked + label:after{
-      background: url("/asset/images/common/radio_on.png") no-repeat;
-    }
+  position: absolute;
+  left: -999999px;
+  top:0;
+  width: 0;
+  height: 0;
+  &:checked + label:after{
+    background: url("/asset/images/common/radio_on.png") no-repeat;
+  }
   }
   label{
-    position: relative;
-    padding-left: 33px;
-    line-height: 24px;
-    display: inline-block;
-    font-size: $_14px;
-    &:after{
-      content:"";
-      display: block;
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 24px;
-      height: 24px;
-      box-sizing:border-box;
-      border-radius:3px;
-      background: url("/asset/images/common/radio_off.png") no-repeat;
-    }
+  position: relative;
+  padding-left: 33px;
+  line-height: 24px;
+  display: inline-block;
+  font-size: $_14px;
+  &:after{
+    content:"";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    box-sizing:border-box;
+    border-radius:3px;
+    background: url("/asset/images/common/radio_off.png") no-repeat;
+  }
   }
 }
 input[type=text]::-ms-clear {
@@ -407,29 +407,29 @@ input[type=text]::-ms-clear {
 .inputSet{
   position: relative;
   input{
-    outline:none;
-    color: $colorLevel4;
-    padding:0 10px;
-    border:1px solid $lineColor3;
-    width:100%;
-    border-radius:5px;
-    overflow: hidden;
-    font-size: $_14px;
-    &:focus{
-      font-weight: bold;
-      border:1px solid #02a7c5;
-      color: $colorLevel2;
-    }
+  outline:none;
+  color: $colorLevel4;
+  padding:0 10px;
+  border:1px solid $lineColor3;
+  width:100%;
+  border-radius:5px;
+  overflow: hidden;
+  font-size: $_14px;
+  &:focus{
+    font-weight: bold;
+    border:1px solid #02a7c5;
+    color: $colorLevel2;
+  }
   }
   &.right{
-    input{
-      text-align: right;
-    }
+  input{
+    text-align: right;
+  }
   }
   &.change{
-    input{
-      color: $colorLevel2;
-      font-weight: bold;
-    }
+  input{
+    color: $colorLevel2;
+    font-weight: bold;
+  }
   }
 }

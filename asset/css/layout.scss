@@ -10,137 +10,137 @@
   margin:0 auto;
   min-width: 1280px;
   &:after{
-    content:"";
-    display: block;
-    width: 1920px;
-    height: 924px;
-    position: absolute;
-    left: 50%;
-    top:0;
-    margin-left:-960px;
-    background-image: url("/asset/images/common/main_left_bg.jpg");
-    background-position: 0 0;
-    background-repeat: no-repeat;
+  content:"";
+  display: block;
+  width: 1920px;
+  height: 924px;
+  position: absolute;
+  left: 50%;
+  top:0;
+  margin-left:-960px;
+  background-image: url("/asset/images/common/main_left_bg.jpg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
   }
   .contentWrap{
-    @include clearline;
-    margin:0 auto;
-    width: 1280px;
+  @include clearline;
+  margin:0 auto;
+  width: 1280px;
+  position: relative;
+  z-index:1;
+  /*메인 왼쪽*/
+  .leftArea{
+    float: left;
     position: relative;
-    z-index:1;
-    /*메인 왼쪽*/
-    .leftArea{
+    width: 418px;
+    height: 924px;
+    padding:30px 60px 0 50px;
+    .nameArea{
+    margin-top: 62px;
+    font-size: $_40px;
+    line-height: $_50px;
+    color: #fff;
+    font-weight: 300;
+    letter-spacing:-4px;
+    .name{
+      font-weight: 600;
+    }
+    }
+    .manyArea{
+    position: relative;
+    margin-top: 43px;
+    padding-bottom: 68px;
+    color: #fff;
+    letter-spacing:-1px;
+    .many{
+      font-weight: 600;
+      font-size: $_36px;
+      color: $colorButtonRed;
+    }
+    &:after{
+      content:"";
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 36px;
+      height: 3px;
+      border-radius:3px;
+      background: #01a7c4;
+    }
+    }
+    .infoText{
+    margin-top: 64px;
+    letter-spacing:-2px;
+    font-weight: 300;
+    color: #01a7c4;
+    font-size: $_28px;
+    line-height:$_36px;
+    }
+    .searchArea{
+    margin-top: 15px;
+    }
+    .sorting{
+    margin-top: 28px;
+    text-align: right;
+    .sortingList{
+      @include clearline;
+      text-align: left;
+      margin-top: 20px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #48546e;
+      li{
       float: left;
-      position: relative;
-      width: 418px;
-      height: 924px;
-      padding:30px 60px 0 50px;
-      .nameArea{
-        margin-top: 62px;
-        font-size: $_40px;
-        line-height: $_50px;
-        color: #fff;
-        font-weight: 300;
-        letter-spacing:-4px;
-        .name{
-          font-weight: 600;
-        }
+      margin-right: 15px;
+      letter-spacing:-1px;
+      &:last-child{
+        margin-right: 0;
       }
-      .manyArea{
-        position: relative;
-        margin-top: 43px;
-        padding-bottom: 68px;
-        color: #fff;
+      }
+    }
+    }
+    .bottomBtnArea{
+    @include clearline;
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+    background: rgba(41, 53, 108, 0.8);
+    padding:20px 0;
+    border-radius:5px;
+    li{
+      float: left;
+      width: 131px;
+      a{
+      display: block;
+      text-align: center;
+      padding: 8px 0 5px 0;
+      .icon{
+        display: block;
+      }
+      .text{
+        margin-top: 8px;
+        display: block;
+        color: #ffffff;
         letter-spacing:-1px;
-        .many{
-          font-weight: 600;
-          font-size: $_36px;
-          color: $colorButtonRed;
-        }
-        &:after{
-          content:"";
-          display: block;
-          position: absolute;
-          left: 0;
-          bottom: 0;
-          width: 36px;
-          height: 3px;
-          border-radius:3px;
-          background: #01a7c4;
-        }
       }
-      .infoText{
-        margin-top: 64px;
-        letter-spacing:-2px;
-        font-weight: 300;
-        color: #01a7c4;
-        font-size: $_28px;
-        line-height:$_36px;
       }
-      .searchArea{
-        margin-top: 15px;
-      }
-      .sorting{
-        margin-top: 28px;
-        text-align: right;
-        .sortingList{
-          @include clearline;
-          text-align: left;
-          margin-top: 20px;
-          padding-bottom: 15px;
-          border-bottom: 1px solid #48546e;
-          li{
-            float: left;
-            margin-right: 15px;
-            letter-spacing:-1px;
-            &:last-child{
-              margin-right: 0;
-            }
-          }
-        }
-      }
-      .bottomBtnArea{
-        @include clearline;
-        position: absolute;
-        left: 50px;
-        bottom: 50px;
-        background: rgba(41, 53, 108, 0.8);
-        padding:20px 0;
-        border-radius:5px;
-        li{
-          float: left;
-          width: 131px;
-          a{
-            display: block;
-            text-align: center;
-            padding: 8px 0 5px 0;
-            .icon{
-              display: block;
-            }
-            .text{
-              margin-top: 8px;
-              display: block;
-              color: #ffffff;
-              letter-spacing:-1px;
-            }
-          }
-          &:last-child{
-            width: 177px;
-            border-left: 1px solid #1d2653;
-          }
-        }
+      &:last-child{
+      width: 177px;
+      border-left: 1px solid #1d2653;
       }
     }
-    /*메인 본문*/
-    .contentArea{
-      float: left;
-      position: relative;
-      width: 862px;
-      padding:30px 0 30px 30px;
-      .contentScroll{
-        height:815px;
-      }
     }
+  }
+  /*메인 본문*/
+  .contentArea{
+    float: left;
+    position: relative;
+    width: 862px;
+    padding:30px 0 30px 30px;
+    .contentScroll{
+    height:815px;
+    }
+  }
   }
 }
 .subTitle{
