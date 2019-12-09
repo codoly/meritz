@@ -1,354 +1,354 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>고객리스트</title>
-    <link rel="stylesheet" href="/asset/css/style.css">
-    <script src="/asset/js/lib/jquery-3.4.1.min.js"></script>
-    <script src="/asset/js/lib/jquery.mCustomScrollbar.min.js"></script>
-    <script src="/asset/js/lib/jquery.mousewheel-3.0.6.min.js"></script>
-    <script src="/asset/js/lib/jquery.nice-select.min.js"></script>
-    <script src="/asset/js/lib/jquery.placeholder.min.js"></script>
-    <script src="/asset/js/default.js"></script>
-    <script>
-        $(function(){
-            $(".contentScroll").mCustomScrollbar();
-        })
-    </script>
+  <meta charset="UTF-8">
+  <title>고객리스트</title>
+  <link rel="stylesheet" href="/asset/css/style.css">
+  <script src="/asset/js/lib/jquery-3.4.1.min.js"></script>
+  <script src="/asset/js/lib/jquery.mCustomScrollbar.min.js"></script>
+  <script src="/asset/js/lib/jquery.mousewheel-3.0.6.min.js"></script>
+  <script src="/asset/js/lib/jquery.nice-select.min.js"></script>
+  <script src="/asset/js/lib/jquery.placeholder.min.js"></script>
+  <script src="/asset/js/default.js"></script>
+  <script>
+    $(function () {
+      $(".contentScroll").mCustomScrollbar();
+    })
+  </script>
 </head>
 <body>
 <div class="wrap main">
-    <div class="contentWrap">
-        <!-- leftArea : s -->
-        <div class="leftArea">
-            <h1 class="logo"><a href="#"><img src="/asset/images/common/main_logo.png" alt="meritz 메리츠 화재"></a></h1>
-            <div class="nameArea">
-              <strong class="name">홍길동</strong> 설계사님<br>
-              반갑습니다.
-            </div>
-            <div class="manyArea">설계사님의 고객은 <strong class="many">163</strong>명 입니다.</div>
-            <div class="infoText">오늘은<br>어떤 고객님과 마주 할까요?</div>
-            <div class="searchArea"><input type="text"><a href="#" class="btnSearch">검색</a></div>
-            <div class="sorting">
-                <div class="selectBox bgType">
-                    <select name="" id="">
-                        <option value="1">최근 동의 순</option>
-                        <option value="1">동의 종료 순</option>
-                        <option value="1">최근 등록 순</option>
-                        <option value="1">최근 분석 순</option>
-                        <option value="1">최근 상령일 순</option>
-                    </select>
-                </div>
-                <ul class="sortingList">
-                    <li>
-                        <div class="checkBoxSet bgType">
-                            <input type="checkbox" id="checkbox1">
-                            <label for="checkbox1">즐겨찾기</label>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="checkBoxSet bgType">
-                            <input type="checkbox" id="checkbox2">
-                            <label for="checkbox2">동의종료D-7</label>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="checkBoxSet bgType">
-                            <input type="checkbox" id="checkbox3">
-                            <label for="checkbox3">보장분석</label>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <ul class="bottomBtnArea">
-                <li>
-                    <a href="#">
-                        <span class="icon"><img src="/asset/images/common/main_left_icon_01.png" alt=""></span>
-                        <span class="text">고객등록</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span class="icon"><img src="/asset/images/common/main_left_icon_02.png" alt=""></span>
-                        <span class="text">권장금액 담보군 설정</span>
-                    </a>
-                </li>
-            </ul>
+  <div class="contentWrap">
+    <!-- leftArea : s -->
+    <div class="leftArea">
+      <h1 class="logo"><a href="#"><img src="/asset/images/common/main_logo.png" alt="meritz 메리츠 화재"></a></h1>
+      <div class="nameArea">
+        <strong class="name">홍길동</strong> 설계사님<br>
+        반갑습니다.
+      </div>
+      <div class="manyArea">설계사님의 고객은 <strong class="many">163</strong>명 입니다.</div>
+      <div class="infoText">오늘은<br>어떤 고객님과 마주 할까요?</div>
+      <div class="searchArea"><input type="text"><a href="#" class="btnSearch">검색</a></div>
+      <div class="sorting">
+        <div class="selectBox bgType">
+          <select name="" id="">
+            <option value="1">최근 동의 순</option>
+            <option value="1">동의 종료 순</option>
+            <option value="1">최근 등록 순</option>
+            <option value="1">최근 분석 순</option>
+            <option value="1">최근 상령일 순</option>
+          </select>
         </div>
-        <!-- leftArea : e -->
-        <!-- contentArea : s -->
-        <div class="contentArea">
-            <h2 class="subTitle">고객리스트</h2>
-            
-            <div class="listTableType">
-                <div class="theadBox">
-                    <div class="item">
-                        <div class="tr">
-                            <div class="th name">고객명</div>
-                            <div class="th gender">성별</div>
-                            <div class="th birth">생년월일</div>
-                            <div class="th old">나이</div>
-                            <div class="th">상령일자</div>
-                            <div class="th">동의종료</div>
-                            <div class="th date">분석일자</div>
-                            <div class="th">즐겨찾기</div>
-                            <div class="th">보장분석</div>
-                            <div class="th">동의여부</div>
-                            <div class="th attend">출석</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- scrollArea : s -->
-                <div class="contentScroll">
-                    <div class="tbodyBox">
-                        <div class="item">
-                            <div class="tr"> 
-                                <div class="td name"><a href="#">독고영재</a></div>
-                                <div class="td gender">남</div>
-                                <div class="td birth">1981.05.30</div>
-                                <div class="td old">32세</div>
-                                <div class="td">11-30</div>
-                                <div class="td">D-30</div>
-                                <div class="td date">2019.10.14</div>
-                                <div class="td"><a href="#" class="btnCircle like on"><span>즐겨찾기</span></a></div>
-                                <div class="td"><a href="#" class="btnCircle analysis on"><span>보장분석</span></a></div>
-                                <div class="td"><a href="#" class="btnCircle agree on"><span>동의여부</span></a></div>
-                                <div class="td attend"><a href="#" class="btnText sizeMiddle fillGray"><span>출력</span></a></div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="tr">
-                                <div class="td name"><a href="#">홍길동</a></div>
-                                <div class="td gender">남</div>
-                                <div class="td birth">1981.05.30</div>
-                                <div class="td old">32세</div>
-                                <div class="td">11-30</div>
-                                <div class="td">D-30</div>
-                                <div class="td date">2019.10.14</div>
-                                <div class="td"><a href="#" class="btnCircle like"><span>즐겨찾기</span></a></div>
-                                <div class="td"><a href="#" class="btnCircle analysis"><span>보장분석</span></a></div>
-                                <div class="td"><a href="#" class="btnCircle agree"><span>동의여부</span></a></div>
-                                <div class="td attend"><a href="#" class="btnText sizeMiddle fillGray"><span>출력</span></a></div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="tr">
-                                <div class="td name"><a href="#">김하나</a></div>
-                                <div class="td gender">여</div>
-                                <div class="td birth">1981.05.30</div>
-                                <div class="td old">32세</div>
-                                <div class="td">11-30</div>
-                                <div class="td">D-30</div>
-                                <div class="td date">2019.10.14</div>
-                                <div class="td"><a href="#" class="btnCircle like on"><span>즐겨찾기</span></a></div>
-                                <div class="td"><a href="#" class="btnCircle analysis on"><span>보장분석</span></a></div>
-                                <div class="td"><a href="#" class="btnCircle agree"><span>동의여부</span></a></div>
-                                <div class="td attend"><a href="#" class="btnText sizeMiddle fillGray"><span>출력</span></a></div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="tr">
-                                <div class="td name"><a href="#">선우재덕</a></div>
-                                <div class="td gender">여</div>
-                                <div class="td birth">1981.05.30</div>
-                                <div class="td old">32세</div>
-                                <div class="td">11-30</div>
-                                <div class="td">D-30</div>
-                                <div class="td date">2019.10.14</div>
-                                <div class="td"><a href="#" class="btnCircle like on"><span>즐겨찾기</span></a></div>
-                                <div class="td"><a href="#" class="btnCircle analysis on"><span>보장분석</span></a></div>
-                                <div class="td"><a href="#" class="btnCircle agree"><span>동의여부</span></a></div>
-                                <div class="td attend"><a href="#" class="btnText sizeMiddle fillGray"><span>출력</span></a></div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="tr"> 
-                                <div class="td name"><a href="#">독고영재</a></div>
-                                <div class="td gender">남</div>
-                                <div class="td birth">1981.05.30</div>
-                                <div class="td old">32세</div>
-                                <div class="td">11-30</div>
-                                <div class="td">D-30</div>
-                                <div class="td date">2019.10.14</div>
-                                <div class="td"><a href="#" class="btnCircle like on"><span>즐겨찾기</span></a></div>
-                                <div class="td"><a href="#" class="btnCircle analysis on"><span>보장분석</span></a></div>
-                                <div class="td"><a href="#" class="btnCircle agree on"><span>동의여부</span></a></div>
-                                <div class="td attend"><a href="#" class="btnText sizeMiddle fillGray"><span>출력</span></a></div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="tr">
-                                <div class="td name"><a href="#">홍길동</a></div>
-                                <div class="td gender">남</div>
-                                <div class="td birth">1981.05.30</div>
-                                <div class="td old">32세</div>
-                                <div class="td">11-30</div>
-                                <div class="td">D-30</div>
-                                <div class="td date">2019.10.14</div>
-                                <div class="td"><a href="#" class="btnCircle like"><span>즐겨찾기</span></a></div>
-                                <div class="td"><a href="#" class="btnCircle analysis"><span>보장분석</span></a></div>
-                                <div class="td"><a href="#" class="btnCircle agree"><span>동의여부</span></a></div>
-                                <div class="td attend"><a href="#" class="btnText sizeMiddle fillGray"><span>출력</span></a></div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="tr">
-                                <div class="td name"><a href="#">김하나</a></div>
-                                <div class="td gender">여</div>
-                                <div class="td birth">1981.05.30</div>
-                                <div class="td old">32세</div>
-                                <div class="td">11-30</div>
-                                <div class="td">D-30</div>
-                                <div class="td date">2019.10.14</div>
-                                <div class="td"><a href="#" class="btnCircle like on"><span>즐겨찾기</span></a></div>
-                                <div class="td"><a href="#" class="btnCircle analysis on"><span>보장분석</span></a></div>
-                                <div class="td"><a href="#" class="btnCircle agree"><span>동의여부</span></a></div>
-                                <div class="td attend"><a href="#" class="btnText sizeMiddle fillGray"><span>출력</span></a></div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="tr">
-                                <div class="td name"><a href="#">선우재덕</a></div>
-                                <div class="td gender">여</div>
-                                <div class="td birth">1981.05.30</div>
-                                <div class="td old">32세</div>
-                                <div class="td">11-30</div>
-                                <div class="td">D-30</div>
-                                <div class="td date">2019.10.14</div>
-                                <div class="td"><a href="#" class="btnCircle like on"><span>즐겨찾기</span></a></div>
-                                <div class="td"><a href="#" class="btnCircle analysis on"><span>보장분석</span></a></div>
-                                <div class="td"><a href="#" class="btnCircle agree"><span>동의여부</span></a></div>
-                                <div class="td attend"><a href="#" class="btnText sizeMiddle fillGray"><span>출력</span></a></div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="tr"> 
-                                <div class="td name"><a href="#">독고영재</a></div>
-                                <div class="td gender">남</div>
-                                <div class="td birth">1981.05.30</div>
-                                <div class="td old">32세</div>
-                                <div class="td">11-30</div>
-                                <div class="td">D-30</div>
-                                <div class="td date">2019.10.14</div>
-                                <div class="td"><a href="#" class="btnCircle like on"><span>즐겨찾기</span></a></div>
-                                <div class="td"><a href="#" class="btnCircle analysis on"><span>보장분석</span></a></div>
-                                <div class="td"><a href="#" class="btnCircle agree on"><span>동의여부</span></a></div>
-                                <div class="td attend"><a href="#" class="btnText sizeMiddle fillGray"><span>출력</span></a></div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="tr">
-                                <div class="td name"><a href="#">홍길동</a></div>
-                                <div class="td gender">남</div>
-                                <div class="td birth">1981.05.30</div>
-                                <div class="td old">32세</div>
-                                <div class="td">11-30</div>
-                                <div class="td">D-30</div>
-                                <div class="td date">2019.10.14</div>
-                                <div class="td"><a href="#" class="btnCircle like"><span>즐겨찾기</span></a></div>
-                                <div class="td"><a href="#" class="btnCircle analysis"><span>보장분석</span></a></div>
-                                <div class="td"><a href="#" class="btnCircle agree"><span>동의여부</span></a></div>
-                                <div class="td attend"><a href="#" class="btnText sizeMiddle fillGray"><span>출력</span></a></div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="tr">
-                                <div class="td name"><a href="#">김하나</a></div>
-                                <div class="td gender">여</div>
-                                <div class="td birth">1981.05.30</div>
-                                <div class="td old">32세</div>
-                                <div class="td">11-30</div>
-                                <div class="td">D-30</div>
-                                <div class="td date">2019.10.14</div>
-                                <div class="td"><a href="#" class="btnCircle like on"><span>즐겨찾기</span></a></div>
-                                <div class="td"><a href="#" class="btnCircle analysis on"><span>보장분석</span></a></div>
-                                <div class="td"><a href="#" class="btnCircle agree"><span>동의여부</span></a></div>
-                                <div class="td attend"><a href="#" class="btnText sizeMiddle fillGray"><span>출력</span></a></div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="tr">
-                                <div class="td name"><a href="#">선우재덕</a></div>
-                                <div class="td gender">여</div>
-                                <div class="td birth">1981.05.30</div>
-                                <div class="td old">32세</div>
-                                <div class="td">11-30</div>
-                                <div class="td">D-30</div>
-                                <div class="td date">2019.10.14</div>
-                                <div class="td"><a href="#" class="btnCircle like on"><span>즐겨찾기</span></a></div>
-                                <div class="td"><a href="#" class="btnCircle analysis on"><span>보장분석</span></a></div>
-                                <div class="td"><a href="#" class="btnCircle agree"><span>동의여부</span></a></div>
-                                <div class="td attend"><a href="#" class="btnText sizeMiddle fillGray"><span>출력</span></a></div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="tr"> 
-                                <div class="td name"><a href="#">독고영재</a></div>
-                                <div class="td gender">남</div>
-                                <div class="td birth">1981.05.30</div>
-                                <div class="td old">32세</div>
-                                <div class="td">11-30</div>
-                                <div class="td">D-30</div>
-                                <div class="td date">2019.10.14</div>
-                                <div class="td"><a href="#" class="btnCircle like on"><span>즐겨찾기</span></a></div>
-                                <div class="td"><a href="#" class="btnCircle analysis on"><span>보장분석</span></a></div>
-                                <div class="td"><a href="#" class="btnCircle agree on"><span>동의여부</span></a></div>
-                                <div class="td attend"><a href="#" class="btnText sizeMiddle fillGray"><span>출력</span></a></div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="tr">
-                                <div class="td name"><a href="#">홍길동</a></div>
-                                <div class="td gender">남</div>
-                                <div class="td birth">1981.05.30</div>
-                                <div class="td old">32세</div>
-                                <div class="td">11-30</div>
-                                <div class="td">D-30</div>
-                                <div class="td date">2019.10.14</div>
-                                <div class="td"><a href="#" class="btnCircle like"><span>즐겨찾기</span></a></div>
-                                <div class="td"><a href="#" class="btnCircle analysis"><span>보장분석</span></a></div>
-                                <div class="td"><a href="#" class="btnCircle agree"><span>동의여부</span></a></div>
-                                <div class="td attend"><a href="#" class="btnText sizeMiddle fillGray"><span>출력</span></a></div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="tr">
-                                <div class="td name"><a href="#">김하나</a></div>
-                                <div class="td gender">여</div>
-                                <div class="td birth">1981.05.30</div>
-                                <div class="td old">32세</div>
-                                <div class="td">11-30</div>
-                                <div class="td">D-30</div>
-                                <div class="td date">2019.10.14</div>
-                                <div class="td"><a href="#" class="btnCircle like on"><span>즐겨찾기</span></a></div>
-                                <div class="td"><a href="#" class="btnCircle analysis on"><span>보장분석</span></a></div>
-                                <div class="td"><a href="#" class="btnCircle agree"><span>동의여부</span></a></div>
-                                <div class="td attend"><a href="#" class="btnText sizeMiddle fillGray"><span>출력</span></a></div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="tr">
-                                <div class="td name"><a href="#">선우재덕</a></div>
-                                <div class="td gender">여</div>
-                                <div class="td birth">1981.05.30</div>
-                                <div class="td old">32세</div>
-                                <div class="td">11-30</div>
-                                <div class="td">D-30</div>
-                                <div class="td date">2019.10.14</div>
-                                <div class="td"><a href="#" class="btnCircle like on"><span>즐겨찾기</span></a></div>
-                                <div class="td"><a href="#" class="btnCircle analysis on"><span>보장분석</span></a></div>
-                                <div class="td"><a href="#" class="btnCircle agree"><span>동의여부</span></a></div>
-                                <div class="td attend"><a href="#" class="btnText sizeMiddle fillGray"><span>출력</span></a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                 <!-- scrollArea : e -->
+        <ul class="sortingList">
+          <li>
+            <div class="checkBoxSet bgType">
+              <input type="checkbox" id="checkbox1">
+              <label for="checkbox1">즐겨찾기</label>
             </div>
-        </div>
-        <!-- contentArea : e -->
+          </li>
+          <li>
+            <div class="checkBoxSet bgType">
+              <input type="checkbox" id="checkbox2">
+              <label for="checkbox2">동의종료D-7</label>
+            </div>
+          </li>
+          <li>
+            <div class="checkBoxSet bgType">
+              <input type="checkbox" id="checkbox3">
+              <label for="checkbox3">보장분석</label>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <ul class="bottomBtnArea">
+        <li>
+          <a href="#">
+            <span class="icon"><img src="/asset/images/common/main_left_icon_01.png" alt=""></span>
+            <span class="text">고객등록</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon"><img src="/asset/images/common/main_left_icon_02.png" alt=""></span>
+            <span class="text">권장금액 담보군 설정</span>
+          </a>
+        </li>
+      </ul>
     </div>
+    <!-- leftArea : e -->
+    <!-- contentArea : s -->
+    <div class="contentArea">
+      <h2 class="subTitle">고객리스트</h2>
+
+      <div class="listTableType">
+        <div class="theadBox">
+          <div class="item">
+            <div class="tr">
+              <div class="th name">고객명</div>
+              <div class="th gender">성별</div>
+              <div class="th birth">생년월일</div>
+              <div class="th old">나이</div>
+              <div class="th">상령일자</div>
+              <div class="th">동의종료</div>
+              <div class="th date">분석일자</div>
+              <div class="th">즐겨찾기</div>
+              <div class="th">보장분석</div>
+              <div class="th">동의여부</div>
+              <div class="th attend">출석</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- scrollArea : s -->
+        <div class="contentScroll">
+          <div class="tbodyBox">
+            <div class="item">
+              <div class="tr">
+                <div class="td name"><a href="#">독고영재</a></div>
+                <div class="td gender">남</div>
+                <div class="td birth">1981.05.30</div>
+                <div class="td old">32세</div>
+                <div class="td">11-30</div>
+                <div class="td">D-30</div>
+                <div class="td date">2019.10.14</div>
+                <div class="td"><a href="#" class="btnCircle like on"><span>즐겨찾기</span></a></div>
+                <div class="td"><a href="#" class="btnCircle analysis on"><span>보장분석</span></a></div>
+                <div class="td"><a href="#" class="btnCircle agree on"><span>동의여부</span></a></div>
+                <div class="td attend"><a href="#" class="btnText sizeMiddle fillGray"><span>출력</span></a></div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="tr">
+                <div class="td name"><a href="#">홍길동</a></div>
+                <div class="td gender">남</div>
+                <div class="td birth">1981.05.30</div>
+                <div class="td old">32세</div>
+                <div class="td">11-30</div>
+                <div class="td">D-30</div>
+                <div class="td date">2019.10.14</div>
+                <div class="td"><a href="#" class="btnCircle like"><span>즐겨찾기</span></a></div>
+                <div class="td"><a href="#" class="btnCircle analysis"><span>보장분석</span></a></div>
+                <div class="td"><a href="#" class="btnCircle agree"><span>동의여부</span></a></div>
+                <div class="td attend"><a href="#" class="btnText sizeMiddle fillGray"><span>출력</span></a></div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="tr">
+                <div class="td name"><a href="#">김하나</a></div>
+                <div class="td gender">여</div>
+                <div class="td birth">1981.05.30</div>
+                <div class="td old">32세</div>
+                <div class="td">11-30</div>
+                <div class="td">D-30</div>
+                <div class="td date">2019.10.14</div>
+                <div class="td"><a href="#" class="btnCircle like on"><span>즐겨찾기</span></a></div>
+                <div class="td"><a href="#" class="btnCircle analysis on"><span>보장분석</span></a></div>
+                <div class="td"><a href="#" class="btnCircle agree"><span>동의여부</span></a></div>
+                <div class="td attend"><a href="#" class="btnText sizeMiddle fillGray"><span>출력</span></a></div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="tr">
+                <div class="td name"><a href="#">선우재덕</a></div>
+                <div class="td gender">여</div>
+                <div class="td birth">1981.05.30</div>
+                <div class="td old">32세</div>
+                <div class="td">11-30</div>
+                <div class="td">D-30</div>
+                <div class="td date">2019.10.14</div>
+                <div class="td"><a href="#" class="btnCircle like on"><span>즐겨찾기</span></a></div>
+                <div class="td"><a href="#" class="btnCircle analysis on"><span>보장분석</span></a></div>
+                <div class="td"><a href="#" class="btnCircle agree"><span>동의여부</span></a></div>
+                <div class="td attend"><a href="#" class="btnText sizeMiddle fillGray"><span>출력</span></a></div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="tr">
+                <div class="td name"><a href="#">독고영재</a></div>
+                <div class="td gender">남</div>
+                <div class="td birth">1981.05.30</div>
+                <div class="td old">32세</div>
+                <div class="td">11-30</div>
+                <div class="td">D-30</div>
+                <div class="td date">2019.10.14</div>
+                <div class="td"><a href="#" class="btnCircle like on"><span>즐겨찾기</span></a></div>
+                <div class="td"><a href="#" class="btnCircle analysis on"><span>보장분석</span></a></div>
+                <div class="td"><a href="#" class="btnCircle agree on"><span>동의여부</span></a></div>
+                <div class="td attend"><a href="#" class="btnText sizeMiddle fillGray"><span>출력</span></a></div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="tr">
+                <div class="td name"><a href="#">홍길동</a></div>
+                <div class="td gender">남</div>
+                <div class="td birth">1981.05.30</div>
+                <div class="td old">32세</div>
+                <div class="td">11-30</div>
+                <div class="td">D-30</div>
+                <div class="td date">2019.10.14</div>
+                <div class="td"><a href="#" class="btnCircle like"><span>즐겨찾기</span></a></div>
+                <div class="td"><a href="#" class="btnCircle analysis"><span>보장분석</span></a></div>
+                <div class="td"><a href="#" class="btnCircle agree"><span>동의여부</span></a></div>
+                <div class="td attend"><a href="#" class="btnText sizeMiddle fillGray"><span>출력</span></a></div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="tr">
+                <div class="td name"><a href="#">김하나</a></div>
+                <div class="td gender">여</div>
+                <div class="td birth">1981.05.30</div>
+                <div class="td old">32세</div>
+                <div class="td">11-30</div>
+                <div class="td">D-30</div>
+                <div class="td date">2019.10.14</div>
+                <div class="td"><a href="#" class="btnCircle like on"><span>즐겨찾기</span></a></div>
+                <div class="td"><a href="#" class="btnCircle analysis on"><span>보장분석</span></a></div>
+                <div class="td"><a href="#" class="btnCircle agree"><span>동의여부</span></a></div>
+                <div class="td attend"><a href="#" class="btnText sizeMiddle fillGray"><span>출력</span></a></div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="tr">
+                <div class="td name"><a href="#">선우재덕</a></div>
+                <div class="td gender">여</div>
+                <div class="td birth">1981.05.30</div>
+                <div class="td old">32세</div>
+                <div class="td">11-30</div>
+                <div class="td">D-30</div>
+                <div class="td date">2019.10.14</div>
+                <div class="td"><a href="#" class="btnCircle like on"><span>즐겨찾기</span></a></div>
+                <div class="td"><a href="#" class="btnCircle analysis on"><span>보장분석</span></a></div>
+                <div class="td"><a href="#" class="btnCircle agree"><span>동의여부</span></a></div>
+                <div class="td attend"><a href="#" class="btnText sizeMiddle fillGray"><span>출력</span></a></div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="tr">
+                <div class="td name"><a href="#">독고영재</a></div>
+                <div class="td gender">남</div>
+                <div class="td birth">1981.05.30</div>
+                <div class="td old">32세</div>
+                <div class="td">11-30</div>
+                <div class="td">D-30</div>
+                <div class="td date">2019.10.14</div>
+                <div class="td"><a href="#" class="btnCircle like on"><span>즐겨찾기</span></a></div>
+                <div class="td"><a href="#" class="btnCircle analysis on"><span>보장분석</span></a></div>
+                <div class="td"><a href="#" class="btnCircle agree on"><span>동의여부</span></a></div>
+                <div class="td attend"><a href="#" class="btnText sizeMiddle fillGray"><span>출력</span></a></div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="tr">
+                <div class="td name"><a href="#">홍길동</a></div>
+                <div class="td gender">남</div>
+                <div class="td birth">1981.05.30</div>
+                <div class="td old">32세</div>
+                <div class="td">11-30</div>
+                <div class="td">D-30</div>
+                <div class="td date">2019.10.14</div>
+                <div class="td"><a href="#" class="btnCircle like"><span>즐겨찾기</span></a></div>
+                <div class="td"><a href="#" class="btnCircle analysis"><span>보장분석</span></a></div>
+                <div class="td"><a href="#" class="btnCircle agree"><span>동의여부</span></a></div>
+                <div class="td attend"><a href="#" class="btnText sizeMiddle fillGray"><span>출력</span></a></div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="tr">
+                <div class="td name"><a href="#">김하나</a></div>
+                <div class="td gender">여</div>
+                <div class="td birth">1981.05.30</div>
+                <div class="td old">32세</div>
+                <div class="td">11-30</div>
+                <div class="td">D-30</div>
+                <div class="td date">2019.10.14</div>
+                <div class="td"><a href="#" class="btnCircle like on"><span>즐겨찾기</span></a></div>
+                <div class="td"><a href="#" class="btnCircle analysis on"><span>보장분석</span></a></div>
+                <div class="td"><a href="#" class="btnCircle agree"><span>동의여부</span></a></div>
+                <div class="td attend"><a href="#" class="btnText sizeMiddle fillGray"><span>출력</span></a></div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="tr">
+                <div class="td name"><a href="#">선우재덕</a></div>
+                <div class="td gender">여</div>
+                <div class="td birth">1981.05.30</div>
+                <div class="td old">32세</div>
+                <div class="td">11-30</div>
+                <div class="td">D-30</div>
+                <div class="td date">2019.10.14</div>
+                <div class="td"><a href="#" class="btnCircle like on"><span>즐겨찾기</span></a></div>
+                <div class="td"><a href="#" class="btnCircle analysis on"><span>보장분석</span></a></div>
+                <div class="td"><a href="#" class="btnCircle agree"><span>동의여부</span></a></div>
+                <div class="td attend"><a href="#" class="btnText sizeMiddle fillGray"><span>출력</span></a></div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="tr">
+                <div class="td name"><a href="#">독고영재</a></div>
+                <div class="td gender">남</div>
+                <div class="td birth">1981.05.30</div>
+                <div class="td old">32세</div>
+                <div class="td">11-30</div>
+                <div class="td">D-30</div>
+                <div class="td date">2019.10.14</div>
+                <div class="td"><a href="#" class="btnCircle like on"><span>즐겨찾기</span></a></div>
+                <div class="td"><a href="#" class="btnCircle analysis on"><span>보장분석</span></a></div>
+                <div class="td"><a href="#" class="btnCircle agree on"><span>동의여부</span></a></div>
+                <div class="td attend"><a href="#" class="btnText sizeMiddle fillGray"><span>출력</span></a></div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="tr">
+                <div class="td name"><a href="#">홍길동</a></div>
+                <div class="td gender">남</div>
+                <div class="td birth">1981.05.30</div>
+                <div class="td old">32세</div>
+                <div class="td">11-30</div>
+                <div class="td">D-30</div>
+                <div class="td date">2019.10.14</div>
+                <div class="td"><a href="#" class="btnCircle like"><span>즐겨찾기</span></a></div>
+                <div class="td"><a href="#" class="btnCircle analysis"><span>보장분석</span></a></div>
+                <div class="td"><a href="#" class="btnCircle agree"><span>동의여부</span></a></div>
+                <div class="td attend"><a href="#" class="btnText sizeMiddle fillGray"><span>출력</span></a></div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="tr">
+                <div class="td name"><a href="#">김하나</a></div>
+                <div class="td gender">여</div>
+                <div class="td birth">1981.05.30</div>
+                <div class="td old">32세</div>
+                <div class="td">11-30</div>
+                <div class="td">D-30</div>
+                <div class="td date">2019.10.14</div>
+                <div class="td"><a href="#" class="btnCircle like on"><span>즐겨찾기</span></a></div>
+                <div class="td"><a href="#" class="btnCircle analysis on"><span>보장분석</span></a></div>
+                <div class="td"><a href="#" class="btnCircle agree"><span>동의여부</span></a></div>
+                <div class="td attend"><a href="#" class="btnText sizeMiddle fillGray"><span>출력</span></a></div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="tr">
+                <div class="td name"><a href="#">선우재덕</a></div>
+                <div class="td gender">여</div>
+                <div class="td birth">1981.05.30</div>
+                <div class="td old">32세</div>
+                <div class="td">11-30</div>
+                <div class="td">D-30</div>
+                <div class="td date">2019.10.14</div>
+                <div class="td"><a href="#" class="btnCircle like on"><span>즐겨찾기</span></a></div>
+                <div class="td"><a href="#" class="btnCircle analysis on"><span>보장분석</span></a></div>
+                <div class="td"><a href="#" class="btnCircle agree"><span>동의여부</span></a></div>
+                <div class="td attend"><a href="#" class="btnText sizeMiddle fillGray"><span>출력</span></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- scrollArea : e -->
+      </div>
+    </div>
+    <!-- contentArea : e -->
+  </div>
 </div>
 
 </body>

@@ -54,14 +54,15 @@ $lineColor3: #e0e4ea;
 $bgcolor: #e6edf8;
 
 
-@mixin bgBtn(){
-  overflow:hidden;
+@mixin bgBtn() {
+  overflow: hidden;
   text-indent: -99999px;
   display: inline-block;
 }
-@mixin clearline(){
-  &:after{
-    content:"";
+
+@mixin clearline() {
+  &:after {
+    content: "";
     display: block;
     clear: both;
   }

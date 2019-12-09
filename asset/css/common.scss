@@ -1,4 +1,4 @@
-.selectBox{
+.selectBox {
   display: inline-block;
   // custome select 관련 구문
   // Default variables
@@ -41,12 +41,15 @@
     user-select: none;
     white-space: nowrap;
     width: auto;
+
     &:hover {
       border-color: darken($gray_light, 5%);
     }
+
     &:active, &:focus {
       border-color: $primary_light;
     }
+
     // Arrow
     &:after {
       border-bottom: 2px solid $arrow_color;
@@ -67,20 +70,24 @@
 
     &.open {
       @extend :active;
+
       &:after {
         transform: rotate(-135deg);
       }
+
       .list {
         opacity: 1;
         pointer-events: auto;
-        top:100%;
+        top: 100%;
         transform: scale(1) translateY(0);
       }
     }
+
     &.disabled {
       border-color: lighten($gray_light, 2%);
       color: $gray;
       pointer-events: none;
+
       &:after {
         border-color: lighten($arrow_color, 20%);
       }
@@ -89,26 +96,32 @@
     // Modifiers
     &.wide {
       width: 100%;
+
       .list {
         left: 0 !important;
         right: 0 !important;
       }
     }
+
     &.right {
       float: right;
+
       .list {
         left: auto;
         right: 0;
       }
     }
+
     &.small {
       font-size: $font_size_small;
       height: $input_height_small;
       line-height: $input_height_small - 2;
+
       &:after {
         height: 4px;
         width: 4px;
       }
+
       .option {
         line-height: $input_height_small - 2;
         min-height: $input_height_small - 2;
@@ -127,16 +140,19 @@
       padding: 7px 0;
       pointer-events: none;
       position: absolute;
-      top: -999999px; left: 0;
-      min-width:100%;
+      top: -999999px;
+      left: 0;
+      min-width: 100%;
       transform-origin: 50% 0;
       transform: scale(.75) translateY(- $input_height / 2);
       transition: transform .2s cubic-bezier(0.5, 0, 0, 1.25), opacity .15s ease-out;
       z-index: 9;
+
       &:hover .option:not(:hover) {
         background-color: transparent !important;
       }
     }
+
     .option {
       cursor: pointer;
       font-weight: 400;
@@ -149,13 +165,16 @@
       padding-right: $dropdown_padding;
       text-align: left;
       transition: all 0.2s;
+
       &:hover, &.focus, &.selected.focus {
         background-color: $gray_lighter;
         color: $colorLevel2;
       }
+
       &.selected {
 
       }
+
       &.disabled {
         background-color: transparent;
         color: $gray;
@@ -163,33 +182,39 @@
       }
     }
   }
-  &.bgType .nice-select{
-    border:0;
+
+  &.bgType .nice-select {
+    border: 0;
     height: 34px;
     line-height: 34px;
     background: transparent;
-    > .current{
+
+    > .current {
       color: #fff;
     }
-    &.open:after{
-      border-color:#ff4858
+
+    &.open:after {
+      border-color: #ff4858
     }
 
   }
 }
+
 // Use display instead of opacity for IE <= 10
 .no-csspointerevents .nice-select {
   .list {
     display: none;
   }
+
   &.open {
     .list {
       display: block;
     }
   }
 }
+
 /***************************가이드 관련****************************/
-.guideTitle{
+.guideTitle {
   font-size: $_26px;
   font-weight: bold;
   padding: 30px;
@@ -198,111 +223,128 @@
   border-top: 1px solid $colorLevel4;
   border-bottom: 1px solid $colorLevel4;
 }
-.guideContent{
-  padding:0 30px;
+
+.guideContent {
+  padding: 0 30px;
   margin-bottom: 50px;
-  .inTitle{
+
+  .inTitle {
     font-size: $_20px;
     font-weight: bold;
     padding: 30px 0 10px 0;
     color: $colorLevel1;
   }
-  .sampleBg{
+
+  .sampleBg {
     background: $colorPoint1;
-    padding:20px;
+    padding: 20px;
   }
 
   //소팅리스트
-  .sortingList{
+  .sortingList {
     @include clearline;
-    li{
+
+    li {
       float: left;
       margin-right: 20px;
     }
   }
 }
+
 /***************************button 관련*************************/
-.btnText{
+.btnText {
   display: inline-block;
-  min-width:130px;
-  border:1px solid $lineColor3;
+  min-width: 130px;
+  border: 1px solid $lineColor3;
   color: $colorLevel2;
-  padding:0 10px;
+  padding: 0 10px;
   line-height: 38px;
   text-align: center;
   font-size: $_18px;
-  letter-spacing:-1px;
+  letter-spacing: -1px;
   //버튼 색상 정의
-  &.fillGray{
-    border:1px solid $colorPoint1;
+  &.fillGray {
+    border: 1px solid $colorPoint1;
     background: $colorPoint1;
     color: #fff;
   }
-  &.fillRed{
-    border:1px solid $colorButtonRed;
+
+  &.fillRed {
+    border: 1px solid $colorButtonRed;
     background: $colorButtonRed;
     color: #fff;
   }
 
   //버튼 크기 정의
-  &.sizeSmall{
-    min-width:auto;
+  &.sizeSmall {
+    min-width: auto;
     line-height: 26px;
     font-size: $_14px;
   }
-  &.sizeMiddle{
-    min-width:70px;
+
+  &.sizeMiddle {
+    min-width: 70px;
     line-height: 32px;
     font-size: $_14px;
   }
-  &.sizeBig{
-    min-width:174px;
+
+  &.sizeBig {
+    min-width: 174px;
     line-height: 53px;
     font-size: $_18px;
   }
 }
-.btnClose{
+
+.btnClose {
   @include bgBtn;
   background: url("/asset/images/common/btn_close.png") no-repeat;
   width: 35px;
   height: 35px;
-  &.white{
+
+  &.white {
     background: url("/asset/images/common/btn_close_w.png") no-repeat;
   }
 }
 
 //검색영역
-.searchArea{
-  border:1px solid #7180a0;
+.searchArea {
+  border: 1px solid #7180a0;
   padding-right: 40px;
   position: relative;
-  border-radius:5px;
-  input{
+  border-radius: 5px;
+
+  input {
     width: 100%;
-    padding:0 0 0 15px;
+    padding: 0 0 0 15px;
     background: transparent;
-    border:0;
+    border: 0;
     line-height: 38px;
     height: 38px;
-    outline:none;
+    outline: none;
     color: #fff;
+
     &.placeholder {
       color: #adbfec;
     }
+
     &::placeholder {
       color: #adbfec;
     }
+
     :-ms-input-placeholder {
       color: #adbfec;
     }
+
     ::-webkit-input-placeholder {
       color: #adbfec;
     }
+
     ::-moz-placeholder {
       color: #adbfec;
     }
   }
-  .btnSearch{
+
+  .btnSearch {
     @include bgBtn;
     position: absolute;
     right: 0;
@@ -311,123 +353,144 @@
     height: 38px;
     background: url("/asset/images/common/btn_main_search_off.png") no-repeat center center;
   }
-  &.focus{
-    border:1px solid #01a7c4;
-    .btnSearch{
+
+  &.focus {
+    border: 1px solid #01a7c4;
+
+    .btnSearch {
       background: url("/asset/images/common/btn_main_search_on.png") no-repeat center center;
     }
   }
 }
-.checkBoxSet{
+
+.checkBoxSet {
   position: relative;
   overflow: hidden;
-  input[type='checkbox']{
+
+  input[type='checkbox'] {
     position: absolute;
     left: -999999px;
-    top:0;
+    top: 0;
     width: 0;
     height: 0;
-    &:checked + label:after{
+
+    &:checked + label:after {
       background: url("/asset/images/common/checkbox_on.png") no-repeat;
     }
   }
-  label{
+
+  label {
     position: relative;
     padding-left: 33px;
     line-height: 24px;
     display: inline-block;
     font-size: $_14px;
-    &:after{
-      content:"";
+
+    &:after {
+      content: "";
       display: block;
       position: absolute;
       left: 0;
       top: 0;
       width: 24px;
       height: 24px;
-      box-sizing:border-box;
-      border-radius:3px;
+      box-sizing: border-box;
+      border-radius: 3px;
       background: url("/asset/images/common/checkbox_off.png") no-repeat;
     }
   }
-  &.bgType{
-    input[type='checkbox']:checked + label{
+
+  &.bgType {
+    input[type='checkbox']:checked + label {
       color: #fff;
-      &:after{
-        border:1px solid #fff;
+
+      &:after {
+        border: 1px solid #fff;
         background: url("/asset/images/common/main_checkbox.png") no-repeat center center;
       }
     }
-    label{
+
+    label {
       color: #bbccf5;
-      &:after{
-        border:1px solid #7180a0;        
+
+      &:after {
+        border: 1px solid #7180a0;
         background: none;
       }
     }
   }
 }
 
-.radioSet{
+.radioSet {
   position: relative;
   overflow: hidden;
-  input[type='radio']{
+
+  input[type='radio'] {
     position: absolute;
     left: -999999px;
-    top:0;
+    top: 0;
     width: 0;
     height: 0;
-    &:checked + label:after{
+
+    &:checked + label:after {
       background: url("/asset/images/common/radio_on.png") no-repeat;
     }
   }
-  label{
+
+  label {
     position: relative;
     padding-left: 33px;
     line-height: 24px;
     display: inline-block;
     font-size: $_14px;
-    &:after{
-      content:"";
+
+    &:after {
+      content: "";
       display: block;
       position: absolute;
       left: 0;
       top: 0;
       width: 24px;
       height: 24px;
-      box-sizing:border-box;
-      border-radius:3px;
+      box-sizing: border-box;
+      border-radius: 3px;
       background: url("/asset/images/common/radio_off.png") no-repeat;
     }
   }
 }
+
 input[type=text]::-ms-clear {
-  display:none;
+  display: none;
 }
-.inputSet{
+
+.inputSet {
   position: relative;
-  input{
-    outline:none;
+
+  input {
+    outline: none;
     color: $colorLevel4;
-    padding:0 10px;
-    border:1px solid $lineColor3;
-    width:100%;
-    border-radius:5px;
+    padding: 0 10px;
+    border: 1px solid $lineColor3;
+    width: 100%;
+    border-radius: 5px;
     overflow: hidden;
     font-size: $_14px;
-    &:focus{
+
+    &:focus {
       font-weight: bold;
-      border:1px solid #02a7c5;
+      border: 1px solid #02a7c5;
       color: $colorLevel2;
     }
   }
-  &.right{
-    input{
+
+  &.right {
+    input {
       text-align: right;
     }
   }
-  &.change{
-    input{
+
+  &.change {
+    input {
       color: $colorLevel2;
       font-weight: bold;
     }

@@ -1,7 +1,7 @@
 .idea
 .gitignore
 node_modules
-*.css
+.css
 asset/css/*.css
 style.css
 asset/css/style.css
