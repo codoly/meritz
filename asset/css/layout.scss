@@ -190,6 +190,11 @@
     width: 1280px;
     position: relative;
     z-index: 1;
+    .btnClose{
+      position: absolute;
+      right: 50px;
+      top: 0;
+    }
     /*메인 왼쪽*/
     .leftArea {
       float: left;
@@ -421,7 +426,7 @@
             position: absolute;
             left: 0;
             top: 50%;
-            transform:translate(0, -50%);
+            margin-top:-272px;
             width: 100%;
             li{
               margin-bottom: 45px;
@@ -549,10 +554,92 @@
       float: left;
       position: relative;
       width: 862px;
-      padding: 30px 0 30px 30px;
+      padding: 0px 0 0px 30px;
 
       .contentScroll {
-        height: 815px;
+        height: 942px;
+      }
+    }
+  }
+}
+.submainWrap{
+  width: 781px;
+  .topArea{
+    @include clearline;
+    border-bottom: 1px solid $lineColor1;
+    .imgArea{
+      float: left;
+      width: 295px;
+    }
+    .infoArea{
+      float: left;
+      width: 486px;
+      padding-top: 102px;
+      .favorites{
+        display: inline-block;
+        background: url("/asset/images/main/icon_heart.png") no-repeat right top;
+        line-height: 17px;
+        padding-right: 26px;
+        color: $colorLevel2;
+      }
+      .title{
+        margin-top: 7px;
+        color: $colorLevel1;
+        font-size: $_34px;
+        line-height:$_40px;
+        font-weight: 300;
+        letter-spacing:-1px;
+        strong{
+          font-weight: 600;
+        }
+      }
+      .text{
+        @include clearline;
+        margin-top: 20px;
+        span,
+        button{
+          float: left;
+          font-size: $_17px;
+          line-height: $_22px;
+          margin-right: 20px;
+          color: $colorLevel4;
+        }
+        .alert{
+          margin-right: 10px;
+          background: url("/asset/images/main/icon_alert.png") no-repeat right top;
+          padding-right: 27px;
+        }
+      }
+    }
+  }
+  .moreContent{
+    @include clearline;
+    margin-top: 20px;
+    height: 599px;
+    position: relative;
+    .box{
+      border-radius:5px;
+      background: #ffffff;
+      &.box1{
+        width: 386px;
+        height: 284px;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      &.box2{
+        width: 386px;
+        height: 304px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+      }
+      &.box3{
+        width: 385px;
+        height: 599px;
+        position: absolute;
+        right: 0;
+        top: 0;
       }
     }
   }

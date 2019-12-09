@@ -419,6 +419,12 @@
       }
     }
   }
+  &.noLabel{
+    label{
+      height: 24px;
+      padding-left: 24px;
+    }
+  }
 }
 
 .radioSet {
@@ -455,6 +461,12 @@
       box-sizing: border-box;
       border-radius: 3px;
       background: url("/asset/images/common/radio_off.png") no-repeat;
+    }
+  }
+  &.noLabel{
+    label{
+      height: 24px;
+      padding-left: 24px;
     }
   }
 }
