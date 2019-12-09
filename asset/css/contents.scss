@@ -319,6 +319,38 @@
       }
     }
   }
+  &.noInsurance{
+    display: table;
+    background: #fff;
+    border-radius: 8px;
+    text-align: center;
+    >div{
+      display: table-cell;
+      vertical-align: middle;
+      font-size:$_20px;
+      color:$colorLevel2;
+    }
+  }
+}
+
+/* 유의사항 */
+.noteBox{
+  padding:15px 0 0;
+  border-top:1px solid #cad2db;
+  dl{
+    letter-spacing: -0.075em;
+    dt{
+      font-size:$_14px;
+      color:$colorLevel2;
+      margin-bottom:5px;
+    }
+    dd{
+      font-size:$_14px;
+      color:$colorLevel4;      
+      line-height: 20px;
+      margin-bottom:5px;
+    }
+  }
 }
 
 /* btnCircle */
