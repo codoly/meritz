@@ -13,6 +13,7 @@
   <script>
     $(function () {
       $(".contentScroll").mCustomScrollbar();
+      $(".memberList").mCustomScrollbar();
     })
   </script>
 </head>
@@ -21,179 +22,438 @@
   <div class="contentWrap">
     <!-- leftArea : s -->
     <div class="leftArea">
-      <div class="searchArea"><input type="text"><a href="#" class="btnSearch">검색</a></div>
-      <div class="sorting">
-        <div class="selectBox bgType">
-          <select name="" id="">
-            <option value="1">최근 동의 순</option>
-            <option value="1">동의 종료 순</option>
-            <option value="1">최근 등록 순</option>
-            <option value="1">최근 분석 순</option>
-            <option value="1">최근 상령일 순</option>
-          </select>
+      <!-- infoArea : s -->
+      <div class="infoArea">
+        <div class="searchArea"><input type="text"><a href="#" class="btnSearch">검색</a></div>
+        <div class="sorting">
+          <div class="selectBox bgType">
+            <select name="" id="">
+              <option value="1">최근 동의 순</option>
+              <option value="1">동의 종료 순</option>
+              <option value="1">최근 등록 순</option>
+              <option value="1">최근 분석 순</option>
+              <option value="1">최근 상령일 순</option>
+            </select>
+          </div>
+          <ul class="sortingList">
+            <li>
+              <div class="checkBoxSet bgType">
+                <input type="checkbox" id="checkbox1">
+                <label for="checkbox1">즐겨찾기</label>
+              </div>
+            </li>
+            <li>
+              <div class="checkBoxSet bgType">
+                <input type="checkbox" id="checkbox2">
+                <label for="checkbox2">동의종료D-7</label>
+              </div>
+            </li>
+            <li>
+              <div class="checkBoxSet bgType">
+                <input type="checkbox" id="checkbox3">
+                <label for="checkbox3">보장분석</label>
+              </div>
+            </li>
+          </ul>
         </div>
-        <ul class="sortingList">
-          <li>
-            <div class="checkBoxSet bgType">
-              <input type="checkbox" id="checkbox1">
-              <label for="checkbox1">즐겨찾기</label>
-            </div>
-          </li>
-          <li>
-            <div class="checkBoxSet bgType">
-              <input type="checkbox" id="checkbox2">
-              <label for="checkbox2">동의종료D-7</label>
-            </div>
-          </li>
-          <li>
-            <div class="checkBoxSet bgType">
-              <input type="checkbox" id="checkbox3">
-              <label for="checkbox3">보장분석</label>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <!-- selectMemberBox : s-->
-      <div class="selectMemberBox">
-        <ul class="info">
-          <li class="name">독고영재</li>
-          <li class="text">
-            <span class="bday">1981.05.31</span>
-            <span class="sex">남</span>
-            <span class="age">32세</span>
-          </li>
-          <li class="btnArea">
-            <a href="#" class="btnIcon favorites">즐겨찾기</a>
-            <a href="#" class="btnIcon statistics">통계</a>
-            <a href="#" class="btnIcon sms">문자</a>
-          </li>
-          <li class="date">
-            <div class="infoGrid">
-              <ul>
-                <li class="title">상령일자</li>
-                <li class="text">D-45</li>
-              </ul>
-              <ul>
-                <li class="title">동의종료</li>
-                <li class="text">11-30</li>
-              </ul>
-              <ul>
-                <li class="title">보장분석</li>
-                <li class="text">2019.10.10</li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <!-- selectMemberBox : e-->
-      <!-- memberListArea : s-->
-      <div class="memberListArea">
-        <div class="total">고객 <strong>163</strong>명</div>
-        <div class="memberList">
-          <ul>
-            <li>
-              <div class="item">
-                <button class="name">홍길동</button>
-                <ul class="info">
-                  <li class="text">
-                    <span class="bday">1981.05.31</span>
-                    <span class="sex">남</span>
-                    <span class="age">32세</span>
-                  </li>
-                  <li class="btnArea">
-                    <a href="#" class="btnIcon favorites">즐겨찾기</a>
-                    <a href="#" class="btnIcon statistics">통계</a>
-                    <a href="#" class="btnIcon sms">문자</a>
-                  </li>
-                  <li class="date">
-                    <div class="infoGrid">
-                      <ul>
-                        <li class="title">상령일자</li>
-                        <li class="text">D-45</li>
-                      </ul>
-                      <ul>
-                        <li class="title">동의종료</li>
-                        <li class="text">11-30</li>
-                      </ul>
-                      <ul>
-                        <li class="title">보장분석</li>
-                        <li class="text">2019.10.10</li>
-                      </ul>
-                    </div>
-                  </li>
-                </ul>
-              </div>
+        <!-- selectMemberBox : s-->
+        <div class="selectMemberBox">
+          <ul class="info">
+            <li class="name">독고영재</li>
+            <li class="text">
+              <span class="bday">1981.05.31</span>
+              <span class="sex">남</span>
+              <span class="age">32세</span>
             </li>
-            <li>
-              <div class="item">
-                <button class="name">홍길동</button>
-                <ul class="info">
-                  <li class="text">
-                    <span class="bday">1981.05.31</span>
-                    <span class="sex">남</span>
-                    <span class="age">32세</span>
-                  </li>
-                  <li class="btnArea">
-                    <a href="#" class="btnIcon favorites">즐겨찾기</a>
-                    <a href="#" class="btnIcon statistics">통계</a>
-                    <a href="#" class="btnIcon sms">문자</a>
-                  </li>
-                  <li class="date">
-                    <div class="infoGrid">
-                      <ul>
-                        <li class="title">상령일자</li>
-                        <li class="text">D-45</li>
-                      </ul>
-                      <ul>
-                        <li class="title">동의종료</li>
-                        <li class="text">11-30</li>
-                      </ul>
-                      <ul>
-                        <li class="title">보장분석</li>
-                        <li class="text">2019.10.10</li>
-                      </ul>
-                    </div>
-                  </li>
-                </ul>
-              </div>
+            <li class="btnArea">
+              <a href="#" class="btnIcon favorites on">즐겨찾기</a>
+              <a href="#" class="btnIcon statistics">통계</a>
+              <a href="#" class="btnIcon sms">문자</a>
             </li>
-            <li>
-              <div class="item">
-                <button class="name">홍길동</button>
-                <ul class="info">
-                  <li class="text">
-                    <span class="bday">1981.05.31</span>
-                    <span class="sex">남</span>
-                    <span class="age">32세</span>
-                  </li>
-                  <li class="btnArea">
-                    <a href="#" class="btnIcon favorites">즐겨찾기</a>
-                    <a href="#" class="btnIcon statistics">통계</a>
-                    <a href="#" class="btnIcon sms">문자</a>
-                  </li>
-                  <li class="date">
-                    <div class="infoGrid">
-                      <ul>
-                        <li class="title">상령일자</li>
-                        <li class="text">D-45</li>
-                      </ul>
-                      <ul>
-                        <li class="title">동의종료</li>
-                        <li class="text">11-30</li>
-                      </ul>
-                      <ul>
-                        <li class="title">보장분석</li>
-                        <li class="text">2019.10.10</li>
-                      </ul>
-                    </div>
-                  </li>
+            <li class="date">
+              <div class="infoGrid small">
+                <ul>
+                  <li class="title">상령일자</li>
+                  <li class="text">D-45</li>
+                </ul>
+                <ul>
+                  <li class="title">동의종료</li>
+                  <li class="text">11-30</li>
+                </ul>
+                <ul>
+                  <li class="title">보장분석</li>
+                  <li class="text">2019.10.10</li>
                 </ul>
               </div>
             </li>
           </ul>
         </div>
+        <!-- selectMemberBox : e-->
+        <!-- memberListArea : s-->
+        <div class="memberListArea">
+          <div class="total">고객 <strong>163</strong>명</div>
+          <div class="memberList">
+            <ul class="list">
+              <li>
+                <div class="item">
+                  <button class="name">홍길동</button>
+                  <ul class="info">
+                    <li class="text">
+                      <span class="bday">1981.05.31</span>
+                      <span class="sex">남</span>
+                      <span class="age">32세</span>
+                    </li>
+                    <li class="btnArea">
+                      <a href="#" class="btnIcon favorites">즐겨찾기</a>
+                      <a href="#" class="btnIcon statistics">통계</a>
+                      <a href="#" class="btnIcon sms">문자</a>
+                    </li>
+                    <li class="date">
+                      <div class="infoGrid small">
+                        <ul>
+                          <li class="title">상령일자</li>
+                          <li class="text">D-45</li>
+                        </ul>
+                        <ul>
+                          <li class="title">동의종료</li>
+                          <li class="text">11-30</li>
+                        </ul>
+                        <ul>
+                          <li class="title">보장분석</li>
+                          <li class="text">2019.10.10</li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div class="item">
+                  <button class="name">홍길동</button>
+                  <ul class="info">
+                    <li class="text">
+                      <span class="bday">1981.05.31</span>
+                      <span class="sex">남</span>
+                      <span class="age">32세</span>
+                    </li>
+                    <li class="btnArea">
+                      <a href="#" class="btnIcon favorites">즐겨찾기</a>
+                      <a href="#" class="btnIcon statistics">통계</a>
+                      <a href="#" class="btnIcon sms">문자</a>
+                    </li>
+                    <li class="date">
+                      <div class="infoGrid small">
+                        <ul>
+                          <li class="title">상령일자</li>
+                          <li class="text">D-45</li>
+                        </ul>
+                        <ul>
+                          <li class="title">동의종료</li>
+                          <li class="text">11-30</li>
+                        </ul>
+                        <ul>
+                          <li class="title">보장분석</li>
+                          <li class="text">2019.10.10</li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div class="item">
+                  <button class="name">홍길동</button>
+                  <ul class="info">
+                    <li class="text">
+                      <span class="bday">1981.05.31</span>
+                      <span class="sex">남</span>
+                      <span class="age">32세</span>
+                    </li>
+                    <li class="btnArea">
+                      <a href="#" class="btnIcon favorites">즐겨찾기</a>
+                      <a href="#" class="btnIcon statistics">통계</a>
+                      <a href="#" class="btnIcon sms">문자</a>
+                    </li>
+                    <li class="date">
+                      <div class="infoGrid small">
+                        <ul>
+                          <li class="title">상령일자</li>
+                          <li class="text">D-45</li>
+                        </ul>
+                        <ul>
+                          <li class="title">동의종료</li>
+                          <li class="text">11-30</li>
+                        </ul>
+                        <ul>
+                          <li class="title">보장분석</li>
+                          <li class="text">2019.10.10</li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div class="item">
+                  <button class="name">홍길동</button>
+                  <ul class="info">
+                    <li class="text">
+                      <span class="bday">1981.05.31</span>
+                      <span class="sex">남</span>
+                      <span class="age">32세</span>
+                    </li>
+                    <li class="btnArea">
+                      <a href="#" class="btnIcon favorites">즐겨찾기</a>
+                      <a href="#" class="btnIcon statistics">통계</a>
+                      <a href="#" class="btnIcon sms">문자</a>
+                    </li>
+                    <li class="date">
+                      <div class="infoGrid small">
+                        <ul>
+                          <li class="title">상령일자</li>
+                          <li class="text">D-45</li>
+                        </ul>
+                        <ul>
+                          <li class="title">동의종료</li>
+                          <li class="text">11-30</li>
+                        </ul>
+                        <ul>
+                          <li class="title">보장분석</li>
+                          <li class="text">2019.10.10</li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div class="item">
+                  <button class="name">홍길동</button>
+                  <ul class="info">
+                    <li class="text">
+                      <span class="bday">1981.05.31</span>
+                      <span class="sex">남</span>
+                      <span class="age">32세</span>
+                    </li>
+                    <li class="btnArea">
+                      <a href="#" class="btnIcon favorites">즐겨찾기</a>
+                      <a href="#" class="btnIcon statistics">통계</a>
+                      <a href="#" class="btnIcon sms">문자</a>
+                    </li>
+                    <li class="date">
+                      <div class="infoGrid small">
+                        <ul>
+                          <li class="title">상령일자</li>
+                          <li class="text">D-45</li>
+                        </ul>
+                        <ul>
+                          <li class="title">동의종료</li>
+                          <li class="text">11-30</li>
+                        </ul>
+                        <ul>
+                          <li class="title">보장분석</li>
+                          <li class="text">2019.10.10</li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div class="item">
+                  <button class="name">홍길동</button>
+                  <ul class="info">
+                    <li class="text">
+                      <span class="bday">1981.05.31</span>
+                      <span class="sex">남</span>
+                      <span class="age">32세</span>
+                    </li>
+                    <li class="btnArea">
+                      <a href="#" class="btnIcon favorites">즐겨찾기</a>
+                      <a href="#" class="btnIcon statistics">통계</a>
+                      <a href="#" class="btnIcon sms">문자</a>
+                    </li>
+                    <li class="date">
+                      <div class="infoGrid small">
+                        <ul>
+                          <li class="title">상령일자</li>
+                          <li class="text">D-45</li>
+                        </ul>
+                        <ul>
+                          <li class="title">동의종료</li>
+                          <li class="text">11-30</li>
+                        </ul>
+                        <ul>
+                          <li class="title">보장분석</li>
+                          <li class="text">2019.10.10</li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div class="item">
+                  <button class="name">홍길동</button>
+                  <ul class="info">
+                    <li class="text">
+                      <span class="bday">1981.05.31</span>
+                      <span class="sex">남</span>
+                      <span class="age">32세</span>
+                    </li>
+                    <li class="btnArea">
+                      <a href="#" class="btnIcon favorites">즐겨찾기</a>
+                      <a href="#" class="btnIcon statistics">통계</a>
+                      <a href="#" class="btnIcon sms">문자</a>
+                    </li>
+                    <li class="date">
+                      <div class="infoGrid small">
+                        <ul>
+                          <li class="title">상령일자</li>
+                          <li class="text">D-45</li>
+                        </ul>
+                        <ul>
+                          <li class="title">동의종료</li>
+                          <li class="text">11-30</li>
+                        </ul>
+                        <ul>
+                          <li class="title">보장분석</li>
+                          <li class="text">2019.10.10</li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div class="item">
+                  <button class="name">홍길동</button>
+                  <ul class="info">
+                    <li class="text">
+                      <span class="bday">1981.05.31</span>
+                      <span class="sex">남</span>
+                      <span class="age">32세</span>
+                    </li>
+                    <li class="btnArea">
+                      <a href="#" class="btnIcon favorites">즐겨찾기</a>
+                      <a href="#" class="btnIcon statistics">통계</a>
+                      <a href="#" class="btnIcon sms">문자</a>
+                    </li>
+                    <li class="date">
+                      <div class="infoGrid small">
+                        <ul>
+                          <li class="title">상령일자</li>
+                          <li class="text">D-45</li>
+                        </ul>
+                        <ul>
+                          <li class="title">동의종료</li>
+                          <li class="text">11-30</li>
+                        </ul>
+                        <ul>
+                          <li class="title">보장분석</li>
+                          <li class="text">2019.10.10</li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div class="item">
+                  <button class="name">홍길동</button>
+                  <ul class="info">
+                    <li class="text">
+                      <span class="bday">1981.05.31</span>
+                      <span class="sex">남</span>
+                      <span class="age">32세</span>
+                    </li>
+                    <li class="btnArea">
+                      <a href="#" class="btnIcon favorites">즐겨찾기</a>
+                      <a href="#" class="btnIcon statistics">통계</a>
+                      <a href="#" class="btnIcon sms">문자</a>
+                    </li>
+                    <li class="date">
+                      <div class="infoGrid small">
+                        <ul>
+                          <li class="title">상령일자</li>
+                          <li class="text">D-45</li>
+                        </ul>
+                        <ul>
+                          <li class="title">동의종료</li>
+                          <li class="text">11-30</li>
+                        </ul>
+                        <ul>
+                          <li class="title">보장분석</li>
+                          <li class="text">2019.10.10</li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div class="item">
+                  <button class="name">홍길동</button>
+                  <ul class="info">
+                    <li class="text">
+                      <span class="bday">1981.05.31</span>
+                      <span class="sex">남</span>
+                      <span class="age">32세</span>
+                    </li>
+                    <li class="btnArea">
+                      <a href="#" class="btnIcon favorites">즐겨찾기</a>
+                      <a href="#" class="btnIcon statistics">통계</a>
+                      <a href="#" class="btnIcon sms">문자</a>
+                    </li>
+                    <li class="date">
+                      <div class="infoGrid small">
+                        <ul>
+                          <li class="title">상령일자</li>
+                          <li class="text">D-45</li>
+                        </ul>
+                        <ul>
+                          <li class="title">동의종료</li>
+                          <li class="text">11-30</li>
+                        </ul>
+                        <ul>
+                          <li class="title">보장분석</li>
+                          <li class="text">2019.10.10</li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- memberListArea : e-->
       </div>
-      <!-- memberListArea : e-->
+      <!-- infoArea : e -->
+      <!-- menuArea : s -->
+      <div class="menuArea">
+        <div class="menuSet">
+          <ul>
+            <li><a href="#" class="menu menu01 on"><span>전체현황</span></a></li>
+            <li><a href="#" class="menu menu02"><span>가입현황</span></a></li>
+            <li><a href="#" class="menu menu03"><span>진단/상세</span></a></li>
+            <li><a href="#" class="menu menu04"><span>컨설팅</span></a></li>
+            <li><a href="#" class="menu menu05"><span>그래프</span></a></li>
+          </ul>
+        </div>
+        <div class="bottomPosition">
+          <ul class="utilMenu">
+            <li><a href="#" class="btn">고객등록</a></li>
+            <li><a href="#" class="btn">권장금액 · 담보군 설정</a></li>
+            <li><a href="#" class="btn">가계약조회</a></li>
+          </ul>
+          <div class="btnArea">
+            <a href="#" class="btnText sizeBig fillGray"><span>미리보기</span></a>
+            <a href="#" class="btnText sizeBig fillRed"><span>출력하기</span></a>
+          </div>
+        </div>
+      </div>
+      <!-- menuArea : e -->
     </div>
     <!-- leftArea : e -->
     <!-- contentArea : s -->

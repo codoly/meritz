@@ -27,4 +27,19 @@ $(function () {
     var popOption = "width=1300px, height=920px, resizable=no, location=no, top=0px, left=0px, scrollable=no;"
     window.open(popUrl, "index", popOption);
   });
+
+  //layout sub 좌측 하단 멤버 리스트
+  $(document).on("click", ".memberList .list .item .name", function () {
+    var target = $(this).closest(".item");
+    var targetList = $(this).closest("ul").find("> li");
+    if (!target.hasClass("on")){
+      targetList.find(".item").removeClass("on");
+      targetList.find(".item .info").slideUp();
+      target.addClass("on");
+      target.find(".info").slideDown();
+    }else{
+      target.removeClass("on");
+      target.find(".info").slideUp();
+    }
+  })
 })

@@ -496,3 +496,31 @@ input[type=text]::-ms-clear {
     }
   }
 }
+/*infoGrid*/
+.infoGrid{
+  ul{
+    @include clearline;
+    li{
+      float: left;
+      &.title{
+        width: 68px;
+      }
+      &.text{
+        color: $colorPoint1;
+      }
+    }
+  }
+  &.small{
+    ul{
+      margin-bottom: 3px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+      li{
+        letter-spacing: -0.05em;
+        font-size: $_14px;
+        line-height: $_20px;
+      }
+    }
+  }
+}
