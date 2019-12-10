@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>컨설팅</title>
+  <link rel="stylesheet" href="/asset/css/style.css">
+  <script src="/asset/js/lib/jquery-3.4.1.min.js"></script>
+  <script src="/asset/js/lib/jquery.mCustomScrollbar.min.js"></script>
+  <script src="/asset/js/lib/jquery.mousewheel-3.0.6.min.js"></script>
+  <script src="/asset/js/lib/jquery.nice-select.min.js"></script>
+  <script src="/asset/js/lib/jquery.placeholder.min.js"></script>
+  <script src="/asset/js/default.js"></script>
+  <script>
+    $(function () {
+      $(".tableScroll").mCustomScrollbar();
+    })
+  </script>
+</head>
+<body style="background: rgba(0,0,0,0.5);">
+<!-- layerPopWrap : s -->
+<div class="layerPopWrap popConditionalContract">
+  <div class="layerPopHeader">
+    <h2>가계약 조회 리스트</h2>
+  </div>
+  <div class="layerPopContent">
+    <div class="searchCondition">
+      <ul class="sortingList">
+        <li>
+          <div class="radioSet">
+            <input type="radio" id="radio1">
+            <label for="radio1">당일</label>
+          </div>
+        </li>
+        <li>
+          <div class="radioSet">
+            <input type="radio" id="radio2">
+            <label for="radio2">1주일</label>
+          </div>
+        </li>
+        <li>
+          <div class="radioSet">
+            <input type="radio" id="radio3">
+            <label for="radio3">1개월</label>
+          </div>
+        </li>
+        <li>
+          <div class="radioSet noLabel">
+            <input type="radio" id="radio4">
+            <label for="radio4">당월</label>
+          </div>
+        </li>
+      </ul>
+      <div>2019.09.25 ~2019.10.25</div>
+    </div>
+    <div class="btnArea">          
+      <a href="#" class="btnText fillRed"><span>확인</span></a>
+    </div>
+  </div>
+  <a href="#" class="btnClose white"><span>닫기</span></a>
+</div>
+<!-- layerPopWrap : e -->
+</body>
+</html>
