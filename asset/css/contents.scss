@@ -1,3 +1,7 @@
+.alignC{
+  text-align: center;
+}
+
 /* 테이블형 리스트 */
 .listTableType{
   .contentScroll{
@@ -129,9 +133,10 @@
 .customerStateInfo{
   position: relative;
   overflow: hidden;
-  padding:10px 20px 30px;
+  padding:37px 0px 30px;
   border-bottom:1px solid #cad2db;
   margin-bottom: 40px;
+  width:782px;
   >div{
     float: left;
     position: relative;
@@ -205,7 +210,10 @@
 }
 .insuranceListBox{
   .contentScroll{
-    height: 724px !important;
+    height: 756px !important;
+  }
+  .noteBox{
+    padding-bottom:30px;
   }
 }
 .insuranceList{
@@ -287,6 +295,7 @@
         color:#fd795c;
         font-size:$_14px;
         margin-right:10px;
+        border-radius: 5px;
       }
     }
   }
@@ -376,6 +385,278 @@
       color:$colorLevel4;      
       line-height: 20px;
       margin-bottom:5px;
+    }
+  }
+}
+
+/* layerPopWrap */
+.layerPopWrap{
+  position: absolute;
+  top:0;
+  left:0;
+  z-index: 10;
+  background: #fff;
+  border-radius: 10px;
+  .layerPopHeader{
+    height:58px;
+    padding-top:18px;
+    border-bottom:1px solid $lineColor3;
+    text-align: center;
+    font-size: $_22px;
+  }
+  .layerPopContent{
+    padding:0 40px 30px;
+    .tabWrap{
+      margin:0 -40px;
+    }
+  }
+  .btnClose{
+    position: absolute;
+    top:10px;
+    right: 23px;
+  } 
+  .noteBox{
+    border-top:none;
+    padding-top:20px;
+    dd{
+      font-family: 'dotum';
+      font-size: $_12px;
+    }
+  } 
+}
+.popInsuranceDetail{
+  width:782px;
+  .insuranceDetail{
+    overflow: hidden;
+    height: 200px;
+    border-bottom: 1px solid $lineColor3;
+    margin:0 -40px;
+    .insuranceInfo{
+      position: relative;
+      float: left;
+      width: 490px;
+      height: 100%;
+      padding:34px 30px 0 40px;
+      border-right:1px solid $lineColor3;
+      .logo{
+        margin-bottom: 5px;
+      }
+      .tit{
+        font-size:$_20px;
+        color:#000;  
+        margin-bottom:5px;      
+      }
+      .number{
+        color:$colorLevel4;
+        font-size:$_16px;
+        margin-bottom:10px;
+        line-height: 1;
+        .tit{
+          font-size:$_14px;
+          color:$colorLevel2;
+          margin-right:6px;
+        }
+      }
+      .date{
+        font-size:$_16px;
+        color:$colorLevel4;
+        .state{
+          display: inline-block;
+          background: #ffeeed;
+          width: 47px;
+          height: 22px;
+          line-height: 20px;
+          text-align: center;
+          color: #fd795c;
+          font-size: 0.875rem;
+          margin-right: 10px;
+          border-radius: 5px;
+        }
+      }
+      .payment{
+        position: absolute;
+        bottom: 48px;
+        right:30px;
+        letter-spacing: -0.075em;        
+        text-align: right;
+        .tit{
+          font-size:$_14px;
+          color:$colorLevel5;
+        }
+        .price{
+          font-weight: 500;
+          font-size:$_20px;
+          color:$colorLevel2;
+          strong{
+            font-weight: 600;
+            font-size:$_22px;
+          }
+        }
+      }
+    }
+    .paymentInfo{
+      float: left;
+      width: 292px;
+      height: 100%;
+      padding:22px 50px 0 30px;
+      .countBarBox{
+        padding-top:37px; 
+        margin-bottom: 10px;
+        .barRail{
+          position: relative;
+          background: #f0f3f8;
+          border-radius:5px;
+          .bar{
+            height: 6px;
+            background: #02a7c5;
+            border-radius:5px;
+            position: relative;
+          }
+          .percent{
+            position: absolute;
+            right: 0;
+            bottom:17px;
+            background: #02a7c5;
+            color:#fff;
+            font-weight: 600;
+            border-radius: 15px;
+            width:50px;
+            height: 27px;
+            margin-right: -25px;
+            line-height: 27px;
+            text-align: center;
+            &:after{
+              position: absolute;
+              bottom: -4px;
+              left:50%;
+              margin-left:-4px;
+              display: block;
+              content:"";
+              border-left: 4px solid transparent;
+              border-right: 4px solid transparent;
+              border-top: 4px solid #02a7c5;
+            }
+          }
+        }
+        .now{
+          font-size: $_14px;
+          color:#02a7c5;
+        }
+        .last{
+          float: right;
+          font-size: $_14px;
+          color:$colorLevel4;
+        }
+      }
+      >ul{
+        margin-bottom:5px;
+        li{          
+          overflow: hidden;
+          .tit{
+            float: left;
+            font-size:$_14px;
+            color:$colorLevel5;
+            letter-spacing: -0.075em;
+          }
+          .txt{
+            float: right;
+            font-size:$_16px;
+            font-weight: 500;
+            color:$colorLevel4;
+            &.complete{
+              color:$colorLevel2;
+            }
+            strong{
+              font-weight: 600;
+            }
+          }
+        }
+      }
+      .text{
+        font-size: $_12px;
+        font-family: 'dotum';
+        color:$colorLevel4;
+        letter-spacing:-0.06em;
+      }
+    }
+  }
+  .tabWrap{
+    padding:30px 15px 0px;
+    .tabList{    
+      width:700px;
+      margin:0 auto 20px;
+    }
+  }
+  .basicType{
+    width:700px;
+    margin:0 auto;
+  }
+  .tableScroll{
+    height: 370px;
+    .basicType{
+      thead{
+        position: absolute;
+        left:-9999px;
+      }
+    }
+    .mCSB_inside > .mCSB_container {
+      margin-right: 0px;
+    }
+  }
+}
+
+/* tabWrap */
+.tabWrap{
+  .tabList{
+    overflow: hidden;
+    li{
+      float: left;
+      width:50%;
+      .tab{
+        display: block;
+        background: #fafafa;
+        color: $colorLevel2;
+        font-size: $_16px;
+        height:44px;
+        line-height:44px;
+        text-align: center;
+        border:1px solid $lineColor3;
+      }
+      &.on .tab{
+        background: #3c444d;
+        color:#fff;
+        border:1px solid #3c444d;
+      }
+    }
+  }
+}
+
+/* basicType */
+.basicType{
+  thead{
+    th{
+      text-align: center;
+      font-size: $_14px;
+      padding:10px; 
+      color:$colorLevel2;
+      border-bottom:1px solid $lineColor1;
+    }
+  }
+  tbody{
+    th{
+      padding:9px 15px;
+      font-size: $_14px;
+      color:$colorLevel4;
+      letter-spacing: -0.05em;
+      border-bottom:1px solid #ededf4;
+      font-weight: 700;
+    }
+    td{
+      padding:9px 15px;
+      font-size: $_14px;
+      color:$colorLevel4;
+      letter-spacing: -0.05em;
+      border-bottom:1px solid #ededf4;
     }
   }
 }
