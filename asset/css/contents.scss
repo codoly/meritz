@@ -486,15 +486,20 @@
   border-radius: 10px;
   .layerPopHeader{
     height:58px;
-    padding-top:18px;
+    padding-top:15px;
     border-bottom:1px solid $lineColor3;
     text-align: center;
     font-size: $_22px;
+    .dot{
+      vertical-align: top;
+      display: inline-block;
+      margin:-4px 4px 0;
+    }
   }
   .layerPopContent{
     padding:0 40px 30px;
-    .tabWrap{
-      margin:0 -40px;
+    .tableScroll{
+      margin: 0 -15px 0 0;
     }
   }
   .btnClose{
@@ -512,6 +517,53 @@
   } 
   .btnArea{
     text-align: center;
+  }
+}
+.popSmall{
+  width: 380px;
+  height: 255px;
+  .centerBox{
+    display: table;
+    text-align: center;
+    width: 100%;
+    height: 127px;
+    >div{
+      display: table-cell;
+      vertical-align: middle;
+      font-size:$_20px;
+      letter-spacing: -0.075em;
+      color: $colorLevel2;
+    }
+    .inputSet{
+      margin:0 5px;
+      input{
+        width: 100%;
+        padding: 0 0 0 15px;
+        background: transparent;
+        line-height: 38px;
+        height: 38px;
+        outline: none;
+      }
+      &.placeholder {
+        color: $colorLevel5;
+      }
+  
+      &::placeholder {
+        color: $colorLevel5;
+      }
+  
+      &::-ms-input-placeholder {
+        color: $colorLevel5;
+      }
+  
+      &::-webkit-input-placeholder {
+        color: $colorLevel5;
+      }
+  
+      &::-moz-placeholder {
+        color: $colorLevel5;
+      }
+    }
   }
 }
 .popInsuranceDetail{
@@ -671,7 +723,7 @@
     }
   }
   .tabWrap{
-    padding:30px 15px 0px;
+    padding:30px 0px 0px;
     .tabList{    
       width:700px;
       margin:0 auto 20px;
@@ -689,9 +741,51 @@
         left:-9999px;
       }
     }
-    .mCSB_inside > .mCSB_container {
-      margin-right: 0px;
+  }
+}
+.popSecuritySet{
+  width:660px;
+  .layerPopContent{
+    padding:20px 40px 30px;
+  }
+  .tableScroll{
+    height: 535px;
+    .basicType{
+      thead{
+        position: absolute;
+        left:-9999px;
+      }
     }
+  }
+  .basicType{
+    width:580px;
+    margin:0 auto;
+    th,td{
+      vertical-align: middle;
+    }
+    th{
+      .select{
+        position: relative;
+        &::after{
+          display: inline-block;
+          content: "";
+          width:16px;
+          height:12px;
+          background: url(/asset/images/common/icon_checked.png) no-repeat 0 0;
+          position: absolute;
+          right:-20px;
+          top:3px;
+        }
+      }
+    }
+    .checkBoxSet{
+      line-height: 1;
+    }
+  }
+  .btnArea{
+    margin-top:20px;
+    padding-top:20px;
+    border-top:1px solid $lineColor1
   }
 }
 
@@ -727,22 +821,22 @@
     th{
       text-align: center;
       font-size: $_14px;
-      padding:10px; 
+      padding:9px 10px;
       color:$colorLevel2;
       border-bottom:1px solid $lineColor1;
     }
   }
   tbody{
     th{
-      padding:9px 15px;
+      padding:9px 10px;
       font-size: $_14px;
       color:$colorLevel4;
       letter-spacing: -0.05em;
       border-bottom:1px solid #ededf4;
-      font-weight: 700;
+      font-weight: 500;
     }
     td{
-      padding:9px 15px;
+      padding:9px 10px;
       font-size: $_14px;
       color:$colorLevel4;
       letter-spacing: -0.05em;
