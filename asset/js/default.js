@@ -43,3 +43,29 @@ $(function () {
     }
   })
 })
+
+function counterStart(){
+  $('.count').each(function () {
+    $(this).prop('Counter',0).animate({
+      Counter: $(this).text()
+    }, {
+      duration: 1000,
+      easing: 'swing',
+      step: function (now) {
+        $(this).text(Math.ceil(now));
+      }
+    });
+  });
+}
+
+//layerpopup
+function layerPopBoxOpen(target){
+  $("#"+target).show();
+  setTimeout(function(){
+    $("#"+target).addClass("open");
+  },10)
+
+}
+function layerPopBoxClose(target){
+  $("#"+target).hide().removeClass("open");;
+}
