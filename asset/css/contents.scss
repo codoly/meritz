@@ -132,87 +132,113 @@
 /* 가입현황 */
 .customerStateInfo{
   position: relative;
-  overflow: hidden;
-  padding:37px 0px 30px;
   border-bottom:1px solid #cad2db;
   margin-bottom: 40px;
   width:782px;
-  >div{
-    float: left;
-    position: relative;
-    &:after{
-      display: block;
-      content:"";
-      width: 1px;
-      height: 62px;
-      background: #dfe3eb;
-      position: absolute;
-      top:0;
-      right:0;
-    }
-  }  
-  .customer{
-    width:215px;
-    font-size:$_22px;
-    color:$colorLevel2;
-    line-height: 30px;
-    padding:0 20px;
-    margin-top: -2px;
-    strong{
-      font-weight: 700;
-    }
-    &:after{
-      display:none;
-    }
-  }
-  .contract{
-    width:95px;  
-  }
-  .payment{
-    width:215px;
-    padding:0 0 0 40px;
-  }
-  .state{
-    padding:0 0 0 30px;
-    &:after{
-      display:none;
-    }
-    dd>span{
-      margin-right:6px;
-    }
-    .shortage{
-      color:#fd5854;
-    }
-    .enough{
-      color:#01a7c4;
-    }
-  }
-  dl{
-    dt{
-      font-size:$_14px;
-      color:$colorLevel4;
-      line-height: 1;
-      margin: 6px 0 12px;
-    }
-    dd{
+  .inner{   
+    padding:37px 0px 30px;
+    overflow: hidden;
+    >div{
+      float: left;
+      position: relative;
+      &:after{
+        display: block;
+        content:"";
+        width: 1px;
+        height: 62px;
+        background: #dfe3eb;
+        position: absolute;
+        top:0;
+        right:0;
+      }
+    } 
+    .customer{
+      width:215px;
+      font-size:$_22px;
       color:$colorLevel2;
+      line-height: 30px;
+      padding:0 20px;
+      margin-top: -2px;
       strong{
-        font-size:$_26px;
         font-weight: 700;
       }
+      &:after{
+        display:none;
+      }
     }
+    .contract{
+      width:95px;  
+    }
+    .payment{
+      width:215px;
+      padding:0 0 0 40px;
+    }
+    .state{
+      padding:0 0 0 30px;
+      &:after{
+        display:none;
+      }
+      dd>span{
+        margin-right:6px;
+      }
+      .shortage{
+        color:#fd5854;
+      }
+      .enough{
+        color:#01a7c4;
+      }
+    }
+    dl{
+      dt{
+        font-size:$_14px;
+        color:$colorLevel4;
+        line-height: 1;
+        margin: 6px 0 12px;
+      }
+      dd{
+        color:$colorLevel2;
+        strong{
+          font-size:$_26px;
+          font-weight: 700;
+        }
+      }
+    } 
   }
-  .btnClose{
-    position: absolute;
-    top:0;
-    right:0;
+  .notice{
+    padding:0 20px 15px;
+    position: relative;
+    line-height: 1;
+    color:$colorLevel2;
+    font-size:$_16px;
+    &::before{
+      display: block;
+      content: "";
+      position: absolute;
+      top: -15px;
+      left: 20px;
+      width: 36px;
+      height: 3px;      
+      border-radius: 3px;
+      background: #01a7c4;
+    }
+    .btnText{
+      background: #fff;
+      margin-left: 15px;
+      letter-spacing: -0.075em;
+    }
   }
 }
 .insuranceListBox{
   .contentScroll{
     height: 756px !important;
   }
+  &.consulting{
+    .contentScroll{
+      height: 713px !important;
+    }
+  }
   .noteBox{
+    width: 782px;
     padding-bottom:30px;
   }
 }
@@ -240,12 +266,72 @@
       margin-left:10px;
     }
   }
+  &.checkList{
+    a.insurance{
+      &:before{
+        display: none;
+      }
+      &:after{
+        display: block;
+        content: "";
+        position: absolute;
+        top:0;
+        left:0;
+        width:41px;
+        height: 41px;
+        background: url(../images/common/checkbox02_off.png) no-repeat 0 0;
+      }
+      &.checked{
+        &:before{
+          display: block;
+          content: "";
+          width:calc(100% - 4px);
+          height:calc(100% - 4px);          
+          border:2px solid $colorButtonRed;
+          border-radius: 8px;
+          position: absolute;
+          top:0;
+          left:0;
+          box-shadow:none;
+        }
+        &:after{
+          background: url(../images/common/checkbox02_on.png) no-repeat 0 0;
+        }
+      }
+    }
+  }
+  .btnContractAdd{
+    width: 782px;
+    height: 130px;
+    position: relative;
+    margin-bottom: 10px;
+    display: block;
+    padding:28px 0 25px;
+    font-size:$_20px;
+    color:$colorLevel2;
+    letter-spacing: -0.075em;
+    border:1px solid #ededf4;
+    text-align: center;
+    background: #fff;
+    border-radius: 10px;
+    &:before{
+      display: block;
+      content:"";
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 1px solid #e0e4eb;
+      margin: 0 auto 12px;
+      background: url(/asset/images/common/icon_add.png) no-repeat center center;
+    }
+  }
 }
 .insurance{
   width:782px;
   height: 130px;   
   position: relative;
   margin-bottom:10px;
+  display: block;
   &:hover:before{
     display: block;
     content: "";
@@ -366,8 +452,9 @@
       font-size:$_20px;
       color:$colorLevel2;
     }
-  }
+  }  
 }
+
 
 /* 유의사항 */
 .noteBox{
@@ -423,6 +510,9 @@
       font-size: $_12px;
     }
   } 
+  .btnArea{
+    text-align: center;
+  }
 }
 .popInsuranceDetail{
   width:782px;
