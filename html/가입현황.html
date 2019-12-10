@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>submain</title>
+  <link rel="stylesheet" href="/asset/css/style.css">
+  <script src="/asset/js/lib/jquery-3.4.1.min.js"></script>
+  <script src="/asset/js/lib/jquery.mCustomScrollbar.min.js"></script>
+  <script src="/asset/js/lib/jquery.mousewheel-3.0.6.min.js"></script>
+  <script src="/asset/js/lib/jquery.nice-select.min.js"></script>
+  <script src="/asset/js/lib/jquery.placeholder.min.js"></script>
+  <script src="/asset/js/default.js"></script>
+  <script>
+    $(function () {
+      $(".contentScroll").mCustomScrollbar();
+      $(".memberList").mCustomScrollbar();
+    })
+  </script>
+</head>
+<body>
+<div class="wrap sub">
+  <div class="contentWrap">
+    <!-- leftArea : s -->
+    <div class="leftArea">
+      <!-- infoArea : s -->
+      <div class="infoArea">
+        <div class="searchArea"><input type="text"><a href="#" class="btnSearch">검색</a></div>
+        <div class="sorting">
+          <div class="selectBox bgType">
+            <select name="" id="">
+              <option value="1">최근 동의 순</option>
+              <option value="1">동의 종료 순</option>
+              <option value="1">최근 등록 순</option>
+              <option value="1">최근 분석 순</option>
+              <option value="1">최근 상령일 순</option>
+            </select>
+          </div>
+          <ul class="sortingList">
+            <li>
+              <div class="checkBoxSet bgType">
+                <input type="checkbox" id="checkbox1">
+                <label for="checkbox1">즐겨찾기</label>
+              </div>
+            </li>
+            <li>
+              <div class="checkBoxSet bgType">
+                <input type="checkbox" id="checkbox2">
+                <label for="checkbox2">동의종료D-7</label>
+              </div>
+            </li>
+            <li>
+              <div class="checkBoxSet bgType">
+                <input type="checkbox" id="checkbox3">
+                <label for="checkbox3">보장분석</label>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- selectMemberBox : s-->
+        <div class="selectMemberBox">
+          <ul class="info">
+            <li class="name">독고영재</li>
+            <li class="text">
+              <span class="bday">1981.05.31</span>
+              <span class="sex">남</span>
+              <span class="age">32세</span>
+            </li>
+            <li class="btnArea">
+              <a href="#" class="btnIcon favorites on">즐겨찾기</a>
+              <a href="#" class="btnIcon statistics">통계</a>
+              <a href="#" class="btnIcon sms">문자</a>
+            </li>
+            <li class="date">
+              <div class="infoGrid small">
+                <ul>
+                  <li class="title">상령일자</li>
+                  <li class="text">D-45</li>
+                </ul>
+                <ul>
+                  <li class="title">동의종료</li>
+                  <li class="text">11-30</li>
+                </ul>
+                <ul>
+                  <li class="title">보장분석</li>
+                  <li class="text">2019.10.10</li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- selectMemberBox : e-->
+        <!-- memberListArea : s-->
+        <div class="memberListArea">
+          <div class="total">고객 <strong>163</strong>명</div>
+          <div class="memberList">
+            <ul class="list">
+              <li>
+                <div class="item">
+                  <button class="name">홍길동</button>
+                  <ul class="info">
+                    <li class="text">
+                      <span class="bday">1981.05.31</span>
+                      <span class="sex">남</span>
+                      <span class="age">32세</span>
+                    </li>
+                    <li class="btnArea">
+                      <a href="#" class="btnIcon favorites">즐겨찾기</a>
+                      <a href="#" class="btnIcon statistics">통계</a>
+                      <a href="#" class="btnIcon sms">문자</a>
+                    </li>
+                    <li class="date">
+                      <div class="infoGrid small">
+                        <ul>
+                          <li class="title">상령일자</li>
+                          <li class="text">D-45</li>
+                        </ul>
+                        <ul>
+                          <li class="title">동의종료</li>
+                          <li class="text">11-30</li>
+                        </ul>
+                        <ul>
+                          <li class="title">보장분석</li>
+                          <li class="text">2019.10.10</li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div class="item">
+                  <button class="name">홍길동</button>
+                  <ul class="info">
+                    <li class="text">
+                      <span class="bday">1981.05.31</span>
+                      <span class="sex">남</span>
+                      <span class="age">32세</span>
+                    </li>
+                    <li class="btnArea">
+                      <a href="#" class="btnIcon favorites">즐겨찾기</a>
+                      <a href="#" class="btnIcon statistics">통계</a>
+                      <a href="#" class="btnIcon sms">문자</a>
+                    </li>
+                    <li class="date">
+                      <div class="infoGrid small">
+                        <ul>
+                          <li class="title">상령일자</li>
+                          <li class="text">D-45</li>
+                        </ul>
+                        <ul>
+                          <li class="title">동의종료</li>
+                          <li class="text">11-30</li>
+                        </ul>
+                        <ul>
+                          <li class="title">보장분석</li>
+                          <li class="text">2019.10.10</li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div class="item">
+                  <button class="name">홍길동</button>
+                  <ul class="info">
+                    <li class="text">
+                      <span class="bday">1981.05.31</span>
+                      <span class="sex">남</span>
+                      <span class="age">32세</span>
+                    </li>
+                    <li class="btnArea">
+                      <a href="#" class="btnIcon favorites">즐겨찾기</a>
+                      <a href="#" class="btnIcon statistics">통계</a>
+                      <a href="#" class="btnIcon sms">문자</a>
+                    </li>
+                    <li class="date">
+                      <div class="infoGrid small">
+                        <ul>
+                          <li class="title">상령일자</li>
+                          <li class="text">D-45</li>
+                        </ul>
+                        <ul>
+                          <li class="title">동의종료</li>
+                          <li class="text">11-30</li>
+                        </ul>
+                        <ul>
+                          <li class="title">보장분석</li>
+                          <li class="text">2019.10.10</li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div class="item">
+                  <button class="name">홍길동</button>
+                  <ul class="info">
+                    <li class="text">
+                      <span class="bday">1981.05.31</span>
+                      <span class="sex">남</span>
+                      <span class="age">32세</span>
+                    </li>
+                    <li class="btnArea">
+                      <a href="#" class="btnIcon favorites">즐겨찾기</a>
+                      <a href="#" class="btnIcon statistics">통계</a>
+                      <a href="#" class="btnIcon sms">문자</a>
+                    </li>
+                    <li class="date">
+                      <div class="infoGrid small">
+                        <ul>
+                          <li class="title">상령일자</li>
+                          <li class="text">D-45</li>
+                        </ul>
+                        <ul>
+                          <li class="title">동의종료</li>
+                          <li class="text">11-30</li>
+                        </ul>
+                        <ul>
+                          <li class="title">보장분석</li>
+                          <li class="text">2019.10.10</li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div class="item">
+                  <button class="name">홍길동</button>
+                  <ul class="info">
+                    <li class="text">
+                      <span class="bday">1981.05.31</span>
+                      <span class="sex">남</span>
+                      <span class="age">32세</span>
+                    </li>
+                    <li class="btnArea">
+                      <a href="#" class="btnIcon favorites">즐겨찾기</a>
+                      <a href="#" class="btnIcon statistics">통계</a>
+                      <a href="#" class="btnIcon sms">문자</a>
+                    </li>
+                    <li class="date">
+                      <div class="infoGrid small">
+                        <ul>
+                          <li class="title">상령일자</li>
+                          <li class="text">D-45</li>
+                        </ul>
+                        <ul>
+                          <li class="title">동의종료</li>
+                          <li class="text">11-30</li>
+                        </ul>
+                        <ul>
+                          <li class="title">보장분석</li>
+                          <li class="text">2019.10.10</li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div class="item">
+                  <button class="name">홍길동</button>
+                  <ul class="info">
+                    <li class="text">
+                      <span class="bday">1981.05.31</span>
+                      <span class="sex">남</span>
+                      <span class="age">32세</span>
+                    </li>
+                    <li class="btnArea">
+                      <a href="#" class="btnIcon favorites">즐겨찾기</a>
+                      <a href="#" class="btnIcon statistics">통계</a>
+                      <a href="#" class="btnIcon sms">문자</a>
+                    </li>
+                    <li class="date">
+                      <div class="infoGrid small">
+                        <ul>
+                          <li class="title">상령일자</li>
+                          <li class="text">D-45</li>
+                        </ul>
+                        <ul>
+                          <li class="title">동의종료</li>
+                          <li class="text">11-30</li>
+                        </ul>
+                        <ul>
+                          <li class="title">보장분석</li>
+                          <li class="text">2019.10.10</li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div class="item">
+                  <button class="name">홍길동</button>
+                  <ul class="info">
+                    <li class="text">
+                      <span class="bday">1981.05.31</span>
+                      <span class="sex">남</span>
+                      <span class="age">32세</span>
+                    </li>
+                    <li class="btnArea">
+                      <a href="#" class="btnIcon favorites">즐겨찾기</a>
+                      <a href="#" class="btnIcon statistics">통계</a>
+                      <a href="#" class="btnIcon sms">문자</a>
+                    </li>
+                    <li class="date">
+                      <div class="infoGrid small">
+                        <ul>
+                          <li class="title">상령일자</li>
+                          <li class="text">D-45</li>
+                        </ul>
+                        <ul>
+                          <li class="title">동의종료</li>
+                          <li class="text">11-30</li>
+                        </ul>
+                        <ul>
+                          <li class="title">보장분석</li>
+                          <li class="text">2019.10.10</li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div class="item">
+                  <button class="name">홍길동</button>
+                  <ul class="info">
+                    <li class="text">
+                      <span class="bday">1981.05.31</span>
+                      <span class="sex">남</span>
+                      <span class="age">32세</span>
+                    </li>
+                    <li class="btnArea">
+                      <a href="#" class="btnIcon favorites">즐겨찾기</a>
+                      <a href="#" class="btnIcon statistics">통계</a>
+                      <a href="#" class="btnIcon sms">문자</a>
+                    </li>
+                    <li class="date">
+                      <div class="infoGrid small">
+                        <ul>
+                          <li class="title">상령일자</li>
+                          <li class="text">D-45</li>
+                        </ul>
+                        <ul>
+                          <li class="title">동의종료</li>
+                          <li class="text">11-30</li>
+                        </ul>
+                        <ul>
+                          <li class="title">보장분석</li>
+                          <li class="text">2019.10.10</li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div class="item">
+                  <button class="name">홍길동</button>
+                  <ul class="info">
+                    <li class="text">
+                      <span class="bday">1981.05.31</span>
+                      <span class="sex">남</span>
+                      <span class="age">32세</span>
+                    </li>
+                    <li class="btnArea">
+                      <a href="#" class="btnIcon favorites">즐겨찾기</a>
+                      <a href="#" class="btnIcon statistics">통계</a>
+                      <a href="#" class="btnIcon sms">문자</a>
+                    </li>
+                    <li class="date">
+                      <div class="infoGrid small">
+                        <ul>
+                          <li class="title">상령일자</li>
+                          <li class="text">D-45</li>
+                        </ul>
+                        <ul>
+                          <li class="title">동의종료</li>
+                          <li class="text">11-30</li>
+                        </ul>
+                        <ul>
+                          <li class="title">보장분석</li>
+                          <li class="text">2019.10.10</li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div class="item">
+                  <button class="name">홍길동</button>
+                  <ul class="info">
+                    <li class="text">
+                      <span class="bday">1981.05.31</span>
+                      <span class="sex">남</span>
+                      <span class="age">32세</span>
+                    </li>
+                    <li class="btnArea">
+                      <a href="#" class="btnIcon favorites">즐겨찾기</a>
+                      <a href="#" class="btnIcon statistics">통계</a>
+                      <a href="#" class="btnIcon sms">문자</a>
+                    </li>
+                    <li class="date">
+                      <div class="infoGrid small">
+                        <ul>
+                          <li class="title">상령일자</li>
+                          <li class="text">D-45</li>
+                        </ul>
+                        <ul>
+                          <li class="title">동의종료</li>
+                          <li class="text">11-30</li>
+                        </ul>
+                        <ul>
+                          <li class="title">보장분석</li>
+                          <li class="text">2019.10.10</li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- memberListArea : e-->
+      </div>
+      <!-- infoArea : e -->
+      <!-- menuArea : s -->
+      <div class="menuArea">
+        <div class="menuSet">
+          <ul>
+            <li><a href="#" class="menu menu01"><span>전체현황</span></a></li>
+            <li><a href="#" class="menu menu02 on"><span>가입현황</span></a></li>
+            <li><a href="#" class="menu menu03"><span>진단/상세</span></a></li>
+            <li><a href="#" class="menu menu04"><span>컨설팅</span></a></li>
+            <li><a href="#" class="menu menu05"><span>그래프</span></a></li>
+          </ul>
+        </div>
+        <div class="bottomPosition">
+          <ul class="utilMenu">
+            <li><a href="#" class="btn">고객등록</a></li>
+            <li><a href="#" class="btn">권장금액 · 담보군 설정</a></li>
+            <li><a href="#" class="btn">가계약조회</a></li>
+          </ul>
+          <div class="btnArea">
+            <a href="#" class="btnText sizeBig fillGray"><span>미리보기</span></a>
+            <a href="#" class="btnText sizeBig fillRed"><span>출력하기</span></a>
+          </div>
+        </div>
+      </div>
+      <!-- menuArea : e -->
+    </div>
+    <!-- leftArea : e -->
+    <!-- contentArea : s -->
+    <div class="contentArea">
+      <!-- customerStateInfo : s -->
+      <div class="customerStateInfo">
+        <div class="inner">
+          <div class="customer">
+            <strong>독고영재</strong>고객님<br>
+            반갑습니다.
+          </div>
+          <div class="contract">
+            <dl>
+              <dt>정상계약</dt>
+              <dd><strong>11</strong>건</dd>
+            </dl>
+          </div>
+          <div class="payment">
+            <dl>
+              <dt>월보험료</dt>
+              <dd><strong>1,264,530</strong>원</dd>
+            </dl>
+          </div>
+          <div class="state">
+            <dl>
+              <dt>보장현황</dt>
+              <dd>
+                <span class="noJoin"><strong>9</strong>미가입</span>
+                <span class="shortage"><strong>14</strong>부족</span>
+                <span class="enough"><strong>3</strong>충분</span>
+              </dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+      <!-- customerStateInfo : e -->
+
+      <!-- insuranceListBox : s -->
+      <div class="insuranceListBox">
+        <!-- scrollArea : s -->
+        <div class="contentScroll">
+          <!-- insuranceList : s -->
+          <div class="insuranceList">
+            <div class="titBox">
+              <h3 class="tit">정상계약</h3><span class="count">+3</span>
+            </div>
+            <a href="#" class="insurance">
+              <div class="info">
+                <div class="logo"><img src="/asset/images/temp/logo_sample01.png" alt="한화생명"></div>
+                <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904</div>
+                <div class="date"><span class="state">정상</span>2009.07.17~2082.07.17</div>
+              </div>
+              <div class="payment">
+                <ul>
+                  <li class="top">
+                    <span class="th">매월납20년</span>
+                    <span class="td"><strong>1,270,660</strong>원</span>
+                  </li>
+                  <li>
+                    <span class="th">납입횟수</span>
+                    <span class="td">122/240회</span>
+                  </li>
+                  <li>
+                    <span class="th">납입률</span>
+                    <span class="td">51%</span>
+                  </li>
+                  <li>
+                    <span class="th">납입보험료</span>
+                    <span class="td">8,421,660원</span>
+                  </li>
+                </ul>
+              </div>
+            </a>
+            <a href="#" class="insurance">
+              <div class="info">
+                <div class="logo"><img src="/asset/images/temp/logo_sample02.png" alt="삼성생명"></div>
+                <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904</div>
+                <div class="date"><span class="state">정상</span>2009.07.17~2082.07.17</div>
+              </div>
+              <div class="payment">
+                <ul>
+                  <li class="top">
+                    <span class="th">매월납20년</span>
+                    <span class="td"><strong>1,270,660</strong>원</span>
+                  </li>
+                  <li>
+                    <span class="th">납입횟수</span>
+                    <span class="td">122/240회</span>
+                  </li>
+                  <li>
+                    <span class="th">납입률</span>
+                    <span class="td">51%</span>
+                  </li>
+                  <li>
+                    <span class="th">납입보험료</span>
+                    <span class="td">8,421,660원</span>
+                  </li>
+                </ul>
+              </div>
+            </a>
+            <a href="#" class="insurance">
+              <div class="info">
+                <div class="logo"><img src="/asset/images/temp/logo_sample02.png" alt="삼성생명"></div>
+                <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904</div>
+                <div class="date"><span class="state">정상</span>2009.07.17~2082.07.17</div>
+              </div>
+              <div class="payment">
+                <ul>
+                  <li class="top">
+                    <span class="th">매월납20년</span>
+                    <span class="td"><strong>1,270,660</strong>원</span>
+                  </li>
+                  <li>
+                    <span class="th">납입횟수</span>
+                    <span class="td">122/240회</span>
+                  </li>
+                  <li>
+                    <span class="th">납입률</span>
+                    <span class="td">51%</span>
+                  </li>
+                  <li>
+                    <span class="th">납입보험료</span>
+                    <span class="td">8,421,660원</span>
+                  </li>
+                </ul>
+              </div>
+            </a>
+          </div>
+          <!-- insuranceList : e -->
+
+          <!-- insuranceList : s -->
+          <div class="insuranceList">
+            <div class="titBox">
+              <h3 class="tit">자동차보험</h3><span class="count">+1</span>
+            </div>
+            <a href="#" class="insurance">
+              <div class="info">
+                <div class="logo"><img src="/asset/images/temp/logo_sample01.png" alt="한화생명"></div>
+                <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904</div>
+                <div class="date"><span class="state">정상</span>2009.07.17~2082.07.17</div>
+              </div>
+              <div class="payment">
+                <ul>
+                  <li class="top">
+                    <span class="th">일시납20년</span>
+                    <span class="td"><strong>1,270,660</strong>원</span>
+                  </li>
+                  <li>
+                    <span class="th">차량번호</span>
+                    <span class="td">76마 1234</span>
+                  </li>
+                  <li>
+                    <span class="th">종료일</span>
+                    <span class="td">2019.11.11</span>
+                  </li>
+                  <li>
+                    <span class="th">남은기간</span>
+                    <span class="td">D-43</span>
+                  </li>
+                </ul>
+              </div>
+            </a>
+            <div class="insurance noInsurance">
+              <div>가입내역이 없습니다.</div>
+            </div>
+          </div>  
+          <!-- insuranceList : e -->
+
+          <!-- insuranceList : s -->  
+          <div class="insuranceList">
+            <div class="titBox">
+              <h3 class="tit">실효해지</h3><span class="count">+2</span>
+            </div>
+            <a href="#" class="insurance disabled">
+              <div class="info">
+                <div class="logo"><img src="/asset/images/temp/logo_sample01_off.png" alt="한화생명"></div>
+                <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904</div>
+                <div class="date"><span class="state">실효</span>2009.07.17~2082.07.17</div>
+              </div>
+              <div class="payment">
+                <ul>
+                  <li class="top">
+                    <span class="th">매월납20년</span>
+                    <span class="td"><strong>1,270,660</strong>원</span>
+                  </li>
+                  <li>
+                    <span class="th">납입횟수</span>
+                    <span class="td">122/240회</span>
+                  </li>
+                  <li>
+                    <span class="th">납입률</span>
+                    <span class="td">51%</span>
+                  </li>
+                  <li>
+                    <span class="th">납입보험료</span>
+                    <span class="td">8,421,660원</span>
+                  </li>
+                </ul>
+              </div>
+            </a>
+            <a href="#" class="insurance disabled">
+              <div class="info">
+                <div class="logo"><img src="/asset/images/temp/logo_sample01_off.png" alt="한화생명"></div>
+                <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904</div>
+                <div class="date"><span class="state">해지</span>2009.07.17~2082.07.17</div>
+              </div>
+              <div class="payment">
+                <ul>
+                  <li class="top">
+                    <span class="th">매월납20년</span>
+                    <span class="td"><strong>1,270,660</strong>원</span>
+                  </li>
+                  <li>
+                    <span class="th">납입횟수</span>
+                    <span class="td">122/240회</span>
+                  </li>
+                  <li>
+                    <span class="th">납입률</span>
+                    <span class="td">51%</span>
+                  </li>
+                  <li>
+                    <span class="th">납입보험료</span>
+                    <span class="td">8,421,660원</span>
+                  </li>
+                </ul>
+              </div>
+            </a>
+          </div>
+          <!-- insuranceList : e -->
+          
+          <!-- 유의사항 : s -->
+          <div class="noteBox">
+            <dl>
+              <dt>유의사항</dt>
+              <dd>상기 내용 중 보험료에 대한 분석은 초회보험료를 납입만기까지 계속 납입하는 기준으로 산출한 것으로 중도에 계약이 변경되거나 특약의 납입기간이 
+              상이할 경우 차이가 발생할 수 있습니다. 정확한 내용은 해당 보험회사에 문의해주시기 바랍니다.</dd>
+              <dd>실손형담보의 보험료는 제외된 금액입니다. 실손형의 경우 갱신형으로 되어 있어 초회보험료와 향후 보험료가 상이하여 책정이 불가능 합니다.</dd>            
+            </dl>
+          </div>
+          <!-- 유의사항 : e -->
+        </div>    
+        <!-- scrollArea : e -->
+      </div>
+      <!-- insuranceListBox : e -->
+    </div>
+    <!-- contentArea : e -->
+  </div>
+</div>
+</body>
+</html>
