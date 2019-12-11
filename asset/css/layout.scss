@@ -194,6 +194,7 @@
       position: absolute;
       right: 50px;
       top: 0;
+      z-index: 10;
     }
     /*메인 왼쪽*/
     .leftArea {
@@ -560,6 +561,9 @@
 
       .contentScroll {
         height: 940px;
+        &.consultingListScroll{
+          height: 730px;
+        }
       }
     }
   }
