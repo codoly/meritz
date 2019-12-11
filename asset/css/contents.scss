@@ -294,6 +294,7 @@
           top:0;
           left:0;
           box-shadow:none;
+          z-index: 10;
         }
         &:after{
           background: url(../images/common/checkbox02_on.png) no-repeat 0 0;
