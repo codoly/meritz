@@ -389,7 +389,7 @@
   .payment{
     float: right;
     width:253px;
-    height: 100%;
+    height: 130px;
     padding:0px 30px 0;
     background:#fff;    
     border-radius: 0 8px 8px 0;
@@ -820,23 +820,36 @@
       color:$colorLevel2;
     }
   }
+  .insuranceList{
+    margin-bottom:0;
+  }
   .insurance{
     width:100%;
     border:1px solid $lineColor3;
     border-radius: 8px;
     height: 110px;
+    margin-bottom:10px !important;
     &:hover::before{
       display: none;
     }
     .info{
       width:460px;
       border-right:1px solid $lineColor3;
-      padding:25px 30px 0; 
+      padding:0px 30px 0; 
     }
     .payment{
       width:240px;
       padding:0px 30px 0;
+      height: 110px;
     }
+  }
+  .contractScroll{
+    height: 515px;
+    margin:0 -15px 0px 0;
+  }
+  .btnArea{  
+    padding-top:20px;  
+    border-top:1px solid #e0e4ea;
   }
 }
 
