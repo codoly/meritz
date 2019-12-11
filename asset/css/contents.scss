@@ -331,7 +331,7 @@
   height: 130px;   
   position: relative;
   margin-bottom:10px;
-  display: block;
+  display: table;
   &:hover:before{
     display: block;
     content: "";
@@ -351,10 +351,11 @@
     margin-bottom: 0;
   }
   .info{
-    float: left;
+    display: table-cell;
+    vertical-align: middle;
     width:527px;
     height: 100%;
-    padding:17px 30px 0;
+    padding:0px 30px 0;
     background:#fff;    
     border-radius: 8px 0 0 8px;
     .logo{
@@ -374,7 +375,7 @@
       .state{
         display:inline-block;
         background:#ffeeed;
-        width:47px;
+        padding:0 10px;
         height: 22px;
         line-height: 20px;
         text-align: center;
@@ -389,9 +390,14 @@
     float: right;
     width:253px;
     height: 100%;
-    padding:17px 30px 0;
+    padding:0px 30px 0;
     background:#fff;    
     border-radius: 0 8px 8px 0;
+    display: table;
+    ul{
+      display: table-cell;
+      vertical-align: middle;
+    }
     li{
       display: table;
       width: 100%;
@@ -490,6 +496,7 @@
     border-bottom:1px solid $lineColor3;
     text-align: center;
     font-size: $_22px;
+    color:$colorLevel1;
     .dot{
       vertical-align: top;
       display: inline-block;
@@ -789,7 +796,48 @@
   }
 }
 .popConditionalContract{
-  .searchCondition
+  width:782px;
+  .searchCondition{
+    margin:0 -40px 30px;;
+    padding:20px 25px;
+    text-align: center;
+    background: #f0f3f8;
+    .sortingList{
+      overflow: hidden;
+      line-height: 1;
+      margin-bottom:15px;
+      li{
+        display:inline-block;
+        margin:0 12px;
+        label{
+          font-size: $_16px;
+          color:$colorLevel2;
+        }
+      }
+    }
+    .date{
+      font-size: $_16px;
+      color:$colorLevel2;
+    }
+  }
+  .insurance{
+    width:100%;
+    border:1px solid $lineColor3;
+    border-radius: 8px;
+    height: 110px;
+    &:hover::before{
+      display: none;
+    }
+    .info{
+      width:460px;
+      border-right:1px solid $lineColor3;
+      padding:25px 30px 0; 
+    }
+    .payment{
+      width:240px;
+      padding:0px 30px 0;
+    }
+  }
 }
 
 /* tabWrap */
