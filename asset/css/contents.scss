@@ -244,6 +244,7 @@
 }
 .insuranceList{
   margin-bottom: 30px;
+  width:782px;
   .titBox{
     margin-bottom: 15px; 
     text-align: center;
@@ -327,7 +328,7 @@
   }
 }
 .insurance{
-  width:782px;
+  width: 100%;
   height: 130px;   
   position: relative;
   margin-bottom:10px;
@@ -739,10 +740,16 @@
       width:700px;
       margin:0 auto 20px;
     }
+    .tabContent{
+      display: none;
+      width: 700px;
+      &.on{
+        display: block;
+      }
+    }
   }
   .basicType{
     width:700px;
-    margin:0 auto;
   }
   .tableScroll{
     height: 370px;
@@ -770,7 +777,6 @@
   }
   .basicType{
     width:580px;
-    margin:0 auto;
     th,td{
       vertical-align: middle;
     }
@@ -826,9 +832,9 @@
   }
   .insuranceList{
     margin-bottom:0;
+    width:702px;
   }
   .insurance{
-    width:100%;
     border:1px solid $lineColor3;
     border-radius: 8px;
     height: 110px;
