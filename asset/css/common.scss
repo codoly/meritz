@@ -262,6 +262,7 @@
   text-align: center;
   font-size: $_18px;
   letter-spacing: -1px;
+  border-radius:5px;
   //버튼 색상 정의
   &.fillGray {
     border: 1px solid $colorPoint1;
@@ -280,18 +281,21 @@
     min-width: auto;
     line-height: 26px;
     font-size: $_14px;
+    border-radius:3px;
   }
 
   &.sizeMiddle {
     min-width: 70px;
     line-height: 32px;
     font-size: $_14px;
+    border-radius:3px;
   }
 
   &.sizeBig {
     min-width: 174px;
     line-height: 53px;
     font-size: $_18px;
+    border-radius:0;
   }
 }
 
@@ -580,7 +584,7 @@ input[type=text]::-ms-clear {
           text-align: right;
           color: $colorLevel2;
           strong{
-            font-weight: 600;
+            font-weight: 500;
           }
         }
         letter-spacing: -0.05em;

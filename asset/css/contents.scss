@@ -133,7 +133,7 @@
 .customerStateInfo{
   position: relative;
   border-bottom:1px solid #cad2db;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   width:782px;
   .inner{   
     padding:37px 0px 30px;
@@ -637,7 +637,7 @@
           font-size:$_20px;
           color:$colorLevel2;
           strong{
-            font-weight: 600;
+            font-weight: 500;
             font-size:$_22px;
           }
         }
@@ -667,7 +667,7 @@
             bottom:17px;
             background: #02a7c5;
             color:#fff;
-            font-weight: 600;
+            font-weight: 500;
             border-radius: 15px;
             width:50px;
             height: 27px;
@@ -716,7 +716,7 @@
               color:$colorLevel2;
             }
             strong{
-              font-weight: 600;
+              font-weight: 500;
             }
           }
         }
@@ -927,5 +927,144 @@
   }  
   &.agree.on{
     background:#ffe4e3 url(../images/common/icon_agree_on.png) no-repeat 10px center;
+  }
+}
+
+
+/*팝업 컨설팅 전후 비교*/
+.consultingWrap{
+  width: 700px;
+  > .title{
+    font-size: $_30px;
+    line-height: $_40px;
+    color: $colorLevel2;
+    text-align: center;
+    margin-top: 33px;
+    letter-spacing:-2px;
+    font-weight: 300;
+    strong{
+      font-weight: 500;
+    }
+    .icon{
+      display: inline-block;
+      height: 34px;
+      vertical-align: top;
+      transform:translate(0, 3px);
+    }
+  }
+  > .text{
+    color: $colorButtonRed;
+    font-size: $_24px;
+    letter-spacing:-2px;
+    text-align: center;
+    margin-top: 22px;
+    font-weight: 300;
+  }
+  .boxArea{
+    margin-top: 20px;
+    @include clearline;
+    border:1px solid $lineColor3;
+    border-radius:10px;
+    .box{
+      float: left;
+      width: 50%;
+      height: 581px;
+      position: relative;
+      border:2px solid transparent;
+      text-align: center;
+      margin:-1px 0;
+      &.after{
+        border-radius:10px;
+        border:2px solid #3c454e;
+        background: #f8f8f8;
+      }
+      > .title{
+        font-size: $_20px;
+        line-height: $_30px;
+        color: $colorLevel2;
+        text-align: center;
+        margin-top: 33px;
+        .icon{
+          display: inline-block;
+          height: 34px;
+          vertical-align: top;
+          transform:translate(0, 3px);
+        }
+      }
+      .infoGrid{
+        margin: 25px auto 15px auto;
+        width: 250px;
+        padding-bottom: 48px;
+        position: relative;
+        text-align: left;
+        &:after {
+          content: "";
+          display: block;
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0px;
+          width: 36px;
+          height: 3px;
+          border-radius: 3px;
+          background: #01a7c4;
+          margin:0 auto;
+        }
+      }
+      .graphArea{
+        height: 217px;
+        position: relative;
+        &:after{
+          content:"";
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          z-index:1;
+          background: #fff;
+          opacity:0;
+        }
+      }
+      .infoBox{
+        margin: 25px auto 0 auto;
+        border:1px solid $lineColor2;
+        border-radius:13px;
+        line-height: 1;
+        font-size: 0;
+        padding:18px 20px;
+        display:table;
+        text-align: center;
+        li{
+          display: inline-block;
+          padding:0 18px;
+          text-align: center;
+          line-height: 1;
+          .tit{
+            display: block;
+            font-size: $_16px;
+          }
+          .number{
+            margin-top: 8px;
+            display: block;
+            font-size: $_24px;
+            font-weight: 700;
+          }
+          &.all{
+            color: $colorLevel2;
+          }
+          &.no{
+            color: #7c838f;
+          }
+          &.lack{
+            color: $colorButtonRed;
+          }
+          &.good{
+            color: #01a7c4;
+          }
+        }
+      }
+    }
   }
 }
