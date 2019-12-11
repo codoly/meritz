@@ -14,6 +14,16 @@
     $(function () {
       $(".contentScroll").mCustomScrollbar();
       $(".memberList").mCustomScrollbar();
+
+      //보험 체크
+      $(document).on("click", ".insuranceList.checkList .insurance", function () {
+        var target = $(this);
+        if (!target.hasClass("checked")){
+          target.addClass("checked");
+        }else{
+          target.removeClass("checked");
+        }
+      })
     })
   </script>
 </head>
@@ -503,11 +513,13 @@
             <div class="titBox">
               <h3 class="tit">가계약</h3><span class="count">+2</span>
             </div>
-            <a href="#" class="insurance checked">
+            <button class="insurance checked">
               <div class="info">
-                <div class="logo"><img src="/asset/images/temp/logo_sample01.png" alt="한화생명"></div>
-                <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904</div>
-                <div class="date"><span class="state">정상</span>2009.07.17~2082.07.17</div>
+                <div class="inner">
+                  <div class="logo"><img src="/asset/images/temp/logo_sample01.png" alt="한화생명"></div>
+                  <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904</div>
+                  <div class="date"><span class="state">정상</span>2009.07.17~2082.07.17</div>
+                </div>
               </div>
               <div class="payment">
                 <ul>
@@ -517,12 +529,14 @@
                   </li>
                 </ul>
               </div>
-            </a>
-            <a href="#" class="insurance">
-              <div class="info">
-                <div class="logo"><img src="/asset/images/temp/logo_sample02.png" alt="삼성생명"></div>
-                <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904</div>
-                <div class="date"><span class="state">정상</span>2009.07.17~2082.07.17</div>
+            </button>
+            <button class="insurance">
+              <div class="info">                
+                <div class="inner">
+                  <div class="logo"><img src="/asset/images/temp/logo_sample02.png" alt="삼성생명"></div>
+                  <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904</div>
+                  <div class="date"><span class="state">정상</span>2009.07.17~2082.07.17</div>
+                </div>
               </div>
               <div class="payment">
                 <ul>
@@ -532,10 +546,10 @@
                   </li>
                 </ul>
               </div>
-            </a>
-            <a href="#" class="btnContractAdd">
+            </button>
+            <button class="btnContractAdd">
               <div>가계약을 추가해주세요.</div>
-            </a>
+            </button>
           </div>
           <!-- insuranceList : e -->
 
@@ -544,11 +558,13 @@
             <div class="titBox">
               <h3 class="tit">정상계약</h3><span class="count">+5</span>
             </div>
-            <a href="#" class="insurance">
+            <button class="insurance">
               <div class="info">
-                <div class="logo"><img src="/asset/images/temp/logo_sample01.png" alt="한화생명"></div>
-                <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904</div>
-                <div class="date"><span class="state">정상</span>2009.07.17~2082.07.17</div>
+                <div class="inner">
+                  <div class="logo"><img src="/asset/images/temp/logo_sample01.png" alt="한화생명"></div>
+                  <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904</div>
+                  <div class="date"><span class="state">정상</span>2009.07.17~2082.07.17</div>
+                </div>
               </div>
               <div class="payment">
                 <ul>
@@ -570,12 +586,14 @@
                   </li>
                 </ul>
               </div>
-            </a>
-            <a href="#" class="insurance">
-              <div class="info">
-                <div class="logo"><img src="/asset/images/temp/logo_sample01.png" alt="한화생명"></div>
-                <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904</div>
-                <div class="date"><span class="state">정상</span>2009.07.17~2082.07.17</div>
+            </button>
+            <button class="insurance">
+              <div class="info">                
+                <div class="inner">
+                  <div class="logo"><img src="/asset/images/temp/logo_sample01.png" alt="한화생명"></div>
+                  <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904</div>
+                  <div class="date"><span class="state">정상</span>2009.07.17~2082.07.17</div>
+                </div>
               </div>
               <div class="payment">
                 <ul>
@@ -597,7 +615,7 @@
                   </li>
                 </ul>
               </div>
-            </a>
+            </button>
           </div>
           <!-- insuranceList : e -->
         </div>
@@ -606,7 +624,8 @@
       <!-- insuranceListBox : e -->
     </div>
     <!-- contentArea : e -->
-  </div>
+    <a href="#" class="btnClose"><span>닫기</span></a>
+  </div>  
 </div>
 
 </body>
