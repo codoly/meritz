@@ -190,3 +190,9 @@ button:focus span,
 button:active span{
   position: relative;
 }
+button div,
+button:focus div,
+button:active div,
+button:before{
+  position: relative;
+}
