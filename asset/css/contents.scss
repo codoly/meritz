@@ -820,11 +820,15 @@
       color:$colorLevel2;
     }
   }
+  .insuranceList{
+    margin-bottom:0;
+  }
   .insurance{
     width:100%;
     border:1px solid $lineColor3;
     border-radius: 8px;
     height: 110px;
+    margin-bottom:10px !important;
     &:hover::before{
       display: none;
     }
@@ -837,6 +841,14 @@
       width:240px;
       padding:0px 30px 0;
     }
+  }
+  .contractScroll{
+    height: 515px;
+    margin:0 -15px 0px 0;
+  }
+  .btnArea{  
+    padding-top:20px;  
+    border-top:1px solid #e0e4ea;
   }
 }
 
