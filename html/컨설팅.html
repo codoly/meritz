@@ -14,6 +14,16 @@
     $(function () {
       $(".contentScroll").mCustomScrollbar();
       $(".memberList").mCustomScrollbar();
+
+      //보험 체크
+      $(document).on("click", ".insuranceList.checkList .insurance", function () {
+        var target = $(this);
+        if (!target.hasClass("checked")){
+          target.addClass("checked");
+        }else{
+          target.removeClass("checked");
+        }
+      })
     })
   </script>
 </head>
