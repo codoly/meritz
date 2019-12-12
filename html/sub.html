@@ -15,8 +15,20 @@
   <script src="/asset/js/default.js"></script>
   <script>
     $(function () {
-      $(".contentScroll").mCustomScrollbar();
-      $(".memberList").mCustomScrollbar();
+      $(".contentScroll").mCustomScrollbar({
+        scrollInertia: 150,
+        callbacks: {
+          onInit: function() {
+            btnTop(this)
+          },
+          onUpdate: function() {
+            btnTop(this)
+          }
+        }
+      });
+      $(".memberList").mCustomScrollbar({
+        scrollInertia: 150
+      });
 
       // Themes begin
       am4core.useTheme(am4themes_animated);
@@ -155,7 +167,7 @@
     <div class="leftArea">
       <!-- infoArea : s -->
       <div class="infoArea">
-        <div class="searchArea"><input type="text"><a href="#" class="btnSearch">검색</a></div>
+        <div class="searchArea small"><input type="text" placeholder="고객 검색"><a href="#" class="btnSearch">검색</a></div>
         <div class="sorting">
           <div class="selectBox bgType">
             <select name="" id="">
@@ -568,8 +580,8 @@
             <li><a href="#" class="menu menu01 on"><span>전체현황</span></a></li>
             <li><a href="#" class="menu menu02"><span>가입현황</span></a></li>
             <li><a href="#" class="menu menu03"><span>진단/상세</span></a></li>
-            <li><a href="#" class="menu menu04"><span>컨설팅</span></a></li>
-            <li><a href="#" class="menu menu05"><span>그래프</span></a></li>
+            <li><a href="#" class="menu menu04 new"><span>컨설팅</span></a></li>
+            <li><a href="#" class="menu menu05 new"><span>그래프</span></a></li>
           </ul>
         </div>
         <div class="bottomPosition">
@@ -692,6 +704,7 @@
         </div>
       </div>
       <!-- scrollArea : e -->
+      <button class="btnTop">상단으로</button>
     </div>
     <!-- contentArea : e -->
     <a href="#" class="btnClose"><span>닫기</span></a>

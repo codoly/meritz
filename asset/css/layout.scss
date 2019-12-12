@@ -35,9 +35,9 @@
     .leftArea {
       float: left;
       position: relative;
-      width: 418px;
+      width: 396px;
       height: 940px;
-      padding: 30px 60px 0 50px;
+      padding: 30px 60px 0 28px;
 
       .nameArea {
         margin-top: 62px;
@@ -90,37 +90,13 @@
       .searchArea {
         margin-top: 15px;
       }
-
-      .sorting {
-        margin-top: 28px;
-        text-align: right;
-
-        .sortingList {
-          @include clearline;
-          text-align: left;
-          margin-top: 20px;
-          padding-bottom: 15px;
-          border-bottom: 1px solid #48546e;
-
-          li {
-            float: left;
-            margin-right: 15px;
-            letter-spacing: -1px;
-
-            &:last-child {
-              margin-right: 0;
-            }
-          }
-        }
-      }
-
       .bottomBtnArea {
         @include clearline;
         position: absolute;
-        left: 50px;
-        bottom: 50px;
+        left: 28px;
+        bottom: 40px;
         background: rgba(41, 53, 108, 0.8);
-        padding: 20px 0;
+        padding: 22px 0;
         border-radius: 5px;
 
         li {
@@ -156,8 +132,38 @@
     .contentArea {
       float: left;
       position: relative;
-      width: 862px;
-      padding: 30px 0 30px 30px;
+      width: 884px;
+      padding: 30px 0 0px 30px;
+
+      .sorting {
+        width: 782px;
+        text-align: right;
+        margin-bottom: 15px;
+        .selectBox{
+          display: inline-block;
+          vertical-align: top;
+        }
+        .sortingList {
+          margin-left: 20px;
+          display: inline-block;
+          vertical-align: top;
+          @include clearline;
+          text-align: left;
+
+          li {
+            float: left;
+            margin-right: 25px;
+            letter-spacing: -1px;
+
+            &:last-child {
+              margin-right: 0;
+            }
+            label{
+              color: $colorLevel2;
+            }
+          }
+        }
+      }
 
       .contentScroll {
         height: 815px;
@@ -200,9 +206,9 @@
     .leftArea {
       float: left;
       position: relative;
-      width: 418px;
+      width: 396px;
       height: 940px;
-      padding-left:50px;
+      padding: 0px 0px 0 28px;
       .infoArea{
         float: left;
         width: 194px;
@@ -444,11 +450,11 @@
                 span{
                   display: block;
                   text-align: center;
-                  margin-top: 9px;
                 }
-                &:before{
+                span:before{
                   content:'';
-                  display: inline-block;
+                  display: block;
+                  margin:0 auto 9px auto;
                 }
                 &:hover,
                 &:focus,
@@ -468,63 +474,74 @@
                     margin:0 auto;
                   }
                 }
+                &.new:before{
+                  content: "";
+                  display: block;
+                  position: absolute;
+                  left: 50%;
+                  top: -6px;
+                  margin-left: 20px;
+                  background: url("/asset/images/common/lnb_new.png") no-repeat;
+                  width: 20px;
+                  height: 20px;
+                }
                 &.menu01{
-                  &:before{
+                  span:before{
                     background: url("/asset/images/common/submenu_01_off.png") no-repeat;
                     width: 46px;
                     height: 28px;
                   }
-                  &:hover:before,
-                  &:focus:before,
-                  &.on:before{
+                  &:hover span:before,
+                  &:focus span:before,
+                  &.on span:before{
                     background: url("/asset/images/common/submenu_01_on.png") no-repeat;
                   }
                 }
                 &.menu02{
-                  &:before {
+                  span:before {
                     background: url("/asset/images/common/submenu_02_off.png") no-repeat;
                     width: 46px;
                     height: 31px;
                   }
-                  &:hover:before,
-                  &:focus:before,
-                  &.on:before{
+                  &:hover span:before,
+                  &:focus span:before,
+                  &.on span:before{
                     background: url("/asset/images/common/submenu_02_on.png") no-repeat;
                   }
                 }
                 &.menu03{
-                  &:before {
+                  span:before {
                     background: url("/asset/images/common/submenu_03_off.png") no-repeat;
                     width: 46px;
                     height: 32px;
                   }
-                  &:hover:before,
-                  &:focus:before,
-                  &.on:before{
+                  &:hover span:before,
+                  &:focus span:before,
+                  &.on span:before{
                     background: url("/asset/images/common/submenu_03_on.png") no-repeat;
                   }
                 }
                 &.menu04{
-                  &:before {
+                  span:before {
                     background: url("/asset/images/common/submenu_04_off.png") no-repeat;
                     width: 46px;
                     height: 37px;
                   }
-                  &:hover:before,
-                  &:focus:before,
-                  &.on:before{
+                  &:hover span:before,
+                  &:focus span:before,
+                  &.on span:before{
                     background: url("/asset/images/common/submenu_04_on.png") no-repeat;
                   }
                 }
                 &.menu05{
-                  &:before {
+                  span:before {
                     background: url("/asset/images/common/submenu_05_off.png") no-repeat;
                     width: 46px;
                     height: 37px;
                   }
-                  &:hover:before,
-                  &:focus:before,
-                  &.on:before{
+                  &:hover span:before,
+                  &:focus span:before,
+                  &.on span:before{
                     background: url("/asset/images/common/submenu_05_on.png") no-repeat;
                   }
                 }
@@ -556,7 +573,7 @@
     .contentArea {
       float: left;
       position: relative;
-      width: 862px;
+      width: 884px;
       padding: 0px 0 0px 30px;
 
       .contentScroll {
@@ -567,6 +584,16 @@
       }
     }
   }
+}
+.btnTop{
+  @include bgBtn;
+  display: none;
+  position: absolute;
+  right: 18px;
+  bottom: 20px;
+  background: url("/asset/images/common/btn_top.png") no-repeat;
+  width: 44px;
+  height: 44px;
 }
 .submainWrap{
   width: 781px;

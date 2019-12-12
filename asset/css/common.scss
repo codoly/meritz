@@ -3,11 +3,11 @@
   // custome select 관련 구문
   // Default variables
   $font_size: 14px !default;
-  $font_size_small: 12px !default;
+  $font_size_small: 14px !default;
 
   $input_border_radius: 5px !default;
   $input_height: 32px !default;
-  $input_height_small: 28px !default;
+  $input_height_small: 34px !default;
   $dropdown_padding: 18px !default;
 
   $gray_dark: #444 !default;
@@ -20,7 +20,7 @@
   // Style the dropdown
   .nice-select {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    background-color: #fff;
+    background-color: transparent;
     border-radius: $input_border_radius;
     border: solid 1px $gray_light;
     box-sizing: border-box;
@@ -41,14 +41,14 @@
     user-select: none;
     white-space: nowrap;
     width: auto;
-
-    &:hover {
-      border-color: darken($gray_light, 5%);
-    }
-
-    &:active, &:focus {
-      border-color: $primary_light;
-    }
+    //
+    //&:hover {
+    //  border-color: darken($gray_light, 5%);
+    //}
+    //
+    //&:active, &:focus {
+    //  border-color: $primary_light;
+    //}
 
     // Arrow
     &:after {
@@ -114,12 +114,18 @@
 
     &.small {
       font-size: $font_size_small;
-      height: $input_height_small;
-      line-height: $input_height_small - 2;
+      height: 24px;
+      line-height: 24px;
+      padding-right: 40px;
 
       &:after {
-        height: 4px;
-        width: 4px;
+        right:0;
+        height: 7px;
+        width: 7px;
+        border-color: #3c444d ;
+      }
+      &.open:after {
+        border-color: #ff4858
       }
 
       .option {
@@ -132,7 +138,7 @@
     .list {
       background-color: #fff;
       border-radius: $input_border_radius;
-      box-shadow: 0 0 0 1px rgba($gray_dark, .11);
+      box-shadow: 1px 1px 3px 2px rgba(68, 68, 68, 0.08);
       box-sizing: border-box;
       margin-top: 4px;
       opacity: 0;
@@ -312,8 +318,8 @@
 
 //검색영역
 .searchArea {
-  border: 1px solid #7180a0;
-  padding-right: 40px;
+  border: 2px solid #7180a0;
+  padding-right: 53px;
   position: relative;
   border-radius: 5px;
 
@@ -322,8 +328,8 @@
     padding: 0 0 0 15px;
     background: transparent;
     border: 0;
-    line-height: 38px;
-    height: 38px;
+    line-height: 44px;
+    height: 44px;
     outline: none;
     color: #fff;
 
@@ -353,16 +359,49 @@
     position: absolute;
     right: 0;
     top: 0;
-    width: 38px;
-    height: 38px;
+    width: 53px;
+    height: 44px;
     background: url("/asset/images/common/btn_main_search_off.png") no-repeat center center;
   }
 
   &.focus {
-    border: 1px solid #01a7c4;
+    border: 2px solid #01a7c4;
 
     .btnSearch {
       background: url("/asset/images/common/btn_main_search_on.png") no-repeat center center;
+    }
+  }
+  &.small{
+    border: 1px solid #7180a0;
+    padding-right: 40px;
+    position: relative;
+    border-radius: 5px;
+
+    input {
+      width: 100%;
+      padding: 0 0 0 15px;
+      line-height: 38px;
+      height: 38px;
+      font-size: $_14px;
+    }
+
+    .btnSearch {
+      @include bgBtn;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 38px;
+      height: 38px;
+      background: url("/asset/images/common/btn_main_search_off.png") no-repeat center center;
+      background-size: 15px auto;
+    }
+
+    &.focus {
+      border: 1px solid #01a7c4;
+      .btnSearch {
+        background: url("/asset/images/common/btn_main_search_on.png") no-repeat center center;
+        background-size: 15px auto;
+      }
     }
   }
 }

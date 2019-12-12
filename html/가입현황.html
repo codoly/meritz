@@ -12,8 +12,20 @@
   <script src="/asset/js/default.js"></script>
   <script>
     $(function () {
-      $(".contentScroll").mCustomScrollbar();
-      $(".memberList").mCustomScrollbar();
+      $(".contentScroll").mCustomScrollbar({
+        scrollInertia: 150,
+        callbacks: {
+          onInit: function() {
+            btnTop(this)
+          },
+          onUpdate: function() {
+            btnTop(this)
+          }
+        }
+      });
+      $(".memberList").mCustomScrollbar({
+        scrollInertia: 150
+      });
     })
   </script>
 </head>

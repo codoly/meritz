@@ -198,8 +198,20 @@
 
     }
     $(function () {
-      $(".contentScroll").mCustomScrollbar();
-      $(".memberList").mCustomScrollbar();
+      $(".contentScroll").mCustomScrollbar({
+        scrollInertia: 150,
+        callbacks: {
+          onInit: function() {
+            btnTop(this)
+          },
+          onUpdate: function() {
+            btnTop(this)
+          }
+        }
+      });
+      $(".memberList").mCustomScrollbar({
+        scrollInertia: 150
+      });
       //차트 그리기
       makeChart('chartdiv1');
       makeChart('chartdiv2');
@@ -737,6 +749,7 @@
           </li>
         </ul>
       </div>
+      <button class="btnTop">상단으로</button>
     </div>
     <!-- contentArea : e -->
   </div>

@@ -69,3 +69,12 @@ function layerPopBoxOpen(target){
 function layerPopBoxClose(target){
   $("#"+target).hide().removeClass("open");;
 }
+//탑버튼 유무
+function btnTop(obj){
+  if($(obj).height() < $(obj).find(".mCSB_container").height()){
+    $(".btnTop").show();
+    $(".btnTop").on("click", function () {
+      $(obj).mCustomScrollbar( "scrollTo","0")
+    })
+  }
+}
