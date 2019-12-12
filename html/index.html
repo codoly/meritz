@@ -12,7 +12,17 @@
   <script src="/asset/js/default.js"></script>
   <script>
     $(function () {
-      $(".contentScroll").mCustomScrollbar();
+      $(".contentScroll").mCustomScrollbar({
+        scrollInertia: 150,
+        callbacks: {
+          onInit: function() {
+            btnTop(this)
+          },
+          onUpdate: function() {
+            btnTop(this)
+          }
+        }
+      });
     })
   </script>
 </head>
@@ -28,38 +38,7 @@
       </div>
       <div class="manyArea">설계사님의 고객은 <strong class="many">163</strong>명 입니다.</div>
       <div class="infoText">오늘은<br>어떤 고객님과 마주 할까요?</div>
-      <div class="searchArea"><input type="text"><a href="#" class="btnSearch">검색</a></div>
-      <div class="sorting">
-        <div class="selectBox bgType">
-          <select name="" id="">
-            <option value="1">최근 동의 순</option>
-            <option value="1">동의 종료 순</option>
-            <option value="1">최근 등록 순</option>
-            <option value="1">최근 분석 순</option>
-            <option value="1">최근 상령일 순</option>
-          </select>
-        </div>
-        <ul class="sortingList">
-          <li>
-            <div class="checkBoxSet bgType">
-              <input type="checkbox" id="checkbox1">
-              <label for="checkbox1">즐겨찾기</label>
-            </div>
-          </li>
-          <li>
-            <div class="checkBoxSet bgType">
-              <input type="checkbox" id="checkbox2">
-              <label for="checkbox2">동의종료D-7</label>
-            </div>
-          </li>
-          <li>
-            <div class="checkBoxSet bgType">
-              <input type="checkbox" id="checkbox3">
-              <label for="checkbox3">보장분석</label>
-            </div>
-          </li>
-        </ul>
-      </div>
+      <div class="searchArea"><input type="text" placeholder="고객 검색"><a href="#" class="btnSearch">검색</a></div>
       <ul class="bottomBtnArea">
         <li>
           <a href="#">
@@ -78,7 +57,37 @@
     <!-- leftArea : e -->
     <!-- contentArea : s -->
     <div class="contentArea">
-      <h2 class="subTitle">고객리스트</h2>
+      <div class="sorting">
+        <div class="selectBox">
+          <select name="" id="" class="small">
+            <option value="1">최근 동의 순</option>
+            <option value="1">동의 종료 순</option>
+            <option value="1">최근 등록 순</option>
+            <option value="1">최근 분석 순</option>
+            <option value="1">최근 상령일 순</option>
+          </select>
+        </div>
+        <ul class="sortingList">
+          <li>
+            <div class="checkBoxSet">
+              <input type="checkbox" id="checkbox1">
+              <label for="checkbox1">즐겨찾기</label>
+            </div>
+          </li>
+          <li>
+            <div class="checkBoxSet">
+              <input type="checkbox" id="checkbox2">
+              <label for="checkbox2">동의종료D-7</label>
+            </div>
+          </li>
+          <li>
+            <div class="checkBoxSet">
+              <input type="checkbox" id="checkbox3">
+              <label for="checkbox3">보장분석</label>
+            </div>
+          </li>
+        </ul>
+      </div>
 
       <div class="listTableType">
         <div class="theadBox">
@@ -351,6 +360,7 @@
         </div>
         <!-- scrollArea : e -->
       </div>
+      <button class="btnTop">상단으로</button>
     </div>
     <!-- contentArea : e -->
   </div>
