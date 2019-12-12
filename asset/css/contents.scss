@@ -153,7 +153,7 @@
       }
     } 
     .customer{
-      width:215px;
+      width:200px;
       font-size:$_22px;
       color:$colorLevel2;
       line-height: 30px;
@@ -167,7 +167,7 @@
       }
     }
     .contract{
-      width:95px;  
+      width:106px;  
     }
     .payment{
       width:215px;
@@ -194,9 +194,27 @@
         color:$colorLevel4;
         line-height: 1;
         margin: 6px 0 12px;
+        letter-spacing: -0.1em;
+        &.new{
+          &:after{
+            display: inline-block;
+            content:"NEW";
+            text-align: center;
+            border:1px solid #ff4858;
+            color:#ff4858;
+            width: 46px;
+            height: 19px;
+            line-height: 19px;
+            border-radius: 10px;
+            margin-left:5px;
+            font-weight: 500;
+            letter-spacing: -0.025em;
+          }
+        }
       }
       dd{
         color:$colorLevel2;
+        font-size:$_18px;
         strong{
           font-size:$_26px;
           font-weight: 700;
@@ -205,22 +223,12 @@
     } 
   }
   .notice{
+    margin-top: -10px;
     padding:0 20px 15px;
     position: relative;
     line-height: 1;
     color:$colorLevel2;
     font-size:$_16px;
-    &::before{
-      display: block;
-      content: "";
-      position: absolute;
-      top: -15px;
-      left: 20px;
-      width: 36px;
-      height: 3px;      
-      border-radius: 3px;
-      background: #01a7c4;
-    }
     .btnText{
       background: #fff;
       margin-left: 15px;
@@ -356,7 +364,7 @@
     float: left;
     display: table;
     width:527px;
-    height: 130px;
+    height: 100%;
     padding:0px 30px 0;
     background:#fff;    
     border-radius: 8px 0 0 8px;
@@ -376,8 +384,11 @@
       font-size: $_20px;
       color:$colorLevel2;
       margin-bottom:6px;
+      font-weight: 500;
+      letter-spacing: -0.075em;
     }
     .date{
+      line-height: 1;
       .state{
         display:inline-block;
         background:#ffeeed;
@@ -395,7 +406,7 @@
   .payment{
     float: right;
     width:253px;
-    height: 130px;
+    height: 100%;
     padding:0px 30px 0;
     background:#fff;    
     border-radius: 0 8px 8px 0;
@@ -626,6 +637,10 @@
           font-size: 0.875rem;
           margin-right: 10px;
           border-radius: 5px;
+          &.cancel{
+            background: #e7e7e7;
+            color:$colorLevel4;
+          }
         }
       }
       .payment{
@@ -654,84 +669,103 @@
       width: 292px;
       height: 100%;
       padding:22px 50px 0 30px;
-      .countBarBox{
-        padding-top:37px; 
-        margin-bottom: 10px;
-        .barRail{
-          position: relative;
-          background: #f0f3f8;
-          border-radius:5px;
-          .bar{
-            height: 6px;
-            background: #02a7c5;
-            border-radius:5px;
+      .normal{
+        .countBarBox{
+          padding-top:37px; 
+          margin-bottom: 10px;
+          .barRail{
             position: relative;
-          }
-          .percent{
-            position: absolute;
-            right: 0;
-            bottom:17px;
-            background: #02a7c5;
-            color:#fff;
-            font-weight: 500;
-            border-radius: 15px;
-            width:50px;
-            height: 27px;
-            margin-right: -25px;
-            line-height: 27px;
-            text-align: center;
-            &:after{
+            background: #f0f3f8;
+            border-radius:5px;
+            .bar{
+              height: 6px;
+              background: #02a7c5;
+              border-radius:5px;
+              position: relative;
+            }
+            .percent{
               position: absolute;
-              bottom: -4px;
-              left:50%;
-              margin-left:-4px;
-              display: block;
-              content:"";
-              border-left: 4px solid transparent;
-              border-right: 4px solid transparent;
-              border-top: 4px solid #02a7c5;
-            }
-          }
-        }
-        .now{
-          font-size: $_14px;
-          color:#02a7c5;
-        }
-        .last{
-          float: right;
-          font-size: $_14px;
-          color:$colorLevel4;
-        }
-      }
-      >ul{
-        margin-bottom:5px;
-        li{          
-          overflow: hidden;
-          .tit{
-            float: left;
-            font-size:$_14px;
-            color:$colorLevel5;
-            letter-spacing: -0.075em;
-          }
-          .txt{
-            float: right;
-            font-size:$_16px;
-            font-weight: 500;
-            color:$colorLevel4;
-            &.complete{
-              color:$colorLevel2;
-            }
-            strong{
+              right: 0;
+              bottom:17px;
+              background: #02a7c5;
+              color:#fff;
               font-weight: 500;
+              border-radius: 15px;
+              width:50px;
+              height: 27px;
+              margin-right: -25px;
+              line-height: 27px;
+              text-align: center;
+              &:after{
+                position: absolute;
+                bottom: -4px;
+                left:50%;
+                margin-left:-4px;
+                display: block;
+                content:"";
+                border-left: 4px solid transparent;
+                border-right: 4px solid transparent;
+                border-top: 4px solid #02a7c5;
+              }
+            }
+          }
+          .now{
+            font-size: $_14px;
+            color:#02a7c5;
+          }
+          .last{
+            float: right;
+            font-size: $_14px;
+            color:$colorLevel4;
+          }
+        }
+        .payList{
+          margin-bottom:5px;
+          li{          
+            overflow: hidden;
+            .tit{
+              float: left;
+              font-size:$_14px;
+              color:$colorLevel5;
+              letter-spacing: -0.075em;
+            }
+            .txt{
+              float: right;
+              font-size:$_16px;
+              font-weight: 500;
+              color:$colorLevel4;
+              &.complete{
+                color:$colorLevel2;
+              }
+              strong{
+                font-weight: 500;
+              }
             }
           }
         }
+        .text{
+          font-size: $_12px;
+          font-family: 'dotum';
+          color:$colorLevel4;
+          letter-spacing:-0.06em;
+        }
       }
-      .text{
-        font-size: $_12px;
-        font-family: 'dotum';
-        color:$colorLevel4;
-        letter-spacing:-0.06em;
+      .cancel{
+        display: table;
+        height: 100%;
+        text-align: center;
+        padding:0 0 20px 30px;
+        letter-spacing: -0.075em;
+        .text{
+          display: table-cell;
+          vertical-align: middle;
+          font-size:$_18px;
+          color:$colorLevel5;
+          line-height: 28px;
+          .title{
+            display: block;
+          }
+        }
       }
     }
   }
@@ -845,14 +879,21 @@
     }
     .info{
       width:460px;
-      height: 110px;
       border-right:1px solid $lineColor3;
       padding:0px 30px 0; 
+      position: relative;
+      .name{
+        margin-bottom: 15px;
+      }
+      .btnEdit{
+        position: absolute;
+        bottom: 27px;
+        right: 25px;
+      }
     }
     .payment{
       width:240px;
       padding:0px 30px 0;
-      height: 110px;
     }
   }
   .contractScroll{
@@ -952,6 +993,26 @@
   }  
   &.agree.on{
     background:#ffe4e3 url(../images/common/icon_agree_on.png) no-repeat 10px center;
+  }
+}
+.btnEdit{
+  font-size: $_14px;
+  color: $colorLevel2;
+  letter-spacing:-0.025em;
+  &:before{
+    display: inline-block;
+    content: "";
+    width:18px;
+    height: 21px;
+    background: url(/asset/images/common/icon_edit_off.png) no-repeat 0 0;
+    vertical-align: top;
+    margin-right: 8px;
+  }
+  &:hover{
+    color:#01a7c4;
+    &:before{
+      background: url(/asset/images/common/icon_edit_on.png) no-repeat 0 0;
+    }
   }
 }
 
