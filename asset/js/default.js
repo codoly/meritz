@@ -71,10 +71,14 @@ function layerPopBoxClose(target){
 }
 //탑버튼 유무
 function btnTop(obj){
+  var btnTop = $(".btnTop");
+  console.log($(obj).height(), $(obj).find(".mCSB_container").height())
   if($(obj).height() < $(obj).find(".mCSB_container").height()){
-    $(".btnTop").show();
-    $(".btnTop").on("click", function () {
+    btnTop.show();
+    btnTop.on("click", function () {
       $(obj).mCustomScrollbar( "scrollTo","0")
     })
+  }else{
+    btnTop.hide();
   }
 }
