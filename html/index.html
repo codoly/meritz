@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
-  <link rel="stylesheet" href="/asset/css/style.css">
-  <script src="/asset/js/lib/jquery.min.js"></script>
-  <script src="/asset/js/lib/jquery.mCustomScrollbar.min.js"></script>
-  <script src="/asset/js/lib/jquery.mousewheel-3.0.6.min.js"></script>
-  <script src="/asset/js/lib/jquery.nice-select.min.js"></script>
-  <script src="/asset/js/lib/jquery.placeholder.min.js"></script>
-  <script src="/asset/js/default.js"></script>
+  <link href="../css/gu.renew.style.css" rel="stylesheet">
+  <script src="../js/lib/jquery.min.js"></script>
+  <script src="../js/lib/jquery.mCustomScrollbar.min.js"></script>
+  <script src="../js/lib/jquery.mousewheel-3.0.6.min.js"></script>
+  <script src="../js/lib/jquery.nice-select.min.js"></script>
+  <script src="../js/lib/jquery.placeholder.min.js"></script>
+  <script src="../js/gu.renew.common.ui.js"></script>
   <script>
     $(function () {
-      $(".contentScroll").mCustomScrollbar({
+      $(".content_scroll").mCustomScrollbar({
         scrollInertia: 150,
         callbacks: {
-          onInit: function() {
+          onInit: function () {
             btnTop(this)
           },
-          onUpdate: function() {
+          onUpdate: function () {
             btnTop(this)
           }
         }
@@ -28,38 +28,38 @@
 </head>
 <body>
 <div class="wrap main">
-  <div class="contentWrap">
-    <!-- leftArea : s -->
-    <div class="leftArea">
-      <h1 class="logo"><a href="#"><img src="/asset/images/common/main_logo.png" alt="meritz 메리츠 화재"></a></h1>
-      <div class="nameArea">
+  <div class="content_wrap">
+    <!-- left_area : s -->
+    <div class="left_area">
+      <h1 class="logo"><a href="#"><img alt="meritz 메리츠 화재" src="../images/gu.renew.common/main_logo.png"></a></h1>
+      <div class="name_area">
         <strong class="name">홍길동</strong> 설계사님<br>
         반갑습니다.
       </div>
-      <div class="manyArea">설계사님의 고객은 <strong class="many">163</strong>명 입니다.</div>
-      <div class="infoText">오늘은<br>어떤 고객님과 마주 할까요?</div>
-      <div class="searchArea"><input type="text" placeholder="고객 검색"><a href="#" class="btnSearch">검색</a></div>
-      <ul class="bottomBtnArea">
+      <div class="many_area">설계사님의 고객은 <strong class="many">163</strong>명 입니다.</div>
+      <div class="info_text">오늘은<br>어떤 고객님과 마주 할까요?</div>
+      <div class="search_area"><input placeholder="고객 검색" type="text"><a class="btn_search" href="#">검색</a></div>
+      <ul class="bottom_btn_area">
         <li>
           <a href="#">
-            <span class="icon"><img src="/asset/images/common/main_left_icon_01.png" alt=""></span>
+            <span class="icon"><img alt="" src="../images/gu.renew.common/main_left_icon_01.png"></span>
             <span class="text">고객등록</span>
           </a>
         </li>
         <li>
           <a href="#">
-            <span class="icon"><img src="/asset/images/common/main_left_icon_02.png" alt=""></span>
+            <span class="icon"><img alt="" src="../images/gu.renew.common/main_left_icon_02.png"></span>
             <span class="text">권장금액 담보군 설정</span>
           </a>
         </li>
       </ul>
     </div>
-    <!-- leftArea : e -->
-    <!-- contentArea : s -->
-    <div class="contentArea">
+    <!-- left_area : e -->
+    <!-- content_area : s -->
+    <div class="content_area">
       <div class="sorting">
-        <div class="selectBox">
-          <select name="" id="" class="small">
+        <div class="select_box">
+          <select class="small" id="" name="">
             <option value="1">최근 동의 순</option>
             <option value="1">동의 종료 순</option>
             <option value="1">최근 등록 순</option>
@@ -67,30 +67,30 @@
             <option value="1">최근 상령일 순</option>
           </select>
         </div>
-        <ul class="sortingList">
+        <ul class="sorting_list">
           <li>
-            <div class="checkBoxSet">
-              <input type="checkbox" id="checkbox1">
+            <div class="check_box_set">
+              <input id="checkbox1" type="checkbox">
               <label for="checkbox1">즐겨찾기</label>
             </div>
           </li>
           <li>
-            <div class="checkBoxSet">
-              <input type="checkbox" id="checkbox2">
+            <div class="check_box_set">
+              <input id="checkbox2" type="checkbox">
               <label for="checkbox2">동의종료D-7</label>
             </div>
           </li>
           <li>
-            <div class="checkBoxSet">
-              <input type="checkbox" id="checkbox3">
+            <div class="check_box_set">
+              <input id="checkbox3" type="checkbox">
               <label for="checkbox3">보장분석</label>
             </div>
           </li>
         </ul>
       </div>
 
-      <div class="listTableType">
-        <div class="theadBox">
+      <div class="list_table_type">
+        <div class="thead_box">
           <div class="item">
             <div class="tr">
               <div class="th name">고객명</div>
@@ -108,9 +108,9 @@
           </div>
         </div>
 
-        <!-- scrollArea : s -->
-        <div class="contentScroll">
-          <div class="tbodyBox">
+        <!-- scroll_area : s -->
+        <div class="content_scroll">
+          <div class="tbody_box">
             <div class="item">
               <div class="tr">
                 <div class="td name"><a href="#">독고영재</a></div>
@@ -120,10 +120,10 @@
                 <div class="td">11-30</div>
                 <div class="td">D-30</div>
                 <div class="td date">2019.10.14</div>
-                <div class="td"><a href="#" class="btnCircle like on"><span>즐겨찾기</span></a></div>
-                <div class="td"><a href="#" class="btnCircle analysis on"><span>보장분석</span></a></div>
-                <div class="td"><a href="#" class="btnCircle agree on"><span>동의여부</span></a></div>
-                <div class="td attend"><a href="#" class="btnText sizeMiddle fillGray"><span>출력</span></a></div>
+                <div class="td"><a class="btn_circle like on" href="#"><span>즐겨찾기</span></a></div>
+                <div class="td"><a class="btn_circle analysis on" href="#"><span>보장분석</span></a></div>
+                <div class="td"><a class="btn_circle agree on" href="#"><span>동의여부</span></a></div>
+                <div class="td attend"><a class="btn_text size_middle fill_gray" href="#"><span>출력</span></a></div>
               </div>
             </div>
             <div class="item">
@@ -135,10 +135,10 @@
                 <div class="td">11-30</div>
                 <div class="td">D-30</div>
                 <div class="td date">2019.10.14</div>
-                <div class="td"><a href="#" class="btnCircle like"><span>즐겨찾기</span></a></div>
-                <div class="td"><a href="#" class="btnCircle analysis"><span>보장분석</span></a></div>
-                <div class="td"><a href="#" class="btnCircle agree"><span>동의여부</span></a></div>
-                <div class="td attend"><a href="#" class="btnText sizeMiddle fillGray"><span>출력</span></a></div>
+                <div class="td"><a class="btn_circle like" href="#"><span>즐겨찾기</span></a></div>
+                <div class="td"><a class="btn_circle analysis" href="#"><span>보장분석</span></a></div>
+                <div class="td"><a class="btn_circle agree" href="#"><span>동의여부</span></a></div>
+                <div class="td attend"><a class="btn_text size_middle fill_gray" href="#"><span>출력</span></a></div>
               </div>
             </div>
             <div class="item">
@@ -150,10 +150,10 @@
                 <div class="td">11-30</div>
                 <div class="td">D-30</div>
                 <div class="td date">2019.10.14</div>
-                <div class="td"><a href="#" class="btnCircle like on"><span>즐겨찾기</span></a></div>
-                <div class="td"><a href="#" class="btnCircle analysis on"><span>보장분석</span></a></div>
-                <div class="td"><a href="#" class="btnCircle agree"><span>동의여부</span></a></div>
-                <div class="td attend"><a href="#" class="btnText sizeMiddle fillGray"><span>출력</span></a></div>
+                <div class="td"><a class="btn_circle like on" href="#"><span>즐겨찾기</span></a></div>
+                <div class="td"><a class="btn_circle analysis on" href="#"><span>보장분석</span></a></div>
+                <div class="td"><a class="btn_circle agree" href="#"><span>동의여부</span></a></div>
+                <div class="td attend"><a class="btn_text size_middle fill_gray" href="#"><span>출력</span></a></div>
               </div>
             </div>
             <div class="item">
@@ -165,10 +165,10 @@
                 <div class="td">11-30</div>
                 <div class="td">D-30</div>
                 <div class="td date">2019.10.14</div>
-                <div class="td"><a href="#" class="btnCircle like on"><span>즐겨찾기</span></a></div>
-                <div class="td"><a href="#" class="btnCircle analysis on"><span>보장분석</span></a></div>
-                <div class="td"><a href="#" class="btnCircle agree"><span>동의여부</span></a></div>
-                <div class="td attend"><a href="#" class="btnText sizeMiddle fillGray"><span>출력</span></a></div>
+                <div class="td"><a class="btn_circle like on" href="#"><span>즐겨찾기</span></a></div>
+                <div class="td"><a class="btn_circle analysis on" href="#"><span>보장분석</span></a></div>
+                <div class="td"><a class="btn_circle agree" href="#"><span>동의여부</span></a></div>
+                <div class="td attend"><a class="btn_text size_middle fill_gray" href="#"><span>출력</span></a></div>
               </div>
             </div>
             <div class="item">
@@ -180,10 +180,10 @@
                 <div class="td">11-30</div>
                 <div class="td">D-30</div>
                 <div class="td date">2019.10.14</div>
-                <div class="td"><a href="#" class="btnCircle like on"><span>즐겨찾기</span></a></div>
-                <div class="td"><a href="#" class="btnCircle analysis on"><span>보장분석</span></a></div>
-                <div class="td"><a href="#" class="btnCircle agree on"><span>동의여부</span></a></div>
-                <div class="td attend"><a href="#" class="btnText sizeMiddle fillGray"><span>출력</span></a></div>
+                <div class="td"><a class="btn_circle like on" href="#"><span>즐겨찾기</span></a></div>
+                <div class="td"><a class="btn_circle analysis on" href="#"><span>보장분석</span></a></div>
+                <div class="td"><a class="btn_circle agree on" href="#"><span>동의여부</span></a></div>
+                <div class="td attend"><a class="btn_text size_middle fill_gray" href="#"><span>출력</span></a></div>
               </div>
             </div>
             <div class="item">
@@ -195,10 +195,10 @@
                 <div class="td">11-30</div>
                 <div class="td">D-30</div>
                 <div class="td date">2019.10.14</div>
-                <div class="td"><a href="#" class="btnCircle like"><span>즐겨찾기</span></a></div>
-                <div class="td"><a href="#" class="btnCircle analysis"><span>보장분석</span></a></div>
-                <div class="td"><a href="#" class="btnCircle agree"><span>동의여부</span></a></div>
-                <div class="td attend"><a href="#" class="btnText sizeMiddle fillGray"><span>출력</span></a></div>
+                <div class="td"><a class="btn_circle like" href="#"><span>즐겨찾기</span></a></div>
+                <div class="td"><a class="btn_circle analysis" href="#"><span>보장분석</span></a></div>
+                <div class="td"><a class="btn_circle agree" href="#"><span>동의여부</span></a></div>
+                <div class="td attend"><a class="btn_text size_middle fill_gray" href="#"><span>출력</span></a></div>
               </div>
             </div>
             <div class="item">
@@ -210,10 +210,10 @@
                 <div class="td">11-30</div>
                 <div class="td">D-30</div>
                 <div class="td date">2019.10.14</div>
-                <div class="td"><a href="#" class="btnCircle like on"><span>즐겨찾기</span></a></div>
-                <div class="td"><a href="#" class="btnCircle analysis on"><span>보장분석</span></a></div>
-                <div class="td"><a href="#" class="btnCircle agree"><span>동의여부</span></a></div>
-                <div class="td attend"><a href="#" class="btnText sizeMiddle fillGray"><span>출력</span></a></div>
+                <div class="td"><a class="btn_circle like on" href="#"><span>즐겨찾기</span></a></div>
+                <div class="td"><a class="btn_circle analysis on" href="#"><span>보장분석</span></a></div>
+                <div class="td"><a class="btn_circle agree" href="#"><span>동의여부</span></a></div>
+                <div class="td attend"><a class="btn_text size_middle fill_gray" href="#"><span>출력</span></a></div>
               </div>
             </div>
             <div class="item">
@@ -225,10 +225,10 @@
                 <div class="td">11-30</div>
                 <div class="td">D-30</div>
                 <div class="td date">2019.10.14</div>
-                <div class="td"><a href="#" class="btnCircle like on"><span>즐겨찾기</span></a></div>
-                <div class="td"><a href="#" class="btnCircle analysis on"><span>보장분석</span></a></div>
-                <div class="td"><a href="#" class="btnCircle agree"><span>동의여부</span></a></div>
-                <div class="td attend"><a href="#" class="btnText sizeMiddle fillGray"><span>출력</span></a></div>
+                <div class="td"><a class="btn_circle like on" href="#"><span>즐겨찾기</span></a></div>
+                <div class="td"><a class="btn_circle analysis on" href="#"><span>보장분석</span></a></div>
+                <div class="td"><a class="btn_circle agree" href="#"><span>동의여부</span></a></div>
+                <div class="td attend"><a class="btn_text size_middle fill_gray" href="#"><span>출력</span></a></div>
               </div>
             </div>
             <div class="item">
@@ -240,10 +240,10 @@
                 <div class="td">11-30</div>
                 <div class="td">D-30</div>
                 <div class="td date">2019.10.14</div>
-                <div class="td"><a href="#" class="btnCircle like on"><span>즐겨찾기</span></a></div>
-                <div class="td"><a href="#" class="btnCircle analysis on"><span>보장분석</span></a></div>
-                <div class="td"><a href="#" class="btnCircle agree on"><span>동의여부</span></a></div>
-                <div class="td attend"><a href="#" class="btnText sizeMiddle fillGray"><span>출력</span></a></div>
+                <div class="td"><a class="btn_circle like on" href="#"><span>즐겨찾기</span></a></div>
+                <div class="td"><a class="btn_circle analysis on" href="#"><span>보장분석</span></a></div>
+                <div class="td"><a class="btn_circle agree on" href="#"><span>동의여부</span></a></div>
+                <div class="td attend"><a class="btn_text size_middle fill_gray" href="#"><span>출력</span></a></div>
               </div>
             </div>
             <div class="item">
@@ -255,10 +255,10 @@
                 <div class="td">11-30</div>
                 <div class="td">D-30</div>
                 <div class="td date">2019.10.14</div>
-                <div class="td"><a href="#" class="btnCircle like"><span>즐겨찾기</span></a></div>
-                <div class="td"><a href="#" class="btnCircle analysis"><span>보장분석</span></a></div>
-                <div class="td"><a href="#" class="btnCircle agree"><span>동의여부</span></a></div>
-                <div class="td attend"><a href="#" class="btnText sizeMiddle fillGray"><span>출력</span></a></div>
+                <div class="td"><a class="btn_circle like" href="#"><span>즐겨찾기</span></a></div>
+                <div class="td"><a class="btn_circle analysis" href="#"><span>보장분석</span></a></div>
+                <div class="td"><a class="btn_circle agree" href="#"><span>동의여부</span></a></div>
+                <div class="td attend"><a class="btn_text size_middle fill_gray" href="#"><span>출력</span></a></div>
               </div>
             </div>
             <div class="item">
@@ -270,10 +270,10 @@
                 <div class="td">11-30</div>
                 <div class="td">D-30</div>
                 <div class="td date">2019.10.14</div>
-                <div class="td"><a href="#" class="btnCircle like on"><span>즐겨찾기</span></a></div>
-                <div class="td"><a href="#" class="btnCircle analysis on"><span>보장분석</span></a></div>
-                <div class="td"><a href="#" class="btnCircle agree"><span>동의여부</span></a></div>
-                <div class="td attend"><a href="#" class="btnText sizeMiddle fillGray"><span>출력</span></a></div>
+                <div class="td"><a class="btn_circle like on" href="#"><span>즐겨찾기</span></a></div>
+                <div class="td"><a class="btn_circle analysis on" href="#"><span>보장분석</span></a></div>
+                <div class="td"><a class="btn_circle agree" href="#"><span>동의여부</span></a></div>
+                <div class="td attend"><a class="btn_text size_middle fill_gray" href="#"><span>출력</span></a></div>
               </div>
             </div>
             <div class="item">
@@ -285,10 +285,10 @@
                 <div class="td">11-30</div>
                 <div class="td">D-30</div>
                 <div class="td date">2019.10.14</div>
-                <div class="td"><a href="#" class="btnCircle like on"><span>즐겨찾기</span></a></div>
-                <div class="td"><a href="#" class="btnCircle analysis on"><span>보장분석</span></a></div>
-                <div class="td"><a href="#" class="btnCircle agree"><span>동의여부</span></a></div>
-                <div class="td attend"><a href="#" class="btnText sizeMiddle fillGray"><span>출력</span></a></div>
+                <div class="td"><a class="btn_circle like on" href="#"><span>즐겨찾기</span></a></div>
+                <div class="td"><a class="btn_circle analysis on" href="#"><span>보장분석</span></a></div>
+                <div class="td"><a class="btn_circle agree" href="#"><span>동의여부</span></a></div>
+                <div class="td attend"><a class="btn_text size_middle fill_gray" href="#"><span>출력</span></a></div>
               </div>
             </div>
             <div class="item">
@@ -300,10 +300,10 @@
                 <div class="td">11-30</div>
                 <div class="td">D-30</div>
                 <div class="td date">2019.10.14</div>
-                <div class="td"><a href="#" class="btnCircle like on"><span>즐겨찾기</span></a></div>
-                <div class="td"><a href="#" class="btnCircle analysis on"><span>보장분석</span></a></div>
-                <div class="td"><a href="#" class="btnCircle agree on"><span>동의여부</span></a></div>
-                <div class="td attend"><a href="#" class="btnText sizeMiddle fillGray"><span>출력</span></a></div>
+                <div class="td"><a class="btn_circle like on" href="#"><span>즐겨찾기</span></a></div>
+                <div class="td"><a class="btn_circle analysis on" href="#"><span>보장분석</span></a></div>
+                <div class="td"><a class="btn_circle agree on" href="#"><span>동의여부</span></a></div>
+                <div class="td attend"><a class="btn_text size_middle fill_gray" href="#"><span>출력</span></a></div>
               </div>
             </div>
             <div class="item">
@@ -315,10 +315,10 @@
                 <div class="td">11-30</div>
                 <div class="td">D-30</div>
                 <div class="td date">2019.10.14</div>
-                <div class="td"><a href="#" class="btnCircle like"><span>즐겨찾기</span></a></div>
-                <div class="td"><a href="#" class="btnCircle analysis"><span>보장분석</span></a></div>
-                <div class="td"><a href="#" class="btnCircle agree"><span>동의여부</span></a></div>
-                <div class="td attend"><a href="#" class="btnText sizeMiddle fillGray"><span>출력</span></a></div>
+                <div class="td"><a class="btn_circle like" href="#"><span>즐겨찾기</span></a></div>
+                <div class="td"><a class="btn_circle analysis" href="#"><span>보장분석</span></a></div>
+                <div class="td"><a class="btn_circle agree" href="#"><span>동의여부</span></a></div>
+                <div class="td attend"><a class="btn_text size_middle fill_gray" href="#"><span>출력</span></a></div>
               </div>
             </div>
             <div class="item">
@@ -330,10 +330,10 @@
                 <div class="td">11-30</div>
                 <div class="td">D-30</div>
                 <div class="td date">2019.10.14</div>
-                <div class="td"><a href="#" class="btnCircle like on"><span>즐겨찾기</span></a></div>
-                <div class="td"><a href="#" class="btnCircle analysis on"><span>보장분석</span></a></div>
-                <div class="td"><a href="#" class="btnCircle agree"><span>동의여부</span></a></div>
-                <div class="td attend"><a href="#" class="btnText sizeMiddle fillGray"><span>출력</span></a></div>
+                <div class="td"><a class="btn_circle like on" href="#"><span>즐겨찾기</span></a></div>
+                <div class="td"><a class="btn_circle analysis on" href="#"><span>보장분석</span></a></div>
+                <div class="td"><a class="btn_circle agree" href="#"><span>동의여부</span></a></div>
+                <div class="td attend"><a class="btn_text size_middle fill_gray" href="#"><span>출력</span></a></div>
               </div>
             </div>
             <div class="item">
@@ -345,24 +345,24 @@
                 <div class="td">11-30</div>
                 <div class="td">D-30</div>
                 <div class="td date">2019.10.14</div>
-                <div class="td"><a href="#" class="btnCircle like on"><span>즐겨찾기</span></a></div>
-                <div class="td"><a href="#" class="btnCircle analysis on"><span>보장분석</span></a></div>
-                <div class="td"><a href="#" class="btnCircle agree"><span>동의여부</span></a></div>
-                <div class="td attend"><a href="#" class="btnText sizeMiddle fillGray"><span>출력</span></a></div>
+                <div class="td"><a class="btn_circle like on" href="#"><span>즐겨찾기</span></a></div>
+                <div class="td"><a class="btn_circle analysis on" href="#"><span>보장분석</span></a></div>
+                <div class="td"><a class="btn_circle agree" href="#"><span>동의여부</span></a></div>
+                <div class="td attend"><a class="btn_text size_middle fill_gray" href="#"><span>출력</span></a></div>
               </div>
             </div>
             <!-- 고객등록 버튼 : s -->
-            <div class="customerAdd">
-              <a href="#" class="btnCustomerAdd"><span>고객을 등록해 주세요.</span></a>
+            <div class="customer_add">
+              <a class="btn_customer_add" href="#"><span>고객을 등록해 주세요.</span></a>
             </div>
             <!-- 고객등록 버튼 : e -->
-          </div>          
+          </div>
         </div>
-        <!-- scrollArea : e -->
+        <!-- scroll_area : e -->
       </div>
-      <button class="btnTop">상단으로</button>
+      <button class="btn_top">상단으로</button>
     </div>
-    <!-- contentArea : e -->
+    <!-- content_area : e -->
   </div>
 </div>
 

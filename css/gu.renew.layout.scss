@@ -1,0 +1,1005 @@
+.wrap {
+  position: relative;
+  min-height: 100%;
+  background: #f0f3f8;
+  overflow: hidden;
+
+}
+
+//메인 layout
+.wrap.main {
+  min-width: 1280px;
+  min-height: 940px;
+  margin: 0 auto;
+
+  &:after {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1920px;
+    height: 940px;
+    margin-left: -960px;
+    background-image: url("../images/gu.renew.common/main_left_bg.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    content: "";
+  }
+
+  .content_wrap {
+    @include clearline;
+    position: relative;
+    z-index: 1;
+    width: 1280px;
+    margin: 0 auto;
+    /*메인 왼쪽*/
+    .left_area {
+      position: relative;
+      float: left;
+      width: 396px;
+      height: 940px;
+      padding: 30px 60px 0 28px;
+
+      .name_area {
+        margin-top: 62px;
+        font-size: $fz40px;
+        font-weight: 300;
+        line-height: $fz50px;
+        letter-spacing: -4px;
+        color: #fff;
+
+        .name {
+          font-weight: 500;
+        }
+      }
+
+      .many_area {
+        position: relative;
+        margin-top: 43px;
+        padding-bottom: 68px;
+        letter-spacing: -1px;
+        color: #fff;
+
+        .many {
+          font-size: $fz36px;
+          font-weight: 500;
+          color: $color_button_red;
+        }
+
+        &:after {
+          display: block;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 36px;
+          height: 3px;
+          border-radius: 3px;
+          background: #01a7c4;
+          content: "";
+        }
+      }
+
+      .info_text {
+        margin-top: 64px;
+        font-size: $fz28px;
+        font-weight: 300;
+        line-height: $fz36px;
+        letter-spacing: -2px;
+        color: #01a7c4;
+      }
+
+      .search_area {
+        margin-top: 15px;
+      }
+
+      .bottom_btn_area {
+        @include clearline;
+        position: absolute;
+        bottom: 40px;
+        left: 28px;
+        padding: 22px 0;
+        border-radius: 5px;
+        background: rgba(41, 53, 108, 0.8);
+
+        li {
+          float: left;
+          width: 131px;
+
+          a {
+            display: block;
+            padding: 8px 0 5px 0;
+            text-align: center;
+
+            .icon {
+              display: block;
+            }
+
+            .text {
+              display: block;
+              margin-top: 8px;
+              letter-spacing: -1px;
+              color: #ffffff;
+            }
+          }
+
+          &:last-child {
+            width: 177px;
+            border-left: 1px solid #1d2653;
+          }
+        }
+      }
+    }
+
+    /*메인 본문*/
+    .content_area {
+      position: relative;
+      float: left;
+      width: 884px;
+      padding: 30px 0 0px 30px;
+
+      .sorting {
+        width: 782px;
+        margin-bottom: 15px;
+        text-align: right;
+
+        .select_box {
+          display: inline-block;
+          vertical-align: top;
+        }
+
+        .sorting_list {
+          display: inline-block;
+          margin-left: 20px;
+          text-align: left;
+          @include clearline;
+          vertical-align: top;
+
+          li {
+            float: left;
+            margin-right: 25px;
+            letter-spacing: -1px;
+
+            &:last-child {
+              margin-right: 0;
+            }
+
+            label {
+              color: $color_level2;
+            }
+          }
+        }
+      }
+
+      .content_scroll {
+        height: 815px;
+      }
+    }
+  }
+}
+
+//서브 layout
+.wrap.sub {
+  min-width: 1280px;
+  min-height: 940px;
+  margin: 0 auto;
+
+  &:after {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1920px;
+    height: 940px;
+    margin-left: -1104px;
+    background-image: url("../images/gu.renew.common/main_left_bg.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    content: "";
+  }
+
+  .content_wrap {
+    @include clearline;
+    position: relative;
+    z-index: 1;
+    width: 1280px;
+    margin: 0 auto;
+
+    > .btn_close {
+      position: absolute;
+      z-index: 10;
+      top: 0;
+      right: 50px;
+    }
+
+    /*메인 왼쪽*/
+    .left_area {
+      position: relative;
+      float: left;
+      width: 396px;
+      height: 940px;
+      padding: 0px 0px 0 28px;
+
+      .info_area {
+        float: left;
+        width: 194px;
+
+        .search_area {
+          margin: 25px 29px 0 0;
+        }
+
+        .sorting {
+          margin-top: 17px;
+          margin-right: 29px;
+          text-align: right;
+          @include clearline;
+
+          .sorting_list {
+            float: right;
+            margin-top: 20px;
+            padding-right: 15px;
+            text-align: left;
+
+            li {
+              margin-bottom: 5px;
+              letter-spacing: -1px;
+
+              &:last-child {
+                margin-bottom: 0;
+              }
+
+              label {
+                width: 115px;
+                text-align: right;
+              }
+            }
+          }
+        }
+
+        .select_member_box {
+          height: 278px;
+          padding: 51px 0 0 25px;
+          background: url("../images/gu.renew.common/member_box_bg.png") no-repeat;
+
+          .info {
+            letter-spacing: -0.04em;
+
+            .name {
+              position: relative;
+              margin-bottom: 10px;
+              padding-bottom: 18px;
+              font-size: $fz20px;
+              line-height: 1;
+              color: $color_level2;
+
+              &:after {
+                display: block;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 36px;
+                height: 3px;
+                border-radius: 3px;
+                background: #01a7c4;
+                overflow: hidden;
+                content: "";
+              }
+            }
+
+            > .text {
+              margin-bottom: 7px;
+              color: $color_level3;
+            }
+
+            .btn_area {
+              @include clearline;
+              margin-bottom: 10px;
+
+              .btn_icon {
+                @include bg_btn;
+                float: left;
+                width: 22px;
+                height: 22px;
+                margin-right: 17px;
+
+                &.favorites {
+                  background: url("../images/gu.renew.common/icon_like_layout_off.png") no-repeat center top;
+
+                  &:hover,
+                  &:focus,
+                  &.on {
+                    background: url("../images/gu.renew.common/icon_like_layout_on.png") no-repeat center top;
+                  }
+                }
+
+                &.statistics {
+                  background: url("../images/gu.renew.common/icon_analysis_layout_off.png") no-repeat center top;
+
+                  &:hover,
+                  &:focus,
+                  &.on {
+                    background: url("../images/gu.renew.common/icon_analysis_layout_on.png") no-repeat center top;
+                  }
+                }
+
+                &.sms {
+                  background: url("../images/gu.renew.common/icon_agree_layout_off.png") no-repeat center top;
+
+                  &:hover,
+                  &:focus,
+                  &.on {
+                    background: url("../images/gu.renew.common/icon_agree_layout_on.png") no-repeat center top;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .member_list_area {
+          .total {
+            margin: 10px 0 25px 0;
+            padding-left: 25px;
+            font-size: $fz28px;
+            letter-spacing: -1px;
+            color: #ffffff;
+
+            strong {
+              font-size: $fz32px;
+              font-weight: 500;
+              color: $color_button_red;
+            }
+          }
+
+          .member_list {
+            width: 180px;
+            height: 360px;
+            padding-left: 14px;
+
+            .m_c_s_b_scroll_tools .m_c_s_b_dragger .m_c_s_b_dragger_bar {
+              background-color: #d6d6d9;
+            }
+
+            .list {
+              width: 150px;
+
+              > li {
+                margin-bottom: 9px;
+
+                .item {
+                  .name {
+                    display: block;
+                    position: relative;
+                    width: 100%;
+                    padding-left: 10px;
+                    font-weight: 500;
+                    line-height: 38px;
+                    color: #bbccf5;
+
+                    &:after {
+                      display: block;
+                      position: absolute;
+                      top: 14px;
+                      right: 10px;
+                      width: 15px;
+                      height: 8px;
+                      background: url("../images/gu.renew.common/main_select_arr_off.png") no-repeat;
+                      content: "";
+                    }
+                  }
+
+                  .info {
+                    display: none;
+                    margin-bottom: 9px;
+                    padding: 20px 10px;
+                    border-top: 1px solid #ffffff;
+                    border-bottom: 1px solid #606c87;
+
+                    > .text {
+                      margin-bottom: 15px;
+                      font-size: $fz14px;
+                      line-height: 1;
+                      color: #ffffff;
+                    }
+
+                    .btn_area {
+                      @include clearline;
+                      margin-bottom: 12px;
+
+                      .btn_icon {
+                        @include bg_btn;
+                        float: left;
+                        width: 22px;
+                        height: 22px;
+                        margin-right: 17px;
+
+                        &.favorites {
+                          background: url("../images/gu.renew.common/icon_like_layout2_off.png") no-repeat center top;
+
+                          &:hover,
+                          &:focus,
+                          &.on {
+                            background: url("../images/gu.renew.common/icon_like_layout_on.png") no-repeat center top;
+                          }
+                        }
+
+                        &.statistics {
+                          background: url("../images/gu.renew.common/icon_analysis_layout2_off.png") no-repeat center top;
+
+                          &:hover,
+                          &:focus,
+                          &.on {
+                            background: url("../images/gu.renew.common/icon_analysis_layout_on.png") no-repeat center top;
+                          }
+                        }
+
+                        &.sms {
+                          background: url("../images/gu.renew.common/icon_agree_layout2_off.png") no-repeat center top;
+
+                          &:hover,
+                          &:focus,
+                          &.on {
+                            background: url("../images/gu.renew.common/icon_agree_layout_on.png") no-repeat center top;
+                          }
+                        }
+                      }
+                    }
+
+                    .info_grid {
+                      li {
+                        color: #ffffff !important;
+
+                        &.title {
+                          width: 58px;
+                        }
+                      }
+                    }
+                  }
+
+                  &.on {
+                    .name {
+                      color: #ffffff;
+
+                      &:after {
+                        background: url("../images/gu.renew.common/main_select_arr_on.png") no-repeat;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .menu_area {
+        position: relative;
+        float: left;
+        width: 174px;
+        height: 940px;
+        border-right: 1px solid $line_color2;
+        background: #f0f3f8;
+
+        .menu_set {
+          position: relative;
+          height: 695px;
+
+          ul {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            margin-top: -272px;
+
+            li {
+              margin-bottom: 45px;
+              text-align: center;
+
+              .menu {
+                display: inline-block;
+                position: relative;
+                font-size: $fz17px;
+                line-height: 1;
+                text-align: center;
+                color: $color_point2;
+
+                span {
+                  display: block;
+                  text-align: center;
+                }
+
+                span:before {
+                  display: block;
+                  margin: 0 auto 9px auto;
+                  content: '';
+                }
+
+                &:hover,
+                &:focus,
+                &.on {
+                  color: $color_point1;
+
+                  &:after {
+                    display: block;
+                    position: absolute;
+                    right: 0;
+                    bottom: -24px;
+                    left: 0;
+                    width: 36px;
+                    height: 3px;
+                    margin: 0 auto;
+                    border-radius: 3px;
+                    background: #01a7c4;
+                    content: "";
+                  }
+                }
+
+                &.new:before {
+                  display: block;
+                  position: absolute;
+                  top: -6px;
+                  left: 50%;
+                  width: 20px;
+                  height: 20px;
+                  margin-left: 20px;
+                  background: url("../images/gu.renew.common/lnb_new.png") no-repeat;
+                  content: "";
+                }
+
+                &.menu01 {
+                  span:before {
+                    width: 46px;
+                    height: 28px;
+                    background: url("../images/gu.renew.common/submenu_01_off.png") no-repeat;
+                  }
+
+                  &:hover span:before,
+                  &:focus span:before,
+                  &.on span:before {
+                    background: url("../images/gu.renew.common/submenu_01_on.png") no-repeat;
+                  }
+                }
+
+                &.menu02 {
+                  span:before {
+                    width: 46px;
+                    height: 31px;
+                    background: url("../images/gu.renew.common/submenu_02_off.png") no-repeat;
+                  }
+
+                  &:hover span:before,
+                  &:focus span:before,
+                  &.on span:before {
+                    background: url("../images/gu.renew.common/submenu_02_on.png") no-repeat;
+                  }
+                }
+
+                &.menu03 {
+                  span:before {
+                    width: 46px;
+                    height: 32px;
+                    background: url("../images/gu.renew.common/submenu_03_off.png") no-repeat;
+                  }
+
+                  &:hover span:before,
+                  &:focus span:before,
+                  &.on span:before {
+                    background: url("../images/gu.renew.common/submenu_03_on.png") no-repeat;
+                  }
+                }
+
+                &.menu04 {
+                  span:before {
+                    width: 46px;
+                    height: 37px;
+                    background: url("../images/gu.renew.common/submenu_04_off.png") no-repeat;
+                  }
+
+                  &:hover span:before,
+                  &:focus span:before,
+                  &.on span:before {
+                    background: url("../images/gu.renew.common/submenu_04_on.png") no-repeat;
+                  }
+                }
+
+                &.menu05 {
+                  span:before {
+                    width: 46px;
+                    height: 37px;
+                    background: url("../images/gu.renew.common/submenu_05_off.png") no-repeat;
+                  }
+
+                  &:hover span:before,
+                  &:focus span:before,
+                  &.on span:before {
+                    background: url("../images/gu.renew.common/submenu_05_on.png") no-repeat;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .bottom_position {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+
+          .util_menu {
+            padding: 20px 0 20px 28px;
+            border-top: 1px solid $line_color2;
+
+            li {
+              .btn {
+                font-size: $fz14px;
+                line-height: $fz30px;
+                letter-spacing: -1px;
+                color: $color_level4;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    /*메인 본문*/
+    .content_area {
+      position: relative;
+      float: left;
+      width: 884px;
+      padding: 0px 0 0px 30px;
+
+      .content_scroll {
+        height: 940px;
+
+        &.consulting_list_scroll {
+          height: 730px;
+        }
+      }
+    }
+  }
+}
+
+.btn_top {
+  @include bg_btn;
+  display: none;
+  position: absolute;
+  right: 18px;
+  bottom: 20px;
+  width: 44px;
+  height: 44px;
+  background: url("../images/gu.renew.common/btn_top.png") no-repeat;
+}
+
+.submain_wrap {
+  width: 781px;
+
+  .top_area {
+    @include clearline;
+    position: relative;
+    z-index: 1;
+    border-bottom: 1px solid $line_color1;
+
+    .img_area {
+      float: left;
+      width: 295px;
+
+      img {
+        filter: gray; /* _i_e6-9 */
+        -webkit-filter: grayscale(1);
+      }
+    }
+
+    .info_area {
+      float: left;
+      width: 486px;
+      padding-top: 102px;
+
+      .favorites {
+        display: inline-block;
+        padding-right: 26px;
+        background: url("../images/gu.renew.contents/icon_heart.png") no-repeat right top;
+        line-height: 17px;
+        color: $color_level2;
+      }
+
+      .title {
+        margin-top: 7px;
+        font-size: $fz34px;
+        font-weight: 300;
+        line-height: $fz40px;
+        letter-spacing: -1px;
+        color: $color_level1;
+
+        strong {
+          font-weight: 500;
+        }
+      }
+
+      .text {
+        @include clearline;
+        margin-top: 20px;
+
+        span,
+        button {
+          float: left;
+          margin-right: 20px;
+          font-size: $fz17px;
+          line-height: $fz22px;
+          color: $color_level4;
+        }
+
+        .alert {
+          margin-right: 10px;
+          padding-right: 27px;
+          background: url("../images/gu.renew.contents/icon_alert.png") no-repeat right top;
+        }
+      }
+    }
+
+    .layer_pop_box {
+      top: 265px;
+      left: 260px;
+    }
+  }
+
+  .more_content {
+    @include clearline;
+    position: relative;
+    height: 599px;
+    margin-top: 20px;
+
+    .box {
+      border-radius: 5px;
+      background: #ffffff;
+
+      &.box1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 386px;
+        height: 284px;
+
+        > .title {
+          padding-top: 34px;
+          font-size: $fz30px;
+          font-weight: 300;
+          line-height: $fz36px;
+          text-align: center;
+          color: $color_level2;
+        }
+
+        > .text {
+          position: relative;
+          margin-top: 17px;
+          margin-bottom: 37px;
+          padding-bottom: 42px;
+          font-size: $fz20px;
+          line-height: 1;
+          text-align: center;
+          color: $color_level2;
+
+          &:after {
+            display: block;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 36px;
+            height: 3px;
+            margin: 0 auto;
+            border-radius: 3px;
+            background: #01a7c4;
+            content: "";
+          }
+        }
+
+        .info_grid {
+          width: 250px;
+          margin: 0 auto;
+        }
+      }
+
+      &.box2 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 386px;
+        height: 304px;
+
+        .graph_area {
+          position: relative;
+
+          #chartdiv1 {
+            height: 200px;
+          }
+
+          .counter_number {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            font-size: $fz30px;
+            transform: translate(-50%, -50%);
+            letter-spacing: -1px;
+            color: #42b4cc;
+
+            strong {
+              font-weight: 700;
+            }
+          }
+        }
+
+        .info_grid {
+          width: 250px;
+          margin: -12px auto 0 auto;
+        }
+      }
+
+      &.box3 {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 385px;
+        height: 599px;
+
+        > .title {
+          padding-top: 34px;
+          font-size: $fz30px;
+          font-weight: 300;
+          line-height: $fz36px;
+          text-align: center;
+          color: $color_level2;
+        }
+
+        > .text {
+          position: relative;
+          margin-top: 12px;
+          font-size: $fz20px;
+          line-height: 1;
+          text-align: center;
+          color: $color_level2;
+        }
+
+        .graph_area {
+          position: relative;
+          padding-top: 10px;
+
+          &:after {
+            display: block;
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            content: "";
+            opacity: 0;
+          }
+
+          #chartdiv2 {
+            height: 220px;
+          }
+        }
+
+        .info_box {
+          display: table;
+          width: 305px;
+          margin: 25px auto 0 auto;
+          padding: 18px 0;
+          border: 1px solid $line_color2;
+          border-radius: 13px;
+          font-size: 0;
+          line-height: 1;
+          text-align: center;
+
+          li {
+            display: inline-block;
+            padding: 0 15px;
+            line-height: 1;
+            text-align: center;
+
+            .tit {
+              display: block;
+              font-size: $fz16px;
+            }
+
+            .number {
+              display: block;
+              margin-top: 8px;
+              font-size: $fz24px;
+              font-weight: 700;
+            }
+
+            &.all {
+              color: $color_level2;
+            }
+
+            &.no {
+              color: #7c838f;
+            }
+
+            &.lack {
+              color: $color_button_red;
+            }
+
+            &.good {
+              color: #01a7c4;
+            }
+          }
+        }
+
+        .result {
+          margin-top: 28px;
+          font-size: $fz20px;
+          line-height: $fz30px;
+          text-align: center;
+          color: $color_level2;
+
+          span {
+            color: $color_button_red;
+          }
+        }
+      }
+    }
+  }
+}
+
+.sub_title {
+  margin-bottom: 15px;
+  font-size: $fz22px;
+  line-height: $fz30px;
+  text-align: center;
+  letter-spacing: -2px;
+  color: $color_level1;
+}
+
+/*정보성 layer_pop_box*/
+.layer_pop_box {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 28px 30px;
+  border-radius: 10px;
+  background: #ffffff;
+  transition: transform .2s cubic-bezier(0.5, 0, 0, 1.25), opacity .15s ease-out;
+  transform: scale(.75);
+  transform-origin: 50% 0;
+  opacity: 0;
+  box-shadow: 0 0 10px 3px rgba(35, 44, 66, 0.2);
+
+  &.open {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  .layer_pop_content {
+    font-size: $fz14px;
+    line-height: $fz20px;
+    letter-spacing: -0.03em;
+
+    .icon_title {
+      margin-bottom: 10px;
+      padding-left: 27px;
+      background: url("../images/gu.renew.contents/icon_alert.png") no-repeat left top;
+      font-size: $fz16px;
+      line-height: 21px;
+      color: $color_level2;
+    }
+
+    .text {
+      font-size: $fz14px;
+      line-height: $fz20px;
+      color: $color_level4;
+    }
+  }
+
+  .btn_close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 17px;
+    height: 17px;
+    background: url("../images/gu.renew.common/btn_popup_close.png") no-repeat;
+  }
+}

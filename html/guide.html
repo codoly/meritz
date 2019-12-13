@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <title>Guide</title>
-  <link rel="stylesheet" href="/asset/css/style.css">
+  <link href="../css/gu.renew.style.css" rel="stylesheet">
   <!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
-  <script src="/asset/js/lib/jquery.min.js"></script>
-  <script src="/asset/js/lib/jquery.mCustomScrollbar.min.js"></script>
-  <script src="/asset/js/lib/jquery.mousewheel-3.0.6.min.js"></script>
-  <script src="/asset/js/lib/jquery.nice-select.min.js"></script>
-  <script src="/asset/js/lib/jquery.placeholder.min.js"></script>
-  <script src="/asset/js/default.js"></script>
+  <script src="../js/lib/jquery.min.js"></script>
+  <script src="../js/lib/jquery.mCustomScrollbar.min.js"></script>
+  <script src="../js/lib/jquery.mousewheel-3.0.6.min.js"></script>
+  <script src="../js/lib/jquery.nice-select.min.js"></script>
+  <script src="../js/lib/jquery.placeholder.min.js"></script>
+  <script src="../js/gu.renew.common.ui.js"></script>
   <style>
     body{
       overflow:auto;
@@ -19,97 +19,97 @@
 </head>
 <body>
 <!--form-->
-<h2 class="guideTitle">form</h2>
-<div class="guideContent">
-  <h3 class="inTitle">search</h3>
-  <div class="sampleBg">
-    <div class="searchArea"><input type="text" placeholder="고객검색"><a href="#" class="btnSearch">검색</a></div>
+<h2 class="guide_title">form</h2>
+<div class="guide_content">
+  <h3 class="in_title">search</h3>
+  <div class="sample_bg">
+    <div class="search_area"><input placeholder="고객검색" type="text"><a class="btn_search" href="#">검색</a></div>
   </div>
 
-  <h3 class="inTitle">checkbox</h3>
-  <ul class="sortingList">
+  <h3 class="in_title">checkbox</h3>
+  <ul class="sorting_list">
     <li>
-      <div class="checkBoxSet">
-        <input type="checkbox" id="checkbox1">
+      <div class="check_box_set">
+        <input id="checkbox1" type="checkbox">
         <label for="checkbox1">즐겨찾기</label>
       </div>
     </li>
     <li>
-      <div class="checkBoxSet">
-        <input type="checkbox" id="checkbox2">
+      <div class="check_box_set">
+        <input id="checkbox2" type="checkbox">
         <label for="checkbox2">동의종료D-7</label>
       </div>
     </li>
     <li>
-      <div class="checkBoxSet">
-        <input type="checkbox" id="checkbox3">
+      <div class="check_box_set">
+        <input id="checkbox3" type="checkbox">
         <label for="checkbox3">보장분석</label>
       </div>
     </li>
   </ul>
   <br>
-  <div class="sampleBg">
-    <ul class="sortingList">
+  <div class="sample_bg">
+    <ul class="sorting_list">
       <li>
-        <div class="checkBoxSet bgType">
-          <input type="checkbox" id="checkbox2_1">
-          <label for="checkbox2_1">즐겨찾기</label>
+        <div class="check_box_set bg_type">
+          <input id="checkbox21" type="checkbox">
+          <label for="checkbox21">즐겨찾기</label>
         </div>
       </li>
       <li>
-        <div class="checkBoxSet bgType">
-          <input type="checkbox" id="checkbox2_2">
-          <label for="checkbox2_2">동의종료D-7</label>
+        <div class="check_box_set bg_type">
+          <input id="checkbox22" type="checkbox">
+          <label for="checkbox22">동의종료D-7</label>
         </div>
       </li>
       <li>
-        <div class="checkBoxSet bgType">
-          <input type="checkbox" id="checkbox2_3">
-          <label for="checkbox2_3">보장분석</label>
+        <div class="check_box_set bg_type">
+          <input id="checkbox23" type="checkbox">
+          <label for="checkbox23">보장분석</label>
         </div>
       </li>
       <li>
-        <div class="checkBoxSet bgType noLabel">
-          <input type="checkbox" id="checkbox2_4">
-          <label for="checkbox2_4"></label>
+        <div class="check_box_set bg_type no_label">
+          <input id="checkbox24" type="checkbox">
+          <label for="checkbox24"></label>
         </div>
       </li>
     </ul>
   </div>
 
-  <h3 class="inTitle">radio</h3>
-  <ul class="sortingList">
+  <h3 class="in_title">radio</h3>
+  <ul class="sorting_list">
     <li>
-      <div class="radioSet">
-        <input type="radio" id="radio1">
+      <div class="radio_set">
+        <input id="radio1" type="radio">
         <label for="radio1">즐겨찾기</label>
       </div>
     </li>
     <li>
-      <div class="radioSet">
-        <input type="radio" id="radio2">
+      <div class="radio_set">
+        <input id="radio2" type="radio">
         <label for="radio2">동의종료D-7</label>
       </div>
     </li>
     <li>
-      <div class="radioSet">
-        <input type="radio" id="radio3">
+      <div class="radio_set">
+        <input id="radio3" type="radio">
         <label for="radio3">보장분석</label>
       </div>
     </li>
     <li>
-      <div class="radioSet noLabel">
-        <input type="radio" id="radio4">
+      <div class="radio_set no_label">
+        <input id="radio4" type="radio">
         <label for="radio4"></label>
       </div>
     </li>
   </ul>
 
 
-  <h3 class="inTitle">select</h3>
-  <div class="sampleBg">
-    <div class="selectBox bgType">
-      <select name="" id="">
+  <h3 class="in_title">select</h3>
+  <div class="sample_bg">
+    <div class="select_box bg_type">
+      <select id="" name="">
         <option value="1">최근 동의 순</option>
         <option value="1">동의 종료 순</option>
         <option value="1">최근 등록 순</option>
@@ -119,29 +119,29 @@
     </div>
   </div>
 
-  <h3 class="inTitle">input</h3>
-  <ul class="sortingList">
+  <h3 class="in_title">input</h3>
+  <ul class="sorting_list">
     <li>
-      <div class="inputSet right"><input type="text" data-value="100,000" value="100,000" style="width: 95px;"></div>
+      <div class="input_set right"><input data-value="100,000" style="width: 95px;" type="text" value="100,000"></div>
     </li>
   </ul>
 </div>
 <!--button-->
-<h2 class="guideTitle">button</h2>
-<div class="guideContent">
-  <h3 class="inTitle">기본형</h3>
-  <a href="#" class="btnText fillRed"><span>확인1111</span></a>
-  <a href="#" class="btnText"><span>설정 초기화</span></a>
-  <h3 class="inTitle">sizeSmall</h3>
-  <a href="#" class="btnText sizeSmall"><span>자세히보기</span></a>
-  <h3 class="inTitle">sizeMiddle</h3>
-  <a href="#" class="btnText sizeMiddle fillGray"><span>출력</span></a>
-  <h3 class="inTitle">sizeBig</h3>
-  <button class="btnText sizeBig fillGray"><span>미리보기</span></button>
-  <button href="#" class="btnText sizeBig fillRed"><span>출력하기</span></button>
-  <h3 class="inTitle">btnClose</h3>
-  <a href="#" class="btnClose"><span>닫기</span></a>
-  <a href="#" class="btnClose white"><span>닫기</span></a>
+<h2 class="guide_title">button</h2>
+<div class="guide_content">
+  <h3 class="in_title">기본형</h3>
+  <a class="btn_text fill_red" href="#"><span>확인1111</span></a>
+  <a class="btn_text" href="#"><span>설정 초기화</span></a>
+  <h3 class="in_title">size_small</h3>
+  <a class="btn_text size_small" href="#"><span>자세히보기</span></a>
+  <h3 class="in_title">size_middle</h3>
+  <a class="btn_text size_middle fill_gray" href="#"><span>출력</span></a>
+  <h3 class="in_title">size_big</h3>
+  <button class="btn_text size_big fill_gray"><span>미리보기</span></button>
+  <button class="btn_text size_big fill_red" href="#"><span>출력하기</span></button>
+  <h3 class="in_title">btn_close</h3>
+  <a class="btn_close" href="#"><span>닫기</span></a>
+  <a class="btn_close white" href="#"><span>닫기</span></a>
 </div>
 </body>
 </html>

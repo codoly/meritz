@@ -3,36 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <title>컨설팅</title>
-  <link rel="stylesheet" href="/asset/css/style.css">
-  <script src="/asset/js/lib/jquery.min.js"></script>
-  <script src="/asset/js/lib/jquery.mCustomScrollbar.min.js"></script>
-  <script src="/asset/js/lib/jquery.mousewheel-3.0.6.min.js"></script>
-  <script src="/asset/js/lib/jquery.nice-select.min.js"></script>
-  <script src="/asset/js/lib/jquery.placeholder.min.js"></script>
-  <script src="/asset/js/default.js"></script>
+  <link href="../css/gu.renew.style.css" rel="stylesheet">
+  <script src="../js/lib/jquery.min.js"></script>
+  <script src="../js/lib/jquery.mCustomScrollbar.min.js"></script>
+  <script src="../js/lib/jquery.mousewheel-3.0.6.min.js"></script>
+  <script src="../js/lib/jquery.nice-select.min.js"></script>
+  <script src="../js/lib/jquery.placeholder.min.js"></script>
+  <script src="../js/gu.renew.common.ui.js"></script>
   <script>
     $(function () {
-      $(".contentScroll").mCustomScrollbar({
+      $(".content_scroll").mCustomScrollbar({
         scrollInertia: 150,
         callbacks: {
-          onInit: function() {
+          onInit: function () {
             btnTop(this)
           },
-          onUpdate: function() {
+          onUpdate: function () {
             btnTop(this)
           }
         }
       });
-      $(".memberList").mCustomScrollbar({
+      $(".member_list").mCustomScrollbar({
         scrollInertia: 150
       });
 
       //보험 체크
-      $(document).on("click", ".insuranceList.checkList .insurance", function () {
+      $(document).on("click", ".insurance_list.check_list .insurance", function () {
         var target = $(this);
-        if (!target.hasClass("checked")){
+        if (!target.hasClass("checked")) {
           target.addClass("checked");
-        }else{
+        } else {
           target.removeClass("checked");
         }
       })
@@ -41,15 +41,15 @@
 </head>
 <body>
 <div class="wrap sub">
-  <div class="contentWrap">
-    <!-- leftArea : s -->
-    <div class="leftArea">
-      <!-- infoArea : s -->
-      <div class="infoArea">
-        <div class="searchArea"><input type="text"><a href="#" class="btnSearch">검색</a></div>
+  <div class="content_wrap">
+    <!-- left_area : s -->
+    <div class="left_area">
+      <!-- info_area : s -->
+      <div class="info_area">
+        <div class="search_area"><input type="text"><a class="btn_search" href="#">검색</a></div>
         <div class="sorting">
-          <div class="selectBox bgType">
-            <select name="" id="">
+          <div class="select_box bg_type">
+            <select id="" name="">
               <option value="1">최근 동의 순</option>
               <option value="1">동의 종료 순</option>
               <option value="1">최근 등록 순</option>
@@ -57,29 +57,29 @@
               <option value="1">최근 상령일 순</option>
             </select>
           </div>
-          <ul class="sortingList">
+          <ul class="sorting_list">
             <li>
-              <div class="checkBoxSet bgType">
-                <input type="checkbox" id="checkbox1">
+              <div class="check_box_set bg_type">
+                <input id="checkbox1" type="checkbox">
                 <label for="checkbox1">즐겨찾기</label>
               </div>
             </li>
             <li>
-              <div class="checkBoxSet bgType">
-                <input type="checkbox" id="checkbox2">
+              <div class="check_box_set bg_type">
+                <input id="checkbox2" type="checkbox">
                 <label for="checkbox2">동의종료D-7</label>
               </div>
             </li>
             <li>
-              <div class="checkBoxSet bgType">
-                <input type="checkbox" id="checkbox3">
+              <div class="check_box_set bg_type">
+                <input id="checkbox3" type="checkbox">
                 <label for="checkbox3">보장분석</label>
               </div>
             </li>
           </ul>
         </div>
-        <!-- selectMemberBox : s-->
-        <div class="selectMemberBox">
+        <!-- select_member_box : s-->
+        <div class="select_member_box">
           <ul class="info">
             <li class="name">독고영재</li>
             <li class="text">
@@ -87,13 +87,13 @@
               <span class="sex">남</span>
               <span class="age">32세</span>
             </li>
-            <li class="btnArea">
-              <a href="#" class="btnIcon favorites on">즐겨찾기</a>
-              <a href="#" class="btnIcon statistics">통계</a>
-              <a href="#" class="btnIcon sms">문자</a>
+            <li class="btn_area">
+              <a class="btn_icon favorites on" href="#">즐겨찾기</a>
+              <a class="btn_icon statistics" href="#">통계</a>
+              <a class="btn_icon sms" href="#">문자</a>
             </li>
             <li class="date">
-              <div class="infoGrid small">
+              <div class="info_grid small">
                 <ul>
                   <li class="title">상령일자</li>
                   <li class="text">D-45</li>
@@ -110,11 +110,11 @@
             </li>
           </ul>
         </div>
-        <!-- selectMemberBox : e-->
-        <!-- memberListArea : s-->
-        <div class="memberListArea">
+        <!-- select_member_box : e-->
+        <!-- member_list_area : s-->
+        <div class="member_list_area">
           <div class="total">고객 <strong>163</strong>명</div>
-          <div class="memberList">
+          <div class="member_list">
             <ul class="list">
               <li>
                 <div class="item">
@@ -125,13 +125,13 @@
                       <span class="sex">남</span>
                       <span class="age">32세</span>
                     </li>
-                    <li class="btnArea">
-                      <a href="#" class="btnIcon favorites">즐겨찾기</a>
-                      <a href="#" class="btnIcon statistics">통계</a>
-                      <a href="#" class="btnIcon sms">문자</a>
+                    <li class="btn_area">
+                      <a class="btn_icon favorites" href="#">즐겨찾기</a>
+                      <a class="btn_icon statistics" href="#">통계</a>
+                      <a class="btn_icon sms" href="#">문자</a>
                     </li>
                     <li class="date">
-                      <div class="infoGrid small">
+                      <div class="info_grid small">
                         <ul>
                           <li class="title">상령일자</li>
                           <li class="text">D-45</li>
@@ -158,13 +158,13 @@
                       <span class="sex">남</span>
                       <span class="age">32세</span>
                     </li>
-                    <li class="btnArea">
-                      <a href="#" class="btnIcon favorites">즐겨찾기</a>
-                      <a href="#" class="btnIcon statistics">통계</a>
-                      <a href="#" class="btnIcon sms">문자</a>
+                    <li class="btn_area">
+                      <a class="btn_icon favorites" href="#">즐겨찾기</a>
+                      <a class="btn_icon statistics" href="#">통계</a>
+                      <a class="btn_icon sms" href="#">문자</a>
                     </li>
                     <li class="date">
-                      <div class="infoGrid small">
+                      <div class="info_grid small">
                         <ul>
                           <li class="title">상령일자</li>
                           <li class="text">D-45</li>
@@ -191,13 +191,13 @@
                       <span class="sex">남</span>
                       <span class="age">32세</span>
                     </li>
-                    <li class="btnArea">
-                      <a href="#" class="btnIcon favorites">즐겨찾기</a>
-                      <a href="#" class="btnIcon statistics">통계</a>
-                      <a href="#" class="btnIcon sms">문자</a>
+                    <li class="btn_area">
+                      <a class="btn_icon favorites" href="#">즐겨찾기</a>
+                      <a class="btn_icon statistics" href="#">통계</a>
+                      <a class="btn_icon sms" href="#">문자</a>
                     </li>
                     <li class="date">
-                      <div class="infoGrid small">
+                      <div class="info_grid small">
                         <ul>
                           <li class="title">상령일자</li>
                           <li class="text">D-45</li>
@@ -224,13 +224,13 @@
                       <span class="sex">남</span>
                       <span class="age">32세</span>
                     </li>
-                    <li class="btnArea">
-                      <a href="#" class="btnIcon favorites">즐겨찾기</a>
-                      <a href="#" class="btnIcon statistics">통계</a>
-                      <a href="#" class="btnIcon sms">문자</a>
+                    <li class="btn_area">
+                      <a class="btn_icon favorites" href="#">즐겨찾기</a>
+                      <a class="btn_icon statistics" href="#">통계</a>
+                      <a class="btn_icon sms" href="#">문자</a>
                     </li>
                     <li class="date">
-                      <div class="infoGrid small">
+                      <div class="info_grid small">
                         <ul>
                           <li class="title">상령일자</li>
                           <li class="text">D-45</li>
@@ -257,13 +257,13 @@
                       <span class="sex">남</span>
                       <span class="age">32세</span>
                     </li>
-                    <li class="btnArea">
-                      <a href="#" class="btnIcon favorites">즐겨찾기</a>
-                      <a href="#" class="btnIcon statistics">통계</a>
-                      <a href="#" class="btnIcon sms">문자</a>
+                    <li class="btn_area">
+                      <a class="btn_icon favorites" href="#">즐겨찾기</a>
+                      <a class="btn_icon statistics" href="#">통계</a>
+                      <a class="btn_icon sms" href="#">문자</a>
                     </li>
                     <li class="date">
-                      <div class="infoGrid small">
+                      <div class="info_grid small">
                         <ul>
                           <li class="title">상령일자</li>
                           <li class="text">D-45</li>
@@ -290,13 +290,13 @@
                       <span class="sex">남</span>
                       <span class="age">32세</span>
                     </li>
-                    <li class="btnArea">
-                      <a href="#" class="btnIcon favorites">즐겨찾기</a>
-                      <a href="#" class="btnIcon statistics">통계</a>
-                      <a href="#" class="btnIcon sms">문자</a>
+                    <li class="btn_area">
+                      <a class="btn_icon favorites" href="#">즐겨찾기</a>
+                      <a class="btn_icon statistics" href="#">통계</a>
+                      <a class="btn_icon sms" href="#">문자</a>
                     </li>
                     <li class="date">
-                      <div class="infoGrid small">
+                      <div class="info_grid small">
                         <ul>
                           <li class="title">상령일자</li>
                           <li class="text">D-45</li>
@@ -323,13 +323,13 @@
                       <span class="sex">남</span>
                       <span class="age">32세</span>
                     </li>
-                    <li class="btnArea">
-                      <a href="#" class="btnIcon favorites">즐겨찾기</a>
-                      <a href="#" class="btnIcon statistics">통계</a>
-                      <a href="#" class="btnIcon sms">문자</a>
+                    <li class="btn_area">
+                      <a class="btn_icon favorites" href="#">즐겨찾기</a>
+                      <a class="btn_icon statistics" href="#">통계</a>
+                      <a class="btn_icon sms" href="#">문자</a>
                     </li>
                     <li class="date">
-                      <div class="infoGrid small">
+                      <div class="info_grid small">
                         <ul>
                           <li class="title">상령일자</li>
                           <li class="text">D-45</li>
@@ -356,13 +356,13 @@
                       <span class="sex">남</span>
                       <span class="age">32세</span>
                     </li>
-                    <li class="btnArea">
-                      <a href="#" class="btnIcon favorites">즐겨찾기</a>
-                      <a href="#" class="btnIcon statistics">통계</a>
-                      <a href="#" class="btnIcon sms">문자</a>
+                    <li class="btn_area">
+                      <a class="btn_icon favorites" href="#">즐겨찾기</a>
+                      <a class="btn_icon statistics" href="#">통계</a>
+                      <a class="btn_icon sms" href="#">문자</a>
                     </li>
                     <li class="date">
-                      <div class="infoGrid small">
+                      <div class="info_grid small">
                         <ul>
                           <li class="title">상령일자</li>
                           <li class="text">D-45</li>
@@ -389,13 +389,13 @@
                       <span class="sex">남</span>
                       <span class="age">32세</span>
                     </li>
-                    <li class="btnArea">
-                      <a href="#" class="btnIcon favorites">즐겨찾기</a>
-                      <a href="#" class="btnIcon statistics">통계</a>
-                      <a href="#" class="btnIcon sms">문자</a>
+                    <li class="btn_area">
+                      <a class="btn_icon favorites" href="#">즐겨찾기</a>
+                      <a class="btn_icon statistics" href="#">통계</a>
+                      <a class="btn_icon sms" href="#">문자</a>
                     </li>
                     <li class="date">
-                      <div class="infoGrid small">
+                      <div class="info_grid small">
                         <ul>
                           <li class="title">상령일자</li>
                           <li class="text">D-45</li>
@@ -422,13 +422,13 @@
                       <span class="sex">남</span>
                       <span class="age">32세</span>
                     </li>
-                    <li class="btnArea">
-                      <a href="#" class="btnIcon favorites">즐겨찾기</a>
-                      <a href="#" class="btnIcon statistics">통계</a>
-                      <a href="#" class="btnIcon sms">문자</a>
+                    <li class="btn_area">
+                      <a class="btn_icon favorites" href="#">즐겨찾기</a>
+                      <a class="btn_icon statistics" href="#">통계</a>
+                      <a class="btn_icon sms" href="#">문자</a>
                     </li>
                     <li class="date">
-                      <div class="infoGrid small">
+                      <div class="info_grid small">
                         <ul>
                           <li class="title">상령일자</li>
                           <li class="text">D-45</li>
@@ -449,39 +449,39 @@
             </ul>
           </div>
         </div>
-        <!-- memberListArea : e-->
+        <!-- member_list_area : e-->
       </div>
-      <!-- infoArea : e -->
-      <!-- menuArea : s -->
-      <div class="menuArea">
-        <div class="menuSet">
+      <!-- info_area : e -->
+      <!-- menu_area : s -->
+      <div class="menu_area">
+        <div class="menu_set">
           <ul>
-            <li><a href="#" class="menu menu01"><span>전체현황</span></a></li>
-            <li><a href="#" class="menu menu02"><span>가입현황</span></a></li>
-            <li><a href="#" class="menu menu03"><span>진단/상세</span></a></li>
-            <li><a href="#" class="menu menu04 on new"><span>컨설팅</span></a></li>
-            <li><a href="#" class="menu menu05 new"><span>그래프</span></a></li>
+            <li><a class="menu menu01" href="#"><span>전체현황</span></a></li>
+            <li><a class="menu menu02" href="#"><span>가입현황</span></a></li>
+            <li><a class="menu menu03" href="#"><span>진단/상세</span></a></li>
+            <li><a class="menu menu04 on new" href="#"><span>컨설팅</span></a></li>
+            <li><a class="menu menu05 new" href="#"><span>그래프</span></a></li>
           </ul>
         </div>
-        <div class="bottomPosition">
-          <ul class="utilMenu">
-            <li><a href="#" class="btn">고객등록</a></li>
-            <li><a href="#" class="btn">권장금액 · 담보군 설정</a></li>
-            <li><a href="#" class="btn">가계약조회</a></li>
+        <div class="bottom_position">
+          <ul class="util_menu">
+            <li><a class="btn" href="#">고객등록</a></li>
+            <li><a class="btn" href="#">권장금액 · 담보군 설정</a></li>
+            <li><a class="btn" href="#">가계약조회</a></li>
           </ul>
-          <div class="btnArea">
-            <a href="#" class="btnText sizeBig fillGray"><span>미리보기</span></a>
-            <a href="#" class="btnText sizeBig fillRed"><span>출력하기</span></a>
+          <div class="btn_area">
+            <a class="btn_text size_big fill_gray" href="#"><span>미리보기</span></a>
+            <a class="btn_text size_big fill_red" href="#"><span>출력하기</span></a>
           </div>
         </div>
       </div>
-      <!-- menuArea : e -->
+      <!-- menu_area : e -->
     </div>
-    <!-- leftArea : e -->
-    <!-- contentArea : s -->
-    <div class="contentArea">
-      <!-- customerStateInfo : s -->
-      <div class="customerStateInfo">
+    <!-- left_area : e -->
+    <!-- content_area : s -->
+    <div class="content_area">
+      <!-- customer_state_info : s -->
+      <div class="customer_state_info">
         <div class="inner">
           <div class="customer">
             <strong>독고영재</strong>고객님<br>
@@ -503,7 +503,7 @@
             <dl>
               <dt class="new">보장현황</dt>
               <dd>
-                <span class="noJoin"><strong>9</strong>미가입</span>
+                <span class="no_join"><strong>9</strong>미가입</span>
                 <span class="shortage"><strong>14</strong>부족</span>
                 <span class="enough"><strong>3</strong>충분</span>
               </dd>
@@ -511,24 +511,24 @@
           </div>
         </div>
         <div class="notice">
-            선택하신 컨설팅 전 후 비교분석 결과를 확인해보세요. <a href="#" class="btnText sizeSmall"><span>자세히보기</span></a>
+          선택하신 컨설팅 전 후 비교분석 결과를 확인해보세요. <a class="btn_text size_small" href="#"><span>자세히보기</span></a>
         </div>
       </div>
-      <!-- customerStateInfo : e -->
+      <!-- customer_state_info : e -->
 
-      <!-- insuranceListBox : s -->
-      <div class="insuranceListBox consulting">
-        <!-- scrollArea : s -->
-        <div class="contentScroll">
-          <!-- insuranceList : s -->
-          <div class="insuranceList checkList">
-            <div class="titBox">
+      <!-- insurance_list_box : s -->
+      <div class="insurance_list_box consulting">
+        <!-- scroll_area : s -->
+        <div class="content_scroll">
+          <!-- insurance_list : s -->
+          <div class="insurance_list check_list">
+            <div class="tit_box">
               <h3 class="tit">가계약</h3><span class="count">+2</span>
             </div>
             <button class="insurance checked">
               <div class="info">
                 <div class="inner">
-                  <div class="logo"><img src="/asset/images/temp/logo_sample01.png" alt="한화생명"></div>
+                  <div class="logo"><img alt="한화생명" src="../images/temp/logo_sample01.png"></div>
                   <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904</div>
                   <div class="date"><span class="state">정상</span>2009.07.17~2082.07.17</div>
                 </div>
@@ -543,9 +543,9 @@
               </div>
             </button>
             <button class="insurance">
-              <div class="info">                
+              <div class="info">
                 <div class="inner">
-                  <div class="logo"><img src="/asset/images/temp/logo_sample02.png" alt="삼성생명"></div>
+                  <div class="logo"><img alt="삼성생명" src="../images/temp/logo_sample02.png"></div>
                   <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904</div>
                   <div class="date"><span class="state">정상</span>2009.07.17~2082.07.17</div>
                 </div>
@@ -559,21 +559,21 @@
                 </ul>
               </div>
             </button>
-            <button class="btnContractAdd">
+            <button class="btn_contract_add">
               <div>가계약을 추가해주세요.</div>
             </button>
           </div>
-          <!-- insuranceList : e -->
+          <!-- insurance_list : e -->
 
-          <!-- insuranceList : s -->
-          <div class="insuranceList checkList">
-            <div class="titBox">
+          <!-- insurance_list : s -->
+          <div class="insurance_list check_list">
+            <div class="tit_box">
               <h3 class="tit">정상계약</h3><span class="count">+5</span>
             </div>
             <button class="insurance checked">
               <div class="info">
                 <div class="inner">
-                  <div class="logo"><img src="/asset/images/temp/logo_sample01.png" alt="한화생명"></div>
+                  <div class="logo"><img alt="한화생명" src="../images/temp/logo_sample01.png"></div>
                   <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904</div>
                   <div class="date"><span class="state">정상</span>2009.07.17~2082.07.17</div>
                 </div>
@@ -600,9 +600,9 @@
               </div>
             </button>
             <button class="insurance">
-              <div class="info">                
+              <div class="info">
                 <div class="inner">
-                  <div class="logo"><img src="/asset/images/temp/logo_sample01.png" alt="한화생명"></div>
+                  <div class="logo"><img alt="한화생명" src="../images/temp/logo_sample01.png"></div>
                   <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904</div>
                   <div class="date"><span class="state">정상</span>2009.07.17~2082.07.17</div>
                 </div>
@@ -629,16 +629,16 @@
               </div>
             </button>
           </div>
-          <!-- insuranceList : e -->
+          <!-- insurance_list : e -->
         </div>
-        <!-- scrollArea : e -->
+        <!-- scroll_area : e -->
       </div>
-      <!-- insuranceListBox : e -->
-      <button class="btnTop">상단으로</button>
+      <!-- insurance_list_box : e -->
+      <button class="btn_top">상단으로</button>
     </div>
-    <!-- contentArea : e -->
-    <a href="#" class="btnClose"><span>닫기</span></a>
-  </div>  
+    <!-- content_area : e -->
+    <a class="btn_close" href="#"><span>닫기</span></a>
+  </div>
 </div>
 
 </body>

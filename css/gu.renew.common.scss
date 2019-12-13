@@ -1,0 +1,858 @@
+@font-face {
+  font-family: NotoSansKR;
+  font-style: normal;
+  font-weight: 200;
+  src: url(../font/NotoSansKR-Light.eot);
+  src: url(../font/NotoSansKR-Light.eot?#iefix) format('embedded-opentype'), url(../font/NotoSansKR-Light.woff) format('woff'), url(../font/NotoSansKR-Light.woff2) format('woff2')
+}
+
+@font-face {
+  font-family: NotoSansKR;
+  font-style: normal;
+  font-weight: 400;
+  src: url(../font/NotoSansKR-Regular.eot);
+  src: url(../font/NotoSansKR-Regular.eot?#iefix) format('embedded-opentype'), url(../font/NotoSansKR-Regular.woff) format('woff'), url(../font/NotoSansKR-Regular.woff2) format('woff2')
+}
+
+@font-face {
+  font-family: NotoSansKR;
+  font-style: normal;
+  font-weight: 500;
+  src: url(../font/NotoSansKR-Medium.eot);
+  src: url(../font/NotoSansKR-Medium.eot?#iefix) format('embedded-opentype'), url(../font/NotoSansKR-Medium.woff) format('woff'), url(../font/NotoSansKR-Medium.woff2) format('woff2')
+}
+
+@font-face {
+  font-family: NotoSansKR;
+  font-style: normal;
+  font-weight: 700;
+  src: url(../font/NotoSansKR-Bold.eot);
+  src: url(../font/NotoSansKR-Bold.eot?#iefix) format('embedded-opentype'), url(../font/NotoSansKR-Bold.woff) format('woff'), url(../font/NotoSansKR-Bold.woff2) format('woff2')
+}
+
+@font-face {
+  font-family: NotoSansKR;
+  font-style: normal;
+  font-weight: 400;
+  unicode-range: U+0030-0039;
+  src: url(../font/Roboto-Regular.eot);
+  src: url(../font/Roboto-Regular.eot?#iefix) format('embedded-opentype'), url(../font/Roboto-Regular.woff) format('woff'), url(../font/Roboto-Regular.woff2) format('woff2')
+}
+
+@font-face {
+  font-family: NotoSansKR;
+  font-style: normal;
+  font-weight: 500;
+  unicode-range: U+0030-0039;
+  src: url(../font/Roboto-Medium.eot);
+  src: url(../font/Roboto-Medium.eot?#iefix) format('embedded-opentype'), url(../font/Roboto-Medium.woff) format('woff'), url(../font/Roboto-Medium.woff2) format('woff2')
+}
+
+@font-face {
+  font-family: NotoSansKR;
+  font-style: normal;
+  font-weight: 700;
+  unicode-range: U+0030-0039;
+  src: url(../font/Roboto-Bold.eot);
+  src: url(../font/Roboto-Bold.eot?#iefix) format('embedded-opentype'), url(../font/Roboto-Bold.woff) format('woff'), url(../font/Roboto-Bold.woff2) format('woff2')
+}
+
+body, html {
+  height: 100%;
+  font-size: 16px
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box
+}
+
+article, aside, audio, blockquote, body, canvas, code, dd, details, div, dl, dt, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, input, legend, li, mark, menu, nav, ol, p, pre, section, summary, td, textarea, th, time, ul, video {
+  margin: 0;
+  padding: 0
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
+  display: block
+}
+
+body {
+  background-color: #fff;
+  font-family: NotoSansKR, "Malgun Gothic", Dotum, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  overflow-y: hidden;
+  color: $color_level3
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: 400
+}
+
+img {
+  border: 0;
+  vertical-align: top
+}
+
+button, input, select, textarea {
+  width: 100%;
+  margin: 0;
+  font-family: NotoSansKR, "Malgun Gothic", Dotum, sans-serif;
+  font-size: 100%;
+  vertical-align: middle;
+  color: $color_level3
+}
+
+fieldset {
+  border: 0
+}
+
+caption, legend {
+  width: 0;
+  height: 0;
+  font-size: 0;
+  line-height: 0
+}
+
+address, cite, code, dfn, em, var {
+  font-weight: 400;
+  font-style: normal
+}
+
+strong {
+  font-weight: 400;
+  font-style: normal
+}
+
+ol, ul {
+  list-style: none
+}
+
+table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse
+}
+
+caption, hr, legend {
+  width: 0;
+  height: 0;
+  font-size: 1px;
+  line-height: 0;
+  text-indent: -9999em
+}
+
+th {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
+  vertical-align: top;
+  color: #333
+}
+
+td {
+  line-height: 22px;
+  text-align: left;
+  vertical-align: top;
+  color: #333
+}
+
+dt {
+  font-weight: 400
+}
+
+a, button {
+  width: auto;
+  border: 0;
+  background: 0 0;
+  cursor: pointer;
+  text-align: left;
+  text-decoration: none;
+  color: $color_level2
+}
+
+button, button:active, button:focus {
+  padding: 0
+}
+
+button span, button:active span, button:focus span {
+  position: relative
+}
+
+button div, button:active div, button:before, button:focus div {
+  position: relative
+}
+
+.select_box {
+  display: inline-block;
+  // custome select 관련 구문
+  // _default variables
+  $font_size: 14px !default;
+  $font_size_small: 14px !default;
+
+  $input_border_radius: 5px !default;
+  $input_height: 32px !default;
+  $input_height_small: 34px !default;
+  $dropdown_padding: 18px !default;
+
+  $gray_dark: #444 !default;
+  $gray: #999 !default;
+  $gray_light: #f0f3f8 !default;
+  $gray_lighter: #f6f6f6 !default;
+  $primary_light: $gray !default;
+  $arrow_color: #a8b9e6 !default;
+
+  // _style the dropdown
+  .nice-select {
+    display: inline-block;
+    position: relative;
+    clear: both;
+    width: auto;
+    height: $input_height;
+    padding-right: 55px;
+    padding-left: $dropdown_padding;
+    border: solid 1px $gray_light;
+    border-radius: $input_border_radius;
+    outline: none;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: $font_size;
+    font-weight: normal;
+    line-height: $input_height - 2;
+    box-sizing: border-box;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.2s ease-in-out;
+    text-align: left !important;
+    white-space: nowrap;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    //
+    //&:hover {
+    //  border-color: darken($gray_light, 5%);
+    //}
+    //
+    //&:active, &:focus {
+    //  border-color: $primary_light;
+    //}
+
+    // _arrow
+    &:after {
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      width: 7px;
+      height: 7px;
+      margin-top: -6px;
+      border-right: 2px solid $arrow_color;
+      border-bottom: 2px solid $arrow_color;
+      content: '';
+      transition: all 0.15s ease-in-out;
+      transform: rotate(45deg);
+      transform-origin: 66% 66%;
+      pointer-events: none;
+    }
+
+    &.open {
+      @extend :active;
+
+      &:after {
+        transform: rotate(-135deg);
+      }
+
+      .list {
+        top: 100%;
+        transform: scale(1) translate_y(0);
+        pointer-events: auto;
+        opacity: 1;
+      }
+    }
+
+    &.disabled {
+      border-color: lighten($gray_light, 2%);
+      pointer-events: none;
+      color: $gray;
+
+      &:after {
+        border-color: lighten($arrow_color, 20%);
+      }
+    }
+
+    // _modifiers
+    &.wide {
+      width: 100%;
+
+      .list {
+        right: 0 !important;
+        left: 0 !important;
+      }
+    }
+
+    &.right {
+      float: right;
+
+      .list {
+        right: 0;
+        left: auto;
+      }
+    }
+
+    &.small {
+      height: 24px;
+      padding-right: 40px;
+      font-size: $font_size_small;
+      line-height: 24px;
+
+      &:after {
+        right: 0;
+        width: 7px;
+        height: 7px;
+        border-color: #3c444d;
+      }
+
+      &.open:after {
+        border-color: #ff4858
+      }
+
+      .option {
+        min-height: $input_height_small - 2;
+        line-height: $input_height_small - 2;
+      }
+    }
+
+    // _list and options
+    .list {
+      position: absolute;
+      z-index: 9;
+      top: -999999px;
+      left: 0;
+      min-width: 100%;
+      margin-top: 4px;
+      padding: 7px 0;
+      border-radius: $input_border_radius;
+      background-color: #fff;
+      overflow: hidden;
+      box-sizing: border-box;
+      transition: transform .2s cubic-bezier(0.5, 0, 0, 1.25), opacity .15s ease-out;
+      transform: scale(.75) translate_y(- $input_height / 2);
+      transform-origin: 50% 0;
+      pointer-events: none;
+      opacity: 0;
+      box-shadow: 1px 1px 3px 2px rgba(68, 68, 68, 0.08);
+
+      &:hover .option:not(:hover) {
+        background-color: transparent !important;
+      }
+    }
+
+    .option {
+      min-height: $input_height;
+      padding-right: $dropdown_padding;
+      padding-left: $dropdown_padding;
+      outline: none;
+      font-weight: 400;
+      line-height: $input_height;
+      list-style: none;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-align: left;
+      color: $color_level4;
+
+      &:hover, &.focus, &.selected.focus {
+        background-color: $gray_lighter;
+        color: $color_level2;
+      }
+
+      &.selected {
+
+      }
+
+      &.disabled {
+        background-color: transparent;
+        cursor: default;
+        color: $gray;
+      }
+    }
+  }
+
+  &.bg_type .nice-select {
+    height: 34px;
+    border: 0;
+    background: transparent;
+    line-height: 34px;
+
+    > .current {
+      color: #fff;
+    }
+
+    &.open:after {
+      border-color: #ff4858
+    }
+
+  }
+}
+
+// _use display instead of opacity for _i_e <= 10
+.no-csspointerevents .nice-select {
+  .list {
+    display: none;
+  }
+
+  &.open {
+    .list {
+      display: block;
+    }
+  }
+}
+
+/***************************가이드 관련****************************/
+.guide_title {
+  padding: 30px;
+  border-top: 1px solid $color_level4;
+  border-bottom: 1px solid $color_level4;
+  background: #f5f5f5;
+  font-size: $fz26px;
+  font-weight: bold;
+  color: $color_level1;
+}
+
+.guide_content {
+  margin-bottom: 50px;
+  padding: 0 30px;
+
+  .in_title {
+    padding: 30px 0 10px 0;
+    font-size: $fz20px;
+    font-weight: bold;
+    color: $color_level1;
+  }
+
+  .sample_bg {
+    padding: 20px;
+    background: $color_point1;
+  }
+
+  //소팅리스트
+  .sorting_list {
+    @include clearline;
+
+    li {
+      float: left;
+      margin-right: 20px;
+    }
+  }
+}
+
+/***************************button 관련*************************/
+.btn_text {
+  display: inline-block;
+  min-width: 130px;
+  padding: 0 10px;
+  border: 1px solid $line_color3;
+  border-radius: 5px;
+  font-size: $fz18px;
+  line-height: 38px;
+  text-align: center;
+  letter-spacing: -1px;
+  color: $color_level2;
+  //버튼 색상 정의
+  &.fill_gray {
+    border: 1px solid $color_point1;
+    background: $color_point1;
+    color: #fff;
+  }
+
+  &.fill_red {
+    border: 1px solid $color_button_red;
+    background: $color_button_red;
+    color: #fff;
+  }
+
+  //버튼 크기 정의
+  &.size_small {
+    min-width: auto;
+    border-radius: 3px;
+    font-size: $fz14px;
+    line-height: 26px;
+  }
+
+  &.size_middle {
+    min-width: 70px;
+    border-radius: 3px;
+    font-size: $fz14px;
+    line-height: 32px;
+  }
+
+  &.size_big {
+    min-width: 174px;
+    border-radius: 0;
+    font-size: $fz18px;
+    line-height: 53px;
+  }
+}
+
+.btn_close {
+  @include bg_btn;
+  width: 35px;
+  height: 35px;
+  background: url("../images/gu.renew.common/btn_close.png") no-repeat;
+
+  &.white {
+    background: url("../images/gu.renew.common/btn_close_w.png") no-repeat;
+  }
+}
+
+//검색영역
+.search_area {
+  position: relative;
+  padding-right: 53px;
+  border: 2px solid #7180a0;
+  border-radius: 5px;
+
+  input {
+    width: 100%;
+    height: 44px;
+    padding: 0 0 0 15px;
+    border: 0;
+    outline: none;
+    background: transparent;
+    line-height: 44px;
+    color: #fff;
+
+    &.placeholder {
+      color: #adbfec;
+    }
+
+    &::placeholder {
+      color: #adbfec;
+    }
+
+    :-ms-input-placeholder {
+      color: #adbfec;
+    }
+
+    ::-webkit-input-placeholder {
+      color: #adbfec;
+    }
+
+    ::-moz-placeholder {
+      color: #adbfec;
+    }
+  }
+
+  .btn_search {
+    @include bg_btn;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 53px;
+    height: 44px;
+    background: url("../images/gu.renew.common/btn_main_search_off.png") no-repeat center center;
+  }
+
+  &.focus {
+    border: 2px solid #01a7c4;
+
+    .btn_search {
+      background: url("../images/gu.renew.common/btn_main_search_on.png") no-repeat center center;
+    }
+  }
+
+  &.small {
+    position: relative;
+    padding-right: 40px;
+    border: 1px solid #7180a0;
+    border-radius: 5px;
+
+    input {
+      width: 100%;
+      height: 38px;
+      padding: 0 0 0 15px;
+      font-size: $fz14px;
+      line-height: 38px;
+    }
+
+    .btn_search {
+      @include bg_btn;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 38px;
+      height: 38px;
+      background: url("../images/gu.renew.common/btn_main_search_off.png") no-repeat center center;
+      background-size: 15px auto;
+    }
+
+    &.focus {
+      border: 1px solid #01a7c4;
+
+      .btn_search {
+        background: url("../images/gu.renew.common/btn_main_search_on.png") no-repeat center center;
+        background-size: 15px auto;
+      }
+    }
+  }
+}
+
+.check_box_set {
+  position: relative;
+  overflow: hidden;
+
+  input[type='checkbox'] {
+    position: absolute;
+    top: 0;
+    left: -999999px;
+    width: 0;
+    height: 0;
+
+    &:checked + label:after {
+      background: url("../images/gu.renew.common/checkbox_on.png") no-repeat;
+    }
+  }
+
+  label {
+    display: inline-block;
+    position: relative;
+    padding-left: 33px;
+    font-size: $fz14px;
+    line-height: 24px;
+
+    &:after {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 24px;
+      height: 24px;
+      border-radius: 3px;
+      background: url("../images/gu.renew.common/checkbox_off.png") no-repeat;
+      box-sizing: border-box;
+      content: "";
+    }
+  }
+
+  &.bg_type {
+    input[type='checkbox']:checked + label {
+      color: #fff;
+
+      &:after {
+        border: 1px solid #fff;
+        background: url("../images/gu.renew.common/main_checkbox.png") no-repeat center center;
+      }
+    }
+
+    label {
+      color: #bbccf5;
+
+      &:after {
+        border: 1px solid #7180a0;
+        background: none;
+      }
+    }
+  }
+
+  &.no_label {
+    label {
+      height: 24px;
+      padding-left: 24px;
+    }
+  }
+}
+
+.radio_set {
+  position: relative;
+  overflow: hidden;
+
+  input[type='radio'] {
+    position: absolute;
+    top: 0;
+    left: -999999px;
+    width: 0;
+    height: 0;
+
+    &:checked + label:after {
+      background: url("../images/gu.renew.common/radio_on.png") no-repeat;
+    }
+  }
+
+  label {
+    display: inline-block;
+    position: relative;
+    padding-left: 33px;
+    font-size: $fz14px;
+    line-height: 24px;
+
+    &:after {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 24px;
+      height: 24px;
+      border-radius: 3px;
+      background: url("../images/gu.renew.common/radio_off.png") no-repeat;
+      box-sizing: border-box;
+      content: "";
+    }
+  }
+
+  &.no_label {
+    label {
+      height: 24px;
+      padding-left: 24px;
+    }
+  }
+}
+
+input[type=text]::-ms-clear {
+  display: none;
+}
+
+.input_set {
+  position: relative;
+
+  input {
+    width: 100%;
+    padding: 0 10px;
+    border: 1px solid $line_color3;
+    border-radius: 5px;
+    outline: none;
+    font-size: $fz14px;
+    overflow: hidden;
+    color: $color_level4;
+
+    &:focus {
+      border: 1px solid #02a7c5;
+      font-weight: bold;
+      color: $color_level2;
+    }
+  }
+
+  &.right {
+    input {
+      text-align: right;
+    }
+  }
+
+  &.change {
+    input {
+      font-weight: bold;
+      color: $color_level2;
+    }
+  }
+}
+
+/*info_grid*/
+.info_grid {
+  ul {
+    @include clearline;
+
+    li {
+      float: left;
+
+      &.title {
+        width: 68px;
+
+        &.black {
+          color: $color_level2;
+        }
+      }
+
+      &.text {
+        color: $color_point1;
+      }
+    }
+  }
+
+  &.small {
+    ul {
+      margin-bottom: 3px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      li {
+        font-size: $fz14px;
+        line-height: $fz20px;
+        letter-spacing: -0.05em;
+      }
+    }
+  }
+
+  &.big {
+    ul {
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      li {
+        font-size: $fz24px;
+
+        line-height: $fz24px;
+
+        letter-spacing: -0.05em;
+
+        &.title {
+          width: 100px;
+          font-size: $fz16px;
+        }
+
+        &.text {
+          width: 150px;
+          text-align: right;
+
+          strong {
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+
+  &.right {
+    ul {
+      margin-bottom: 12px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      li {
+        line-height: $fz16px;
+
+        letter-spacing: -0.05em;
+
+        &.title {
+          width: 100px;
+          font-size: $fz16px;
+          color: $color_level5;
+        }
+
+        &.text {
+          width: 150px;
+          text-align: right;
+          color: $color_level2;
+
+          strong {
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*color*/
+.skyblue {
+  color: #01a7c4 !important;
+}
+
+.color_point {
+  color: $color_button_red;
+}
