@@ -229,8 +229,6 @@
                   &.favorites {
                     background: url("../images/gu.renew.common/icon_like_layout_off.png") no-repeat center top;
 
-                    &:hover,
-                    &:focus,
                     &.on {
                       background: url("../images/gu.renew.common/icon_like_layout_on.png") no-repeat center top;
                     }
@@ -239,8 +237,6 @@
                   &.statistics {
                     background: url("../images/gu.renew.common/icon_analysis_layout_off.png") no-repeat center top;
 
-                    &:hover,
-                    &:focus,
                     &.on {
                       background: url("../images/gu.renew.common/icon_analysis_layout_on.png") no-repeat center top;
                     }
@@ -249,8 +245,6 @@
                   &.sms {
                     background: url("../images/gu.renew.common/icon_agree_layout_off.png") no-repeat center top;
 
-                    &:hover,
-                    &:focus,
                     &.on {
                       background: url("../images/gu.renew.common/icon_agree_layout_on.png") no-repeat center top;
                     }
@@ -340,8 +334,6 @@
                           &.favorites {
                             background: url("../images/gu.renew.common/icon_like_layout2_off.png") no-repeat center top;
 
-                            &:hover,
-                            &:focus,
                             &.on {
                               background: url("../images/gu.renew.common/icon_like_layout_on.png") no-repeat center top;
                             }
@@ -350,8 +342,6 @@
                           &.statistics {
                             background: url("../images/gu.renew.common/icon_analysis_layout2_off.png") no-repeat center top;
 
-                            &:hover,
-                            &:focus,
                             &.on {
                               background: url("../images/gu.renew.common/icon_analysis_layout_on.png") no-repeat center top;
                             }
@@ -360,8 +350,6 @@
                           &.sms {
                             background: url("../images/gu.renew.common/icon_agree_layout2_off.png") no-repeat center top;
 
-                            &:hover,
-                            &:focus,
                             &.on {
                               background: url("../images/gu.renew.common/icon_agree_layout_on.png") no-repeat center top;
                             }
@@ -760,9 +748,12 @@
       .favorites {
         display: inline-block;
         padding-right: 26px;
-        background: url("../images/gu.renew.contents/icon_heart.png") no-repeat right top;
+        background: url("../images/gu.renew.common/icon_like_layout_off.png") no-repeat right top;
         line-height: 17px;
         color: $color_level2;
+        &.on{
+          background: url("../images/gu.renew.contents/icon_heart_off.png") no-repeat right top;
+        }
       }
 
       .title {
