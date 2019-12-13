@@ -22,7 +22,7 @@ $(function () {
   })
 
   //팝업테스트함수
-  $(".logo").click(function () {
+  $(".left_area .logo").click(function () {
     var popUrl = window.location;
     var popOption = "width=1300px, height=920px, resizable=no, location=no, top=0px, left=0px, scrollable=no;"
     window.open(popUrl, "index", popOption);
@@ -43,18 +43,24 @@ $(function () {
     }
   })
 })
-
+function formatNumber(num) {
+  return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+}
 function counterStart() {
   $('.count').each(function () {
-    $(this).prop('Counter', 0).animate({
-      Counter: $(this).text()
-    }, {
-      duration: 1000,
-      easing: 'swing',
-      step: function (now) {
-        $(this).text(Math.ceil(now));
-      }
-    });
+    if(!$(this).hasClass("active")){
+      $(this).addClass("active")
+      var num = $(this).text();
+      $(this).prop('Counter', 0).animate({
+        Counter: num
+      }, {
+        duration: 1300,
+        easing: 'swing',
+        step: function (now) {
+          $(this).text(formatNumber(Math.ceil(now)));
+        }
+      });
+    }
   });
 }
 
@@ -75,7 +81,6 @@ function layerPopBoxClose(target) {
 //탑버튼 유무
 function btnTop(obj) {
   var btnTop = $(".btn_top");
-  console.log($(obj).height(), $(obj).find(".mCSB_container").height())
   if ($(obj).height() < $(obj).find(".mCSB_container").height()) {
     btnTop.show();
     btnTop.on("click", function () {
@@ -84,4 +89,38 @@ function btnTop(obj) {
   } else {
     btnTop.hide();
   }
+}
+//레이아웃 바꾸기
+function changeLayout(type, file){
+  if (type == 'sub'){
+    $(".wrap").removeClass("main").addClass("sub")
+    $(".left_area .main_area").removeClass("active");
+    $(".left_area .sub_area").addClass("active");
+    setTimeout(function(){
+      $(".tbody_box").removeClass("load");
+      $(".left_area .main_area").removeClass("active");
+    },10)
+  }else{
+    $(".wrap").removeClass("sub").addClass("main")
+    $(".left_area .main_area").addClass("active");
+    $(".left_area .sub_area").removeClass("active");
+    setTimeout(function(){
+      $(".tbody_box").addClass("load");
+      $(".left_area .main_area").addClass("active");
+    },10)
+  }
+  if (file){
+    $.get(file, function(data) {
+      var data = $(data);
+      loadHtml =  $(data).find(".ajax_area");
+      //추후 ajax콜 끝난시점
+      setTimeout(function(){
+        $(".content_area_sub").html(loadHtml);
+      },300)
+    });
+  }
+}
+//서브메뉴 활성화
+function subMenuActive(idx){
+  $(".menu_area .menu_set .menu").removeClass("on").eq(idx).addClass("on");
 }

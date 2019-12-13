@@ -24,6 +24,7 @@
         target.addClass("on").siblings().removeClass("on");
         targetCont.eq(idx).addClass('on').siblings('.tab_content').removeClass("on");
       })
+      counterStart()
     })
   </script>
 </head>
@@ -43,7 +44,7 @@
           <div class="date"><span class="state cancel">해지</span> 2009.07.17 ~ 2082.07.17</div>
           <div class="payment">
             <span class="tit">매월납20년</span>
-            <div class="price"><strong>60,660</strong>원</div>
+            <div class="price"><strong class="count">60660</strong>원</div>
           </div>
         </div>
         <div class="payment_info">

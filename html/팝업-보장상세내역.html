@@ -24,6 +24,10 @@
         target.addClass("on").siblings().removeClass("on");
         targetCont.eq(idx).addClass('on').siblings('.tab_content').removeClass("on");
       })
+
+      var varValue = $(".bar_rail .bar").attr("data-value");
+      $(".bar_rail .bar").width(varValue);
+      counterStart()
     })
   </script>
 </head>
@@ -43,7 +47,7 @@
           <div class="date"><span class="state">정상</span> 2009.07.17 ~ 2082.07.17</div>
           <div class="payment">
             <span class="tit">매월납20년</span>
-            <div class="price"><strong>60,660</strong>원</div>
+            <div class="price"><strong class="count">60660</strong>원</div>
           </div>
         </div>
         <div class="payment_info">
@@ -52,7 +56,7 @@
             <div class="pay_count">
               <div class="count_bar_box">
                 <div class="bar_rail">
-                  <div class="bar" style="width: 56%;"><span class="percent">56%</span></div>
+                  <div class="bar" data-value="56%"><span class="percent"><em class="count">56</em>%</span></div>
                 </div>
                 <span class="now"><strong>122</strong>회</span>
                 <span class="last"><strong>240</strong>회</span>
@@ -61,11 +65,11 @@
             <ul class="pay_list">
               <li>
                 <span class="tit">납입완료</span>
-                <span class="txt complete"><strong>1,559,720</strong>원</span>
+                <span class="txt complete"><strong class="count">1559720</strong>원</span>
               </li>
               <li>
                 <span class="tit">납입횟수</span>
-                <span class="txt"><strong>8,007,48</strong>원</span>
+                <span class="txt"><strong class="count">800748</strong>원</span>
               </li>
             </ul>
             <p class="text">갱신 등이 반영되지 않은 단순 예상 보험료</p>

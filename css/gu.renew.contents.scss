@@ -72,9 +72,23 @@
     padding-top: 1px;
     border-radius: 8px;
     background: #fff;
-
+    @for $i from 1 through 50 {
+      >div:nth-child(#{$i}) {
+        transform:translate(0, (1500+($i*30))+px);
+        transition-delay:(0.1*$i)+s;
+      }
+    }
+    &.load{
+      > div {
+        transform:translate(0,0);
+      }
+    }
+    > div {
+      transition:all 1s;
+    }
     .item {
       position: relative;
+
 
       &:last-child {
         border-bottom: 0;
@@ -244,7 +258,7 @@
             border-radius: 10px;
             font-weight: 500;
             line-height: 17px;
-            content: "_n_e_w";
+            content: "NEW";
             text-align: center;
             letter-spacing: -0.025em;
             color: #ff4858;
@@ -314,7 +328,7 @@
       vertical-align: top;
     }
 
-    .count {
+    .number {
       display: inline-block;
       height: 27px;
       margin-left: 10px;
@@ -812,6 +826,8 @@
               height: 6px;
               border-radius: 5px;
               background: #02a7c5;
+              transition:all 1.2s;
+              width:0;
             }
 
             .percent {
