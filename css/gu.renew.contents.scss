@@ -294,19 +294,19 @@
   }
 }
 
-.insurance_list_box {
-  padding-top: 10px;
-
-  .content_scroll {
-    height: 774px !important;
-  }
-
+.wrap.sub .content_wrap .content_area_sub .insurance_list_box{
   &.consulting {
     .content_scroll {
-      height: 741px !important;
+      height: 741px;
     }
   }
+  .content_scroll {
+    height: 774px;
+  }
+}
 
+.insurance_list_box {
+  padding-top: 10px;
   .note_box {
     width: 782px;
     padding-bottom: 30px;

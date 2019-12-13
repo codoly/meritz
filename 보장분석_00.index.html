@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>보장분석 HTML LIST</title>
+<link rel="stylesheet" type="text/css" href="./css/gu.renew.style.css">
+<style type="text/css">
+/* page title */
+.g_location {height:35px;padding-bottom:5px;border-bottom:1px solid #e1e1e1;color:#3a3635;}
+.g_location .tit_scr {margin-left:20px;color:#ff564c;font-family: '맑은 고딕', 'Malgun Gothic', '돋움', 'Dotum', 'Apple SD Gothic Neo', arial, sans-serif;font-size:16px;line-height:35px;font-weight:bold;}
+.g_location .tit_scr span {margin-left:10px;padding-left:10px;border-left:1px solid #ddd;color:#999;font-size:13px;}
+/* HTML List */
+.htmllist_list {margin:10px 10px 10px 20px;border-top:2px solid #4c4c4c;}
+.htmllist_list.sub {border-top:2px solid #efefef;}
+.htmllist_list.sub table thead {display:none;}
+.htmllist_list table {width:100%;}
+.htmllist_list table thead th {padding:7px 0;background:#f2f3f7;color:#3a3635;font-size:12px;text-align:center;font-weight:bold;}
+.htmllist_list table tbody td {padding:7px 5px;border:1px solid #efefef;font-size:12px;color:#666;}
+.htmllist_list table tbody tr:hover td {background:#f8f9fb;}
+.htmllist_list table tbody tr.sub_menu td {border-top:2px solid #ddd;}
+.htmllist_list table .category {}
+.htmllist_list table .no {text-align:center;}
+.htmllist_list table .dep1 {}
+.htmllist_list table .dep2 {}
+.htmllist_list table .dep3 {}
+.htmllist_list table .scr_name {}
+.htmllist_list table .scr_id {padding-right:0;letter-spacing:0;}
+.htmllist_list table .scr_id a {color:#3a3635;}
+.htmllist_list table .scr_id a:hover {color:orange;text-decoration:underline;}
+.htmllist_list table .name {text-align:center;}
+.htmllist_list table .date {text-align:center;}
+.htmllist_list table .note {font-size:11px;}
+.htmllist_list table .note strong {color:#333;font-weight:bold;}
+/* mobile iframe view */
+#g_container.mobile .g_location {position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.9);}
+#g_container.mobile .g_location .g_btn_area {position:absolute;top:10px;right:10px;}
+#g_container.mobile #g_contents {margin-top:51px;}
+.g_mobile_view {position:fixed;top:51px;left:10px;width:380px;height:740px;padding-top:20px;box-sizing:border-box;border:2px solid #212121;background:#212121;z-index: 100 !important;}
+.g_mobile_view iframe {position:relative;top:0;left:0;width:100%;height:100%;background:#fff;}
+.g_link_blank {display:inline-block;color:#ccc !important;font-size:11px;letter-spacing:-1px;vertical-align:top;}
+html, body {background:#fff;}
+.red {color:red !important;}
+.blue {color:blue !important;}
+</style>
+</head>
+<body>
+<div id="g_container" class="mobile">
+	<div class="g_location">
+		 <p class="tit_scr">보장분석 리뉴얼<span>HTML List</span></p>
+	</div>
+	<div id="g_contents">
+		<div class="htmllist_list">
+			<table class="">
+				<caption>작업 목록</caption>
+				<colgroup>
+					<col width="100px">
+					<col width="120px">
+					<col width="200px">
+					<col width="250px">
+					<col width="70px">
+					<col width="">
+				</colgroup>
+				<thead>
+					<tr>
+						<th>Depth1</th>
+						<th>Depth2</th>
+						<th>Depth3</th>
+						<th>화면링크</th>
+						<th class="date">완료일</th>
+						<th class="note">비고</th>
+					</tr>
+				</thead>
+				<tbody>
+					
+					<tr class="sub_menu">
+						<td class="dep1">보장분석</td>
+						<td class="dep2">분석목록(고객목록)</td>
+						<td class="scr_name">검색결과(전체)</td>
+						<td class="scr_id">
+							<a href="./html/index.html" target="_blank">index</a>
+						</td>
+						<td class="date">2019.12.13</td>
+						<td class="note">
+						</td>
+					</tr>
+
+					<tr class="sub_menu">
+						<td class="dep1"></td>
+						<td class="dep2">분석상세(고객상세)</td>
+						<td class="scr_name">전체현황</td>
+						<td class="scr_id">
+							<a href="./html/sub.html" target="_blank">02.고객상세_01.전체현황.html</a>
+						</td>
+						<td class="date">2019.12.13</td>
+						<td class="note">
+							
+						</td>
+					</tr>
+					<tr>
+						<td class="dep1"></td>
+						<td class="dep2"></td>
+						<td class="scr_name">가입현황</td>
+						<td class="scr_id">
+							<a href="./html/가입현황.html" target="_blank">02.고객상세_02.가입현황.html</a>
+						</td>
+						<td class="date">2019.12.13</td>
+						<td class="note">
+							
+						</td>
+					</tr>
+					<tr>
+						<td class="dep1"></td>
+						<td class="dep2"></td>
+						<td class="scr_name">진단상세</td>
+						<td class="scr_id">
+							<a href="#" target="_blank"></a>
+						</td>
+						<td class="date"></td>
+						<td class="note">
+							<strong></strong>
+						</td>
+					</tr>
+					<tr>
+						<td class="dep1"></td>
+						<td class="dep2"></td>
+						<td class="scr_name">컨설팅</td>
+						<td class="scr_id">
+							<a href="./html/컨설팅.html" target="_blank">02.고객상세_04.컨설팅.html</a>
+						</td>
+						<td class="date">2019.12.13</td>
+						<td class="note"><strong></strong></td>
+					</tr>
+					<tr>
+						<td class="dep1"></td>
+						<td class="dep2"></td>
+						<td class="scr_name">그래프</td>
+						<td class="scr_id">
+							<a href="./html/그래프.html" target="_blank">02.고객상세_05.그래프.html</a>
+						</td>
+						<td class="date">2019.12.13</td>
+						<td class="note"><strong></strong></td>
+					</tr>					
+
+					<tr class="sub_menu">
+						<td class="dep1"></td>
+						<td class="dep2">팝업</td>
+						<td class="scr_name">index</td>
+						<td class="scr_id">
+							<a href="./html/팝업-고객등록동의문자발송.html" target="_blank">팝업-고객등록동의문자발송.html</a>
+						</td>
+						<td class="date">2019.12.13</td>
+						<td class="note"></td>
+					</tr>
+					<tr>
+						<td class="dep1"></td>
+						<td class="dep2"></td>
+						<td class="scr_name">가입현황</td>
+						<td class="scr_id">
+							<a href="./html/팝업-보장상세내역.html" target="_blank">02.팝업_보장 상세내역.html</a><br>
+						</td>
+						<td class="date">2019.12.13</td>
+						<td class="note">
+							
+						</td>
+					</tr>
+					<tr>
+						<td class="dep1"></td>
+						<td class="dep2"></td>
+						<td class="scr_name"></td>
+						<td class="scr_id">
+							<a href="./html/팝업-보장상세내역(해지).html" target="_blank">02.팝업_보장 상세내역(해지).html</a><br>
+						</td>
+						<td class="date">2019.12.13</td>
+						<td class="note">
+						</td>
+					</tr>
+					<tr>
+						<td class="dep1"></td>
+						<td class="dep2"></td>
+						<td class="scr_name">컨설팅</td>
+						<td class="scr_id">
+							<a href="./html/팝업-가계약 추가.html" target="_blank">04.팝업_가계약 추가.html</a><br>
+						</td>
+						<td class="date">2019.12.13</td>
+						<td class="note">
+						</td>
+					</tr>
+					<tr>
+						<td class="dep1"></td>
+						<td class="dep2"></td>
+						<td class="scr_name"></td>
+						<td class="scr_id">
+							<a href="./html/팝업-가계약조회리스트.html" target="_blank">04.팝업_가계약조회리스트.html</a><br>
+						</td>
+						<td class="date">2019.12.13</td>
+						<td class="note">
+						</td>
+					</tr>
+					<tr>
+						<td class="dep1"></td>
+						<td class="dep2"></td>
+						<td class="scr_name"></td>
+						<td class="scr_id">
+							<a href="./html/팝업-컨설팅전후비교.html" target="_blank">04.팝업_컨설팅전후비교.html</a><br>
+						</td>
+						<td class="date">2019.12.13</td>
+						<td class="note">
+						</td>
+					</tr>
+					<tr>
+						<td class="dep1"></td>
+						<td class="dep2"></td>
+						<td class="scr_name"></td>
+						<td class="scr_id">
+							<a href="./html/팝업-권장금액보장군설정.html" target="_blank">04.팝업_권장금액보장군설정.html</a><br>
+						</td>
+						<td class="date">2019.12.13</td>
+						<td class="note">
+						</td>
+					</tr>
+					<tr class="sub_menu">
+						<td class="dep1">가이드</td>
+						<td class="dep2">퍼블리싱가이드</td>
+						<td class="scr_name"></td>
+						<td class="scr_id">
+							<a href="보장분석_guide_publishing.html" target="_blank">보장분석_guide_publishing01</a>
+						</td>
+						<td class="date">2019.12.13</td>
+						<td class="note"><strong></strong></td>
+					</tr>
+					<tr>
+						<td class="dep1"></td>
+						<td class="dep2"></td>
+						<td class="scr_name"></td>
+						<td class="scr_id">
+							<a href="./html/guide.html" target="_blank">보장분석_guide_publishing02</a>
+						</td>
+						<td class="date">2019.12.13</td>
+						<td class="note"><strong></strong></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+<!-- //#g_container -->
+</body>
+</html>
