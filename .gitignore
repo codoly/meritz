@@ -2,6 +2,6 @@
 .gitignore
 node_modules
 .css
-asset/css/*.css
+css/*.css
 css/gu.renew.style.css
-asset/css/style.css
+css/style.css
