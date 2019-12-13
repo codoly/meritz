@@ -9,6 +9,7 @@
   <script src="/asset/js/lib/jquery.mousewheel-3.0.6.min.js"></script>
   <script src="/asset/js/lib/jquery.nice-select.min.js"></script>
   <script src="/asset/js/lib/jquery.placeholder.min.js"></script>
+  <script src="/asset/js/lib/jquery.gray.min.js"></script>
   <script src="/asset/js/default.js"></script>
   <script>
     $(function () {
@@ -26,6 +27,8 @@
       $(".memberList").mCustomScrollbar({
         scrollInertia: 150
       });
+      //로고 회색으로 변경
+      $('.grayscale').gray();
     })
   </script>
 </head>
@@ -479,19 +482,19 @@
           </div>
           <div class="contract">
             <dl>
-              <dt class="new">정상계약</dt><!-- 계약 체크값 수정시 클래스 new 추가 -->
+              <dt>정상계약</dt>
               <dd><strong>11</strong>건</dd>
             </dl>
           </div>
           <div class="payment">
             <dl>
-              <dt class="new">월보험료</dt>
+              <dt>월보험료</dt>
               <dd><strong>1,264,530</strong>원</dd>
             </dl>
           </div>
           <div class="state">
             <dl>
-              <dt class="new">보장현황</dt>
+              <dt>보장현황</dt>
               <dd>
                 <span class="noJoin"><strong>9</strong>미가입</span>
                 <span class="shortage"><strong>14</strong>부족</span>
@@ -650,7 +653,7 @@
             <button class="insurance disabled">
               <div class="info">
                 <div class="inner">
-                  <div class="logo"><img src="/asset/images/temp/logo_sample01_off.png" alt="한화생명"></div>
+                  <div class="logo"><img src="/asset/images/temp/logo_sample01.png" alt="한화생명" class="grayscale"></div>
                   <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904</div>
                   <div class="date"><span class="state">실효</span>2009.07.17~2082.07.17</div>
                 </div>
@@ -679,7 +682,7 @@
             <button class="insurance disabled">
               <div class="info">
                 <div class="inner">
-                  <div class="logo"><img src="/asset/images/temp/logo_sample01_off.png" alt="한화생명"></div>
+                  <div class="logo"><img src="/asset/images/temp/logo_sample02.png" alt="삼성생명"  class="grayscale"></div>
                   <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904</div>
                   <div class="date"><span class="state">해지</span>2009.07.17~2082.07.17</div>
                 </div>
