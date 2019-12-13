@@ -3,6 +3,7 @@
   min-height: 100%;
   overflow: hidden;
   background: #f0f3f8;
+
 }
 
 //메인 layout
@@ -605,6 +606,10 @@
     .imgArea{
       float: left;
       width: 295px;
+      img{
+        filter: gray; /* IE6-9 */
+        -webkit-filter: grayscale(1);
+      }
     }
     .infoArea{
       float: left;
