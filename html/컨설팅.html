@@ -628,13 +628,20 @@
             });
 
             //보험 체크
+
             $(document).on("click", ".insurance_list.check_list .insurance", function () {
+              var total = 0;
               var target = $(this);
               if (!target.hasClass("checked")) {
                 target.addClass("checked");
               } else {
                 target.removeClass("checked");
               }
+              $(".insurance.checked .payment .count").each(function(){
+                total = total + Number($(this).text().replace(/,/gi,""));
+              })
+              $(".customer_state_info .payment .count").removeClass("active").attr("data-value", total);
+              counterStart();
             })
             changeLayout("sub");
             counterStart();

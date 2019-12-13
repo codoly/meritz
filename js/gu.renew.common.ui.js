@@ -51,12 +51,18 @@ function counterStart() {
     if(!$(this).hasClass("active")){
       $(this).addClass("active")
       var num = $(this).text();
-      $(this).prop('Counter', 0).animate({
+      var start = 0;
+      if ($(this).attr("data-value")){
+        num = Number($(this).attr("data-value"));
+        start = Number($(this).text().replace(/,/gi,""));
+      }
+      $(this).prop('Counter', start).animate({
         Counter: num
       }, {
         duration: 1300,
         easing: 'swing',
         step: function (now) {
+          $(this).attr("data-value",Math.ceil(now));
           $(this).text(formatNumber(Math.ceil(now)));
         }
       });
