@@ -192,8 +192,8 @@
       dt{
         font-size:$_14px;
         color:$colorLevel4;
-        line-height: 1;
-        margin: 6px 0 12px;
+        line-height: 19px;
+        margin: 3px 0 8px;
         letter-spacing: -0.1em;
         &.new{
           &:after{
@@ -203,8 +203,8 @@
             border:1px solid #ff4858;
             color:#ff4858;
             width: 46px;
-            height: 19px;
-            line-height: 19px;
+            height: 17px;
+            line-height: 17px;
             border-radius: 10px;
             margin-left:5px;
             font-weight: 500;
@@ -237,12 +237,13 @@
   }
 }
 .insuranceListBox{
+  padding-top: 10px;
   .contentScroll{
-    height: 756px !important;
+    height: 774px !important;
   }
   &.consulting{
     .contentScroll{
-      height: 713px !important;
+      height: 741px !important;
     }
   }
   .noteBox{
@@ -446,6 +447,16 @@
     }
   }
   &.disabled{
+    .logo{
+      /*! Gray v1.6.0 (https://github.com/karlhorky/gray) | MIT */
+      .grayscale{
+        filter:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='saturate' values='0'/></filter></svg>#grayscale");
+        -webkit-filter:grayscale(1);
+        filter:grayscale(1);
+        filter:gray;
+        opacity: 0.45;
+      }
+    }
     .name{
       color:$colorLevel5;
     }
