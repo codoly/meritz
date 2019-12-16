@@ -86,6 +86,16 @@
     > div {
       transition:all 1s;
     }
+    .link{
+      position: absolute;
+      top:2px;
+      left: 0;
+      display: block;
+      width:500px;
+      height:calc(100% - 4px);
+      background: #fff;
+      opacity: 0;
+    }
     .item {
       position: relative;
 
@@ -129,11 +139,8 @@
 
     .name {
       text-align: left;
-
-      a {
-        font-size: $fz18px;
-        letter-spacing: -0.1em;
-      }
+      font-size: $fz18px;
+      letter-spacing: -0.1em;   
     }
   }
 

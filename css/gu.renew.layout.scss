@@ -749,10 +749,11 @@
         display: inline-block;
         padding-right: 26px;
         background: url("../images/gu.renew.common/icon_like_layout_off.png") no-repeat right top;
+        background-size: 19px 17px;
         line-height: 17px;
         color: $color_level2;
         &.on{
-          background: url("../images/gu.renew.contents/icon_heart_off.png") no-repeat right top;
+          background: url("../images/gu.renew.contents/icon_heart.png") no-repeat right top;
         }
       }
 
