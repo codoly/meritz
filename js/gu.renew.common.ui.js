@@ -41,7 +41,12 @@ $(function () {
       target.removeClass("on");
       target.find(".info").slideUp();
     }
-  })
+  });
+
+  //즐겨찾기 on/off
+  $(document).on("click", ".submain_wrap .info_area .favorites", function () {
+    $(this).toggleClass('on');
+  });
 })
 function formatNumber(num) {
   return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')

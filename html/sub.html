@@ -13,7 +13,13 @@
   <script src="../js/lib/charts.js"></script>
   <script src="../js/lib/animated.js"></script>
   <script src="../js/gu.renew.common.ui.js"></script>
-
+  <script>
+    $(function () {
+      $(document).on("click", ".submain_wrap .info_area .favorites", function () {
+        $(this).toggleClass('on');
+      });
+    })
+  </script>
 </head>
 <body>
 <div class="wrap sub">
@@ -29,8 +35,8 @@
             <div class="select_box bg_type">
               <select id="" name="">
                 <option value="1">최근 동의 순</option>
+                <option value="1">이름순</option>
                 <option value="1">동의 종료 순</option>
-                <option value="1">최근 등록 순</option>
                 <option value="1">최근 분석 순</option>
                 <option value="1">최근 상령일 순</option>
               </select>
@@ -475,7 +481,7 @@
                 <div class="text">
                   <span class="bday">1981.05.31</span>
                   <span class="age">32세</span>
-                  <button class="alert" onclick="layerPopBoxOpen('popup_info1')">상령일</button>
+                  <button class="alert" onclick="layerPopBoxOpen('popup_info1')"><span>상령일</span></button>
                   <span class="date">11.30</span>
                 </div>
               </div>

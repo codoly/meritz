@@ -106,7 +106,7 @@
 
       &:hover {
         z-index: 5;
-
+        transition: none;
         .tr {
           border-bottom-color: transparent;
         }
@@ -124,6 +124,7 @@
         border-radius: 8px;
         content: "";
         box-shadow: 7px 7px 9px 0px rgba(0, 0, 0, 0.12);
+        transition: none;
       }
     }
 
@@ -584,7 +585,11 @@
     border-radius: 8px;
     background: #fff;
     text-align: center;
-
+    &:hover{
+      &:before{
+        display: none;
+      }
+    }
     > div {
       display: table-cell;
       font-size: $fz20px;
