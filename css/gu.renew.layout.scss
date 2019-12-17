@@ -748,12 +748,12 @@
       .favorites {
         display: inline-block;
         padding-right: 26px;
-        background: url("../images/gu.renew.common/icon_like_layout_off.png") no-repeat right top;
+        background: url("../images/gu.renew.contents/icon_heart_off.png") no-repeat right top;
         background-size: 19px 17px;
         line-height: 17px;
         color: $color_level2;
         &.on{
-          background: url("../images/gu.renew.contents/icon_heart.png") no-repeat right top;
+          background: url("../images/gu.renew.contents/icon_heart_on.png") no-repeat right top;
         }
       }
 
@@ -901,6 +901,7 @@
 
         > .title {
           padding-top: 34px;
+          letter-spacing:-1px;
           font-size: $fz30px;
           font-weight: 300;
           line-height: $fz36px;
@@ -909,8 +910,9 @@
         }
 
         > .text {
+          letter-spacing:-1px;
           position: relative;
-          margin-top: 12px;
+          margin-top: 20px;
           font-size: $fz20px;
           line-height: 1;
           text-align: center;
@@ -941,29 +943,33 @@
 
         .info_box {
           display: table;
-          width: 305px;
+          width: 285px;
           margin: 25px auto 0 auto;
-          padding: 18px 0;
+          padding: 15px 0 14px 0;
           border: 1px solid $line_color2;
           border-radius: 13px;
           font-size: 0;
           line-height: 1;
           text-align: center;
+          & + .text{
+            margin-top: 25px;
+          }
 
           li {
             display: inline-block;
-            padding: 0 15px;
+            padding: 0 25px;
             line-height: 1;
             text-align: center;
 
             .tit {
               display: block;
               font-size: $fz16px;
+              color: #777777;
             }
 
             .number {
               display: block;
-              margin-top: 8px;
+              margin-top: 4px;
               font-size: $fz24px;
               font-weight: 700;
             }
@@ -973,7 +979,7 @@
             }
 
             &.no {
-              color: #7c838f;
+              color: #6a8db3;
             }
 
             &.lack {
@@ -981,13 +987,14 @@
             }
 
             &.good {
-              color: #01a7c4;
+              color: #5bd1e6;
             }
           }
         }
 
         .result {
-          margin-top: 28px;
+          margin-top:-10px;
+          letter-spacing:-1px;
           font-size: $fz20px;
           line-height: $fz30px;
           text-align: center;
