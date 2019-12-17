@@ -13,13 +13,6 @@
   <script src="../js/lib/charts.js"></script>
   <script src="../js/lib/animated.js"></script>
   <script src="../js/gu.renew.common.ui.js"></script>
-  <script>
-    $(function () {
-      $(document).on("click", ".submain_wrap .info_area .favorites", function () {
-        $(this).toggleClass('on');
-      });
-    })
-  </script>
 </head>
 <body>
 <div class="wrap sub">
@@ -719,6 +712,10 @@
             // });
 
             subMenuActive(0);
+
+            $(document).on("click", ".submain_wrap .info_area .favorites", function () {
+              $(this).toggleClass('on');
+            });
 
           })
         </script>
