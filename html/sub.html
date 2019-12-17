@@ -651,8 +651,10 @@
 
 
             // Create chart instance
-            var chart2 = am4core.create("chartdiv2", am4charts.PieChart);
+            var chart2 = am4core.create("chartdiv2", am4charts.PieChart3D);
             chart2.hiddenState.properties.opacity = 0; // this creates initial fade-in
+            chart2.depth = 10;
+            chart2.innerRadius = am4core.percent(20);
 
             chart2.data = [
               {
@@ -673,7 +675,6 @@
                 value: 230,
                 config: {
                   fill: am4core.color("#fe5855"),
-                  isActive: true,
                   zIndex: 2
                 },
                 configLabel: {
@@ -697,12 +698,12 @@
               }
             ];
 
-            var series = chart2.series.push(new am4charts.PieSeries());
+            var series = chart2.series.push(new am4charts.PieSeries3D());
             series.dataFields.value = "value";
             series.slices.template.tooltipText = "";
             series.ticks.template.disabled = true;
             series.alignLabels = false;
-            series.labels.template.text = "{value.percent.formatNumber('#.0')}%";
+            series.labels.template.text = "{value.percent.formatNumber('#.')}%";
             series.labels.template.radius = am4core.percent(-40);
             series.hiddenState.properties.endAngle = -120;
             series.slices.template.states.getKey("hover").properties.scale = 1;
