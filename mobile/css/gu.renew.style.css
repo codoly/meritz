@@ -1503,7 +1503,7 @@ input[type=text]::-ms-clear {
     .list_table_type .tbody_box .item {
       position: relative;
       display: block;
-      padding: 110px 20px; }
+      padding: 0px 20px; }
       .list_table_type .tbody_box .item:last-child .tr {
         border-bottom: 0; }
       .list_table_type .tbody_box .item:active, .list_table_type .tbody_box .select_box .item.nice-select.open, .select_box .list_table_type .tbody_box .item.nice-select.open {
