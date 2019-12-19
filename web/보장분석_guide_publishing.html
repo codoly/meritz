@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta charset="utf-8">
+<title>Publishing | Guide | 보장분석</title>
+<link rel="shortcut icon" href="https://www.meritzfire.com/common/images/meritz_favicon.png">
+<link rel="apple-touch-icon" href="https://www.meritzfire.com/common/images/meritz_favicon.png">
+
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="cssu.renew.style.css">
+
+<!-- jQuery -->
+<script src="../js/jquery.min.js"></script>
+<script src="../js/jquery.easing.1.3.js"></script>
+<script src="../js/gu.common.ui.js"></script>
+
+<script src="../js/angular.min.js"></script>
+<script src="../js/ngDialog.min.js"></script>
+
+</head>
+<body>
+<!-- Wrap [s] -->
+<div class="wrap_page wrap_guide">
+	<!-- Header [s] -->
+	<header class="header">
+		<div class="header_inner">
+			<h1>Publishing Guide</h1>
+		</div>
+	</header>
+	<!-- Header [e] -->
+	<!-- Container [s] -->
+	<section class="container">
+		<!-- Cotents Area [s] -->
+		<div class="contents">
+
+<!-- ################################################## Guide Start ################################################## -->
+
+	<!-- 퍼블리싱가이드를 위한 css. 개발 화면에 적용하지 않음! -->
+	<link rel="stylesheet" type="text/css" href="보장분석_guide.publishing.css">
+
+
+	
+	<p class="gg_tit1">0. 개요</p>
+
+	<p class="gg_tit2">0.1. 서버 경로 및 구조</p>
+	<div class="gg_info">
+		<ul>
+			<li><em><strong>/cg.sag.onweb/src/main/webapp/resources/</strong></em></li>
+			<li>└ <em><strong><span class="gg_folder gg_blue">css</span></strong> / <span class="gg_file">*.css</span></em></li>
+			<li>└ <em><strong><span class="gg_folder gg_blue">html</span></strong> / <span class="gg_file">*.html</span></em></li>
+			<li>└ <strong><span class="gg_folder gg_blue">images</span></strong>
+				<p>└ <span class="gg_folder gg_blue">common</span> / *.* <span class="gg_gray mgl10"> *가입설계,영업지원 이미지</span></p>
+				<p>└ <span class="gg_folder gg_blue">contents</span> / *.* <span class="gg_gray mgl10"> *가입설계,영업지원 이미지</span></p>
+				<p>└ <span class="gg_folder">. . .</span></p>
+			</li>
+			<li>└ <strong><span class="gg_folder gg_blue">js</span></strong> / <span class="gg_file">*.js</span></li>
+			<li class="mgt10">
+				<span class="gg_red">※ 파란색으로 표기된 폴더명, 위치는 변경할 수 없다.</span><br>
+			</li>
+		</ul>
+	</div>
+
+	<!-- ################################################## -->
+
+	<p class="gg_tit1">1. HTML </p>
+
+	<p class="gg_tit2">1.1. 위치 및 정의</p>
+	<div class="gg_info">
+		<ul>
+			<li>① <strong class="gg_black bold">/html/보장분석_*.html</strong><br>
+				<span class="gg_gray">개발화면을 위한 html Markup File</span>
+			</li>
+			<li>② <strong class="gg_black">/html/보장분석_guide_**.html</strong><br>
+				<span class="gg_gray">퍼블리싱 가이드(html Markup Guide).<br>
+				유지 보수를 위해 스타일 정의 및 패턴 등 정보제공 문서</span>
+			</li>
+			<li>※ html 파일은 개발, 운영에 업로드 하지 않는다.<li>
+		</ul>
+	</div>
+
+	<p class="gg_tit2">1.2. 파일명 정의</p>
+	<div class="gg_info bullet1">
+		<ul>
+			<li>화면정의서의 화면ID 또는 메뉴, 화면명의 조합으로 명명한다.</li>
+			<li>가입설계, 영업지원 파일과의 구분을 위해,<br>파일명 앞에 <strong class="gg_red">'보장분석_'</strong>을 붙여준다.<br>
+				<span class="gg_gray">ex)보장분석_main.html, 보장분석_guide_button.html</span>
+			</li>
+		</ul>
+	</div>
+
+	<!-- ################################################## -->
+
+	<p class="gg_tit1">2. CSS</p>
+
+	<p class="gg_tit2">2.1. 위치 및 정의</p>
+	<div class="gg_info">
+		<ul>
+			<li><strong>/css/</strong>*.css</li>
+			<li>
+				<strong>① UI Design</strong>
+				<ul class="bullet2">
+					<li></li>
+					<li><strong class="gg_black"><span class="gg_red">gu.</span>common.css</strong><br><span class="gg_gray">reset, common style, form, button 등 기본(공통) 스타일 정의</span></li>
+					<li><strong class="gg_black"><span class="gg_red">gu.</span>layout.css</strong><br><span class="gg_gray">페이지, 팝업 등 레이아웃 스타일 정의</span></li>
+					<li><strong class="gg_black"><span class="gg_red">gu.</span>contents.css</strong><br><span class="gg_gray">컨텐츠 영역 스타일 정의</span></li>
+				</ul>
+				<p class="mgt10">※ 현재 운영 파일 <br>common.gu.css, layout.gu.css, contents.gu.css</p>
+			</li>
+			<li>
+				<strong>② ngDialog UI</strong><br>
+				<ul class="bullet2">
+					<li>ngDialog.min.css</li>
+					<li>ngDialog-theme-default.min.css</li>
+					<li><strong class="gg_black"><span class="gg_red">gu.</span>ngDialog-theme-meritz.css</strong><br><span class="gg_gray">보장분석의 UI에 맞게 스타일 재정의</span></li>
+				</ul>
+				<p>※ library, plug-in 에서 제공하는 원본 파일을 직접 수정하지 않음. 별도의 파일을 지정하여 스타일 보완.</p>
+				<p>※ 현재 운영 파일 ngDialog-theme-meritz.gu.css 이며, <br>동일한 파일에 스타일 추가하여 사용할지, 새파일을 만들어 정의할지는 편한대로 선택</p>
+			</li>
+			<li>
+				<strong>③ Desktop, Mobile 구분</strong><br>
+					모바일 문서는 mb를 붙어준다.<br>
+					<em class="gg_gray">ex) gu.mb.common.css, gu.mb.layout.css, gu.mb.contents.css</em>
+			</li>
+		</ul>
+	</div>
+
+	<p class="gg_tit2">2.2. 클래스명 정의</p>
+	<div class="gg_info bullet1">
+		<ul>
+			<li>스타일 정의시 아이디(#) 사용은 피한다.</li>
+			<li>클래스명(.)은 소문자로 이루어지며, 대문자를 사용하지 않는다.</li>
+			<li>단어와 단어의 연결은 Underscore(_)로 한다.<br>
+				<em class="gg_gray">ex) .list_data, .tbl_data, ... (<strong class="gg_red">O</strong>)<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.list-data, .tbl-data, ... (<strong class="gg_red">Ⅹ</strong>)</em><br>
+				(단, 플러그인 커스터마이징 또는 스크립트 기능을 위한 경우에는 대문자, Hyphen(-) 사용을 허용한다.)
+			</li>
+			<li>동일한 용도의 클래스이나 스타일이 다르게 정의될 경우, 클래스명 뒤에 숫자를 붙여 구분한다.<br>
+				(단, 1은 생략해도 무방하다.)<br>
+				<em class="gg_gray">ex) .list_item, .list_item2, .list_item3, ...</em>
+			</li>
+			<li>common style 중 margin, padding, width, height 정의 클래스명은 기존에 정의된 클래스를 사용한다.<br>
+				.mgt10, .pdb0, .w20p 등 ...
+			</li>
+		</ul>
+	</div>
+
+	<p class="gg_tit2">2.3. 스타일(속성) 정의</p>
+	<div class="gg_info bullet1">
+		<ul>
+			<li>Common Style의 경우 margin, padding, width, height 정의 클래스명은 기존에 정의된 내용을 사용한다.
+				<br>(필요에 따라 내용 추가)
+			</li>
+			<li>예약어는 단독으로 정의하지 않고, 반드시 상속을 통해 정의한다.
+				<br>* 예약어 <em><strong>.btn, .tit, .txt, .msg, .img, .cont, .list, .tbl, .info, .name, .data, .on, .off, .small, .large, .color</strong></em> ... 
+			</li>
+			<li>Common Style 외에 <span class="gg_red">!important 사용을 지양</span>한다. 상속이나 추가 클래스를 통해 그 우선순위를 결정한다.</li>
+			<li>사이즈의 상대단위, 절대단위는 정의된 디자인에 따라 적절하게 사용한다.<br>
+				<span class="gg_blue">단, 폰트 사이즈 단위는 <strong>rem</strong>을 기본으로 한다.</span>
+			</li>
+			<li>속성의 정의 순서를 준수한다.(권장사항)<br>
+				display → position → float → width, height → margin, padding → border → background → font → 기타... </li>
+			<li>스크립트를 통한 스타일 정의는 가급적 피한다.</li>
+		</ul>
+	</div>
+
+	<!-- ################################################## -->
+
+	<p class="gg_tit1">3. IMAGES</p>
+
+	<p class="gg_tit2">3.1. 위치 및 정의</p>
+	<div class="gg_info">
+		<ul>
+			<li><strong>/images/</strong>*/*.*</li>
+			<li>
+				<ul class="bullet2">
+					<li><strong class="gg_black">/<span class="gg_red">gu.</span>common/</strong> *.png <br><span class="gg_gray">header, footer, button, form 등 공통 요소에 사용되는 이미지</span></li>
+					<li><strong class="gg_black">/<span class="gg_red">gu.</span>contents/</strong> *.png <br><span class="gg_gray">공통 요소를 제외한 모든 이미지</span></li>
+				</ul>
+			</li>
+			<li>
+				<p>※ 기본적으로 ratio x2 적용, 필요에 따라 x3, x4 적용</p>
+				<p class="gg_blue">※ slplit image 사용 권장</p>
+			</li>
+			<li>
+				<strong>② Desktop, Mobile 구분</strong><br>
+				<strong class="gg_black">/gu.mb.common/, /gu.mb.contents/</strong> *
+			</li>
+			<li><span class="gg_blue mgt10">※ 웹폰트 사용할 경우</span><br>
+				<strong class="gg_black">└ /font/</strong> 폴더에 폰트 파일 저장
+			</li>
+		</ul>
+	</div>
+
+	<p class="gg_tit2">3.2. 파일명 정의</p>
+	<div class="gg_info bullet1">
+		<ul>
+			<li>네이밍의 순서는 '형태-의미-상태' 순<br>
+				<em class="gg_gray">ex) bg_arr_on.png , ico_check_off.png</em>
+			</li>
+			<li>동일한 용도의 이미지가 여러개인 경우 마지막 단어에 숫자를 붙여서 다르게 명명한다.<br>
+				<em class="gg_gray">ex) bg_arr.png, bg_arr02.png</em>
+			</li>
+			<li>영역을 표시하기 위한 임시이미지나 운영화면에서는 서버에서 불러와서 처리하는 이미지는 @을 앞에 붙여 구분한다.<br>
+				<em class="gg_gray">ex)@banner_main.gif</em>
+			</li>
+		</ul>
+	</div>
+
+<!-- ################################################## -->
+
+	<p class="gg_tit1">4. JS</p>
+
+	<p class="gg_tit2">4.1. 위치 및 정의</p>
+	<div class="gg_info">
+		<ul>
+			<li><strong>/js/</strong></li>
+			<li>
+				<ul class="bullet2">
+					<li><strong><span class="gg_red">gu</span>.common.ui.js</strong><br>
+					<span class="gg_gray">화면 UI, 인터렉션을 위한 스크립트 정의</span></li>
+				</ul>
+			</li>
+			<li><span class="gg_red">※ 함수 정의 및 사용은 개발자와 논의하여 결정 ★</span></li>
+		</ul>
+	</div>
+
+<!-- ################################################## -->
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<!-- ################################################## Guide End ################################################## -->
+
+		</div>
+		<!-- Cotents Area [e] -->
+	</section>
+	<!-- Container [e] -->
+</div>
+<!-- Wrap [e] -->
+</body>
+</html>

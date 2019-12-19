@@ -137,7 +137,7 @@
           transform: translate(0, 0);
           .info_area{
             .select_member_box {
-              transform: translate(0, 0) scale(1);
+              transform: translate(1px, 0) scale(1);
               opacity: 1;
             }
           }
@@ -565,6 +565,11 @@
     float: left;
     width: 884px;
     padding: 0px 0 0px 30px;
+    .content_scroll{
+      .mCSB_scrollTools{
+        right:5px;
+      }
+    }
 
     .sorting {
       width: 782px;

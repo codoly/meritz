@@ -1,0 +1,71 @@
+$fz1px: 0.0625rem;
+$fz2px: 0.125rem;
+$fz3px: 0.1875rem;
+$fz4px: 0.25rem;
+$fz5px: 0.3125rem;
+$fz6px: 0.375rem;
+$fz7px: 0.4375rem;
+$fz8px: 0.5rem;
+$fz9px: 0.5625rem;
+$fz10px: 0.625rem;
+$fz11px: 0.6875rem;
+$fz12px: 0.75rem;
+$fz13px: 0.8125rem;
+$fz14px: 0.875rem;
+$fz15px: 0.9375rem;
+$fz16px: 1rem;
+$fz17px: 1.063rem;
+$fz18px: 1.125rem;
+$fz20px: 1.25rem;
+$fz22px: 1.375rem;
+$fz24px: 1.5rem;
+$fz26px: 1.625rem;
+$fz28px: 1.75rem;
+$fz30px: 1.875rem;
+$fz32px: 2rem;
+$fz34px: 2.125rem;
+$fz36px: 2.25rem;
+$fz38px: 2.375rem;
+$fz40px: 2.5rem;
+$fz45px: 2.813rem;
+$fz50px: 3.125rem;
+$fz55px: 3.438rem;
+$fz60px: 3.75rem;
+$fz70px: 4.375rem;
+$fz80px: 5rem;
+$fz90px: 5.625rem;
+$fz100px: 6.25rem;
+
+//color
+$color_level1: #000000;
+$color_level2: #333333;
+$color_level3: #666666;
+$color_level4: #888888;
+$color_level5: #aaaaaa;
+
+$color_point1: #3c444d;
+$color_point2: #b1bac7;
+$color_point3: #adbfec;
+$color_button_red: #fe5855;
+
+$line_color1: #cad2db;
+$line_color2: #dfe3eb;
+$line_color3: #e0e4ea;
+
+$bgcolor: #e6edf8;
+
+
+@mixin bg_btn() {
+  overflow: hidden;
+  text-indent: -99999px;
+  display: inline-block;
+}
+
+@mixin clearline() {
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+

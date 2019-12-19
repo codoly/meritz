@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>submain</title>
+  <link href="../css/gu.renew.style.css" rel="stylesheet">
+  <script src="../js/lib/jquery.min.js"></script>
+  <script src="../js/lib/jquery.nice-select.min.js"></script>
+  <script src="../js/gu.renew.common.ui.js"></script>
+  <script>
+    $(function () {
+      $(".table_scroll").mCustomScrollbar({
+        scrollInertia: 150
+      });
+    })
+  </script>
+</head>
+<body style="background:rgba(0,0,0,0.5)">
+<!-- layer_pop_wrap : s -->
+<div class="layer_pop_wrap pop_alert">
+  <div class="layer_pop_header">
+    <h2>컨설팅</h2>
+  </div>
+  <div class="layer_pop_content">
+    <div class="center_box">
+      <div>가계약을 추가하시겠습니까?</div>
+    </div>
+    <div class="btn_area">
+      <a class="btn_text" href="#"><span>아니요</span></a>
+      <a class="btn_text fill_red" href="#"><span>예</span></a>
+    </div>
+  </div>
+  <a class="btn_close white" href="#"><span>닫기</span></a>
+</div>
+<!-- layer_pop_wrap : e -->
+</body>
+</html>

@@ -3,5 +3,5 @@
 node_modules
 .css
 css/*.css
-css/gu.renew.style.css
-css/style.css
+web/css/gu.renew.style.css
+web/css/style.css
