@@ -1976,6 +1976,8 @@
               var targetCont = $(this).closest(".insurance_all_state").find(".tab_content");
               target.addClass("on").siblings().removeClass("on");
               targetCont.eq(idx).addClass('on').siblings('.tab_content').removeClass("on");
+              
+              //가로 막대 그래프
               $('.state_info .state_item .bar_rail .bar').each(function(){
                 var varValue = $(this).attr("data-value");
                 $(this).width(varValue);
@@ -2011,8 +2013,7 @@
                 target.removeClass("open");
                 target.find(".insurance_list2").slideUp();
               }
-            });
-            //가로 막대 그래프            
+            });            
            
             //로고 회색으로 변경
             $('.grayscale').gray();
