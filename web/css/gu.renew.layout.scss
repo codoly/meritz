@@ -949,16 +949,13 @@
         .info_box {
           display: table;
           width: 285px;
-          margin: 25px auto 0 auto;
-          padding: 15px 0 14px 0;
+          margin: 25px auto 13px auto;
+          padding: 20px 0 19px 0;
           border: 1px solid $line_color2;
           border-radius: 13px;
           font-size: 0;
           line-height: 1;
           text-align: center;
-          & + .text{
-            margin-top: 25px;
-          }
 
           li {
             display: inline-block;
@@ -984,7 +981,7 @@
             }
 
             &.no {
-              color: #6a8db3;
+              color: #777777;
             }
 
             &.lack {
@@ -998,7 +995,7 @@
         }
 
         .result {
-          margin-top:-10px;
+          margin-top:3px;
           letter-spacing:-1px;
           font-size: $fz20px;
           line-height: $fz30px;
