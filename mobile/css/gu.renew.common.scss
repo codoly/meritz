@@ -416,10 +416,10 @@ button div, button:active div, button:before, button:focus div {
 
   //버튼 크기 정의
   &.size_small {
-    min-width: auto;
+    min-width: 58px;
     border-radius: 3px;
-    font-size: $fz14px;
-    line-height: 26px;
+    font-size: $fz12px;
+    line-height: 23px;
   }
 
   &.size_middle {
