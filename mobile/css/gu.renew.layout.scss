@@ -572,10 +572,6 @@
     }
 
     .sorting {
-      width: 782px;
-      padding-top: 30px;
-      margin-bottom: 15px;
-      text-align: right;
 
       .select_box {
         display: inline-block;
@@ -584,7 +580,7 @@
 
       .sorting_list {
         display: inline-block;
-        margin-left: 20px;
+        margin-left: 10px;
         text-align: left;
         @include clearline;
         vertical-align: top;
