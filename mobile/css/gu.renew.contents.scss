@@ -25,6 +25,8 @@
     color: $color_level2;
     letter-spacing: -0.075em;
     font-weight: 700;
+    float: left;
+    padding-top: 3px;
     strong{
       font-size: $fz18px;
       color:#fe5855;      
@@ -46,6 +48,7 @@
       height: 30px;
       line-height: 28px;
       letter-spacing: -0.075em;
+      background: #fff;
       &:after{
           top: 50%;
           right: 15px;
@@ -54,13 +57,19 @@
           margin-top: -6px;
           border-color: #3c444d;
       }
+       .option {
+        min-height: 32px;
+        padding-right: 10px;
+        padding-left: 10px;
+       }
     }
   }
   .list_type_select{    
     display: inline-block;
     vertical-align: top;
-    font-size: 0;
-    button{
+    font-size: 0;   
+    
+    .btn{
       display: inline-block;
       vertical-align: top;
       width: 37px;
@@ -68,12 +77,22 @@
       background-size: 16px 16px;
       background-repeat: no-repeat;
       background-position: center center;
+      background-color: #fff;
       border: 1px solid #e0e4ea;
+      position: relative;
+      
       &.grid{
         background-image: url(../images/gu.renew.common/icon_type_grid.png);
+        border-radius: 5px 0 0 5px;
+        margin-right:-1px;
       }
       &.list{
         background-image: url(../images/gu.renew.common/icon_type_list.png);
+        border-radius: 0 5px 5px 0;
+      }
+      &.active{
+        border: 1px solid #3c444d;
+        z-index: 5;
       }
     }
   }
@@ -89,6 +108,12 @@
 /* customer_list_box */
 .customer_list_box{  
   padding: 65px 20px 20px 20px;
+  .customer_list{
+    display: none;
+    &.grid_type {
+      display: block;
+    }
+  }
   .customer_add {
     width: 100%;
     text-align: center;
@@ -136,7 +161,6 @@
 
 /* 테이블형 리스트 */
 .list_table_type {
-
   .tbody_box {
     padding-top: 1px;
     border-radius: 10px;
@@ -232,12 +256,10 @@
 }
 
 /* 그리드형 리스트 */
-.list_grid_type{
+.grid_type{
   .item{
     position: relative;
-    background: #fff;
-    margin:0 0 10px;
-    border-radius: 10px;
+    margin:0 0 10px;    
     overflow: hidden;
     &:last-child{
       margin:0;
@@ -245,9 +267,23 @@
   }
   .customer_info{
     position: relative;
-    padding: 15px 20px 10px;
-    display: block;
-
+    padding: 15px 20px 51px;
+    display: block;        
+    border-radius: 10px;
+    background: #fff;
+    &:active:before{
+      display: block;
+      position: absolute;
+      top: 0px;
+      left: 0;
+      width: calc(100% - 3px);
+      height: calc(100% - 3px);
+      border: 1.5px solid #fe5855;
+      border-radius: 8px;
+      content: "";
+      box-shadow: 4px 5px 5px 0px rgba(0, 0, 0, 0.15);
+      transition: none;
+    }
     .name{
       font-size: $fz15px;
       color: $color_level2;
@@ -261,6 +297,13 @@
       padding-right: 105px;
       line-height: 1;
       margin-bottom:20px;
+      span{
+        display: inline-block;
+        margin-right: 10px;
+        &:last-child{
+          margin-right:0
+        }
+      }
     }
     .list{
       &:last-child{
@@ -285,16 +328,22 @@
     }    
   }
   .btn_box{
-    padding: 0px 20px 15px;
-    .btn_pdf{
-      float: right;
-      width: 118px;
-    }
+    
   }
   .btn_util{
     position: absolute;
     top: 17px;
     right: 20px;
+  }
+  .btn_util2{
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+    right: 20px;
+    .btn_pdf{
+      float: right;
+      width: 118px;
+    }
   }
 }
 
