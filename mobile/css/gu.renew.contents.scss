@@ -1,14 +1,17 @@
-.wrap .content_area{
-  width:100%;
-  padding:0;
-}
 .align_c {
   text-align: center;
 }
 
 /* customer_sort */
 .customer_sort{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
   padding: 20px 20px 15px;
+  height: 65px;
+  background: #f0f3f8;
+  z-index:5;
   .customer_total{
     font-size: $fz16px;
     color: $color_level2;
@@ -49,11 +52,17 @@
     display: inline-block;
   }
 }
+.fixed{
+  .customer_sort{
+    position: fixed;
+    left: 0;
+    top: 146px;
+  }
+}
 
 /* customer_list_box */
 .customer_list_box{  
-  padding: 0 20px;
-  
+  padding: 65px 20px 20px 20px;
   .customer_add {
     width: 100%;
     text-align: center;

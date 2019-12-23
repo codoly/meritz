@@ -85,9 +85,20 @@
       top: 0;
       width: 100%;
       background: #5d33c0;
-      border-radius:12px;
-      padding:15px 20px;
-      margin-bottom: -20px;
+      border-radius:10px 10px 0 0;
+      padding:15px 20px 25px 20px;
+      z-index:10;
+      &:after{
+        content:'';
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height:10px;
+        background: #f0f3f8;
+        border-radius:10px 10px 0 0;
+      }
     }
     .sorting_list{
       padding:0 15px;
@@ -105,6 +116,11 @@
         }
       }
     }
+    .content_radius_box{
+      position: relative;
+      border-radius:10px;
+      background: #f0f3f8;
+    }
   }
   &.main {
     padding-top: 129px;
@@ -118,72 +134,7 @@
       padding-top: 60px;
       border-radius:0;
     }
-  }
-}
 
-//메인 layout
-
-
-//서브 layout
-.wrap.sub {
-  min-width: 1280px;
-  min-height: 940px;
-  margin: 0 auto;
-  &:after {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 1920px;
-    height: 940px;
-    margin-left: -1104px;
-    background-image: url("../images/gu.renew.common/main_left_bg.jpg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    content: "";
-  }
-
-  .content_wrap {
-    @include clearline;
-    position: relative;
-    z-index: 1;
-    width: 1280px;
-    margin: 0 auto;
-
-    > .btn_close {
-      display: block;
-      position: absolute;
-      z-index: 10;
-      top: 0;
-      right: 50px;
-    }
-
-    /*메인 왼쪽*/
-    .left_area {
-      position: relative;
-      float: left;
-      width: 396px;
-      height: 940px;
-      padding: 30px 0px 0 28px;
-    }
-
-    /*메인 본문*/
-    .content_area {
-      display: none;
-    }
-    .content_area_sub {
-      display: block;
-      position: relative;
-      float: left;
-      width: 884px;
-      padding: 0px 0 0px 30px;
-      .content_scroll {
-        height: 940px;
-        &.consulting_list_scroll {
-          height: 730px;
-        }
-      }
-    }
   }
 }
 
