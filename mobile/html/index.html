@@ -6,20 +6,20 @@
   <title>Title</title>
   <link href="../css/gu.renew.style.css" rel="stylesheet">
   <script src="../js/lib/jquery.min.js"></script>
-  <script src="../js/lib/jquery.mCustomScrollbar.min.js"></script>
-  <script src="../js/lib/jquery.mousewheel-3.0.6.min.js"></script>
   <script src="../js/lib/jquery.nice-select.min.js"></script>
-  <script src="../js/lib/jquery.placeholder.min.js"></script>
-  <script src="../js/lib/jquery.gray.min.js"></script>
   <script src="../js/lib/core.js"></script>
   <script src="../js/lib/charts.js"></script>
   <script src="../js/lib/animated.js"></script>
   <script src="../js/gu.renew.common.ui.js"></script>
   <script>
     $(function () {
-      changeLayout('main');
-      $(".tbody_box .link").click(function(){
-        changeLayout('sub', 'sub.html');
+      $(window).scroll(function () {
+        var top = $(window).scrollTop();
+        if (top > $(".content_area").offset().top-43){
+          $(".wrap").addClass("fixed")
+        }else{
+          $(".wrap").removeClass("fixed")
+        }
       })
     })
   </script>
@@ -28,14 +28,21 @@
 <div class="wrap main">
   <div class="top_area">
     <ul>
-      <li></li>
+      <li class="home"><a href="#" class="home">홈으로</a></li>
+      <li class="util">
+        <a href="#" class="menu01">등록</a>
+        <a href="#" class="menu02">컨컬팅</a>
+        <a href="#" class="menu03">pdf sample</a>
+      </li>
     </ul>
   </div>
-  <div class="main_area">
+  <div class="top_bg_area">
     <div class="name_area">
       홍길동 설계사님<br>
       <strong>오늘 하루도 활기찬 하루 되세요.</strong>
     </div>
+  </div>
+  <div class="content_area">
     <!-- search_box : s-->
     <div class="search_box">
       <div class="search_area"><input placeholder="고객 검색" type="text"><a class="btn_search" href="#">검색</a></div>
@@ -60,6 +67,7 @@
         </li>
       </ul>
     </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <!-- search_box : e-->
   </div>
 </div>

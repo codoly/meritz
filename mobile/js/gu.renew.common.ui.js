@@ -9,8 +9,6 @@ $(function () {
   $(".search_area").on("focusout", function () {
     $(this).removeClass("focus");
   })
-  //ie9에서 placeholder처리
-  $('input, textarea').placeholder();
   //input focusOut 처리
   $(document).on("focusout", ".input_set input", function () {
     var thisValue = $(this).attr("data-value")

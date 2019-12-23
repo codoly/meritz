@@ -25,7 +25,6 @@ body {
   font-family: 'Apple SD Gothic Neo', 'Droid Sans', 'Spoqa Han Sans', Arial, sans-serif;
   font-size: 14px;
   line-height: 24px;
-  overflow-y: hidden;
   color: $color_level3
 }
 
@@ -65,8 +64,7 @@ address, cite, code, dfn, em, var {
 }
 
 strong {
-  font-weight: 400;
-  font-style: normal
+  font-weight: 700;
 }
 
 ol, ul {
@@ -452,18 +450,19 @@ button div, button:active div, button:before, button:focus div {
 .search_area {
   position: relative;
   padding-right: 53px;
-  border: 2px solid #7180a0;
+  border: 1px solid #a797ff;
   border-radius: 5px;
 
   input {
     width: 100%;
-    height: 44px;
-    padding: 0 0 0 15px;
+    height: 33px;
+    padding: 0 0 0 18px;
     border: 0;
     outline: none;
     background: transparent;
-    line-height: 44px;
+    line-height: 33px;
     color: #fff;
+    font-size: $fz12px;
 
     &.placeholder {
       color: #adbfec;
@@ -492,15 +491,16 @@ button div, button:active div, button:before, button:focus div {
     top: 0;
     right: 0;
     width: 53px;
-    height: 44px;
+    height: 33px;
     background: url("../images/gu.renew.common/btn_main_search_off.png") no-repeat center center;
+    background-size: 15px auto;
   }
 
   &.focus {
-    border: 2px solid #01a7c4;
-
+    border: 1px solid #01a7c4;
     .btn_search {
       background: url("../images/gu.renew.common/btn_main_search_on.png") no-repeat center center;
+      background-size: 15px auto;
     }
   }
 
@@ -559,17 +559,17 @@ button div, button:active div, button:before, button:focus div {
   label {
     display: inline-block;
     position: relative;
-    padding-left: 33px;
-    font-size: $fz14px;
-    line-height: 24px;
+    padding-left: 30px;
+    font-size: $fz12px;
+    line-height: 20px;
 
     &:after {
       display: block;
       position: absolute;
       top: 0;
       left: 0;
-      width: 24px;
-      height: 24px;
+      width: 20px;
+      height: 20px;
       border-radius: 3px;
       background: url("../images/gu.renew.common/checkbox_off.png") no-repeat;
       box-sizing: border-box;
@@ -582,8 +582,8 @@ button div, button:active div, button:before, button:focus div {
       color: #fff;
 
       &:after {
-        border: 1px solid #fff;
-        background: url("../images/gu.renew.common/main_checkbox.png") no-repeat center center;
+        background: url("../images/gu.renew.common/main_checkbox_on.png") no-repeat center center;
+        background-size: 20px auto;
       }
     }
 
@@ -591,8 +591,10 @@ button div, button:active div, button:before, button:focus div {
       color: #bbccf5;
 
       &:after {
-        border: 1px solid #7180a0;
-        background: none;
+        border: 0;
+        border-radius:0;
+        background: url("../images/gu.renew.common/main_checkbox_off.png") no-repeat center center;
+        background-size: 20px auto;
       }
     }
   }
