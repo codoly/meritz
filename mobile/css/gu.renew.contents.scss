@@ -5,6 +5,14 @@
 .align_c {
   text-align: center;
 }
+.blind {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  width: 1px;
+  height: 1px; 
+}
 
 /* customer_sort */
 .customer_sort{
@@ -47,6 +55,24 @@
   }
   .list_type_select{    
     display: inline-block;
+    vertical-align: top;
+    font-size: 0;
+    button{
+      display: inline-block;
+      vertical-align: top;
+      width: 37px;
+      height: 30px;
+      background-size: 16px 16px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      border: 1px solid #e0e4ea;
+      &.grid{
+        background-image: url(../images/gu.renew.common/icon_type_grid.png);
+      }
+      &.list{
+        background-image: url(../images/gu.renew.common/icon_type_list.png);
+      }
+    }
   }
 }
 
