@@ -1,3 +1,5 @@
+//스코롤 감지
+var scrollCheck
 $(function () {
 	//셀렉트 디자인변경
 	$(".select_box select").niceSelect();
@@ -40,6 +42,17 @@ $(function () {
 			target.find(".info").slideUp();
 		}
 	});
+
+	//스코롤 위아래 체크
+	$(window).scroll(function(){
+		var top = $(window).scrollTop()
+		if (scrollCheck > top){
+			$("body").removeClass("scroll_down").addClass("scroll_up");
+		}else{
+			$("body").removeClass("scroll_up").addClass("scroll_down");
+		}
+		scrollCheck = top
+	})
 
 })
 
@@ -117,19 +130,21 @@ function changeLayout(type, file) {
 			$(".left_area .main_area").addClass("active");
 		}, 10)
 	}
-	if (file) {
-		$.get(file, function (data) {
-			var data = $(data);
-			loadHtml = $(data).find(".ajax_area");
-			//추후 ajax콜 끝난시점
-			setTimeout(function () {
-				$(".content_area_sub").html(loadHtml);
-			}, 300)
-		});
-	}
+	// if (file) {
+	// 	$.get(file, function (data) {
+	// 		var data = $(data);
+	// 		loadHtml = $(data).find(".ajax_area");
+	// 		//추후 ajax콜 끝난시점
+	// 		setTimeout(function () {
+	// 			$(".content_area_sub").html(loadHtml);
+	// 		}, 300)
+	// 	});
+	// }
 }
 
 //서브메뉴 활성화
 function subMenuActive(idx) {
 	$(".menu_area .menu_set .menu").removeClass("on").eq(idx).addClass("on");
 }
+
+//서브메뉴 상단 페딩계산산
