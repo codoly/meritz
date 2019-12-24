@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+	<title>Title</title>
+	<link href="/resources/css/gu.renew.style.css" rel="stylesheet">
+	<script src="/resources/js/lib/jquery.min.js"></script>
+	<script src="/resources/js/lib/jquery.nice-select.min.js"></script>
+	<script src="/resources/js/lib/core.js"></script>
+	<script src="/resources/js/lib/charts.js"></script>
+	<script src="/resources/js/lib/animated.js"></script>
+	<script src="/resources/js/gu.renew.common.ui.js"></script>
+	<script>
+		$(function(){			
+			//가입현황 상세내역 탭
+			$(document).on("click", ".tab_list .tab", function(){
+				var target = $(this);
+				var targetCont = $('.insurance_detail_tab_cont .tab_cont');
+				var idx = $(this).parent().index();
+				target.addClass('active').parent().siblings().children().removeClass('active');
+				targetCont.hide();
+				targetCont.eq(idx).show();
+				
+				
+				
+			});
+		})
+	</script>
+</head>
+<body>
+<div class="wrap">
+	<div class="content_wrap">
+		<!-- content_area : s -->
+		<div class="content_area_sub">
+			<!-- insurance_detail : s -->
+			<div class="insurance_detail">
+				<div class="payment_info">
+					<div class="payment"><strong>69,030</strong>원</div>
+					<div class="info"><span class="tit">매월납</span> <span class="count"><strong>12</strong>년</span></div>
+					<div class="logo"><img alt="한화생명" class="grayscale" src="/resources/images/gu.renew.logo/logo_lifeplanet_life.png"></div>
+				</div>
+				<div class="count_bar_box">
+					<div class="bar_rail">
+						<div class="bar" data-value="50%"><span class="percent"><em class="count">50</em>%</span></div>
+					</div>
+					<div class="txt_box">
+						<span class="left_txt"><strong>122</strong>회</span>
+						<span class="right_txt"><strong>240</strong>회</span>
+					</div>
+				</div>
+			</div>
+			<!-- insurance_detail : e-->
+			<!-- insurance_detail_tab : s-->
+			<div class="insurance_detail_tab">
+				<div class="tab_list">
+					<ul>
+						<li>
+							<button class="tab active"><span>정액형 보장</span></button>
+						</li>
+						<li>
+							<button class="tab"><span>실손형 보장</span></button>
+						</li>
+					</ul>
+				</div>
+				<div class="insurance_detail_tab_cont">
+					<div class="tab_cont active">
+						<ul class="list">
+							<li>
+								<div class="item">
+									<div class="tit_info">
+										<strong class="tit">질병입원일당</strong>
+										<div class="info">상해+질병 외래의료비</div>
+									</div>
+									<div class="state_info">
+										<span class="state">정상</span>
+										<span class="info">2천만원</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="item">
+									<div class="tit_info">
+										<strong class="tit">질병입원일당</strong>
+										<div class="info">상해+질병 외래의료비</div>
+									</div>
+									<div class="state_info">
+										<span class="state">정상</span>
+										<span class="info">2천만원</span>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="tab_cont">
+						<ul class="list">
+							<li>
+								<div class="item">
+									<div class="tit_info">
+										<strong class="tit">질병입원일당</strong>
+										<div class="info">상해+질병 외래의료비</div>
+									</div>
+									<div class="state_info">
+										<span class="state">정상</span>
+										<span class="info">2천만원</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="item">
+									<div class="tit_info">
+										<strong class="tit">질병입원일당</strong>
+										<div class="info">상해+질병 외래의료비</div>
+									</div>
+									<div class="state_info">
+										<span class="state">정상</span>
+										<span class="info">2천만원</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="item">
+									<div class="tit_info">
+										<strong class="tit">질병입원일당</strong>
+										<div class="info">상해+질병 외래의료비</div>
+									</div>
+									<div class="state_info">
+										<span class="state">정상</span>
+										<span class="info">2천만원</span>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- insurance_detail_tab : e-->
+		</div>
+		<!-- content_area : e -->
+	</div>
+</div>
+</body>
+</html>

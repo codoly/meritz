@@ -2244,3 +2244,106 @@
 	}
 
 }
+
+/* 가입현황 - 상세내역 */
+.insurance_detail_tab{
+	.tab_list{	
+		padding:0 15px;
+		border-bottom: 1px solid #d5d5d5;
+		ul{
+			@include clearline();
+			margin-bottom: -1px;
+			li{			
+				float: left;
+				margin-right:17px;			
+				line-height: 1;
+				&:last-child{
+					margin-right: 0;
+				}
+				.tab{
+					position: relative;
+					font-size:$fz15px;
+					color:$color_level4;
+					letter-spacing: -0.05em;
+					padding-bottom: 8px;
+					&.active{
+						font-weight: 700;
+						color:$color_level2;
+						&:after{
+							position: absolute;
+							left:0;
+							bottom:0;
+							display: block;
+							content:"";
+							width:100%;
+							height:2px;
+							background: #333;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.insurance_detail_tab_cont{
+	background: #fff;
+	padding:0 15px;
+	.tab_cont{
+		display: none;
+		&.active{
+			display:block;
+		}
+	}
+	.list{
+		.item{
+			border-bottom: 1px solid #ededed;
+			padding: 10px 0 10px;
+			line-height: 1;
+			@include clearline();
+			.tit_info{
+				float: left;
+				width:70%;
+				font-size: $fz12px;
+				color: #555;
+				letter-spacing: -0.05em;
+				line-height: 20px;
+				padding-left: 9px;
+				.tit{
+					position: relative;
+					display: block;
+					font-weight: 700;
+					&:before{
+						position: absolute;
+						top: 50%;
+						left: -7px;
+						margin-top: -1px;
+						display: inline-block;
+						content: "";
+						width: 2px;
+						height: 2px;
+						background: #555;
+					}
+				}
+			}
+			.state_info{
+				float: right;
+				width:30%;
+				text-align:right;
+				font-size: $fz12px;
+				span{
+					display: block;
+					&.state{
+						display: inline-block;
+						color: #ff4858;
+						background: #ffe4e3;
+						height: 18px;
+						line-height: 20px;
+						padding:0 10px;
+						border-radius: 3px;
+						margin-bottom: 8px;
+					}
+				}
+			}
+		}
+	}
+}

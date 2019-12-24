@@ -28,11 +28,7 @@
 				var idx = $(this).index();
 				targetCont.hide();
 				targetCont.eq(idx).show();
-				if (!target.hasClass("active")) {
-					target.addClass("active").siblings().removeClass('active');
-				} else {
-					target.removeClass("active");
-				}
+				target.addClass('active').siblings().removeClass('active');
 			});
 		})
 	</script>
