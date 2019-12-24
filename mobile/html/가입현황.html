@@ -2,10 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>submain</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>Title</title>
   <link href="../css/gu.renew.style.css" rel="stylesheet">
   <script src="../js/lib/jquery.min.js"></script>
   <script src="../js/lib/jquery.nice-select.min.js"></script>
+  <script src="../js/lib/core.js"></script>
+  <script src="../js/lib/charts.js"></script>
+  <script src="../js/lib/animated.js"></script>
   <script src="../js/gu.renew.common.ui.js"></script>
 
 </head>
@@ -13,259 +17,131 @@
 <div class="wrap">
   <div class="content_wrap">    
     <!-- content_area : s -->
-    <div class="content_area_sub">      
-      <!-- customer_state_info : s -->
-      <div class="customer_state_info">
-        <div class="inner">
-          <div class="customer">
-            <strong>독고영재</strong>고객님<br>
-            반갑습니다.
-          </div>
-          <div class="contract">
-            <dl>
-              <dt>정상계약</dt>
-              <dd><strong>11</strong>건</dd>
-            </dl>
-          </div>
-          <div class="payment">
-            <dl>
-              <dt>월보험료</dt>
-              <dd><strong>1,264,530</strong>원</dd>
-            </dl>
-          </div>
-          <div class="state">
-            <dl>
-              <dt>보장현황</dt>
-              <dd>
-                <span class="no_join"><strong>9</strong>미가입</span>
-                <span class="shortage"><strong>14</strong>부족</span>
-                <span class="enough"><strong>3</strong>충분</span>
-              </dd>
-            </dl>
-          </div>
-        </div>
-      </div>
-      <!-- customer_state_info : e -->
-
+    <div class="content_area_sub"> 
       <!-- insurance_list_box : s -->
       <div class="insurance_list_box">
-        <!-- scroll_area : s -->
-        <div class="content_scroll">
-          <!-- insurance_list : s -->
-          <div class="insurance_list">
-            <div class="tit_box">
-              <h3 class="sort_tit">정상계약</h3><span class="number">+3</span>
-            </div>
-            <button class="insurance">
-              <div class="info">
-                <div class="inner">
-                  <div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
-                  <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904</div>
-                  <div class="date"><span class="state">정상</span>2009.07.17~2082.07.17</div>
-                </div>
-              </div>
-              <div class="payment">
-                <ul>
-                  <li class="top">
-                    <span class="th">매월납20년</span>
-                    <span class="td"><strong class="count">1270660</strong>원</span>
-                  </li>
-                  <li>
-                    <span class="th">납입횟수</span>
-                    <span class="td">122/240회</span>
-                  </li>
-                  <li>
-                    <span class="th">납입률</span>
-                    <span class="td">51%</span>
-                  </li>
-                  <li>
-                    <span class="th">납입보험료</span>
-                    <span class="td">8,421,660원</span>
-                  </li>
-                </ul>
-              </div>
-            </button>
-            <button class="insurance">
-              <div class="info">
-                <div class="inner">
-                  <div class="logo"><img alt="삼성생명" src="../images/gu.renew.logo/logo_samsung_life.png"></div>
-                  <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904</div>
-                  <div class="date"><span class="state">정상</span>2009.07.17~2082.07.17</div>
-                </div>
-              </div>
-              <div class="payment">
-                <ul>
-                  <li class="top">
-                    <span class="th">매월납20년</span>
-                    <span class="td"><strong class="count">1270660</strong>원</span>
-                  </li>
-                  <li>
-                    <span class="th">납입횟수</span>
-                    <span class="td">122/240회</span>
-                  </li>
-                  <li>
-                    <span class="th">납입률</span>
-                    <span class="td">51%</span>
-                  </li>
-                  <li>
-                    <span class="th">납입보험료</span>
-                    <span class="td">8,421,660원</span>
-                  </li>
-                </ul>
-              </div>
-            </button>
-            <button class="insurance">
-              <div class="info">
-                <div class="inner">
-                  <div class="logo"><img alt="삼성생명" src="../images/gu.renew.logo/logo_samsung_life.png"></div>
-                  <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904</div>
-                  <div class="date"><span class="state">정상</span>2009.07.17~2082.07.17</div>
-                </div>
-              </div>
-              <div class="payment">
-                <ul>
-                  <li class="top">
-                    <span class="th">매월납20년</span>
-                    <span class="td"><strong class="count">1270660</strong>원</span>
-                  </li>
-                  <li>
-                    <span class="th">납입횟수</span>
-                    <span class="td">122/240회</span>
-                  </li>
-                  <li>
-                    <span class="th">납입률</span>
-                    <span class="td">51%</span>
-                  </li>
-                  <li>
-                    <span class="th">납입보험료</span>
-                    <span class="td">8,421,660원</span>
-                  </li>
-                </ul>
-              </div>
-            </button>
+        <!-- insurance_list : s -->
+        <div class="insurance_list">
+          <div class="tit_box">
+            <h3 class="sort_tit">정상계약</h3><span class="number">+3</span>
           </div>
-          <!-- insurance_list : e -->
-
-          <!-- insurance_list : s -->
-          <div class="insurance_list">
-            <div class="tit_box">
-              <h3 class="sort_tit">자동차보험</h3><span class="number">+1</span>
-            </div>
-            <button class="insurance">
-              <div class="info">
-                <div class="inner">
-                  <div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
-                  <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904</div>
-                  <div class="date"><span class="state">정상</span>2009.07.17~2082.07.17</div>
+          <div class="list">
+            <a href="#" class="insurance">
+              <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904</div> 
+              <div class="payment_info">
+                <span class="state">정상</span>
+                <div class="info">
+                  <div class="payment"><strong>69,030</strong>원 <span>매월납/12년</span></div>
+                  <div class="date">2009.07.17~2082.07.17</div>
                 </div>
               </div>
-              <div class="payment">
-                <ul>
-                  <li class="top">
-                    <span class="th">일시납20년</span>
-                    <span class="td"><strong class="count">1270660</strong>원</span>
-                  </li>
-                  <li>
-                    <span class="th">차량번호</span>
-                    <span class="td">76마 1234</span>
-                  </li>
-                  <li>
-                    <span class="th">종료일</span>
-                    <span class="td">2019.11.11</span>
-                  </li>
-                  <li>
-                    <span class="th">남은기간</span>
-                    <span class="td">D-43</span>
-                  </li>
-                </ul>
-              </div>
-            </button>
-            <div class="insurance no_insurance">
-              <div>가입내역이 없습니다.</div>
-            </div>
-          </div>
-          <!-- insurance_list : e -->
-
-          <!-- insurance_list : s -->
-          <div class="insurance_list">
-            <div class="tit_box">
-              <h3 class="sort_tit">실효해지</h3><span class="number">+2</span>
-            </div>
-            <button class="insurance disabled">
-              <div class="info">
-                <div class="inner">
-                  <div class="logo"><img alt="한화생명" class="grayscale" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
-                  <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904</div>
-                  <div class="date"><span class="state">실효</span>2009.07.17~2082.07.17</div>
+              <div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
+            </a> 
+            <a href="#" class="insurance">
+              <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904</div> 
+              <div class="payment_info">
+                <span class="state">정상</span>
+                <div class="info">
+                  <div class="payment"><strong>69,030</strong>원 <span>매월납/12년</span></div>
+                  <div class="date">2009.07.17~2082.07.17</div>
                 </div>
               </div>
-              <div class="payment">
-                <ul>
-                  <li class="top">
-                    <span class="th">매월납20년</span>
-                    <span class="td"><strong class="count">1270660</strong>원</span>
-                  </li>
-                  <li>
-                    <span class="th">납입횟수</span>
-                    <span class="td">122/240회</span>
-                  </li>
-                  <li>
-                    <span class="th">납입률</span>
-                    <span class="td">51%</span>
-                  </li>
-                  <li>
-                    <span class="th">납입보험료</span>
-                    <span class="td">8,421,660원</span>
-                  </li>
-                </ul>
-              </div>
-            </button>
-            <button class="insurance disabled">
-              <div class="info">
-                <div class="inner">
-                  <div class="logo"><img alt="삼성생명" class="grayscale" src="../images/gu.renew.logo/logo_samsung_life.png"></div>
-                  <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904</div>
-                  <div class="date"><span class="state">해지</span>2009.07.17~2082.07.17</div>
-                </div>
-              </div>
-              <div class="payment">
-                <ul>
-                  <li class="top">
-                    <span class="th">매월납20년</span>
-                    <span class="td"><strong class="count">1270660</strong>원</span>
-                  </li>
-                  <li>
-                    <span class="th">납입횟수</span>
-                    <span class="td">122/240회</span>
-                  </li>
-                  <li>
-                    <span class="th">납입률</span>
-                    <span class="td">51%</span>
-                  </li>
-                  <li>
-                    <span class="th">납입보험료</span>
-                    <span class="td">8,421,660원</span>
-                  </li>
-                </ul>
-              </div>
-            </button>
-          </div>
-          <!-- insurance_list : e -->
-
-          <!-- 유의사항 : s -->
-          <div class="note_box">
-            <dl>
-              <dt>유의사항</dt>
-              <dd>상기 내용 중 보험료에 대한 분석은 초회보험료를 납입만기까지 계속 납입하는 기준으로 산출한 것으로 중도에 계약이 변경되거나 특약의 납입기간이
-                상이할 경우 차이가 발생할 수 있습니다. 정확한 내용은 해당 보험회사에 문의해주시기 바랍니다.
-              </dd>
-              <dd>실손형담보의 보험료는 제외된 금액입니다. 실손형의 경우 갱신형으로 되어 있어 초회보험료와 향후 보험료가 상이하여 책정이 불가능 합니다.</dd>
-            </dl>
-          </div>
-          <!-- 유의사항 : e -->
+              <div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_bnp_life.png"></div>
+            </a> 
+          </div>        
         </div>
-        <!-- scroll_area : e -->
-      </div>
+        <!-- insurance_list : e -->
+
+        <!-- insurance_list : s -->
+        <div class="insurance_list">
+          <div class="tit_box">
+            <h3 class="sort_tit">자동차보험</h3><span class="number">1</span>
+          </div>
+         
+          <div class="insurance no_insurance">
+            <div>가입내역이 없습니다.</div>
+          </div>
+        </div>
+        <!-- insurance_list : e -->
+
+        <!-- insurance_list : s -->
+        <div class="insurance_list">
+          <div class="tit_box">
+            <h3 class="sort_tit">실효해지</h3><span class="number">+2</span>
+          </div>
+          <a href="#" class="insurance disabled">
+            <div class="info">
+              <div class="inner">
+                <div class="logo"><img alt="한화생명" class="grayscale" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
+                <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904</div>
+                <div class="date"><span class="state">실효</span>2009.07.17~2082.07.17</div>
+              </div>
+            </div>
+            <div class="payment">
+              <ul>
+                <li class="top">
+                  <span class="th">매월납20년</span>
+                  <span class="td"><strong class="count">1270660</strong>원</span>
+                </li>
+                <li>
+                  <span class="th">납입횟수</span>
+                  <span class="td">122/240회</span>
+                </li>
+                <li>
+                  <span class="th">납입률</span>
+                  <span class="td">51%</span>
+                </li>
+                <li>
+                  <span class="th">납입보험료</span>
+                  <span class="td">8,421,660원</span>
+                </li>
+              </ul>
+            </div>
+          </a>
+          <a href="#" class="insurance disabled">
+            <div class="info">
+              <div class="inner">
+                <div class="logo"><img alt="삼성생명" class="grayscale" src="../images/gu.renew.logo/logo_samsung_life.png"></div>
+                <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904</div>
+                <div class="date"><span class="state">해지</span>2009.07.17~2082.07.17</div>
+              </div>
+            </div>
+            <div class="payment">
+              <ul>
+                <li class="top">
+                  <span class="th">매월납20년</span>
+                  <span class="td"><strong class="count">1270660</strong>원</span>
+                </li>
+                <li>
+                  <span class="th">납입횟수</span>
+                  <span class="td">122/240회</span>
+                </li>
+                <li>
+                  <span class="th">납입률</span>
+                  <span class="td">51%</span>
+                </li>
+                <li>
+                  <span class="th">납입보험료</span>
+                  <span class="td">8,421,660원</span>
+                </li>
+              </ul>
+            </div>
+          </a>
+        </div>
+        <!-- insurance_list : e -->
+
+        <!-- 유의사항 : s -->
+        <div class="note_box">
+          <dl>
+            <dt>유의사항</dt>
+            <dd>상기 내용 중 보험료에 대한 분석은 초회보험료를 납입만기까지 계속 납입하는 기준으로 산출한 것으로 중도에 계약이 변경되거나 특약의 납입기간이
+              상이할 경우 차이가 발생할 수 있습니다. 정확한 내용은 해당 보험회사에 문의해주시기 바랍니다.
+            </dd>
+            <dd>실손형담보의 보험료는 제외된 금액입니다. 실손형의 경우 갱신형으로 되어 있어 초회보험료와 향후 보험료가 상이하여 책정이 불가능 합니다.</dd>
+          </dl>
+        </div>
+        <!-- 유의사항 : e -->
+        </div>
       <!-- insurance_list_box : e -->     
     </div>
     <!-- content_area : e -->
