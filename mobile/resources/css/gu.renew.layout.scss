@@ -1,11 +1,9 @@
 .wrap {
 	position: relative;
 	min-height: 100%;
-	background: #f0f3f8;
-	overflow: hidden;
 
 	.top_area {
-		position: fixed;
+		position: sticky;
 		z-index: 10;
 		top: 0;
 		left: 0;
@@ -134,26 +132,28 @@
 
 				label {
 					font-size: $fz12px;
-					color: #a797ff;
 				}
 			}
 		}
 
 		.content_radius_box {
 			position: relative;
-			border-radius: 10px;
+			border-radius: 10px 10px 0 0;
 			background: #f0f3f8;
 		}
 	}
 
 	&.main {
 		padding-top: 129px;
+		.top_area{
+			position: fixed;
+		}
 
 	}
 
 	&.sub {
+		padding-bottom: 80px;
 		.top_area {
-			height: 104px;
 			background: #333333;
 
 			.member_info_area {
@@ -241,14 +241,13 @@
 		}
 
 		.top_info_fixed {
-			position: fixed;
+			position: relative;;
 			z-index: 11;
-			top: 94px;
-			left: 0;
 			width: 100%;
 			padding: 20px 22px;
 			border-radius: 10px 10px 0 0;
 			background: #f3f3f3;
+			margin-top: 10px;
 
 			ul {
 				display: flex;
@@ -312,9 +311,25 @@
 					}
 				}
 			}
+			.btn_area{
+				margin: 12px -8px 0 -8px;
+				.btn_inner{
+					display: block;
+					border:1px solid #d5d5d5;
+					border-radius:28px;
+					height: 26px;
+					padding:0 12px;
+					span{
+						display: block;
+						font-size: $fz12px;
+						color: $color_level1;
+						background: url("/resources/images/gu.renew.common/btn_arr.png") no-repeat right center;
+						background-size: auto 10px;
+					}
+				}
+			}
 		}
 	}
-
 	&.fixed {
 		.search_box {
 			position: fixed;
@@ -323,7 +338,109 @@
 			padding-top: 60px;
 			border-radius: 0;
 		}
-
+	}
+}
+.bottom_fixed_menu_area{
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	z-index:20;
+	width: 100%;
+	transition:all 0.2s;
+	border-top: 1px solid #ededed;
+	background: #ffffff;
+	display: flex;
+	.home{
+		flex:none;
+		padding:10px 23px 10px 10px;
+		background: #333333;
+		position: relative;
+		overflow: hidden;
+		span{
+			position: relative;
+			z-index:1;
+			display: block;
+			color: #ffffff;
+			font-size: $fz11px;
+			background: url("/resources/images/gu.renew.common/bottom_menu_home.png") no-repeat center top;
+			background-size: 25px auto;
+			padding-top: 30px;
+		}
+		&:after{
+			content: "";
+			display: block;
+			width: 25px;
+			height: 120%;
+			background: #ffffff;
+			position: absolute;
+			right: -18px;
+			top: -7px;
+			transform: rotate(10deg);
+		}
+	}
+	ul{
+		display: flex;
+		flex:1;
+		li{
+			flex:1;
+			align-self:center;
+			text-align: center;
+			.bottom_menu{
+				span{
+					display: block;
+					color: $color_level4;
+					font-size: $fz11px;
+					background-position: center top;
+					background-repeat: no-repeat;
+					background-size: auto 20px;
+					padding-top: 30px;
+					letter-spacing:-1px;
+				}
+				&.on span{
+					color: #ff4858;
+				}
+				&.menu01 span{
+					background-image:url("/resources/images/gu.renew.common/bottom_menu_01_off.png");
+				}
+				&.menu01.on span{
+					background-image:url("/resources/images/gu.renew.common/bottom_menu_01_on.png");
+				}
+				&.menu02 span{
+					background-image:url("/resources/images/gu.renew.common/bottom_menu_02_off.png");
+				}
+				&.menu02.on span{
+					background-image:url("/resources/images/gu.renew.common/bottom_menu_01_on.png");
+				}
+				&.menu03 span{
+					background-image:url("/resources/images/gu.renew.common/bottom_menu_03_off.png");
+				}
+				&.menu03.on span{
+					background-image:url("/resources/images/gu.renew.common/bottom_menu_01_on.png");
+				}
+				&.menu04 span{
+					background-image:url("/resources/images/gu.renew.common/bottom_menu_04_off.png");
+				}
+				&.menu04.on span{
+					background-image:url("/resources/images/gu.renew.common/bottom_menu_01_on.png");
+				}
+				&.menu05 span{
+					background-image:url("/resources/images/gu.renew.common/bottom_menu_05_off.png");
+				}
+				&.menu05.on span{
+					background-image:url("/resources/images/gu.renew.common/bottom_menu_01_on.png");
+				}
+			}
+		}
+	}
+}
+.scroll_down{
+	.bottom_fixed_menu_area{
+		transform:translate(0,100%);
+	}
+}
+.scroll_up{
+	.bottom_fixed_menu_area{
+		transform:translate(0,0);
 	}
 }
 

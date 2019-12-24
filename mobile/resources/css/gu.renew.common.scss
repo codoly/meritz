@@ -450,7 +450,7 @@ button div, button:active div, button:before, button:focus div {
 .search_area {
 	position: relative;
 	padding-right: 53px;
-	border: 1px solid #a797ff;
+	border: 1px solid #888888;
 	border-radius: 5px;
 
 	input {
@@ -461,27 +461,26 @@ button div, button:active div, button:before, button:focus div {
 		outline: none;
 		background: transparent;
 		font-size: $fz12px;
-		line-height: 33px;
 		color: #fff;
 
 		&.placeholder {
-			color: #adbfec;
+			color: #888888;
 		}
 
 		&::placeholder {
-			color: #adbfec;
+			color: #888888;
 		}
 
 		:-ms-input-placeholder {
-			color: #adbfec;
+			color: #888888;
 		}
 
 		::-webkit-input-placeholder {
-			color: #adbfec;
+			color: #888888;
 		}
 
 		::-moz-placeholder {
-			color: #adbfec;
+			color: #888888;
 		}
 	}
 
@@ -497,7 +496,7 @@ button div, button:active div, button:before, button:focus div {
 	}
 
 	&.focus {
-		border: 1px solid #01a7c4;
+		border: 1px solid #ffffff;
 
 		.btn_search {
 			background: url("/resources/images/gu.renew.common/btn_main_search_on.png") no-repeat center center;
@@ -589,7 +588,7 @@ button div, button:active div, button:before, button:focus div {
 		}
 
 		label {
-			color: #bbccf5;
+			color: #888888;
 
 			&:after {
 				border: 0;
