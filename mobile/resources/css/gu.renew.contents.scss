@@ -358,10 +358,6 @@
 		}
 	}
 
-	.btn_box {
-
-	}
-
 	.btn_util {
 		position: absolute;
 		top: 17px;
@@ -521,27 +517,52 @@
 	margin-bottom: 20px;
 
 	.tit_box {
-		margin-bottom: 15px;
-		font-size: $fz22px;
+		margin-bottom: 10px;	
 		text-align: center;
-		color: $color_level1;
+		line-height: 1;
 
-		.tit {
+		.sort_tit {
 			display: inline-block;
 			vertical-align: top;
+			font-size: $fz16px;
+			color: $color_level1;
+			font-weight: 700;
 		}
 
 		.number {
 			display: inline-block;
-			height: 27px;
 			margin-left: 10px;
-			padding: 0 10px;
-			border: 1px solid #01a7c4;
-			border-radius: 15px;
-			font-size: $fz16px;
-			line-height: 23px;
+			font-size: $fz14px;
 			vertical-align: top;
-			color: #01a7c4;
+			color: #777;
+			font-weight: 400;
+			strong{
+				font-size: $fz15px;
+				font-weight: 700;
+			}
+		}
+	}
+
+	.list_box{
+		border:1px solid #d5d5d5;
+		border-radius: 8px;
+		.insurance{
+			margin-bottom: -1px;
+			border-bottom:1px solid #ededed;
+			&:last-child{
+				border-bottom: none;
+			}
+			&:after{
+				position: absolute;
+				bottom: 40px;
+				right:15px;
+				display: inline-block;
+				content: "";
+				width: 24px;
+				height: 9px;
+				background: url(/resources/images/gu.renew.contents/icon_arrow.png) no-repeat 0 0;
+				background-size: 100% auto;
+			}
 		}
 	}
 
@@ -567,14 +588,14 @@
 					display: block;
 					position: absolute;
 					z-index: 10;
-					top: 0;
-					left: 0;
-					width: calc(100% - 4px);
-					height: calc(100% - 4px);
-					border: 2px solid $color_button_red;
+					top: -1px;
+					left: -1px;
+					width: 100%;
+					height: 100%;
+					border: 1px solid #fd5856;
 					border-radius: 8px;
 					content: "";
-					box-shadow: none;
+					box-shadow: 7px 7px 9px 0px rgba(0, 0, 0, 0.12);
 				}
 
 				&:after {
@@ -584,32 +605,12 @@
 		}
 	}
 
-	.list {
-		.insurance {
-		}
-	}
-
 	.insurance {
 		display: block;
 		position: relative;
 		padding: 10px 15px;
-		border: 1px solid #d5d5d5;
-		border-bottom-color: #ededed;
-
-		&:active:before {
-			display: block;
-			position: absolute;
-			z-index: 10;
-			top: 0;
-			left: 0;
-			width: calc(100% - 3px);
-			height: calc(100% - 3px);
-			border: 1.5px solid #fd5856;
-			border-radius: 8px;
-			content: "";
-			box-shadow: 7px 7px 9px 0px rgba(0, 0, 0, 0.12);
-		}
-
+		
+		
 		&:last-child {
 			margin-bottom: 0;
 		}
@@ -679,7 +680,7 @@
 			.logo {
 				/*! _gray v1.6.0 (https://github.com/karlhorky/gray) | _m_i_t */
 				.grayscale {
-					opacity: 0.45;
+					opacity: 0.7;
 					filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><fe_color_matrix type='saturate' values='0'/></filter></svg>#grayscale");
 					-webkit-filter: grayscale(1);
 					filter: grayscale(1);
@@ -691,28 +692,26 @@
 				color: $color_level5;
 			}
 
-			.date {
-				color: $color_level5;
-
+			.payment_info{
 				.state {
 					background: #e7e7e7;
 					color: $color_level5;
 				}
-			}
-
-			.payment {
-				li {
-					&.top {
-						color: $color_level5;
-					}
+				.date {
+					color: $color_level5;
+				}
+				.payment{
+					color: $color_level4;
 				}
 			}
 		}
 
 		&.no_insurance {
 			display: table;
+			width: 100%;
+			height: 80px;
+			border:1px solid #d5d5d5;
 			border-radius: 8px;
-			background: #fff;
 			text-align: center;
 
 			&:hover {
@@ -723,9 +722,9 @@
 
 			> div {
 				display: table-cell;
-				font-size: $fz20px;
+				font-size: $fz13px;
 				vertical-align: middle;
-				color: $color_level2;
+				color: $color_level5;
 			}
 		}
 	}
@@ -733,8 +732,6 @@
 	.btn_contract_add {
 		display: block;
 		position: relative;
-		width: 782px;
-		height: 130px;
 		margin-bottom: 10px;
 		padding: 28px 0 25px;
 		border: 1px solid #ededf4;
