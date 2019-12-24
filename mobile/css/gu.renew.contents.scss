@@ -1,6 +1,14 @@
 .align_c {
   text-align: center;
 }
+.blind {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  width: 1px;
+  height: 1px; 
+}
 
 /* customer_sort */
 .customer_sort{
@@ -17,6 +25,8 @@
     color: $color_level2;
     letter-spacing: -0.075em;
     font-weight: 700;
+    float: left;
+    padding-top: 3px;
     strong{
       font-size: $fz18px;
       color:#fe5855;      
@@ -38,6 +48,7 @@
       height: 30px;
       line-height: 28px;
       letter-spacing: -0.075em;
+      background: #fff;
       &:after{
           top: 50%;
           right: 15px;
@@ -46,10 +57,44 @@
           margin-top: -6px;
           border-color: #3c444d;
       }
+       .option {
+        min-height: 32px;
+        padding-right: 10px;
+        padding-left: 10px;
+       }
     }
   }
   .list_type_select{    
     display: inline-block;
+    vertical-align: top;
+    font-size: 0;   
+    
+    .btn{
+      display: inline-block;
+      vertical-align: top;
+      width: 37px;
+      height: 30px;
+      background-size: 16px 16px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-color: #fff;
+      border: 1px solid #e0e4ea;
+      position: relative;
+      
+      &.grid{
+        background-image: url(../images/gu.renew.common/icon_type_grid.png);
+        border-radius: 5px 0 0 5px;
+        margin-right:-1px;
+      }
+      &.list{
+        background-image: url(../images/gu.renew.common/icon_type_list.png);
+        border-radius: 0 5px 5px 0;
+      }
+      &.active{
+        border: 1px solid #3c444d;
+        z-index: 5;
+      }
+    }
   }
 }
 .fixed{
@@ -63,6 +108,12 @@
 /* customer_list_box */
 .customer_list_box{  
   padding: 65px 20px 20px 20px;
+  .customer_list{
+    display: none;
+    &.grid_type {
+      display: block;
+    }
+  }
   .customer_add {
     width: 100%;
     text-align: center;
@@ -110,7 +161,6 @@
 
 /* 테이블형 리스트 */
 .list_table_type {
-
   .tbody_box {
     padding-top: 1px;
     border-radius: 10px;
@@ -206,12 +256,10 @@
 }
 
 /* 그리드형 리스트 */
-.list_grid_type{
+.grid_type{
   .item{
     position: relative;
-    background: #fff;
-    margin:0 0 10px;
-    border-radius: 10px;
+    margin:0 0 10px;    
     overflow: hidden;
     &:last-child{
       margin:0;
@@ -219,9 +267,23 @@
   }
   .customer_info{
     position: relative;
-    padding: 15px 20px 10px;
-    display: block;
-
+    padding: 15px 20px 51px;
+    display: block;        
+    border-radius: 10px;
+    background: #fff;
+    &:active:before{
+      display: block;
+      position: absolute;
+      top: 0px;
+      left: 0;
+      width: calc(100% - 3px);
+      height: calc(100% - 3px);
+      border: 1.5px solid #fe5855;
+      border-radius: 8px;
+      content: "";
+      box-shadow: 4px 5px 5px 0px rgba(0, 0, 0, 0.15);
+      transition: none;
+    }
     .name{
       font-size: $fz15px;
       color: $color_level2;
@@ -235,6 +297,13 @@
       padding-right: 105px;
       line-height: 1;
       margin-bottom:20px;
+      span{
+        display: inline-block;
+        margin-right: 10px;
+        &:last-child{
+          margin-right:0
+        }
+      }
     }
     .list{
       &:last-child{
@@ -259,16 +328,22 @@
     }    
   }
   .btn_box{
-    padding: 0px 20px 15px;
-    .btn_pdf{
-      float: right;
-      width: 118px;
-    }
+    
   }
   .btn_util{
     position: absolute;
     top: 17px;
     right: 20px;
+  }
+  .btn_util2{
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+    right: 20px;
+    .btn_pdf{
+      float: right;
+      width: 118px;
+    }
   }
 }
 
@@ -400,16 +475,15 @@
 }
 
 .insurance_list_box {
-  padding-top: 10px;
+  padding: 10px 15px;
+  background: #fff;
   .note_box {
-    width: 782px;
     padding-bottom: 30px;
   }
 }
 
 .insurance_list {
-  width: 782px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;  
 
   .tit_box {
     margin-bottom: 15px;
@@ -475,134 +549,87 @@
     }
   }
 
+  .list{
+    .insurance {}
+  }
   .insurance {
     position: relative;
-    width: 100%;
-    height: 130px;
-    margin-bottom: 10px;
-  
-    &:hover:before {
+    display: block;
+    padding:10px 15px;
+    border: 1px solid #d5d5d5;
+    border-bottom-color: #ededed;
+    
+    &:active:before {
       display: block;
       position: absolute;
       z-index: 10;
       top: 0;
       left: 0;
-      width: calc(100% - 4px);
-      height: calc(100% - 4px);
-      border: 2px solid #fd5856;
+      width: calc(100% - 3px);
+      height: calc(100% - 3px);
+      border: 1.5px solid #fd5856;
       border-radius: 8px;
       content: "";
       box-shadow: 7px 7px 9px 0px rgba(0, 0, 0, 0.12);
-    }
-  
-    &:after {
-      @include clearline();
-    }
-  
+    }    
+   
     &:last-child {
       margin-bottom: 0;
     }
-  
-    .info {
-      display: table;
-      float: left;
-      width: 527px;
-      height: 100%;
-      padding: 0px 30px 0;
-      border-radius: 8px 0 0 8px;
-      background: #fff;
-  
-      .inner {
-        display: table-cell;
-        vertical-align: middle;
-      }
-  
-      .logo {
-        display: block;
-        height: 34px;
-        margin-bottom: 5px;
-  
-        img {
-          height: 100%;
-        }
-      }
-  
-      .name {
-        margin-bottom: 6px;
-        font-size: $fz20px;
-        font-weight: 500;
-        letter-spacing: -0.075em;
-        color: $color_level2;
-      }
-  
-      .date {
-        line-height: 1;
-  
-        .state {
-          display: inline-block;
-          height: 22px;
-          margin-right: 10px;
-          padding: 0 10px;
-          border-radius: 5px;
-          background: #ffeeed;
-          font-size: $fz14px;
-          line-height: 20px;
-          text-align: center;
-          color: #fd795c;
-        }
-      }
+    
+    .name {
+      margin-bottom: 6px;
+      font-size: $fz15px;
+      letter-spacing: -0.05em;
+      color: #010101;
     }
-  
-    .payment {
-      display: table;
-      float: right;
-      width: 253px;
-      height: 100%;
-      padding: 0px 30px 0;
-      border-radius: 0 8px 8px 0;
-      background: #fff;
-  
-      ul {
-        display: table-cell;
-        vertical-align: middle;
+    .payment_info{
+      @include clearline();
+      .state{
+        float: left;
+        display: inline-block;
+        margin-right: 10px;
+        padding: 0 10px;
+        border-radius: 5px;
+        background: #ffeceb;
+        font-size: $fz12px;
+        height: 18px;
+        line-height: 18px;
+        text-align: center;
+        color: #fd795b;
       }
-  
-      li {
-        display: table;
-        width: 100%;
-        line-height: 22px;
-        color: $color_level5;
-  
-        span {
-          display: table-cell;
-          font-size: $fz14px;
-        }
-  
-        .th {
-          width: 70px;
-          letter-spacing: -0.075em;
-        }
-  
-        .td {
-          text-align: right;
-          letter-spacing: -0.025em;
-        }
-  
-        &.top {
-          color: $color_level2;
-  
-          .td {
-            font-size: $fz20px;
-  
-            strong {
-              font-size: $fz22px;
-              font-weight: 700;
-              letter-spacing: -0.075em;
-            }
+      .info {
+        float: left;
+        line-height: 20px;
+        .payment {    
+          font-size: $fz12px;
+          strong{
+            font-size: $fz15px;
+          }
+          span{
+            margin-left:10px;
+            color: $color_level4;
           }
         }
+        .date {
+          color: $color_level4;      
+          letter-spacing: -0.05em;    
+        }
+      }  
+    }
+
+    .logo {
+      position: absolute;
+      bottom: 12px;
+      right: 15px;
+      display: block;
+      height: 18px;
+
+      img {
+        height: 100%;
       }
     }
+    
   
     &.disabled {
       .logo {
@@ -686,52 +713,47 @@
 }
 
 .insurance_list2 {
-  padding:0 50px;
+  padding:0 15px;
   background: #fff;
   .insurance {
-    padding:17px 0;
-    letter-spacing: -0.075em;
-    border-bottom: 1px solid #f0f3f8;
+    padding:10px 0 15px;
+    letter-spacing: -0.05em;
+    border-top: 1px solid #f0f3f8;
     &:last-child{
       border-bottom: none;
     }
     @include clearline();
     .info{
-      float: left;
-      width:478px;
       .logo{
-        height: 25px;
+        height: 20px;
         margin-bottom: 5px;
         img{
           height: 100%;
         }
       }
       .name{
-        font-size: $fz16px;
-        color:  $color_level3;        
+        font-size: $fz13px;
+        color:  $color_level3;   
+        line-height: 18px;     
       }
     }
     .sum_info{
-      float: right;
-      width: 204px;
-      padding: 0 0 0 28px;
-      text-align: right;
+      margin-top:5px;
       .title{
-        font-size: $fz14px;
-        color: $color_level4;
-        margin-bottom: 5px;  
+        display: inline-block;
+        font-size: $fz12px;
+        color: #3c444d;
+        background:#f0f3f8;
+        padding: 0 10px;
+        height: 25px;
+        line-height: 27px;
+        border-radius: 12px;
       }
-      .txt{        
-        color: $color_level4;  
-        .tit{
-          float: left;
-        }      
-        .sum{
-          font-size: $fz16px;
-          strong{
-            font-size: $fz18px;
-          }
-        }
+      .sum{
+        float: right;
+        font-size: $fz12px;   
+        color: $color_level3; 
+        line-height: 27px;
       }
     }
   }
@@ -1378,7 +1400,27 @@
     }
   }
 }
-
+.btn_text_arr{
+  font-size: $fz12px;
+  color: #3c444d;
+  :after{
+    display: inline-block;
+    content: "";
+    width: 6px;
+    height: 6px;
+    margin: -6px 0 0 5px;
+    vertical-align: middle;
+    border-right: 1.5px solid #9a9fa6;
+    border-bottom: 1.5px solid #9a9fa6;
+    -webkit-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transform-origin: 66% 66%;
+    transform-origin: 66% 66%;
+    pointer-events: none;
+  }
+}
 
 /*팝업 컨설팅 전후 비교*/
 .consulting_wrap {
@@ -1692,55 +1734,41 @@
     width: 782px;
   }
   .all_state_icon{
+    padding:10px 16px;
     background: #fff;
-    border-radius: 10px;   
-    height: 714px;
-    overflow: hidden;
-    padding:33px 0 0px;
-    margin-bottom: 130px;    
-    width: 782px;
-    .list{
-      @include clearline();
+    .list{      
 
       >li{
-        float:left;
-        width: 159px;
-        text-align: center;
-        margin:0 18px;
-        li{
-          margin-bottom: 10px;
+        margin-bottom: 10px;
+
+        &:last-child{
+          margin-bottom: 0;
         }
-        .sort{
-          margin-bottom: 25px;
-          &:before{
-            display: block;
-            content: "";
-            height:76px;  
-            margin-bottom: 10px;          
-          }
-          &.icon{
-            background: url(../images/gu.renew.contents/icon_all_state_1.jpg) no-repeat 0 0;
-          }
-          &.icon2{
-            background: url(../images/gu.renew.contents/icon_all_state_2.jpg) no-repeat 0 0;
-          }
-          &.icon3{
-            background: url(../images/gu.renew.contents/icon_all_state_3.jpg) no-repeat 0 0;
-          }
-          &.icon4{
-            background: url(../images/gu.renew.contents/icon_all_state_4.jpg) no-repeat 0 0;
-          }
-          .tit{
-            font-size: $fz20px;
-            color: $color_level1;
-            letter-spacing: -0.075em;
+
+        .state_tit{
+          font-size: $fz13px;
+          color: $color_level2;
+          letter-spacing: -0.075em; 
+          line-height: 1;
+          margin-bottom: 8px;
+        }
+        ul{
+          @include clearline();
+          margin: -10px -10px 0 0;
+        }
+        li{
+          float: left;
+          margin: 10px 10px 0 0;
+          &:last-child{
+            margin-right: 0;
           }
         }
 
         .btn_state{
-          width: 100%;
+          width: 74px;
+          height: 64px;
           position: relative;
-          &:hover:before {
+          &:active:before {
             display: block;
             position: absolute;
             top: 0px;
@@ -1757,31 +1785,22 @@
           >span{
             display: block;
             text-align: center;
-            padding:20px 10px 0;
-            height: 120px;
-            border-radius: 15px;
+            padding:15px 0px 0;
+            border-radius: 6px;
             line-height: 1;
+            height: 100%;
           }
           .tit{
-            font-size: $fz18px;
+            font-size: $fz12px;
             color: $color_level1;
             letter-spacing: -0.075em;
             display: block;
-            margin-bottom: 25px;
+            margin-bottom: 6px;
           }
           .state{
             display: inline-block;
-            font-size: $fz24px;
+            font-size: $fz18px;
             font-weight: 700;
-            &:before{
-              display: inline-block;
-              content:"";
-              width: 44px;
-              height: 44px;
-              border-radius: 50%;
-              vertical-align: top;
-              margin: -10px 10px 0 0;
-            }
           }
           &.lack{
             >span{
@@ -1789,20 +1808,14 @@
             }
             .state{
               color:#ff4858;
-              &:before{
-                background: url(../images/gu.renew.contents/icon_all_state_lack.png) no-repeat 0 0;
-              }
             }
           }
           &.no_join{
             >span{
-              background: #d0ddeb;
+              background: #cacaca;
             }
             .state{
-              color:#5d7ea2;
-              &:before{
-                background: url(../images/gu.renew.contents/icon_all_state_no_join.png) no-repeat 0 0;
-              }
+              color:#777;
             }
           }
           &.enough{
@@ -1811,9 +1824,6 @@
             }
             .state{
               color:#01a7c4;
-              &:before{
-                background: url(../images/gu.renew.contents/icon_all_state_enough.png) no-repeat 0 0;
-              }
             }
           }
         }
@@ -1871,44 +1881,47 @@
   }
 
   .state_info{
-    width:782px;
-    padding-top: 30px;
+    padding: 15px;
     .tit_area{
       position: relative;
       margin-bottom: 12px;
       .tit{
         text-align: center;
-        font-size: $fz22px;
-        color: $color_level1;
+        font-size: $fz16px;
+        color: $color_level2;
+        line-height: 1;
+        font-weight: 700;
         .state {
           display: inline-block;
-          border-radius: 15px;
-          padding:0 12px;
-          height: 27px;
-          line-height: 27px;
+          border-radius: 8px;
+          padding:0 10px;
+          height: 18px;
+          line-height: 18px;
           color:#fff;
           letter-spacing: -0.025em;
-          font-size: $fz14px;
+          font-size: $fz12px;
           vertical-align: top;
+          margin-top: -1px;
           &.lack{
             background: #fe5855;
           }
           &.enough{
             background: #01a7c4;
           }
+          &.no_join{
+            background: #cacaca;
+          }
         }
       }
-      .btn_text {
+      .btn_text_arr {
         position: absolute;
         top:0;
         right: 0;
-        padding: 0 10px;
-        background: #fff;
       }
     }
     .state_item{
       margin-bottom: 10px;
-      border-radius: 10px;
+      border-radius: 8px;
       overflow: hidden;
       &:last-child{
         margin-bottom: 0;
@@ -1928,39 +1941,35 @@
           }
         }
       }
-      .btn_info{  
-        @include clearline;
-        height: 130px;
-        
+      .btn_info{ 
         overflow: hidden;
+        width: 100%;
+        padding: 15px;
+        background: #fff;
         .info{
-          float: left;
-          width:528px;
           height: 100%;
-          padding:20px 30px 0;
-          background: #fff;
           .sort_tit{            
             line-height: 1;
             .tit{
-              font-size: $fz20px;
+              font-size: $fz15px;
               color: $color_level1;
               letter-spacing: -0.075em;
               font-weight: 500;
             }
             .count_info{
               float: right;
-              font-size: $fz20px;
+              font-size: $fz15px;
               color: $color_level2;
               letter-spacing: -0.075em;
               strong{
-                font-size: $fz22px;
+                font-size: $fz16px;
                 font-weight: 600;
               }
             }
           }
           .count_bar_box {
-            margin-bottom: 10px;
-            padding-top: 30px;
+            margin-bottom: 15px;
+            padding-top: 18px;
             @include clearline;
             .bar_rail {
               position: relative;
@@ -1969,7 +1978,7 @@
 
               .bar {
                 position: relative;
-                height: 12px;
+                height: 10px;
                 border-radius: 5px;
                 transition:all 1.2s;
                 width:0;
@@ -1981,7 +1990,7 @@
                 bottom: 12px;
                 font-weight: 600;
                 text-align: center;
-                font-size: $fz18px;
+                font-size: $fz12px;
                 letter-spacing: -0.025em;
                 em{                  
                   font-weight: 600;
@@ -1990,55 +1999,56 @@
             }
             .txt_box {
               line-height: 1;
-              margin-top: 10px;
+              margin-top: 8px;
               .left_txt {
-                font-size: $fz16px;
+                font-size: $fz12px;
                 color: $color_level2;
               }
 
               .right_txt {
                 float: right;
-                font-size: $fz14px;
-                color: $color_level4;
+                font-size: $fz12px;
+                color: $color_level2;
               }
             }
           }
         }
         .state{
-          float: left;
-          width:254px;
-          height: 100%;
-          padding:25px 0 0;
+          height: 42px;
+          padding:10px 0 0;
           text-align: center;
+          border-radius: 8px;
+          font-size: 0;
           .icon{
-            display: block;
-            width:44px;
-            height:44px;
-            margin:0 auto 15px;
+            display: inline-block;
+            width:22px;
+            height:22px;
+            margin:0 10px 0 0;
+            vertical-align: middle;
           }
           .txt{
-            display: block;
-            font-size:$fz20px; 
+            display: inline-block;
+            font-size:$fz17px; 
             font-weight: 700;
             line-height: 1;
             position: relative;
             letter-spacing:-0.05em;
+            vertical-align: middle;
+            margin-top:3px;
             strong{
               display: inline-block;
-              font-size: $fz24px;              
+              font-size: $fz20px;              
               font-weight: 700;
               vertical-align: top;
               margin-top: -2px;
             }
             &:after{
-              position: absolute;
-              top:50%;
-              right:30px;
               display: inline-block;
               content: "";   
-              width: 11px;
-              height: 11px;  
-              margin-top: -8px;         
+              width: 8px;
+              height: 8px;  
+              margin: -6px 0 0 10px;   
+              vertical-align: middle; 
               border-right: 2px solid #3c444d;
               border-bottom: 2px solid #3c444d;
               -webkit-transition: all 0.15s ease-in-out;
@@ -2066,10 +2076,7 @@
             color:#ff4858;
             .icon{
               background: url(../images/gu.renew.contents/icon_all_state_lack.png) no-repeat 0 0;
-            }
-            .txt{
-              padding:0 65px 0 10px;
-              text-align: right;
+              background-size: 100%;
             }
           }
           
@@ -2088,6 +2095,28 @@
             color:#01a7c4;
             .icon{
               background: url(../images/gu.renew.contents/icon_all_state_enough.png) no-repeat 0 0;
+              background-size: 100%;
+            }
+          }
+          
+        }        
+        &.no_join{
+          .info{
+            .percent{
+              color:#777;
+              right:-26px !important;
+
+            }
+            .bar {
+              background:#eee;
+            }
+          }
+          .state{
+            background:#cacaca;
+            color:#777;
+            .icon{
+              background: url(../images/gu.renew.contents/icon_all_state_no_join.png) no-repeat 0 0;
+              background-size: 100%;
             }
           }
           
