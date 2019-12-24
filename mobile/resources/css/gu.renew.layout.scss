@@ -435,16 +435,19 @@
 		}
 	}
 	.sub_menu{
+		display: none;
 		margin-top: -10px;
 		height: 42px;
-		border-bottom: 1px solid #d5d5d5;
-		box-shadow:0 1px 2px 3px rgba(100,100,100,0.12);
 		background: #ffffff;
 		position: relative;
-		z-index:1;
-		padding-right: 35px;
+		z-index:3;
 		.scroll_area{
 			overflow:auto;
+			border-bottom: 1px solid #d5d5d5;
+			box-shadow:0 2px 2px 1px rgba(100, 100, 100, 0.12);
+			padding-right: 35px;
+			position: relative;
+			z-index:1;
 			ul{
 				display: table;
 				font-size: 0;
@@ -468,10 +471,10 @@
 			right: 0;
 			top: 0;
 			width: 35px;
-			height: 42px;
-			background: url("/resources/images/gu.renew.common/btn_sub_menu_open.png") no-repeat center center;
+			height: 40px;
+			z-index:2;
+			background:#ffffff url("/resources/images/gu.renew.common/btn_sub_menu_open.png") no-repeat center center;
 			background-size: 16px auto;
-			transition:all 0.5s;
 			outline:none;
 			&.open{
 				transform:rotate(180deg);
@@ -479,9 +482,10 @@
 		}
 	}
 	.all_menu_area{
+		display: none;
 		position: absolute;
 		left: 0;
-		top: 86px;
+		top: 42px;
 		background: #ffffff;
 		padding:0 17px;
 		display: none;

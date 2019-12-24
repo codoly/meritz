@@ -1333,32 +1333,12 @@ font-size: $fz12px;
 	}
 }
 
-/* tab_wrap */
-.tab_wrap {
-	.tab_list {
-		overflow: hidden;
+/* tab_content */
+.tab_content {
+	display: none;
 
-		li {
-			float: left;
-			width: 50%;
-
-			.tab {
-				display: block;
-				height: 44px;
-				border: 1px solid $line_color3;
-				background: #fafafa;
-				font-size: $fz16px;
-				line-height: 44px;
-				text-align: center;
-				color: $color_level2;
-			}
-
-			&.on .tab {
-				border: 1px solid #3c444d;
-				background: #3c444d;
-				color: #fff;
-			}
-		}
+	&.on {
+		display: block;
 	}
 }
 
@@ -1800,7 +1780,7 @@ font-size: $fz12px;
 	}
 
 	.all_state_icon {
-		padding: 10px 16px;
+		padding: 20px 16px;
 		background: #fff;
 
 		.list {
@@ -1967,7 +1947,7 @@ font-size: $fz12px;
 	}
 
 	.state_info {
-		padding: 15px;
+		padding: 20px 15px;
 
 		.tit_area {
 			position: relative;
