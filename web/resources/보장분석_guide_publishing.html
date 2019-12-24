@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"
-				name="viewport">
+					name="viewport">
 	<meta content="telephone=no" name="format-detection">
 	<meta charset="utf-8">
 	<title>Publishing | Guide | 보장분석</title>
@@ -76,8 +76,7 @@
 					<li>① <strong class="gg_black bold">/html/보장분석_*.html</strong><br>
 						<span class="gg_gray">개발화면을 위한 html Markup File</span>
 					</li>
-					<li>② <strong class="gg_black">/html/보장분석_guide_**.html</strong><br>
-						<span class="gg_gray">퍼블리싱 가이드(html Markup Guide).<br>
+					<li>② <strong class="gg_black">/html/보장분석_guide_**.html</strong><br> <span class="gg_gray">퍼블리싱 가이드(html Markup Guide).<br>
 				유지 보수를 위해 스타일 정의 및 패턴 등 정보제공 문서</span>
 					</li>
 					<li>※ html 파일은 개발, 운영에 업로드 하지 않는다.
@@ -107,9 +106,11 @@
 						<strong>① UI Design</strong>
 						<ul class="bullet2">
 							<li></li>
-							<li><strong class="gg_black"><span class="gg_red">gu.</span>common.css</strong><br><span class="gg_gray">reset, common style, form, button 등 기본(공통) 스타일 정의</span>
+							<li>
+								<strong class="gg_black"><span class="gg_red">gu.</span>common.css</strong><br><span class="gg_gray">reset, common style, form, button 등 기본(공통) 스타일 정의</span>
 							</li>
-							<li><strong class="gg_black"><span class="gg_red">gu.</span>layout.css</strong><br><span class="gg_gray">페이지, 팝업 등 레이아웃 스타일 정의</span>
+							<li>
+								<strong class="gg_black"><span class="gg_red">gu.</span>layout.css</strong><br><span class="gg_gray">페이지, 팝업 등 레이아웃 스타일 정의</span>
 							</li>
 							<li><strong class="gg_black"><span class="gg_red">gu.</span>contents.css</strong><br><span
 											class="gg_gray">컨텐츠 영역 스타일 정의</span></li>
@@ -128,8 +129,7 @@
 						<p>※ 현재 운영 파일 ngDialog-theme-meritz.gu.css 이며, <br>동일한 파일에 스타일 추가하여 사용할지, 새파일을 만들어 정의할지는 편한대로 선택</p>
 					</li>
 					<li>
-						<strong>③ Desktop, Mobile 구분</strong><br>
-						모바일 문서는 mb를 붙어준다.<br>
+						<strong>③ Desktop, Mobile 구분</strong><br> 모바일 문서는 mb를 붙어준다.<br>
 						<em class="gg_gray">ex) gu.mb.common.css, gu.mb.layout.css, gu.mb.contents.css</em>
 					</li>
 				</ul>
@@ -142,15 +142,12 @@
 					<li>클래스명(.)은 소문자로 이루어지며, 대문자를 사용하지 않는다.</li>
 					<li>단어와 단어의 연결은 Underscore(_)로 한다.<br>
 						<em class="gg_gray">ex) .list_data, .tbl_data, ... (<strong class="gg_red">O</strong>)<br>
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.list-data, .tbl-data, ... (<strong class="gg_red">Ⅹ</strong>)</em><br>
-						(단, 플러그인 커스터마이징 또는 스크립트 기능을 위한 경우에는 대문자, Hyphen(-) 사용을 허용한다.)
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.list-data, .tbl-data, ... (<strong class="gg_red">Ⅹ</strong>)</em><br> (단, 플러그인 커스터마이징 또는 스크립트 기능을 위한 경우에는 대문자, Hyphen(-) 사용을 허용한다.)
 					</li>
-					<li>동일한 용도의 클래스이나 스타일이 다르게 정의될 경우, 클래스명 뒤에 숫자를 붙여 구분한다.<br>
-						(단, 1은 생략해도 무방하다.)<br>
+					<li>동일한 용도의 클래스이나 스타일이 다르게 정의될 경우, 클래스명 뒤에 숫자를 붙여 구분한다.<br> (단, 1은 생략해도 무방하다.)<br>
 						<em class="gg_gray">ex) .list_item, .list_item2, .list_item3, ...</em>
 					</li>
-					<li>common style 중 margin, padding, width, height 정의 클래스명은 기존에 정의된 클래스를 사용한다.<br>
-						.mgt10, .pdb0, .w20p 등 ...
+					<li>common style 중 margin, padding, width, height 정의 클래스명은 기존에 정의된 클래스를 사용한다.<br> .mgt10, .pdb0, .w20p 등 ...
 					</li>
 				</ul>
 			</div>
@@ -158,19 +155,15 @@
 			<p class="gg_tit2">2.3. 스타일(속성) 정의</p>
 			<div class="gg_info bullet1">
 				<ul>
-					<li>Common Style의 경우 margin, padding, width, height 정의 클래스명은 기존에 정의된 내용을 사용한다.
-						<br>(필요에 따라 내용 추가)
+					<li>Common Style의 경우 margin, padding, width, height 정의 클래스명은 기존에 정의된 내용을 사용한다. <br>(필요에 따라 내용 추가)
 					</li>
-					<li>예약어는 단독으로 정의하지 않고, 반드시 상속을 통해 정의한다.
-						<br>* 예약어 <em><strong>.btn, .tit, .txt, .msg, .img, .cont, .list, .tbl, .info, .name, .data, .on, .off,
-							.small, .large, .color</strong></em> ...
+					<li>예약어는 단독으로 정의하지 않고, 반드시 상속을 통해 정의한다. <br>* 예약어
+						<em><strong>.btn, .tit, .txt, .msg, .img, .cont, .list, .tbl, .info, .name, .data, .on, .off, .small, .large, .color</strong></em> ...
 					</li>
 					<li>Common Style 외에 <span class="gg_red">!important 사용을 지양</span>한다. 상속이나 추가 클래스를 통해 그 우선순위를 결정한다.</li>
-					<li>사이즈의 상대단위, 절대단위는 정의된 디자인에 따라 적절하게 사용한다.<br>
-						<span class="gg_blue">단, 폰트 사이즈 단위는 <strong>rem</strong>을 기본으로 한다.</span>
+					<li>사이즈의 상대단위, 절대단위는 정의된 디자인에 따라 적절하게 사용한다.<br> <span class="gg_blue">단, 폰트 사이즈 단위는 <strong>rem</strong>을 기본으로 한다.</span>
 					</li>
-					<li>속성의 정의 순서를 준수한다.(권장사항)<br>
-						display → position → float → width, height → margin, padding → border → background → font → 기타...
+					<li>속성의 정의 순서를 준수한다.(권장사항)<br> display → position → float → width, height → margin, padding → border → background → font → 기타...
 					</li>
 					<li>스크립트를 통한 스타일 정의는 가급적 피한다.</li>
 				</ul>
@@ -209,11 +202,9 @@
 			<p class="gg_tit2">3.2. 파일명 정의</p>
 			<div class="gg_info bullet1">
 				<ul>
-					<li>네이밍의 순서는 '형태-의미-상태' 순<br>
-						<em class="gg_gray">ex) bg_arr_on.png , ico_check_off.png</em>
+					<li>네이밍의 순서는 '형태-의미-상태' 순<br> <em class="gg_gray">ex) bg_arr_on.png , ico_check_off.png</em>
 					</li>
-					<li>동일한 용도의 이미지가 여러개인 경우 마지막 단어에 숫자를 붙여서 다르게 명명한다.<br>
-						<em class="gg_gray">ex) bg_arr.png, bg_arr02.png</em>
+					<li>동일한 용도의 이미지가 여러개인 경우 마지막 단어에 숫자를 붙여서 다르게 명명한다.<br> <em class="gg_gray">ex) bg_arr.png, bg_arr02.png</em>
 					</li>
 					<li>영역을 표시하기 위한 임시이미지나 운영화면에서는 서버에서 불러와서 처리하는 이미지는 @을 앞에 붙여 구분한다.<br>
 						<em class="gg_gray">ex)@banner_main.gif</em>
@@ -242,11 +233,7 @@
 			<!-- ################################################## -->
 
 
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
+			<br> <br> <br> <br> <br>
 
 			<!-- ################################################## Guide End ################################################## -->
 
