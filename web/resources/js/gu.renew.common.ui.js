@@ -9,6 +9,8 @@ $(function () {
 	$(".search_area").on("focusout", function () {
 		$(this).removeClass("focus");
 	})
+	//ie9에서 placeholder처리
+	$('input, textarea').placeholder();
 	//input focusOut 처리
 	$(document).on("focusout", ".input_set input", function () {
 		var thisValue = $(this).attr("data-value")
@@ -117,6 +119,7 @@ function changeLayout(type, file) {
 			$(".left_area .main_area").addClass("active");
 		}, 10)
 	}
+	/*
 	if (file) {
 		$.get(file, function (data) {
 			var data = $(data);
@@ -127,6 +130,7 @@ function changeLayout(type, file) {
 			}, 300)
 		});
 	}
+	*/
 }
 
 //서브메뉴 활성화

@@ -3,6 +3,6 @@
 node_modules
 .css
 css/*.css
-web/css/gu.renew.style.css
-web/css/style.css
+web/resources/css/gu.renew.style.css
+web/resources/css/style.css
 mobile/css/gu.renew.style.css

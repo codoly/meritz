@@ -56,16 +56,16 @@ $bgcolor: #e6edf8;
 
 
 @mixin bg_btn() {
-  overflow: hidden;
-  text-indent: -99999px;
-  display: inline-block;
+	overflow: hidden;
+	text-indent: -99999px;
+	display: inline-block;
 }
 
 @mixin clearline() {
-  &:after {
-    content: "";
-    display: block;
-    clear: both;
-  }
+	&:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
 }
 

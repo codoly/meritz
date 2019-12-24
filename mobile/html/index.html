@@ -1,263 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-  <title>Title</title>
-  <link href="../css/gu.renew.style.css" rel="stylesheet">
-  <script src="../js/lib/jquery.min.js"></script>
-  <script src="../js/lib/jquery.nice-select.min.js"></script>
-  <script src="../js/lib/core.js"></script>
-  <script src="../js/lib/charts.js"></script>
-  <script src="../js/lib/animated.js"></script>
-  <script src="../js/gu.renew.common.ui.js"></script>
-  <script>
-    $(function () {
-      $(window).scroll(function () {
-        var top = $(window).scrollTop();
-        if (top > $(".content_area").offset().top-43){
-          $(".wrap").addClass("fixed")
-        }else{
-          $(".wrap").removeClass("fixed")
-        }
-      })
-    })
-  </script>
+	<meta charset="UTF-8">
+	<meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
+				name="viewport">
+	<title>Title</title>
+	<link href="../css/gu.renew.style.css" rel="stylesheet">
+	<script src="../js/lib/jquery.min.js"></script>
+	<script src="../js/lib/jquery.nice-select.min.js"></script>
+	<script src="../js/lib/core.js"></script>
+	<script src="../js/lib/charts.js"></script>
+	<script src="../js/lib/animated.js"></script>
+	<script src="../js/gu.renew.common.ui.js"></script>
+	<script>
+		$(function () {
+			$(window).scroll(function () {
+				var top = $(window).scrollTop();
+				if (top > $(".content_area").offset().top - 43) {
+					$(".wrap").addClass("fixed")
+				} else {
+					$(".wrap").removeClass("fixed")
+				}
+			})
+		})
+	</script>
 </head>
 <body>
 <div class="wrap main">
-  <div class="top_area">
-    <ul class="menu_area">
-      <li class="home"><a href="#" class="home">홈으로</a></li>
-      <li class="util">
-        <a href="#" class="menu01">등록</a>
-        <a href="#" class="menu02">컨컬팅</a>
-        <a href="#" class="menu03">pdf sample</a>
-      </li>
-    </ul>
-  </div>
-  <div class="top_bg_area">
-    <div class="name_area">
-      홍길동 설계사님<br>
-      <strong>오늘 하루도 활기찬 하루 되세요.</strong>
-    </div>
-  </div>
-  <div class="content_area">
-    <!-- search_box : s-->
-    <div class="search_box">
-      <div class="search_area"><input placeholder="고객 검색" type="text"><a class="btn_search" href="#">검색</a></div>
-      <ul class="sorting_list">
-        <li>
-          <div class="check_box_set bg_type">
-            <input id="checkbox1" type="checkbox">
-            <label for="checkbox1">즐겨찾기</label>
-          </div>
-        </li>
-        <li>
-          <div class="check_box_set bg_type">
-            <input id="checkbox2" type="checkbox">
-            <label for="checkbox2">동의종료D-7</label>
-          </div>
-        </li>
-        <li>
-          <div class="check_box_set bg_type">
-            <input id="checkbox3" type="checkbox">
-            <label for="checkbox3">보장분석</label>
-          </div>
-        </li>
-      </ul>
-    </div>
-    <!-- search_box : e-->
-    <!-- content_radius_box : s-->
-    <div class="content_radius_box">
-      <div class="customer_sort">
-        <div class="customer_total">고객<strong>163</strong>명</div>
+	<div class="top_area">
+		<ul class="menu_area">
+			<li class="home"><a class="home" href="#">홈으로</a></li>
+			<li class="util">
+				<a class="menu01" href="#">등록</a>
+				<a class="menu02" href="#">컨컬팅</a>
+				<a class="menu03" href="#">pdf sample</a>
+			</li>
+		</ul>
+	</div>
+	<div class="top_bg_area">
+		<div class="name_area">
+			홍길동 설계사님<br>
+			<strong>오늘 하루도 활기찬 하루 되세요.</strong>
+		</div>
+	</div>
+	<div class="content_area">
+		<!-- search_box : s-->
+		<div class="search_box">
+			<div class="search_area"><input placeholder="고객 검색" type="text"><a class="btn_search" href="#">검색</a></div>
+			<ul class="sorting_list">
+				<li>
+					<div class="check_box_set bg_type">
+						<input id="checkbox1" type="checkbox">
+						<label for="checkbox1">즐겨찾기</label>
+					</div>
+				</li>
+				<li>
+					<div class="check_box_set bg_type">
+						<input id="checkbox2" type="checkbox">
+						<label for="checkbox2">동의종료D-7</label>
+					</div>
+				</li>
+				<li>
+					<div class="check_box_set bg_type">
+						<input id="checkbox3" type="checkbox">
+						<label for="checkbox3">보장분석</label>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<!-- search_box : e-->
+		<!-- content_radius_box : s-->
+		<div class="content_radius_box">
+			<div class="customer_sort">
+				<div class="customer_total">고객<strong>163</strong>명</div>
 
-        <div class="sorting">
-          <div class="select_box">
-            <select id="" name="">
-              <option value="1">최근 동의 순</option>
-              <option value="1">이름순</option>
-              <option value="1">동의종료 순</option>
-              <option value="1">최근 분석 순</option>
-              <option value="1">최근 상령일 순</option>
-            </select>
-          </div>
+				<div class="sorting">
+					<div class="select_box">
+						<select id="" name="">
+							<option value="1">최근 동의 순</option>
+							<option value="1">이름순</option>
+							<option value="1">동의종료 순</option>
+							<option value="1">최근 분석 순</option>
+							<option value="1">최근 상령일 순</option>
+						</select>
+					</div>
 
-          <div class="list_type_select">
-            <button class="grid">
-              <span>그리드형</span>
-            </button>
-            <button class="list">
-              <span>리스트형</span>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="customer_list_box">
-        <!-- 리스트형 -->
-        <div class="list_table_type">
-          <div class="tbody_box load">
-            <a class="item" href="#">
-              <div class="tr">
-                <div class="td name">독고영재</div>
-                <div class="td gender">남</div>
-                <div class="td birth">1981.05.30</div>
-                <div class="td old">32세</div>
-              </div>
-            </a>
-            <a class="item" href="#">
-              <div class="tr">
-                <div class="td name">독고영재</div>
-                <div class="td gender">남</div>
-                <div class="td birth">1981.05.30</div>
-                <div class="td old">32세</div>
-              </div>
-            </a>
-            <a class="item" href="#">
-              <div class="tr">
-                <div class="td name">김창열</div>
-                <div class="td gender">남</div>
-                <div class="td birth">1981.05.30</div>
-                <div class="td old">32세</div>
-              </div>
-            </a>
-            <a class="item" href="#">
-              <div class="tr">
-                <div class="td name">송혜교</div>
-                <div class="td gender">여</div>
-                <div class="td birth">1981.05.30</div>
-                <div class="td old">32세</div>
-              </div>
-            </a>
-            <a class="item" href="#">
-              <div class="tr">
-                <div class="td name">독고영재</div>
-                <div class="td gender">남</div>
-                <div class="td birth">1981.05.30</div>
-                <div class="td old">32세</div>
-              </div>
-            </a>
-            <a class="item" href="#">
-              <div class="tr">
-                <div class="td name">독고영재</div>
-                <div class="td gender">남</div>
-                <div class="td birth">1981.05.30</div>
-                <div class="td old">32세</div>
-              </div>
-            </a>
-            <a class="item" href="#">
-              <div class="tr">
-                <div class="td name">김창열</div>
-                <div class="td gender">남</div>
-                <div class="td birth">1981.05.30</div>
-                <div class="td old">32세</div>
-              </div>
-            </a>
-            <a class="item" href="#">
-              <div class="tr">
-                <div class="td name">송혜교</div>
-                <div class="td gender">여</div>
-                <div class="td birth">1981.05.30</div>
-                <div class="td old">32세</div>
-              </div>
-            </a>
-          </div>
-        </div>
+					<div class="list_type_select">
+						<button class="grid">
+							<span>그리드형</span>
+						</button>
+						<button class="list">
+							<span>리스트형</span>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="customer_list_box">
+				<!-- 리스트형 -->
+				<div class="list_table_type">
+					<div class="tbody_box load">
+						<a class="item" href="#">
+							<div class="tr">
+								<div class="td name">독고영재</div>
+								<div class="td gender">남</div>
+								<div class="td birth">1981.05.30</div>
+								<div class="td old">32세</div>
+							</div>
+						</a>
+						<a class="item" href="#">
+							<div class="tr">
+								<div class="td name">독고영재</div>
+								<div class="td gender">남</div>
+								<div class="td birth">1981.05.30</div>
+								<div class="td old">32세</div>
+							</div>
+						</a>
+						<a class="item" href="#">
+							<div class="tr">
+								<div class="td name">김창열</div>
+								<div class="td gender">남</div>
+								<div class="td birth">1981.05.30</div>
+								<div class="td old">32세</div>
+							</div>
+						</a>
+						<a class="item" href="#">
+							<div class="tr">
+								<div class="td name">송혜교</div>
+								<div class="td gender">여</div>
+								<div class="td birth">1981.05.30</div>
+								<div class="td old">32세</div>
+							</div>
+						</a>
+						<a class="item" href="#">
+							<div class="tr">
+								<div class="td name">독고영재</div>
+								<div class="td gender">남</div>
+								<div class="td birth">1981.05.30</div>
+								<div class="td old">32세</div>
+							</div>
+						</a>
+						<a class="item" href="#">
+							<div class="tr">
+								<div class="td name">독고영재</div>
+								<div class="td gender">남</div>
+								<div class="td birth">1981.05.30</div>
+								<div class="td old">32세</div>
+							</div>
+						</a>
+						<a class="item" href="#">
+							<div class="tr">
+								<div class="td name">김창열</div>
+								<div class="td gender">남</div>
+								<div class="td birth">1981.05.30</div>
+								<div class="td old">32세</div>
+							</div>
+						</a>
+						<a class="item" href="#">
+							<div class="tr">
+								<div class="td name">송혜교</div>
+								<div class="td gender">여</div>
+								<div class="td birth">1981.05.30</div>
+								<div class="td old">32세</div>
+							</div>
+						</a>
+					</div>
+				</div>
 
-        <!-- 그리드형 -->
-        <div class="grid_type">
-          <div class="item">
-            <a href="#" class="customer_info">
-              <div class="name">독고영재</div>
-              <div class="info"><span class="gender">남</span><span class="birth">1981.05.30</span><span class="old">32세</span></div>
-              <ul class="list">
-                <li>
-                  <div class="tit">상령일자</div>
-                  <div class="txt">11.30</div>
-                </li>
-                <li>
-                  <div class="tit">동의종료</div>
-                  <div class="txt">D-45</div>
-                </li>
-                <li>
-                  <div class="tit">보장분석</div>
-                  <div class="txt">2019.10.14</div>
-                </li>
-              </ul>
-            </a>
-            <div class="btn_box">
-              <div class="btn_util">
-                <button class="btn_circle like on">
-                  <span>즐겨찾기</span>
-                </button>
-                <button class="btn_circle analysis on">
-                  <span>통계</span>
-                </button>
-                <button class="btn_circle agree on">
-                  <span>LMS</span>
-                </button>
-              </div>
-              <div class="btn_util2">
-                <a href="tel:0123456789" class="btn_text size_small"><span>전화</span></a>
-                <a href="sms:0123456789" class="btn_text size_small"><span>문자</span></a>
-                <button class="btn_text btn_pdf size_small fill_gray">
-                  <span>PDF 보기</span>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <a href="#" class="customer_info">
-              <div class="name">독고영재</div>
-              <div class="info"><span class="gender">남</span><span class="birth">1981.05.30</span><span class="old">32세</span></div>
-              <ul class="list">
-                <li>
-                  <div class="tit">상령일자</div>
-                  <div class="txt">11.30</div>
-                </li>
-                <li>
-                  <div class="tit">동의종료</div>
-                  <div class="txt">D-45</div>
-                </li>
-                <li>
-                  <div class="tit">보장분석</div>
-                  <div class="txt">2019.10.14</div>
-                </li>
-              </ul>
-            </a>
-            <div class="btn_box">
-              <div class="btn_util">
-                <button class="btn_circle like">
-                  <span>즐겨찾기</span>
-                </button>
-                <button class="btn_circle analysis">
-                  <span>통계</span>
-                </button>
-                <button class="btn_circle agree">
-                  <span>LMS</span>
-                </button>
-              </div>
-              <div class="btn_util2">
-                <a href="tel:0123456789" class="btn_text size_small"><span>전화</span></a>
-                <a href="sms:0123456789" class="btn_text size_small"><span>문자</span></a>
-                <a href="#" class="btn_text btn_pdf size_small fill_gray">
-                  <span>PDF 보기</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+				<!-- 그리드형 -->
+				<div class="grid_type">
+					<div class="item">
+						<a class="customer_info" href="#">
+							<div class="name">독고영재</div>
+							<div class="info"><span class="gender">남</span><span class="birth">1981.05.30</span><span
+											class="old">32세</span></div>
+							<ul class="list">
+								<li>
+									<div class="tit">상령일자</div>
+									<div class="txt">11.30</div>
+								</li>
+								<li>
+									<div class="tit">동의종료</div>
+									<div class="txt">D-45</div>
+								</li>
+								<li>
+									<div class="tit">보장분석</div>
+									<div class="txt">2019.10.14</div>
+								</li>
+							</ul>
+						</a>
+						<div class="btn_box">
+							<div class="btn_util">
+								<button class="btn_circle like on">
+									<span>즐겨찾기</span>
+								</button>
+								<button class="btn_circle analysis on">
+									<span>통계</span>
+								</button>
+								<button class="btn_circle agree on">
+									<span>LMS</span>
+								</button>
+							</div>
+							<div class="btn_util2">
+								<a class="btn_text size_small" href="tel:0123456789"><span>전화</span></a>
+								<a class="btn_text size_small" href="sms:0123456789"><span>문자</span></a>
+								<button class="btn_text btn_pdf size_small fill_gray">
+									<span>PDF 보기</span>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<a class="customer_info" href="#">
+							<div class="name">독고영재</div>
+							<div class="info"><span class="gender">남</span><span class="birth">1981.05.30</span><span
+											class="old">32세</span></div>
+							<ul class="list">
+								<li>
+									<div class="tit">상령일자</div>
+									<div class="txt">11.30</div>
+								</li>
+								<li>
+									<div class="tit">동의종료</div>
+									<div class="txt">D-45</div>
+								</li>
+								<li>
+									<div class="tit">보장분석</div>
+									<div class="txt">2019.10.14</div>
+								</li>
+							</ul>
+						</a>
+						<div class="btn_box">
+							<div class="btn_util">
+								<button class="btn_circle like">
+									<span>즐겨찾기</span>
+								</button>
+								<button class="btn_circle analysis">
+									<span>통계</span>
+								</button>
+								<button class="btn_circle agree">
+									<span>LMS</span>
+								</button>
+							</div>
+							<div class="btn_util2">
+								<a class="btn_text size_small" href="tel:0123456789"><span>전화</span></a>
+								<a class="btn_text size_small" href="sms:0123456789"><span>문자</span></a>
+								<a class="btn_text btn_pdf size_small fill_gray" href="#">
+									<span>PDF 보기</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
 
-        <!-- 고객등록 버튼 : s -->
-        <div class="customer_add">
-          <a class="btn_customer_add" href="#"><span>고객을 등록해 주세요.</span></a>
-        </div>
-        <!-- 고객등록 버튼 : e -->
-      </div>
-    </div>
-    <!-- content_radius_box : e-->
-  </div>
+				<!-- 고객등록 버튼 : s -->
+				<div class="customer_add">
+					<a class="btn_customer_add" href="#"><span>고객을 등록해 주세요.</span></a>
+				</div>
+				<!-- 고객등록 버튼 : e -->
+			</div>
+		</div>
+		<!-- content_radius_box : e-->
+	</div>
 </div>
 
 </body>

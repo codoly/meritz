@@ -1,640 +1,694 @@
 .wrap {
-  position: relative;
-  min-height: 100%;
-  background: #f0f3f8;
-  overflow: hidden;
-  .top_area{
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index:10;
-    width: 100%;
-    padding-top: 21px;
-    .menu_area{
-      display: flex;
-      padding:0 20px;
-      li{
-        &.home{
-          flex:1;
-        }
-        &.util{
-          flex:none;
-        }
-        a{
-          @include bg_btn;
-          display: block;
-          float: left;
-          margin-left:15px;
+	position: relative;
+	min-height: 100%;
+	background: #f0f3f8;
+	overflow: hidden;
 
-          &.home{
-            background: url("../images/gu.renew.common/btn_home.png") no-repeat;
-            background-size: 24px 22px;
-            width: 24px;
-            height: 22px;
-            margin-left: 0;
-          }
-          &.menu01{
-            background: url("../images/gu.renew.common/btn_mobile_menu_01.png") no-repeat;
-            background-size: 24px 22px;
-            width: 24px;
-            height: 22px;
-          }
-          &.menu02{
-            background: url("../images/gu.renew.common/btn_mobile_menu_02.png") no-repeat;
-            background-size: 24px 22px;
-            width: 24px;
-            height: 22px;
-          }
-          &.menu03{
-            background: url("../images/gu.renew.common/btn_mobile_menu_03.png") no-repeat;
-            background-size: 24px 22px;
-            width: 24px;
-            height: 22px;
-          }
-        }
-      }
-    }
-  }
-  .top_bg_area{
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index:1;
-    width: 100%;
-    background: url("../images/gu.renew.common/main_bg.jpg") no-repeat;
-    background-size: cover;
-    height: 162px;
-    .name_area{
-      color: #ffffff;
-      padding-left: 38px;
-      padding-top: 70px;
-      line-height: 21px;
-      font-size: $fz14px;
-      strong{
-        font-size: $fz16px;
-      }
-    }
-  }
-  .content_area{
-    position: relative;
-    z-index:4;
-    padding-top: 104px;
-    &.bgWhite{
-      background: #ffffff;
-    }
-    .search_box{
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      background: #333333;
-      border-radius:10px 10px 0 0;
-      padding:15px 20px 25px 20px;
-      z-index:10;
-      &:after{
-        content:'';
-        display: block;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height:10px;
-        background: #f0f3f8;
-        border-radius:10px 10px 0 0;
-      }
-    }
-    .sorting_list{
-      padding:0 15px;
-      margin-top: 15px;
-      display: flex;
-      li{
-        margin-left: 25px;
-        letter-spacing:-1px;
-        &:first-child{
-          margin-left: 0;
-        }
-        label{
-          font-size: $fz12px;
-          color: #a797ff;
-        }
-      }
-    }
-    .content_radius_box{
-      position: relative;
-      border-radius:10px;
-      background: #f0f3f8;
-    }
-  }
-  &.main {
-    padding-top: 129px;
+	.top_area {
+		position: fixed;
+		z-index: 10;
+		top: 0;
+		left: 0;
+		width: 100%;
+		padding-top: 21px;
 
-  }
-  &.sub{
-    .top_area{
-      height: 104px;
-      background: #333333;
-      .member_info_area{
-        padding:0 20px;
-        margin-top: 20px;
-        display: flex;
-        line-height: 16px;
-        .name{
-          flex:1;
-          font-size: $fz16px;
-          color: #ffffff;
-          strong  {
-            font-weight: 600;
-          }
-          .btn_like{
-            @include bg_btn;
-            background: url("../images/gu.renew.contents/btn_like_off.png") no-repeat;
-            background-size: 12px auto;
-            width: 12px;
-            height: 12px;
-            &.on{
-              background-image: url("../images/gu.renew.contents/btn_like_on.png");
-            }
-          }
-        }
-        .info{
-          color: $color_level4;
-          font-size: $fz12px;
-          display: flex;
-          height: 16px;
-          li{
-            position: relative;
-            padding-right: 6px;
-            margin-right: 6px;
-            &:after{
-              content:"";
-              display: block;
-              position: absolute;
-              right: 0;
-              top: 50%;
-              width: 1px;
-              height: 10px;
-              background: #4d4d4d;
-              margin-top:-5px;
-            }
-            &:last-child{
-              padding-right: 0;
-              margin-right: 0;
-              &:after{
-                display: none;
-              }
-            }
-            span{
-              vertical-align: top;
-              display: inline-block;
-              margin-right: 4px;
-              &:last-child{
-                margin-right: 0;
-              }
-            }
-            .btn_alert{
-              color: $color_level4;
-              font-size: $fz12px;
-              vertical-align: top;
-              line-height: 16px;
-              padding-right: 14px;
-              background: url("../images/gu.renew.contents/icon_alert.png") no-repeat right 2px;
-              background-size: 11px auto;
-            }
-          }
-        }
-      }
-    }
-    .top_info_fixed{
-      border-radius:10px 10px 0 0;
-      position: fixed;
-      left: 0;
-      top: 94px;
-      background: #f3f3f3;
-      padding:20px 22px;
-      z-index:11;
-      width: 100%;
-      ul{
-        display: flex;
-        width: 100%;
-        li{
-          line-height: 1;
-          &.default{
-            padding-right: 30px;
-          }
-          &.month{
-            flex:1;
-          }
-          &.list{
-            flex:none;
-            text-align: center;
-            padding-right:19px;
-            &:last-child{
-              padding-right: 0;
-            }
-            &.no{
-              .title,
-              .result{
-                color: #777777 !important;
-              }
-            }
-            &.lack{
-              .title,
-              .result{
-                color: #ff4858 !important;
-              }
-            }
-            &.good{
-              .title,
-              .result{
-                color: #00a8c3 !important;
-              }
-            }
-          }
-          .title{
-            color: $color_level3;
-            font-size: $fz12px;
-            margin-bottom: 10px;
-          }
-          .result{
-            color: $color_level2;
-            font-size: $fz15px;
-            strong{
-              font-size: $fz18px;
-            }
-          }
-        }
-      }
-    }
-  }
-  &.fixed{
-    .search_box{
-      position: fixed;
-      left: 0;
-      top: 0;
-      padding-top: 60px;
-      border-radius:0;
-    }
+		.menu_area {
+			display: flex;
+			padding: 0 20px;
 
-  }
+			li {
+				&.home {
+					flex: 1;
+				}
+
+				&.util {
+					flex: none;
+				}
+
+				a {
+					@include bg_btn;
+					display: block;
+					float: left;
+					margin-left: 15px;
+
+					&.home {
+						width: 24px;
+						height: 22px;
+						margin-left: 0;
+						background: url("../images/gu.renew.common/btn_home.png") no-repeat;
+						background-size: 24px 22px;
+					}
+
+					&.menu01 {
+						width: 24px;
+						height: 22px;
+						background: url("../images/gu.renew.common/btn_mobile_menu_01.png") no-repeat;
+						background-size: 24px 22px;
+					}
+
+					&.menu02 {
+						width: 24px;
+						height: 22px;
+						background: url("../images/gu.renew.common/btn_mobile_menu_02.png") no-repeat;
+						background-size: 24px 22px;
+					}
+
+					&.menu03 {
+						width: 24px;
+						height: 22px;
+						background: url("../images/gu.renew.common/btn_mobile_menu_03.png") no-repeat;
+						background-size: 24px 22px;
+					}
+				}
+			}
+		}
+	}
+
+	.top_bg_area {
+		position: fixed;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 162px;
+		background: url("../images/gu.renew.common/main_bg.jpg") no-repeat;
+		background-size: cover;
+
+		.name_area {
+			padding-top: 70px;
+			padding-left: 38px;
+			font-size: $fz14px;
+			line-height: 21px;
+			color: #ffffff;
+
+			strong {
+				font-size: $fz16px;
+			}
+		}
+	}
+
+	.content_area {
+		position: relative;
+		z-index: 4;
+		padding-top: 104px;
+
+		&.bgWhite {
+			background: #ffffff;
+		}
+
+		.search_box {
+			position: absolute;
+			z-index: 10;
+			top: 0;
+			left: 0;
+			width: 100%;
+			padding: 15px 20px 25px 20px;
+			border-radius: 10px 10px 0 0;
+			background: #333333;
+
+			&:after {
+				display: block;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 10px;
+				border-radius: 10px 10px 0 0;
+				background: #f0f3f8;
+				content: '';
+			}
+		}
+
+		.sorting_list {
+			display: flex;
+			margin-top: 15px;
+			padding: 0 15px;
+
+			li {
+				margin-left: 25px;
+				letter-spacing: -1px;
+
+				&:first-child {
+					margin-left: 0;
+				}
+
+				label {
+					font-size: $fz12px;
+					color: #a797ff;
+				}
+			}
+		}
+
+		.content_radius_box {
+			position: relative;
+			border-radius: 10px;
+			background: #f0f3f8;
+		}
+	}
+
+	&.main {
+		padding-top: 129px;
+
+	}
+
+	&.sub {
+		.top_area {
+			height: 104px;
+			background: #333333;
+
+			.member_info_area {
+				display: flex;
+				margin-top: 20px;
+				padding: 0 20px;
+				line-height: 16px;
+
+				.name {
+					font-size: $fz16px;
+					flex: 1;
+					color: #ffffff;
+
+					strong {
+						font-weight: 600;
+					}
+
+					.btn_like {
+						@include bg_btn;
+						width: 12px;
+						height: 12px;
+						background: url("../images/gu.renew.contents/btn_like_off.png") no-repeat;
+						background-size: 12px auto;
+
+						&.on {
+							background-image: url("../images/gu.renew.contents/btn_like_on.png");
+						}
+					}
+				}
+
+				.info {
+					display: flex;
+					height: 16px;
+					font-size: $fz12px;
+					color: $color_level4;
+
+					li {
+						position: relative;
+						margin-right: 6px;
+						padding-right: 6px;
+
+						&:after {
+							display: block;
+							position: absolute;
+							top: 50%;
+							right: 0;
+							width: 1px;
+							height: 10px;
+							margin-top: -5px;
+							background: #4d4d4d;
+							content: "";
+						}
+
+						&:last-child {
+							margin-right: 0;
+							padding-right: 0;
+
+							&:after {
+								display: none;
+							}
+						}
+
+						span {
+							display: inline-block;
+							margin-right: 4px;
+							vertical-align: top;
+
+							&:last-child {
+								margin-right: 0;
+							}
+						}
+
+						.btn_alert {
+							padding-right: 14px;
+							background: url("../images/gu.renew.contents/icon_alert.png") no-repeat right 2px;
+							background-size: 11px auto;
+							font-size: $fz12px;
+							line-height: 16px;
+							vertical-align: top;
+							color: $color_level4;
+						}
+					}
+				}
+			}
+		}
+
+		.top_info_fixed {
+			position: fixed;
+			z-index: 11;
+			top: 94px;
+			left: 0;
+			width: 100%;
+			padding: 20px 22px;
+			border-radius: 10px 10px 0 0;
+			background: #f3f3f3;
+
+			ul {
+				display: flex;
+				width: 100%;
+
+				li {
+					line-height: 1;
+
+					&.default {
+						padding-right: 30px;
+					}
+
+					&.month {
+						flex: 1;
+					}
+
+					&.list {
+						padding-right: 19px;
+						flex: none;
+						text-align: center;
+
+						&:last-child {
+							padding-right: 0;
+						}
+
+						&.no {
+							.title,
+							.result {
+								color: #777777 !important;
+							}
+						}
+
+						&.lack {
+							.title,
+							.result {
+								color: #ff4858 !important;
+							}
+						}
+
+						&.good {
+							.title,
+							.result {
+								color: #00a8c3 !important;
+							}
+						}
+					}
+
+					.title {
+						margin-bottom: 10px;
+						font-size: $fz12px;
+						color: $color_level3;
+					}
+
+					.result {
+						font-size: $fz15px;
+						color: $color_level2;
+
+						strong {
+							font-size: $fz18px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&.fixed {
+		.search_box {
+			position: fixed;
+			top: 0;
+			left: 0;
+			padding-top: 60px;
+			border-radius: 0;
+		}
+
+	}
 }
 
 .btn_top {
-  @include bg_btn;
-  display: none;
-  position: absolute;
-  right: 18px;
-  bottom: 20px;
-  width: 44px;
-  height: 44px;
-  background: url("../images/gu.renew.common/btn_top.png") no-repeat;
+	@include bg_btn;
+	display: none;
+	position: absolute;
+	right: 18px;
+	bottom: 20px;
+	width: 44px;
+	height: 44px;
+	background: url("../images/gu.renew.common/btn_top.png") no-repeat;
 }
 
 .submain_wrap {
-  width: 781px;
+	width: 781px;
 
-  .top_area {
-    @include clearline;
-    position: relative;
-    z-index: 1;
-    border-bottom: 1px solid $line_color1;
+	.top_area {
+		@include clearline;
+		position: relative;
+		z-index: 1;
+		border-bottom: 1px solid $line_color1;
 
-    .img_area {
-      float: left;
-      width: 295px;
-    }
+		.img_area {
+			float: left;
+			width: 295px;
+		}
 
-    .info_area {
-      float: left;
-      width: 486px;
-      padding-top: 102px;
+		.info_area {
+			float: left;
+			width: 486px;
+			padding-top: 102px;
 
-      .favorites {
-        display: inline-block;
-        padding-right: 26px;
-        background: url("../images/gu.renew.contents/icon_heart_off.png") no-repeat right top;
-        background-size: 19px 17px;
-        line-height: 17px;
-        color: $color_level2;
-        &.on{
-          background: url("../images/gu.renew.contents/icon_heart_on.png") no-repeat right top;
-        }
-      }
+			.favorites {
+				display: inline-block;
+				padding-right: 26px;
+				background: url("../images/gu.renew.contents/icon_heart_off.png") no-repeat right top;
+				background-size: 19px 17px;
+				line-height: 17px;
+				color: $color_level2;
 
-      .title {
-        margin-top: 7px;
-        font-size: $fz34px;
-        font-weight: 300;
-        line-height: $fz40px;
-        letter-spacing: -1px;
-        color: $color_level1;
+				&.on {
+					background: url("../images/gu.renew.contents/icon_heart_on.png") no-repeat right top;
+				}
+			}
 
-        strong {
-          font-weight: 500;
-        }
-      }
+			.title {
+				margin-top: 7px;
+				font-size: $fz34px;
+				font-weight: 300;
+				line-height: $fz40px;
+				letter-spacing: -1px;
+				color: $color_level1;
 
-      .text {
-        @include clearline;
-        margin-top: 20px;
+				strong {
+					font-weight: 500;
+				}
+			}
 
-        span,
-        button {
-          float: left;
-          margin-right: 20px;
-          font-size: $fz17px;
-          line-height: $fz22px;
-          color: $color_level4;
-        }
+			.text {
+				@include clearline;
+				margin-top: 20px;
 
-        .alert {
-          margin-right: 10px;
-          padding-right: 27px;
-          background: url("../images/gu.renew.contents/icon_alert.png") no-repeat right top;
-          span{
-            margin: 0;
-          }
-        }
-      }
-    }
+				span,
+				button {
+					float: left;
+					margin-right: 20px;
+					font-size: $fz17px;
+					line-height: $fz22px;
+					color: $color_level4;
+				}
 
-    .layer_pop_box {
-      top: 265px;
-      left: 260px;
-    }
-  }
+				.alert {
+					margin-right: 10px;
+					padding-right: 27px;
+					background: url("../images/gu.renew.contents/icon_alert.png") no-repeat right top;
 
-  .more_content {
-    @include clearline;
-    position: relative;
-    height: 599px;
-    margin-top: 20px;
+					span {
+						margin: 0;
+					}
+				}
+			}
+		}
 
-    .box {
-      border-radius: 5px;
-      background: #ffffff;
+		.layer_pop_box {
+			top: 265px;
+			left: 260px;
+		}
+	}
 
-      &.box1 {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 386px;
-        height: 284px;
+	.more_content {
+		@include clearline;
+		position: relative;
+		height: 599px;
+		margin-top: 20px;
 
-        > .title {
-          padding-top: 34px;
-          font-size: $fz30px;
-          font-weight: 300;
-          line-height: $fz36px;
-          text-align: center;
-          color: $color_level2;
-        }
+		.box {
+			border-radius: 5px;
+			background: #ffffff;
 
-        > .text {
-          position: relative;
-          margin-top: 17px;
-          margin-bottom: 37px;
-          padding-bottom: 42px;
-          font-size: $fz20px;
-          line-height: 1;
-          text-align: center;
-          color: $color_level2;
+			&.box1 {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 386px;
+				height: 284px;
 
-          &:after {
-            display: block;
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            width: 36px;
-            height: 3px;
-            margin: 0 auto;
-            border-radius: 3px;
-            background: #01a7c4;
-            content: "";
-          }
-        }
+				> .title {
+					padding-top: 34px;
+					font-size: $fz30px;
+					font-weight: 300;
+					line-height: $fz36px;
+					text-align: center;
+					color: $color_level2;
+				}
 
-        .info_grid {
-          width: 250px;
-          margin: 0 auto;
-        }
-      }
+				> .text {
+					position: relative;
+					margin-top: 17px;
+					margin-bottom: 37px;
+					padding-bottom: 42px;
+					font-size: $fz20px;
+					line-height: 1;
+					text-align: center;
+					color: $color_level2;
 
-      &.box2 {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 386px;
-        height: 304px;
+					&:after {
+						display: block;
+						position: absolute;
+						right: 0;
+						bottom: 0;
+						left: 0;
+						width: 36px;
+						height: 3px;
+						margin: 0 auto;
+						border-radius: 3px;
+						background: #01a7c4;
+						content: "";
+					}
+				}
 
-        .graph_area {
-          position: relative;
+				.info_grid {
+					width: 250px;
+					margin: 0 auto;
+				}
+			}
 
-          #chartdiv1 {
-            height: 200px;
-          }
+			&.box2 {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 386px;
+				height: 304px;
 
-          .counter_number {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            font-size: $fz30px;
-            transform: translate(-50%, -50%);
-            letter-spacing: -1px;
-            color: #42b4cc;
+				.graph_area {
+					position: relative;
 
-            strong {
-              font-weight: 700;
-            }
-          }
-        }
+					#chartdiv1 {
+						height: 200px;
+					}
 
-        .info_grid {
-          width: 250px;
-          margin: -12px auto 0 auto;
-        }
-      }
+					.counter_number {
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						font-size: $fz30px;
+						transform: translate(-50%, -50%);
+						letter-spacing: -1px;
+						color: #42b4cc;
 
-      &.box3 {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 385px;
-        height: 599px;
+						strong {
+							font-weight: 700;
+						}
+					}
+				}
 
-        > .title {
-          padding-top: 34px;
-          letter-spacing:-1px;
-          font-size: $fz30px;
-          font-weight: 300;
-          line-height: $fz36px;
-          text-align: center;
-          color: $color_level2;
-        }
+				.info_grid {
+					width: 250px;
+					margin: -12px auto 0 auto;
+				}
+			}
 
-        > .text {
-          letter-spacing:-1px;
-          position: relative;
-          margin-top: 20px;
-          font-size: $fz20px;
-          line-height: 1;
-          text-align: center;
-          color: $color_level2;
-        }
+			&.box3 {
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 385px;
+				height: 599px;
 
-        .graph_area {
-          position: relative;
-          padding-top: 10px;
+				> .title {
+					padding-top: 34px;
+					font-size: $fz30px;
+					font-weight: 300;
+					line-height: $fz36px;
+					text-align: center;
+					letter-spacing: -1px;
+					color: $color_level2;
+				}
 
-          &:after {
-            display: block;
-            position: absolute;
-            z-index: 1;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: #fff;
-            content: "";
-            opacity: 0;
-          }
+				> .text {
+					position: relative;
+					margin-top: 20px;
+					font-size: $fz20px;
+					line-height: 1;
+					text-align: center;
+					letter-spacing: -1px;
+					color: $color_level2;
+				}
 
-          #chartdiv2 {
-            height: 220px;
-          }
-        }
+				.graph_area {
+					position: relative;
+					padding-top: 10px;
 
-        .info_box {
-          display: table;
-          width: 285px;
-          margin: 25px auto 0 auto;
-          padding: 15px 0 14px 0;
-          border: 1px solid $line_color2;
-          border-radius: 13px;
-          font-size: 0;
-          line-height: 1;
-          text-align: center;
-          & + .text{
-            margin-top: 25px;
-          }
+					&:after {
+						display: block;
+						position: absolute;
+						z-index: 1;
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+						background: #fff;
+						content: "";
+						opacity: 0;
+					}
 
-          li {
-            display: inline-block;
-            padding: 0 25px;
-            line-height: 1;
-            text-align: center;
+					#chartdiv2 {
+						height: 220px;
+					}
+				}
 
-            .tit {
-              display: block;
-              font-size: $fz16px;
-              color: #777777;
-            }
+				.info_box {
+					display: table;
+					width: 285px;
+					margin: 25px auto 0 auto;
+					padding: 15px 0 14px 0;
+					border: 1px solid $line_color2;
+					border-radius: 13px;
+					font-size: 0;
+					line-height: 1;
+					text-align: center;
 
-            .number {
-              display: block;
-              margin-top: 4px;
-              font-size: $fz24px;
-              font-weight: 700;
-            }
+					& + .text {
+						margin-top: 25px;
+					}
 
-            &.all {
-              color: $color_level2;
-            }
+					li {
+						display: inline-block;
+						padding: 0 25px;
+						line-height: 1;
+						text-align: center;
 
-            &.no {
-              color: #6a8db3;
-            }
+						.tit {
+							display: block;
+							font-size: $fz16px;
+							color: #777777;
+						}
 
-            &.lack {
-              color: $color_button_red;
-            }
+						.number {
+							display: block;
+							margin-top: 4px;
+							font-size: $fz24px;
+							font-weight: 700;
+						}
 
-            &.good {
-              color: #5bd1e6;
-            }
-          }
-        }
+						&.all {
+							color: $color_level2;
+						}
 
-        .result {
-          margin-top:-10px;
-          letter-spacing:-1px;
-          font-size: $fz20px;
-          line-height: $fz30px;
-          text-align: center;
-          color: $color_level2;
+						&.no {
+							color: #6a8db3;
+						}
 
-          span {
-            color: $color_button_red;
-          }
-        }
-      }
-    }
-  }
+						&.lack {
+							color: $color_button_red;
+						}
+
+						&.good {
+							color: #5bd1e6;
+						}
+					}
+				}
+
+				.result {
+					margin-top: -10px;
+					font-size: $fz20px;
+					line-height: $fz30px;
+					text-align: center;
+					letter-spacing: -1px;
+					color: $color_level2;
+
+					span {
+						color: $color_button_red;
+					}
+				}
+			}
+		}
+	}
 }
 
 .sub_title {
-  margin-bottom: 15px;
-  font-size: $fz22px;
-  line-height: $fz30px;
-  text-align: center;
-  letter-spacing: -2px;
-  color: $color_level1;
+	margin-bottom: 15px;
+	font-size: $fz22px;
+	line-height: $fz30px;
+	text-align: center;
+	letter-spacing: -2px;
+	color: $color_level1;
 }
 
 /*정보성 layer_pop_box*/
 .layer_pop_box {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 28px 30px;
-  border-radius: 10px;
-  background: #ffffff;
-  transition: transform .2s cubic-bezier(0.5, 0, 0, 1.25), opacity .15s ease-out;
-  transform: scale(.75);
-  transform-origin: 50% 0;
-  opacity: 0;
-  box-shadow: 0 0 10px 3px rgba(35, 44, 66, 0.2);
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 28px 30px;
+	border-radius: 10px;
+	background: #ffffff;
+	transition: transform .2s cubic-bezier(0.5, 0, 0, 1.25), opacity .15s ease-out;
+	transform: scale(.75);
+	transform-origin: 50% 0;
+	opacity: 0;
+	box-shadow: 0 0 10px 3px rgba(35, 44, 66, 0.2);
 
-  &.open {
-    transform: scale(1);
-    opacity: 1;
-  }
+	&.open {
+		transform: scale(1);
+		opacity: 1;
+	}
 
-  .layer_pop_content {
-    font-size: $fz14px;
-    line-height: $fz20px;
-    letter-spacing: -0.03em;
+	.layer_pop_content {
+		font-size: $fz14px;
+		line-height: $fz20px;
+		letter-spacing: -0.03em;
 
-    .icon_title {
-      margin-bottom: 10px;
-      padding-left: 27px;
-      background: url("../images/gu.renew.contents/icon_alert.png") no-repeat left top;
-      font-size: $fz16px;
-      line-height: 21px;
-      color: $color_level2;
-    }
+		.icon_title {
+			margin-bottom: 10px;
+			padding-left: 27px;
+			background: url("../images/gu.renew.contents/icon_alert.png") no-repeat left top;
+			font-size: $fz16px;
+			line-height: 21px;
+			color: $color_level2;
+		}
 
-    .text {
-      font-size: $fz14px;
-      line-height: $fz20px;
-      color: $color_level4;
-    }
-  }
+		.text {
+			font-size: $fz14px;
+			line-height: $fz20px;
+			color: $color_level4;
+		}
+	}
 
-  .btn_close {
-    display: block;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 17px;
-    height: 17px;
-    background: url("../images/gu.renew.common/btn_popup_close.png") no-repeat;
-  }
+	.btn_close {
+		display: block;
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		width: 17px;
+		height: 17px;
+		background: url("../images/gu.renew.common/btn_popup_close.png") no-repeat;
+	}
 }
-.count{
-  opacity:0;
-  &.active{
-    opacity:1;
-  }
+
+.count {
+	opacity: 0;
+
+	&.active {
+		opacity: 1;
+	}
 }

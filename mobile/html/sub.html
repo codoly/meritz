@@ -1,87 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-  <title>submain</title>
-  <link href="../css/gu.renew.style.css" rel="stylesheet">
-  <script src="../js/lib/jquery.min.js"></script>
-  <script src="../js/lib/jquery.nice-select.min.js"></script>
-  <script src="../js/lib/core.js"></script>
-  <script src="../js/lib/charts.js"></script>
-  <script src="../js/lib/animated.js"></script>
-  <script src="../js/gu.renew.common.ui.js"></script>
-  <script>
-    $(function () {
-      $(window).scroll(function () {
-        var top = $(window).scrollTop();
-        if (top > $(".content_area").offset().top-43){
-          $(".wrap").addClass("fixed")
-        }else{
-          $(".wrap").removeClass("fixed")
-        }
-      })
-    })
-  </script>
+	<meta charset="UTF-8">
+	<meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
+				name="viewport">
+	<title>submain</title>
+	<link href="../css/gu.renew.style.css" rel="stylesheet">
+	<script src="../js/lib/jquery.min.js"></script>
+	<script src="../js/lib/jquery.nice-select.min.js"></script>
+	<script src="../js/lib/core.js"></script>
+	<script src="../js/lib/charts.js"></script>
+	<script src="../js/lib/animated.js"></script>
+	<script src="../js/gu.renew.common.ui.js"></script>
+	<script>
+		$(function () {
+			$(window).scroll(function () {
+				var top = $(window).scrollTop();
+				if (top > $(".content_area").offset().top - 43) {
+					$(".wrap").addClass("fixed")
+				} else {
+					$(".wrap").removeClass("fixed")
+				}
+			})
+		})
+	</script>
 </head>
 <body>
 <div class="wrap sub">
-  <div class="top_area">
-    <ul class="menu_area">
-      <li class="home"><a href="#" class="home">홈으로</a></li>
-      <li class="util">
-        <a href="#" class="menu01">등록</a>
-        <a href="#" class="menu02">컨컬팅</a>
-        <a href="#" class="menu03">pdf sample</a>
-      </li>
-    </ul>
-    <div class="member_info_area">
-      <div class="name">
-        <strong>권은아</strong>
-        고객님
-        <button class="btn_like">즐겨찾기</button><!--활성화 class="btn_like on"-->
-      </div>
-      <ul class="info">
-        <li>
-          <span class="sex">여</span>
-          <span class="bday">1981.05.30</span>
-          <span class="age">32세</span>
-        </li>
-        <li>
-          <button class="btn_alert">상령일</button>
-          <span>11.30</span>
-        </li>
-      </ul>
-    </div>
-    <div class="top_info_fixed">
-      <ul>
-        <li class="default">
-          <div class="title">정상계약</div>
-          <div class="result"><strong>113</strong>건</div>
-        </li>
-        <li class="month">
-          <div class="title">정상계약</div>
-          <div class="result"><strong>11,264,530</strong>건</div>
-        </li>
-        <li class="list no">
-          <div class="title">미가입</div>
-          <div class="result"><strong>13</strong></div>
-        </li>
-        <li class="list lack">
-          <div class="title">부족</div>
-          <div class="result"><strong>13</strong></div>
-        </li>
-        <li class="list good">
-          <div class="title">충분</div>
-          <div class="result"><strong>13</strong></div>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <div class="content_area bgWhite">
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<div class="top_area">
+		<ul class="menu_area">
+			<li class="home"><a class="home" href="#">홈으로</a></li>
+			<li class="util">
+				<a class="menu01" href="#">등록</a>
+				<a class="menu02" href="#">컨컬팅</a>
+				<a class="menu03" href="#">pdf sample</a>
+			</li>
+		</ul>
+		<div class="member_info_area">
+			<div class="name">
+				<strong>권은아</strong>
+				고객님
+				<button class="btn_like">즐겨찾기</button><!--활성화 class="btn_like on"-->
+			</div>
+			<ul class="info">
+				<li>
+					<span class="sex">여</span>
+					<span class="bday">1981.05.30</span>
+					<span class="age">32세</span>
+				</li>
+				<li>
+					<button class="btn_alert">상령일</button>
+					<span>11.30</span>
+				</li>
+			</ul>
+		</div>
+		<div class="top_info_fixed">
+			<ul>
+				<li class="default">
+					<div class="title">정상계약</div>
+					<div class="result"><strong>113</strong>건</div>
+				</li>
+				<li class="month">
+					<div class="title">정상계약</div>
+					<div class="result"><strong>11,264,530</strong>건</div>
+				</li>
+				<li class="list no">
+					<div class="title">미가입</div>
+					<div class="result"><strong>13</strong></div>
+				</li>
+				<li class="list lack">
+					<div class="title">부족</div>
+					<div class="result"><strong>13</strong></div>
+				</li>
+				<li class="list good">
+					<div class="title">충분</div>
+					<div class="result"><strong>13</strong></div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="content_area bgWhite">
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-  </div>
+	</div>
 </div>
 
 </body>

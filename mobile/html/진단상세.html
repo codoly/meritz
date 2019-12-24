@@ -1,1387 +1,1400 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-  <title>Title</title>
-  <link href="../css/gu.renew.style.css" rel="stylesheet">
-  <script src="../js/lib/jquery.min.js"></script>
-  <script src="../js/lib/jquery.nice-select.min.js"></script>
-  <script src="../js/lib/core.js"></script>
-  <script src="../js/lib/charts.js"></script>
-  <script src="../js/lib/animated.js"></script>
-  <script src="../js/gu.renew.common.ui.js"></script>
-  
-  <script>
-      //state_info button click event
-      $(document).on("click", ".state_info .btn_info", function () {
-        var target = $(this).closest(".state_item");
-        if (!target.hasClass("open")) {
-          target.addClass("open");
-          target.find(".insurance_list2").slideDown();
-        } else {
-          target.removeClass("open");
-          target.find(".insurance_list2").slideUp();
-        }
-      }); 
-  </script>
+	<meta charset="UTF-8">
+	<meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
+				name="viewport">
+	<title>Title</title>
+	<link href="../css/gu.renew.style.css" rel="stylesheet">
+	<script src="../js/lib/jquery.min.js"></script>
+	<script src="../js/lib/jquery.nice-select.min.js"></script>
+	<script src="../js/lib/core.js"></script>
+	<script src="../js/lib/charts.js"></script>
+	<script src="../js/lib/animated.js"></script>
+	<script src="../js/gu.renew.common.ui.js"></script>
+
+	<script>
+		//state_info button click event
+		$(document).on("click", ".state_info .btn_info", function () {
+			var target = $(this).closest(".state_item");
+			if (!target.hasClass("open")) {
+				target.addClass("open");
+				target.find(".insurance_list2").slideDown();
+			} else {
+				target.removeClass("open");
+				target.find(".insurance_list2").slideUp();
+			}
+		});
+	</script>
 </head>
 <body>
 <div class="wrap ">
-  <div class="top_area">
-    <ul>
-      <li class="home"><a href="#" class="home">홈으로</a></li>
-      <li class="util">
-        <a href="#" class="menu01">등록</a>
-        <a href="#" class="menu02">컨컬팅</a>
-        <a href="#" class="menu03">pdf sample</a>
-      </li>
-    </ul>
-  </div>
-  
-  <div class="content_area">
-    <!-- content_radius_box : s-->
-    <div class="content_radius_box">
-      <div class="insurance_all_state">
-        <div class="tab_content_box">
-          <div class="tab_content on">
-            <h2 class="blind">보장 진단</h2>
-            <!-- 보장 전체 아이콘  : s -->
-            <div class="all_state_icon">
-              <ul class="list">
-                <li>
-                  <h3 class="state_tit">사망&middot;후유장해</h3>
-                  <ul>
-                    <li>
-                      <button class="btn_state lack" data-index="1" data-state="death">
+	<div class="top_area">
+		<ul>
+			<li class="home"><a class="home" href="#">홈으로</a></li>
+			<li class="util">
+				<a class="menu01" href="#">등록</a>
+				<a class="menu02" href="#">컨컬팅</a>
+				<a class="menu03" href="#">pdf sample</a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="content_area">
+		<!-- content_radius_box : s-->
+		<div class="content_radius_box">
+			<div class="insurance_all_state">
+				<div class="tab_content_box">
+					<div class="tab_content on">
+						<h2 class="blind">보장 진단</h2>
+						<!-- 보장 전체 아이콘  : s -->
+						<div class="all_state_icon">
+							<ul class="list">
+								<li>
+									<h3 class="state_tit">사망&middot;후유장해</h3>
+									<ul>
+										<li>
+											<button class="btn_state lack" data-index="1" data-state="death">
                         <span>
                           <span class="tit">사망</span>
                           <em class="state">부족</em>
                         </span>
-                      </button>
-                    </li>
-                    <li>
-                      <button class="btn_state lack" data-index="2" data-state="sequela">
+											</button>
+										</li>
+										<li>
+											<button class="btn_state lack" data-index="2" data-state="sequela">
                         <span>
                           <span class="tit">후유장해</span>
                           <em class="state">부족</em>
                         </span>
-                      </button>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <h3 class="state_tit">진단비</h3>
-                  <ul>
-                    <li>
-                      <button class="btn_state lack" data-index="3" data-state="cancer">
+											</button>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h3 class="state_tit">진단비</h3>
+									<ul>
+										<li>
+											<button class="btn_state lack" data-index="3" data-state="cancer">
                         <span>
                           <span class="tit">암</span>
                           <em class="state">부족</em>
                         </span>
-                      </button>
-                    </li>
-                    <li>
-                      <button class="btn_state lack" data-index="4" data-state="brain">
+											</button>
+										</li>
+										<li>
+											<button class="btn_state lack" data-index="4" data-state="brain">
                         <span>
                           <span class="tit">뇌혈관</span>
                           <em class="state">부족</em>
                         </span>
-                      </button>
-                    </li>
-                    <li>
-                      <button class="btn_state lack" data-index="5" data-state="heart">
+											</button>
+										</li>
+										<li>
+											<button class="btn_state lack" data-index="5" data-state="heart">
                         <span>
                           <span class="tit">심장혈관</span>
                           <em class="state">부족</em>
                         </span>
-                      </button>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <h3 class="state_tit">의료비&middot;수술&middot;입원</h3>
-                  <ul>
-                    <li>
-                      <button class="btn_state enough" data-index="6" data-state="medical">
+											</button>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h3 class="state_tit">의료비&middot;수술&middot;입원</h3>
+									<ul>
+										<li>
+											<button class="btn_state enough" data-index="6" data-state="medical">
                         <span>
                           <span class="tit">의료비</span>
                           <em class="state">충분</em>
                         </span>
-                      </button>
-                    </li>
-                    <li>
-                      <button class="btn_state no_join" data-index="7" data-state="surgery">
+											</button>
+										</li>
+										<li>
+											<button class="btn_state no_join" data-index="7" data-state="surgery">
                         <span>
                           <span class="tit">수술비</span>
                           <em class="state">미가입</em>
                         </span>
-                      </button>
-                    </li>
-                    <li>
-                      <button class="btn_state lack" data-index="8" data-state="hospitalization">
+											</button>
+										</li>
+										<li>
+											<button class="btn_state lack" data-index="8" data-state="hospitalization">
                         <span>
                           <span class="tit">입원비(일당)</span>
                           <em class="state">부족</em>
                         </span>
-                      </button>
-                    </li>
-                    <li>
-                      <button class="btn_state lack" data-index="9" data-state="dementia">
+											</button>
+										</li>
+										<li>
+											<button class="btn_state lack" data-index="9" data-state="dementia">
                         <span>
                           <span class="tit">치매</span>
                           <em class="state">부족</em>
                         </span>
-                      </button>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <h3 class="state_tit">운전&middot;자기타비용</h3>
-                  <ul>
-                    <li>
-                      <button class="btn_state no_join" data-index="10" data-state="driver">
+											</button>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h3 class="state_tit">운전&middot;자기타비용</h3>
+									<ul>
+										<li>
+											<button class="btn_state no_join" data-index="10" data-state="driver">
                         <span>
                           <span class="tit">운전자</span>
                           <em class="state">미가입</em>
                         </span>
-                      </button>
-                    </li>
-                    <li>
-                      <button class="btn_state enough" data-index="11" data-state="recompense">
+											</button>
+										</li>
+										<li>
+											<button class="btn_state enough" data-index="11" data-state="recompense">
                         <span>
                           <span class="tit">배상책임</span>
                           <em class="state">충분</em>
                         </span>
-                      </button>
-                    </li>
-                    <li>
-                      <button class="btn_state lack" data-index="12" data-state="teeth">
+											</button>
+										</li>
+										<li>
+											<button class="btn_state lack" data-index="12" data-state="teeth">
                         <span>
                           <span class="tit">치아&middot;화상&middot;골절</span>
                           <em class="state">부족</em>
                         </span>
-                      </button>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-            <!-- 보장 전체 아이콘  : e -->
-          </div>
-          
-          <div class="tab_content">              
-            <h2 class="blind">보장 상세</h2>
-            <!-- 사망 : s -->
-            <div class="state_info">
-              <div class="tit_area">
-                <h4 class="tit">사망 <span class="state lack">부족</span></h4>
-                <button class="btn_text_arr">
-                  <span>니즈환기</span>
-                </button>
-              </div>
-              <div class="state_item">
-                <button class="btn_info lack">
-                  <div class="info">
-                    <div class="sort_tit">
-                      <span class="tit">질병사망</span>
-                      <span class="count_info">
+											</button>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<!-- 보장 전체 아이콘  : e -->
+					</div>
+
+					<div class="tab_content">
+						<h2 class="blind">보장 상세</h2>
+						<!-- 사망 : s -->
+						<div class="state_info">
+							<div class="tit_area">
+								<h4 class="tit">사망 <span class="state lack">부족</span></h4>
+								<button class="btn_text_arr">
+									<span>니즈환기</span>
+								</button>
+							</div>
+							<div class="state_item">
+								<button class="btn_info lack">
+									<div class="info">
+										<div class="sort_tit">
+											<span class="tit">질병사망</span>
+											<span class="count_info">
                         <strong>3</strong>건
                       </span>
-                    </div>
-                    <div class="count_bar_box">
-                      <div class="bar_rail">
-                        <div class="bar" data-value="50%"><span class="percent"><em class="count">50</em>%</span></div>
-                      </div>
-                      <div class="txt_box">
-                        <span class="left_txt">가입금액<strong>1,000</strong>만 원</span>
-                        <span class="right_txt">권장금액<strong>2,000</strong>만 원</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="state">
-                    <span class="icon"></span>
-                    <span class="txt"><strong>1,000</strong>만원 부족</span>
-                  </div>
-                </button> 
-                <div class="insurance_list2">                  
-                  <div class="insurance">
-                    <div class="info">
-                      <div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
-                      <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
-                    </div>
-                    <div class="sum_info">
-                      <div class="title">일반 상해 사항후유장해</div>
-                      <div class="sum">
-                        보장금액 : <strong>1,270,600</strong>원
-                      </div>
-                    </div>
-                  </div>
-                  <div class="insurance">
-                    <div class="info">
-                      <div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
-                      <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
-                    </div>
-                    <div class="sum_info">
-                      <div class="title">일반 상해 사항후유장해</div>
-                      <div class="sum">
-                        보장금액 : <strong>1,270,600</strong>원
-                      </div>
-                    </div>
-                  </div>
-                  <div class="insurance">
-                    <div class="info">
-                      <div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
-                      <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
-                    </div>
-                    <div class="sum_info">
-                      <div class="title">일반 상해 사항후유장해</div>
-                      <div class="sum">
-                        보장금액 : <strong>1,270,600</strong>원
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="state_item">
-                <button class="btn_info enough">
-                  <div class="info">
-                    <div class="sort_tit">
-                      <span class="tit">상해사망</span>
-                      <span class="count_info">
+										</div>
+										<div class="count_bar_box">
+											<div class="bar_rail">
+												<div class="bar" data-value="50%"><span class="percent"><em class="count">50</em>%</span></div>
+											</div>
+											<div class="txt_box">
+												<span class="left_txt">가입금액<strong>1,000</strong>만 원</span>
+												<span class="right_txt">권장금액<strong>2,000</strong>만 원</span>
+											</div>
+										</div>
+									</div>
+									<div class="state">
+										<span class="icon"></span>
+										<span class="txt"><strong>1,000</strong>만원 부족</span>
+									</div>
+								</button>
+								<div class="insurance_list2">
+									<div class="insurance">
+										<div class="info">
+											<div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
+											<div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
+										</div>
+										<div class="sum_info">
+											<div class="title">일반 상해 사항후유장해</div>
+											<div class="sum">
+												보장금액 : <strong>1,270,600</strong>원
+											</div>
+										</div>
+									</div>
+									<div class="insurance">
+										<div class="info">
+											<div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
+											<div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
+										</div>
+										<div class="sum_info">
+											<div class="title">일반 상해 사항후유장해</div>
+											<div class="sum">
+												보장금액 : <strong>1,270,600</strong>원
+											</div>
+										</div>
+									</div>
+									<div class="insurance">
+										<div class="info">
+											<div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
+											<div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
+										</div>
+										<div class="sum_info">
+											<div class="title">일반 상해 사항후유장해</div>
+											<div class="sum">
+												보장금액 : <strong>1,270,600</strong>원
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="state_item">
+								<button class="btn_info enough">
+									<div class="info">
+										<div class="sort_tit">
+											<span class="tit">상해사망</span>
+											<span class="count_info">
                         <strong>3</strong>건
                       </span>
-                    </div>
-                    <div class="count_bar_box">
-                      <div class="bar_rail">
-                        <div class="bar" data-value="100%"><span class="percent"><em class="count">100</em>%</span></div>
-                      </div>
-                      <div class="txt_box">
-                        <span class="left_txt">가입금액<strong>1,000</strong>만 원</span>
-                        <span class="right_txt">권장금액<strong>2,000</strong>만 원</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="state">
-                    <span class="icon"></span>
-                    <span class="txt">충분</span>
-                  </div>
-                </button> 
-                <div class="insurance_list2">
-                  <div class="insurance">
-                    <div class="info">
-                      <div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
-                      <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
-                    </div>
-                    <div class="sum_info">
-                      <div class="title">일반 상해 사항후유장해</div>
-                      <div class="sum">
-                        보장금액 : <strong>1,270,600</strong>원
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="state_item">
-                <button class="btn_info no_join">
-                  <div class="info">
-                    <div class="sort_tit">
-                      <span class="tit">상해사망</span>
-                      <span class="count_info">
+										</div>
+										<div class="count_bar_box">
+											<div class="bar_rail">
+												<div class="bar" data-value="100%"><span class="percent"><em class="count">100</em>%</span>
+												</div>
+											</div>
+											<div class="txt_box">
+												<span class="left_txt">가입금액<strong>1,000</strong>만 원</span>
+												<span class="right_txt">권장금액<strong>2,000</strong>만 원</span>
+											</div>
+										</div>
+									</div>
+									<div class="state">
+										<span class="icon"></span>
+										<span class="txt">충분</span>
+									</div>
+								</button>
+								<div class="insurance_list2">
+									<div class="insurance">
+										<div class="info">
+											<div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
+											<div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
+										</div>
+										<div class="sum_info">
+											<div class="title">일반 상해 사항후유장해</div>
+											<div class="sum">
+												보장금액 : <strong>1,270,600</strong>원
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="state_item">
+								<button class="btn_info no_join">
+									<div class="info">
+										<div class="sort_tit">
+											<span class="tit">상해사망</span>
+											<span class="count_info">
                         <strong>0</strong>건
                       </span>
-                    </div>
-                    <div class="count_bar_box">
-                      <div class="bar_rail">
-                        <div class="bar" data-value="0%"><span class="percent"><em class="count">0</em>%</span></div>
-                      </div>
-                      <div class="txt_box">
-                        <span class="left_txt">가입금액<strong>0</strong>만 원</span>
-                        <span class="right_txt">권장금액<strong>1,000</strong>만 원</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="state">
-                    <span class="icon"></span>
-                    <span class="txt"><strong>미가입</strong></span>
-                  </div>
-                </button> 
-                <div class="insurance_list2">
-                  <div class="insurance">
-                    <div class="info">
-                      <div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
-                      <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
-                    </div>
-                    <div class="sum_info">
-                      <div class="title">일반 상해 사항후유장해</div>
-                      <div class="sum">
-                        보장금액 : <strong>1,270,600</strong>원
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- 사망 : e -->
+										</div>
+										<div class="count_bar_box">
+											<div class="bar_rail">
+												<div class="bar" data-value="0%"><span class="percent"><em class="count">0</em>%</span></div>
+											</div>
+											<div class="txt_box">
+												<span class="left_txt">가입금액<strong>0</strong>만 원</span>
+												<span class="right_txt">권장금액<strong>1,000</strong>만 원</span>
+											</div>
+										</div>
+									</div>
+									<div class="state">
+										<span class="icon"></span>
+										<span class="txt"><strong>미가입</strong></span>
+									</div>
+								</button>
+								<div class="insurance_list2">
+									<div class="insurance">
+										<div class="info">
+											<div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
+											<div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
+										</div>
+										<div class="sum_info">
+											<div class="title">일반 상해 사항후유장해</div>
+											<div class="sum">
+												보장금액 : <strong>1,270,600</strong>원
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- 사망 : e -->
 
-            <!-- 후유장애 : s -->
-            <div class="state_info">
-              <div class="tit_area">
-                <h4 class="tit">후유사망 <span class="state enough">충분</span></h4>
-                <button class="btn_text_arr">
-                  <span>니즈환기</span>
-                </button>
-              </div>
-              <div class="state_item">
-                <button class="btn_info lack">
-                  <div class="info">
-                    <div class="sort_tit">
-                      <span class="tit">질병사망</span>
-                      <span class="count_info">
+						<!-- 후유장애 : s -->
+						<div class="state_info">
+							<div class="tit_area">
+								<h4 class="tit">후유사망 <span class="state enough">충분</span></h4>
+								<button class="btn_text_arr">
+									<span>니즈환기</span>
+								</button>
+							</div>
+							<div class="state_item">
+								<button class="btn_info lack">
+									<div class="info">
+										<div class="sort_tit">
+											<span class="tit">질병사망</span>
+											<span class="count_info">
                         <strong>3</strong>건
                       </span>
-                    </div>
-                    <div class="count_bar_box">
-                      <div class="bar_rail">
-                        <div class="bar" data-value="50%"><span class="percent"><em class="count">50</em>%</span></div>
-                      </div>
-                      <div class="txt_box">
-                        <span class="left_txt">가입금액<strong>1,000</strong>만 원</span>
-                        <span class="right_txt">권장금액<strong>2,000</strong>만 원</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="state">
-                    <span class="icon"></span>
-                    <span class="txt"><strong>1,000</strong>만원 부족</span>
-                  </div>
-                </button> 
-                <div class="insurance_list2">                  
-                  <div class="insurance">
-                    <div class="info">
-                      <div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
-                      <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
-                    </div>
-                    <div class="sum_info">
-                      <div class="title">일반 상해 사항후유장해</div>
-                      <div class="sum">
-                        보장금액 : <strong>1,270,600</strong>원
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="state_item">
-                <button class="btn_info enough">
-                  <div class="info">
-                    <div class="sort_tit">
-                      <span class="tit">상해사망</span>
-                      <span class="count_info">
+										</div>
+										<div class="count_bar_box">
+											<div class="bar_rail">
+												<div class="bar" data-value="50%"><span class="percent"><em class="count">50</em>%</span></div>
+											</div>
+											<div class="txt_box">
+												<span class="left_txt">가입금액<strong>1,000</strong>만 원</span>
+												<span class="right_txt">권장금액<strong>2,000</strong>만 원</span>
+											</div>
+										</div>
+									</div>
+									<div class="state">
+										<span class="icon"></span>
+										<span class="txt"><strong>1,000</strong>만원 부족</span>
+									</div>
+								</button>
+								<div class="insurance_list2">
+									<div class="insurance">
+										<div class="info">
+											<div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
+											<div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
+										</div>
+										<div class="sum_info">
+											<div class="title">일반 상해 사항후유장해</div>
+											<div class="sum">
+												보장금액 : <strong>1,270,600</strong>원
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="state_item">
+								<button class="btn_info enough">
+									<div class="info">
+										<div class="sort_tit">
+											<span class="tit">상해사망</span>
+											<span class="count_info">
                         <strong>3</strong>건
                       </span>
-                    </div>
-                    <div class="count_bar_box">
-                      <div class="bar_rail">
-                        <div class="bar" data-value="100%"><span class="percent"><em class="count">100</em>%</span></div>
-                      </div>
-                      <div class="txt_box">
-                        <span class="left_txt">가입금액<strong>1,000</strong>만 원</span>
-                        <span class="right_txt">권장금액<strong>2,000</strong>만 원</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="state">
-                    <span class="icon"></span>
-                    <span class="txt"><strong>충분</strong></span>
-                  </div>
-                </button> 
-                <div class="insurance_list2">                  
-                  <div class="insurance">
-                    <div class="info">
-                      <div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
-                      <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
-                    </div>
-                    <div class="sum_info">
-                      <div class="title">일반 상해 사항후유장해</div>
-                      <div class="sum">
-                        보장금액 : <strong>1,270,600</strong>원
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- 후유장애 : e -->   
+										</div>
+										<div class="count_bar_box">
+											<div class="bar_rail">
+												<div class="bar" data-value="100%"><span class="percent"><em class="count">100</em>%</span>
+												</div>
+											</div>
+											<div class="txt_box">
+												<span class="left_txt">가입금액<strong>1,000</strong>만 원</span>
+												<span class="right_txt">권장금액<strong>2,000</strong>만 원</span>
+											</div>
+										</div>
+									</div>
+									<div class="state">
+										<span class="icon"></span>
+										<span class="txt"><strong>충분</strong></span>
+									</div>
+								</button>
+								<div class="insurance_list2">
+									<div class="insurance">
+										<div class="info">
+											<div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
+											<div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
+										</div>
+										<div class="sum_info">
+											<div class="title">일반 상해 사항후유장해</div>
+											<div class="sum">
+												보장금액 : <strong>1,270,600</strong>원
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- 후유장애 : e -->
 
-            <!-- 암 : s -->
-            <div class="state_info">
-              <div class="tit_area">
-                <h4 class="tit">암 <span class="state no_join">미가입</span></h4>
-                <button class="btn_text_arr">
-                  <span>니즈환기</span>
-                </button>
-              </div>
-              <div class="state_item">
-                <button class="btn_info lack">
-                  <div class="info">
-                    <div class="sort_tit">
-                      <span class="tit">질병사망</span>
-                      <span class="count_info">
+						<!-- 암 : s -->
+						<div class="state_info">
+							<div class="tit_area">
+								<h4 class="tit">암 <span class="state no_join">미가입</span></h4>
+								<button class="btn_text_arr">
+									<span>니즈환기</span>
+								</button>
+							</div>
+							<div class="state_item">
+								<button class="btn_info lack">
+									<div class="info">
+										<div class="sort_tit">
+											<span class="tit">질병사망</span>
+											<span class="count_info">
                         <strong>3</strong>건
                       </span>
-                    </div>
-                    <div class="count_bar_box">
-                      <div class="bar_rail">
-                        <div class="bar" data-value="50%"><span class="percent"><em class="count">50</em>%</span></div>
-                      </div>
-                      <div class="txt_box">
-                        <span class="left_txt">가입금액<strong>1,000</strong>만 원</span>
-                        <span class="right_txt">권장금액<strong>2,000</strong>만 원</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="state">
-                    <span class="icon"></span>
-                    <span class="txt"><strong>1,000</strong>만원 부족</span>
-                  </div>
-                </button> 
-                <div class="insurance_list2">                  
-                  <div class="insurance">
-                    <div class="info">
-                      <div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
-                      <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
-                    </div>
-                    <div class="sum_info">
-                      <div class="title">일반 상해 사항후유장해</div>
-                      <div class="sum">
-                        보장금액 : <strong>1,270,600</strong>원
-                      </div>
-                    </div>
-                  </div>
-                  <div class="insurance">
-                    <div class="info">
-                      <div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
-                      <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
-                    </div>
-                    <div class="sum_info">
-                      <div class="title">일반 상해 사항후유장해</div>
-                      <div class="sum">
-                        보장금액 : <strong>1,270,600</strong>원
-                      </div>
-                    </div>
-                  </div>
-                  <div class="insurance">
-                    <div class="info">
-                      <div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
-                      <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
-                    </div>
-                    <div class="sum_info">
-                      <div class="title">일반 상해 사항후유장해</div>
-                      <div class="sum">
-                        보장금액 : <strong>1,270,600</strong>원
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="state_item">
-                <button class="btn_info enough">
-                  <div class="info">
-                    <div class="sort_tit">
-                      <span class="tit">상해사망</span>
-                      <span class="count_info">
+										</div>
+										<div class="count_bar_box">
+											<div class="bar_rail">
+												<div class="bar" data-value="50%"><span class="percent"><em class="count">50</em>%</span></div>
+											</div>
+											<div class="txt_box">
+												<span class="left_txt">가입금액<strong>1,000</strong>만 원</span>
+												<span class="right_txt">권장금액<strong>2,000</strong>만 원</span>
+											</div>
+										</div>
+									</div>
+									<div class="state">
+										<span class="icon"></span>
+										<span class="txt"><strong>1,000</strong>만원 부족</span>
+									</div>
+								</button>
+								<div class="insurance_list2">
+									<div class="insurance">
+										<div class="info">
+											<div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
+											<div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
+										</div>
+										<div class="sum_info">
+											<div class="title">일반 상해 사항후유장해</div>
+											<div class="sum">
+												보장금액 : <strong>1,270,600</strong>원
+											</div>
+										</div>
+									</div>
+									<div class="insurance">
+										<div class="info">
+											<div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
+											<div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
+										</div>
+										<div class="sum_info">
+											<div class="title">일반 상해 사항후유장해</div>
+											<div class="sum">
+												보장금액 : <strong>1,270,600</strong>원
+											</div>
+										</div>
+									</div>
+									<div class="insurance">
+										<div class="info">
+											<div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
+											<div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
+										</div>
+										<div class="sum_info">
+											<div class="title">일반 상해 사항후유장해</div>
+											<div class="sum">
+												보장금액 : <strong>1,270,600</strong>원
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="state_item">
+								<button class="btn_info enough">
+									<div class="info">
+										<div class="sort_tit">
+											<span class="tit">상해사망</span>
+											<span class="count_info">
                         <strong>3</strong>건
                       </span>
-                    </div>
-                    <div class="count_bar_box">
-                      <div class="bar_rail">
-                        <div class="bar" data-value="100%"><span class="percent"><em class="count">100</em>%</span></div>
-                      </div>
-                      <div class="txt_box">
-                        <span class="left_txt">가입금액<strong>1,000</strong>만 원</span>
-                        <span class="right_txt">권장금액<strong>2,000</strong>만 원</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="state">
-                    <span class="icon"></span>
-                    <span class="txt"><strong>충분</strong></span>
-                  </div>
-                </button> 
-                <div class="insurance_list2">
-                  <div class="insurance">
-                    <div class="info">
-                      <div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
-                      <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
-                    </div>
-                    <div class="sum_info">
-                      <div class="title">일반 상해 사항후유장해</div>
-                      <div class="sum">
-                        보장금액 : <strong>1,270,600</strong>원
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- 암 : e -->
+										</div>
+										<div class="count_bar_box">
+											<div class="bar_rail">
+												<div class="bar" data-value="100%"><span class="percent"><em class="count">100</em>%</span>
+												</div>
+											</div>
+											<div class="txt_box">
+												<span class="left_txt">가입금액<strong>1,000</strong>만 원</span>
+												<span class="right_txt">권장금액<strong>2,000</strong>만 원</span>
+											</div>
+										</div>
+									</div>
+									<div class="state">
+										<span class="icon"></span>
+										<span class="txt"><strong>충분</strong></span>
+									</div>
+								</button>
+								<div class="insurance_list2">
+									<div class="insurance">
+										<div class="info">
+											<div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
+											<div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
+										</div>
+										<div class="sum_info">
+											<div class="title">일반 상해 사항후유장해</div>
+											<div class="sum">
+												보장금액 : <strong>1,270,600</strong>원
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- 암 : e -->
 
-            <!-- 뇌혈관질환 : s -->
-            <div class="state_info">
-              <div class="tit_area">
-                <h4 class="tit">뇌혈관질환 <span class="state lack">부족</span></h4>
-                <button class="btn_text_arr">
-                  <span>니즈환기</span>
-                </button>
-              </div>
-              <div class="state_item">
-                <button class="btn_info lack">
-                  <div class="info">
-                    <div class="sort_tit">
-                      <span class="tit">질병사망</span>
-                      <span class="count_info">
+						<!-- 뇌혈관질환 : s -->
+						<div class="state_info">
+							<div class="tit_area">
+								<h4 class="tit">뇌혈관질환 <span class="state lack">부족</span></h4>
+								<button class="btn_text_arr">
+									<span>니즈환기</span>
+								</button>
+							</div>
+							<div class="state_item">
+								<button class="btn_info lack">
+									<div class="info">
+										<div class="sort_tit">
+											<span class="tit">질병사망</span>
+											<span class="count_info">
                         <strong>3</strong>건
                       </span>
-                    </div>
-                    <div class="count_bar_box">
-                      <div class="bar_rail">
-                        <div class="bar" data-value="50%"><span class="percent"><em class="count">50</em>%</span></div>
-                      </div>
-                      <div class="txt_box">
-                        <span class="left_txt">가입금액<strong>1,000</strong>만 원</span>
-                        <span class="right_txt">권장금액<strong>2,000</strong>만 원</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="state">
-                    <span class="icon"></span>
-                    <span class="txt"><strong>1,000</strong>만원 부족</span>
-                  </div>
-                </button> 
-                <div class="insurance_list2">                  
-                  <div class="insurance">
-                    <div class="info">
-                      <div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
-                      <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
-                    </div>
-                    <div class="sum_info">
-                      <div class="title">일반 상해 사항후유장해</div>
-                      <div class="sum">
-                        보장금액 : <strong>1,270,600</strong>원
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="state_item">
-                <button class="btn_info enough">
-                  <div class="info">
-                    <div class="sort_tit">
-                      <span class="tit">상해사망</span>
-                      <span class="count_info">
+										</div>
+										<div class="count_bar_box">
+											<div class="bar_rail">
+												<div class="bar" data-value="50%"><span class="percent"><em class="count">50</em>%</span></div>
+											</div>
+											<div class="txt_box">
+												<span class="left_txt">가입금액<strong>1,000</strong>만 원</span>
+												<span class="right_txt">권장금액<strong>2,000</strong>만 원</span>
+											</div>
+										</div>
+									</div>
+									<div class="state">
+										<span class="icon"></span>
+										<span class="txt"><strong>1,000</strong>만원 부족</span>
+									</div>
+								</button>
+								<div class="insurance_list2">
+									<div class="insurance">
+										<div class="info">
+											<div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
+											<div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
+										</div>
+										<div class="sum_info">
+											<div class="title">일반 상해 사항후유장해</div>
+											<div class="sum">
+												보장금액 : <strong>1,270,600</strong>원
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="state_item">
+								<button class="btn_info enough">
+									<div class="info">
+										<div class="sort_tit">
+											<span class="tit">상해사망</span>
+											<span class="count_info">
                         <strong>3</strong>건
                       </span>
-                    </div>
-                    <div class="count_bar_box">
-                      <div class="bar_rail">
-                        <div class="bar" data-value="100%"><span class="percent"><em class="count">100</em>%</span></div>
-                      </div>
-                      <div class="txt_box">
-                        <span class="left_txt">가입금액<strong>1,000</strong>만 원</span>
-                        <span class="right_txt">권장금액<strong>2,000</strong>만 원</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="state">
-                    <span class="icon"></span>
-                    <span class="txt"><strong>충분</strong></span>
-                  </div>
-                </button> 
-                <div class="insurance_list2">                  
-                  <div class="insurance">
-                    <div class="info">
-                      <div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
-                      <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
-                    </div>
-                    <div class="sum_info">
-                      <div class="title">일반 상해 사항후유장해</div>
-                      <div class="sum">
-                        보장금액 : <strong>1,270,600</strong>원
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- 뇌혈관질환 : e --> 
-            
-            <!-- 심장질환 : s -->
-            <div class="state_info">
-              <div class="tit_area">
-                <h4 class="tit">심장질환 <span class="state lack">부족</span></h4>
-                <button class="btn_text_arr">
-                  <span>니즈환기</span>
-                </button>
-              </div>
-              <div class="state_item">
-                <button class="btn_info lack">
-                  <div class="info">
-                    <div class="sort_tit">
-                      <span class="tit">질병사망</span>
-                      <span class="count_info">
-                        <strong>3</strong>건
-                      </span>
-                    </div>
-                    <div class="count_bar_box">
-                      <div class="bar_rail">
-                        <div class="bar" data-value="50%"><span class="percent"><em class="count">50</em>%</span></div>
-                      </div>
-                      <div class="txt_box">
-                        <span class="left_txt">가입금액<strong>1,000</strong>만 원</span>
-                        <span class="right_txt">권장금액<strong>2,000</strong>만 원</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="state">
-                    <span class="icon"></span>
-                    <span class="txt"><strong>1,000</strong>만원 부족</span>
-                  </div>
-                </button> 
-                <div class="insurance_list2">                  
-                  <div class="insurance">
-                    <div class="info">
-                      <div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
-                      <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
-                    </div>
-                    <div class="sum_info">
-                      <div class="title">일반 상해 사항후유장해</div>
-                      <div class="sum">
-                        보장금액 : <strong>1,270,600</strong>원
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="state_item">
-                <button class="btn_info enough">
-                  <div class="info">
-                    <div class="sort_tit">
-                      <span class="tit">상해사망</span>
-                      <span class="count_info">
-                        <strong>3</strong>건
-                      </span>
-                    </div>
-                    <div class="count_bar_box">
-                      <div class="bar_rail">
-                        <div class="bar" data-value="100%"><span class="percent"><em class="count">100</em>%</span></div>
-                      </div>
-                      <div class="txt_box">
-                        <span class="left_txt">가입금액<strong>1,000</strong>만 원</span>
-                        <span class="right_txt">권장금액<strong>2,000</strong>만 원</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="state">
-                    <span class="icon"></span>
-                    <span class="txt"><strong>충분</strong></span>
-                  </div>
-                </button> 
-                <div class="insurance_list2">                  
-                  <div class="insurance">
-                    <div class="info">
-                      <div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
-                      <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
-                    </div>
-                    <div class="sum_info">
-                      <div class="title">일반 상해 사항후유장해</div>
-                      <div class="sum">
-                        보장금액 : <strong>1,270,600</strong>원
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- 심장질환 : e -->
+										</div>
+										<div class="count_bar_box">
+											<div class="bar_rail">
+												<div class="bar" data-value="100%"><span class="percent"><em class="count">100</em>%</span>
+												</div>
+											</div>
+											<div class="txt_box">
+												<span class="left_txt">가입금액<strong>1,000</strong>만 원</span>
+												<span class="right_txt">권장금액<strong>2,000</strong>만 원</span>
+											</div>
+										</div>
+									</div>
+									<div class="state">
+										<span class="icon"></span>
+										<span class="txt"><strong>충분</strong></span>
+									</div>
+								</button>
+								<div class="insurance_list2">
+									<div class="insurance">
+										<div class="info">
+											<div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
+											<div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
+										</div>
+										<div class="sum_info">
+											<div class="title">일반 상해 사항후유장해</div>
+											<div class="sum">
+												보장금액 : <strong>1,270,600</strong>원
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- 뇌혈관질환 : e -->
 
-            <!-- 의료비 : s -->
-            <div class="state_info">
-              <div class="tit_area">
-                <h4 class="tit">의료비 <span class="state lack">부족</span></h4>
-                <button class="btn_text_arr">
-                  <span>니즈환기</span>
-                </button>
-              </div>
-              <div class="state_item">
-                <button class="btn_info lack">
-                  <div class="info">
-                    <div class="sort_tit">
-                      <span class="tit">질병사망</span>
-                      <span class="count_info">
+						<!-- 심장질환 : s -->
+						<div class="state_info">
+							<div class="tit_area">
+								<h4 class="tit">심장질환 <span class="state lack">부족</span></h4>
+								<button class="btn_text_arr">
+									<span>니즈환기</span>
+								</button>
+							</div>
+							<div class="state_item">
+								<button class="btn_info lack">
+									<div class="info">
+										<div class="sort_tit">
+											<span class="tit">질병사망</span>
+											<span class="count_info">
                         <strong>3</strong>건
                       </span>
-                    </div>
-                    <div class="count_bar_box">
-                      <div class="bar_rail">
-                        <div class="bar" data-value="50%"><span class="percent"><em class="count">50</em>%</span></div>
-                      </div>
-                      <div class="txt_box">
-                        <span class="left_txt">가입금액<strong>1,000</strong>만 원</span>
-                        <span class="right_txt">권장금액<strong>2,000</strong>만 원</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="state">
-                    <span class="icon"></span>
-                    <span class="txt"><strong>1,000</strong>만원 부족</span>
-                  </div>
-                </button> 
-                <div class="insurance_list2">                  
-                  <div class="insurance">
-                    <div class="info">
-                      <div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
-                      <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
-                    </div>
-                    <div class="sum_info">
-                      <div class="title">일반 상해 사항후유장해</div>
-                      <div class="sum">
-                        보장금액 : <strong>1,270,600</strong>원
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="state_item">
-                <button class="btn_info enough">
-                  <div class="info">
-                    <div class="sort_tit">
-                      <span class="tit">상해사망</span>
-                      <span class="count_info">
+										</div>
+										<div class="count_bar_box">
+											<div class="bar_rail">
+												<div class="bar" data-value="50%"><span class="percent"><em class="count">50</em>%</span></div>
+											</div>
+											<div class="txt_box">
+												<span class="left_txt">가입금액<strong>1,000</strong>만 원</span>
+												<span class="right_txt">권장금액<strong>2,000</strong>만 원</span>
+											</div>
+										</div>
+									</div>
+									<div class="state">
+										<span class="icon"></span>
+										<span class="txt"><strong>1,000</strong>만원 부족</span>
+									</div>
+								</button>
+								<div class="insurance_list2">
+									<div class="insurance">
+										<div class="info">
+											<div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
+											<div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
+										</div>
+										<div class="sum_info">
+											<div class="title">일반 상해 사항후유장해</div>
+											<div class="sum">
+												보장금액 : <strong>1,270,600</strong>원
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="state_item">
+								<button class="btn_info enough">
+									<div class="info">
+										<div class="sort_tit">
+											<span class="tit">상해사망</span>
+											<span class="count_info">
                         <strong>3</strong>건
                       </span>
-                    </div>
-                    <div class="count_bar_box">
-                      <div class="bar_rail">
-                        <div class="bar" data-value="100%"><span class="percent"><em class="count">100</em>%</span></div>
-                      </div>
-                      <div class="txt_box">
-                        <span class="left_txt">가입금액<strong>1,000</strong>만 원</span>
-                        <span class="right_txt">권장금액<strong>2,000</strong>만 원</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="state">
-                    <span class="icon"></span>
-                    <span class="txt"><strong>충분</strong></span>
-                  </div>
-                </button> 
-                <div class="insurance_list2">                  
-                  <div class="insurance">
-                    <div class="info">
-                      <div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
-                      <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
-                    </div>
-                    <div class="sum_info">
-                      <div class="title">일반 상해 사항후유장해</div>
-                      <div class="sum">
-                        보장금액 : <strong>1,270,600</strong>원
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- 의료비 : e --> 
+										</div>
+										<div class="count_bar_box">
+											<div class="bar_rail">
+												<div class="bar" data-value="100%"><span class="percent"><em class="count">100</em>%</span>
+												</div>
+											</div>
+											<div class="txt_box">
+												<span class="left_txt">가입금액<strong>1,000</strong>만 원</span>
+												<span class="right_txt">권장금액<strong>2,000</strong>만 원</span>
+											</div>
+										</div>
+									</div>
+									<div class="state">
+										<span class="icon"></span>
+										<span class="txt"><strong>충분</strong></span>
+									</div>
+								</button>
+								<div class="insurance_list2">
+									<div class="insurance">
+										<div class="info">
+											<div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
+											<div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
+										</div>
+										<div class="sum_info">
+											<div class="title">일반 상해 사항후유장해</div>
+											<div class="sum">
+												보장금액 : <strong>1,270,600</strong>원
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- 심장질환 : e -->
 
-            <!-- 수술비 : s -->
-            <div class="state_info">
-              <div class="tit_area">
-                <h4 class="tit">수술비 <span class="state lack">부족</span></h4>
-                <button class="btn_text_arr">
-                  <span>니즈환기</span>
-                </button>
-              </div>
-              <div class="state_item">
-                <button class="btn_info lack">
-                  <div class="info">
-                    <div class="sort_tit">
-                      <span class="tit">질병사망</span>
-                      <span class="count_info">
+						<!-- 의료비 : s -->
+						<div class="state_info">
+							<div class="tit_area">
+								<h4 class="tit">의료비 <span class="state lack">부족</span></h4>
+								<button class="btn_text_arr">
+									<span>니즈환기</span>
+								</button>
+							</div>
+							<div class="state_item">
+								<button class="btn_info lack">
+									<div class="info">
+										<div class="sort_tit">
+											<span class="tit">질병사망</span>
+											<span class="count_info">
                         <strong>3</strong>건
                       </span>
-                    </div>
-                    <div class="count_bar_box">
-                      <div class="bar_rail">
-                        <div class="bar" data-value="50%"><span class="percent"><em class="count">50</em>%</span></div>
-                      </div>
-                      <div class="txt_box">
-                        <span class="left_txt">가입금액<strong>1,000</strong>만 원</span>
-                        <span class="right_txt">권장금액<strong>2,000</strong>만 원</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="state">
-                    <span class="icon"></span>
-                    <span class="txt"><strong>1,000</strong>만원 부족</span>
-                  </div>
-                </button> 
-                <div class="insurance_list2">                  
-                  <div class="insurance">
-                    <div class="info">
-                      <div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
-                      <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
-                    </div>
-                    <div class="sum_info">
-                      <div class="title">일반 상해 사항후유장해</div>
-                      <div class="sum">
-                        보장금액 : <strong>1,270,600</strong>원
-                      </div>
-                    </div>
-                  </div>
-                  <div class="insurance">
-                    <div class="info">
-                      <div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
-                      <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
-                    </div>
-                    <div class="sum_info">
-                      <div class="title">일반 상해 사항후유장해</div>
-                      <div class="txt">
-                        <span class="tit">보장금액</span>
-                        <span class="sum"><strong>1,270,600</strong>원</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="insurance">
-                    <div class="info">
-                      <div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
-                      <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
-                    </div>
-                    <div class="sum_info">
-                      <div class="title">일반 상해 사항후유장해</div>
-                      <div class="sum">
-                        보장금액 : <strong>1,270,600</strong>원
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="state_item">
-                <button class="btn_info enough">
-                  <div class="info">
-                    <div class="sort_tit">
-                      <span class="tit">상해사망</span>
-                      <span class="count_info">
+										</div>
+										<div class="count_bar_box">
+											<div class="bar_rail">
+												<div class="bar" data-value="50%"><span class="percent"><em class="count">50</em>%</span></div>
+											</div>
+											<div class="txt_box">
+												<span class="left_txt">가입금액<strong>1,000</strong>만 원</span>
+												<span class="right_txt">권장금액<strong>2,000</strong>만 원</span>
+											</div>
+										</div>
+									</div>
+									<div class="state">
+										<span class="icon"></span>
+										<span class="txt"><strong>1,000</strong>만원 부족</span>
+									</div>
+								</button>
+								<div class="insurance_list2">
+									<div class="insurance">
+										<div class="info">
+											<div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
+											<div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
+										</div>
+										<div class="sum_info">
+											<div class="title">일반 상해 사항후유장해</div>
+											<div class="sum">
+												보장금액 : <strong>1,270,600</strong>원
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="state_item">
+								<button class="btn_info enough">
+									<div class="info">
+										<div class="sort_tit">
+											<span class="tit">상해사망</span>
+											<span class="count_info">
                         <strong>3</strong>건
                       </span>
-                    </div>
-                    <div class="count_bar_box">
-                      <div class="bar_rail">
-                        <div class="bar" data-value="100%"><span class="percent"><em class="count">100</em>%</span></div>
-                      </div>
-                      <div class="txt_box">
-                        <span class="left_txt">가입금액<strong>1,000</strong>만 원</span>
-                        <span class="right_txt">권장금액<strong>2,000</strong>만 원</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="state">
-                    <span class="icon"></span>
-                    <span class="txt"><strong>충분</strong></span>
-                  </div>
-                </button> 
-                <div class="insurance_list2">
-                  <div class="insurance">
-                    <div class="info">
-                      <div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
-                      <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
-                    </div>
-                    <div class="sum_info">
-                      <div class="title">일반 상해 사항후유장해</div>
-                      <div class="sum">
-                        보장금액 : <strong>1,270,600</strong>원
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- 수술비 : e -->
+										</div>
+										<div class="count_bar_box">
+											<div class="bar_rail">
+												<div class="bar" data-value="100%"><span class="percent"><em class="count">100</em>%</span>
+												</div>
+											</div>
+											<div class="txt_box">
+												<span class="left_txt">가입금액<strong>1,000</strong>만 원</span>
+												<span class="right_txt">권장금액<strong>2,000</strong>만 원</span>
+											</div>
+										</div>
+									</div>
+									<div class="state">
+										<span class="icon"></span>
+										<span class="txt"><strong>충분</strong></span>
+									</div>
+								</button>
+								<div class="insurance_list2">
+									<div class="insurance">
+										<div class="info">
+											<div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
+											<div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
+										</div>
+										<div class="sum_info">
+											<div class="title">일반 상해 사항후유장해</div>
+											<div class="sum">
+												보장금액 : <strong>1,270,600</strong>원
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- 의료비 : e -->
 
-            <!-- 입원비(일당) : s -->
-            <div class="state_info">
-              <div class="tit_area">
-                <h4 class="tit">입원비(일당) <span class="state lack">부족</span></h4>
-                <button class="btn_text_arr">
-                  <span>니즈환기</span>
-                </button>
-              </div>
-              <div class="state_item">
-                <button class="btn_info lack">
-                  <div class="info">
-                    <div class="sort_tit">
-                      <span class="tit">질병사망</span>
-                      <span class="count_info">
+						<!-- 수술비 : s -->
+						<div class="state_info">
+							<div class="tit_area">
+								<h4 class="tit">수술비 <span class="state lack">부족</span></h4>
+								<button class="btn_text_arr">
+									<span>니즈환기</span>
+								</button>
+							</div>
+							<div class="state_item">
+								<button class="btn_info lack">
+									<div class="info">
+										<div class="sort_tit">
+											<span class="tit">질병사망</span>
+											<span class="count_info">
                         <strong>3</strong>건
                       </span>
-                    </div>
-                    <div class="count_bar_box">
-                      <div class="bar_rail">
-                        <div class="bar" data-value="50%"><span class="percent"><em class="count">50</em>%</span></div>
-                      </div>
-                      <div class="txt_box">
-                        <span class="left_txt">가입금액<strong>1,000</strong>만 원</span>
-                        <span class="right_txt">권장금액<strong>2,000</strong>만 원</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="state">
-                    <span class="icon"></span>
-                    <span class="txt"><strong>1,000</strong>만원 부족</span>
-                  </div>
-                </button> 
-                <div class="insurance_list2">                  
-                  <div class="insurance">
-                    <div class="info">
-                      <div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
-                      <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
-                    </div>
-                    <div class="sum_info">
-                      <div class="title">일반 상해 사항후유장해</div>
-                      <div class="sum">
-                        보장금액 : <strong>1,270,600</strong>원
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="state_item">
-                <button class="btn_info enough">
-                  <div class="info">
-                    <div class="sort_tit">
-                      <span class="tit">상해사망</span>
-                      <span class="count_info">
+										</div>
+										<div class="count_bar_box">
+											<div class="bar_rail">
+												<div class="bar" data-value="50%"><span class="percent"><em class="count">50</em>%</span></div>
+											</div>
+											<div class="txt_box">
+												<span class="left_txt">가입금액<strong>1,000</strong>만 원</span>
+												<span class="right_txt">권장금액<strong>2,000</strong>만 원</span>
+											</div>
+										</div>
+									</div>
+									<div class="state">
+										<span class="icon"></span>
+										<span class="txt"><strong>1,000</strong>만원 부족</span>
+									</div>
+								</button>
+								<div class="insurance_list2">
+									<div class="insurance">
+										<div class="info">
+											<div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
+											<div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
+										</div>
+										<div class="sum_info">
+											<div class="title">일반 상해 사항후유장해</div>
+											<div class="sum">
+												보장금액 : <strong>1,270,600</strong>원
+											</div>
+										</div>
+									</div>
+									<div class="insurance">
+										<div class="info">
+											<div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
+											<div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
+										</div>
+										<div class="sum_info">
+											<div class="title">일반 상해 사항후유장해</div>
+											<div class="txt">
+												<span class="tit">보장금액</span>
+												<span class="sum"><strong>1,270,600</strong>원</span>
+											</div>
+										</div>
+									</div>
+									<div class="insurance">
+										<div class="info">
+											<div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
+											<div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
+										</div>
+										<div class="sum_info">
+											<div class="title">일반 상해 사항후유장해</div>
+											<div class="sum">
+												보장금액 : <strong>1,270,600</strong>원
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="state_item">
+								<button class="btn_info enough">
+									<div class="info">
+										<div class="sort_tit">
+											<span class="tit">상해사망</span>
+											<span class="count_info">
                         <strong>3</strong>건
                       </span>
-                    </div>
-                    <div class="count_bar_box">
-                      <div class="bar_rail">
-                        <div class="bar" data-value="100%"><span class="percent"><em class="count">100</em>%</span></div>
-                      </div>
-                      <div class="txt_box">
-                        <span class="left_txt">가입금액<strong>1,000</strong>만 원</span>
-                        <span class="right_txt">권장금액<strong>2,000</strong>만 원</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="state">
-                    <span class="icon"></span>
-                    <span class="txt"><strong>충분</strong></span>
-                  </div>
-                </button> 
-                <div class="insurance_list2">                  
-                  <div class="insurance">
-                    <div class="info">
-                      <div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
-                      <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
-                    </div>
-                    <div class="sum_info">
-                      <div class="title">일반 상해 사항후유장해</div>
-                      <div class="sum">
-                        보장금액 : <strong>1,270,600</strong>원
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- 입원비(일당) : e -->   
+										</div>
+										<div class="count_bar_box">
+											<div class="bar_rail">
+												<div class="bar" data-value="100%"><span class="percent"><em class="count">100</em>%</span>
+												</div>
+											</div>
+											<div class="txt_box">
+												<span class="left_txt">가입금액<strong>1,000</strong>만 원</span>
+												<span class="right_txt">권장금액<strong>2,000</strong>만 원</span>
+											</div>
+										</div>
+									</div>
+									<div class="state">
+										<span class="icon"></span>
+										<span class="txt"><strong>충분</strong></span>
+									</div>
+								</button>
+								<div class="insurance_list2">
+									<div class="insurance">
+										<div class="info">
+											<div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
+											<div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
+										</div>
+										<div class="sum_info">
+											<div class="title">일반 상해 사항후유장해</div>
+											<div class="sum">
+												보장금액 : <strong>1,270,600</strong>원
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- 수술비 : e -->
 
-            <!-- 치매 : s -->
-            <div class="state_info">
-              <div class="tit_area">
-                <h4 class="tit">치매 <span class="state lack">부족</span></h4>
-                <button class="btn_text_arr">
-                  <span>니즈환기</span>
-                </button>
-              </div>
-              <div class="state_item">
-                <button class="btn_info lack">
-                  <div class="info">
-                    <div class="sort_tit">
-                      <span class="tit">질병사망</span>
-                      <span class="count_info">
+						<!-- 입원비(일당) : s -->
+						<div class="state_info">
+							<div class="tit_area">
+								<h4 class="tit">입원비(일당) <span class="state lack">부족</span></h4>
+								<button class="btn_text_arr">
+									<span>니즈환기</span>
+								</button>
+							</div>
+							<div class="state_item">
+								<button class="btn_info lack">
+									<div class="info">
+										<div class="sort_tit">
+											<span class="tit">질병사망</span>
+											<span class="count_info">
                         <strong>3</strong>건
                       </span>
-                    </div>
-                    <div class="count_bar_box">
-                      <div class="bar_rail">
-                        <div class="bar" data-value="50%"><span class="percent"><em class="count">50</em>%</span></div>
-                      </div>
-                      <div class="txt_box">
-                        <span class="left_txt">가입금액<strong>1,000</strong>만 원</span>
-                        <span class="right_txt">권장금액<strong>2,000</strong>만 원</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="state">
-                    <span class="icon"></span>
-                    <span class="txt"><strong>1,000</strong>만원 부족</span>
-                  </div>
-                </button> 
-                <div class="insurance_list2">                  
-                  <div class="insurance">
-                    <div class="info">
-                      <div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
-                      <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
-                    </div>
-                    <div class="sum_info">
-                      <div class="title">일반 상해 사항후유장해</div>
-                      <div class="sum">
-                        보장금액 : <strong>1,270,600</strong>원
-                      </div>
-                    </div>
-                  </div>
-                  <div class="insurance">
-                    <div class="info">
-                      <div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
-                      <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
-                    </div>
-                    <div class="sum_info">
-                      <div class="title">일반 상해 사항후유장해</div>
-                      <div class="txt">
-                        <span class="tit">보장금액</span>
-                        <span class="sum"><strong>1,270,600</strong>원</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="insurance">
-                    <div class="info">
-                      <div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
-                      <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
-                    </div>
-                    <div class="sum_info">
-                      <div class="title">일반 상해 사항후유장해</div>
-                      <div class="sum">
-                        보장금액 : <strong>1,270,600</strong>원
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="state_item">
-                <button class="btn_info enough">
-                  <div class="info">
-                    <div class="sort_tit">
-                      <span class="tit">상해사망</span>
-                      <span class="count_info">
+										</div>
+										<div class="count_bar_box">
+											<div class="bar_rail">
+												<div class="bar" data-value="50%"><span class="percent"><em class="count">50</em>%</span></div>
+											</div>
+											<div class="txt_box">
+												<span class="left_txt">가입금액<strong>1,000</strong>만 원</span>
+												<span class="right_txt">권장금액<strong>2,000</strong>만 원</span>
+											</div>
+										</div>
+									</div>
+									<div class="state">
+										<span class="icon"></span>
+										<span class="txt"><strong>1,000</strong>만원 부족</span>
+									</div>
+								</button>
+								<div class="insurance_list2">
+									<div class="insurance">
+										<div class="info">
+											<div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
+											<div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
+										</div>
+										<div class="sum_info">
+											<div class="title">일반 상해 사항후유장해</div>
+											<div class="sum">
+												보장금액 : <strong>1,270,600</strong>원
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="state_item">
+								<button class="btn_info enough">
+									<div class="info">
+										<div class="sort_tit">
+											<span class="tit">상해사망</span>
+											<span class="count_info">
                         <strong>3</strong>건
                       </span>
-                    </div>
-                    <div class="count_bar_box">
-                      <div class="bar_rail">
-                        <div class="bar" data-value="100%"><span class="percent"><em class="count">100</em>%</span></div>
-                      </div>
-                      <div class="txt_box">
-                        <span class="left_txt">가입금액<strong>1,000</strong>만 원</span>
-                        <span class="right_txt">권장금액<strong>2,000</strong>만 원</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="state">
-                    <span class="icon"></span>
-                    <span class="txt"><strong>충분</strong></span>
-                  </div>
-                </button> 
-                <div class="insurance_list2">
-                  <div class="insurance">
-                    <div class="info">
-                      <div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
-                      <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
-                    </div>
-                    <div class="sum_info">
-                      <div class="title">일반 상해 사항후유장해</div>
-                      <div class="sum">
-                        보장금액 : <strong>1,270,600</strong>원
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- 치매 : e -->
+										</div>
+										<div class="count_bar_box">
+											<div class="bar_rail">
+												<div class="bar" data-value="100%"><span class="percent"><em class="count">100</em>%</span>
+												</div>
+											</div>
+											<div class="txt_box">
+												<span class="left_txt">가입금액<strong>1,000</strong>만 원</span>
+												<span class="right_txt">권장금액<strong>2,000</strong>만 원</span>
+											</div>
+										</div>
+									</div>
+									<div class="state">
+										<span class="icon"></span>
+										<span class="txt"><strong>충분</strong></span>
+									</div>
+								</button>
+								<div class="insurance_list2">
+									<div class="insurance">
+										<div class="info">
+											<div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
+											<div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
+										</div>
+										<div class="sum_info">
+											<div class="title">일반 상해 사항후유장해</div>
+											<div class="sum">
+												보장금액 : <strong>1,270,600</strong>원
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- 입원비(일당) : e -->
 
-            <!-- 운전자 : s -->
-            <div class="state_info">
-              <div class="tit_area">
-                <h4 class="tit">운전자 <span class="state lack">부족</span></h4>
-                <button class="btn_text_arr">
-                  <span>니즈환기</span>
-                </button>
-              </div>
-              <div class="state_item">
-                <button class="btn_info lack">
-                  <div class="info">
-                    <div class="sort_tit">
-                      <span class="tit">질병사망</span>
-                      <span class="count_info">
+						<!-- 치매 : s -->
+						<div class="state_info">
+							<div class="tit_area">
+								<h4 class="tit">치매 <span class="state lack">부족</span></h4>
+								<button class="btn_text_arr">
+									<span>니즈환기</span>
+								</button>
+							</div>
+							<div class="state_item">
+								<button class="btn_info lack">
+									<div class="info">
+										<div class="sort_tit">
+											<span class="tit">질병사망</span>
+											<span class="count_info">
                         <strong>3</strong>건
                       </span>
-                    </div>
-                    <div class="count_bar_box">
-                      <div class="bar_rail">
-                        <div class="bar" data-value="50%"><span class="percent"><em class="count">50</em>%</span></div>
-                      </div>
-                      <div class="txt_box">
-                        <span class="left_txt">가입금액<strong>1,000</strong>만 원</span>
-                        <span class="right_txt">권장금액<strong>2,000</strong>만 원</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="state">
-                    <span class="icon"></span>
-                    <span class="txt"><strong>1,000</strong>만원 부족</span>
-                  </div>
-                </button> 
-                <div class="insurance_list2">                  
-                  <div class="insurance">
-                    <div class="info">
-                      <div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
-                      <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
-                    </div>
-                    <div class="sum_info">
-                      <div class="title">일반 상해 사항후유장해</div>
-                      <div class="sum">
-                        보장금액 : <strong>1,270,600</strong>원
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="state_item">
-                <button class="btn_info enough">
-                  <div class="info">
-                    <div class="sort_tit">
-                      <span class="tit">상해사망</span>
-                      <span class="count_info">
+										</div>
+										<div class="count_bar_box">
+											<div class="bar_rail">
+												<div class="bar" data-value="50%"><span class="percent"><em class="count">50</em>%</span></div>
+											</div>
+											<div class="txt_box">
+												<span class="left_txt">가입금액<strong>1,000</strong>만 원</span>
+												<span class="right_txt">권장금액<strong>2,000</strong>만 원</span>
+											</div>
+										</div>
+									</div>
+									<div class="state">
+										<span class="icon"></span>
+										<span class="txt"><strong>1,000</strong>만원 부족</span>
+									</div>
+								</button>
+								<div class="insurance_list2">
+									<div class="insurance">
+										<div class="info">
+											<div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
+											<div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
+										</div>
+										<div class="sum_info">
+											<div class="title">일반 상해 사항후유장해</div>
+											<div class="sum">
+												보장금액 : <strong>1,270,600</strong>원
+											</div>
+										</div>
+									</div>
+									<div class="insurance">
+										<div class="info">
+											<div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
+											<div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
+										</div>
+										<div class="sum_info">
+											<div class="title">일반 상해 사항후유장해</div>
+											<div class="txt">
+												<span class="tit">보장금액</span>
+												<span class="sum"><strong>1,270,600</strong>원</span>
+											</div>
+										</div>
+									</div>
+									<div class="insurance">
+										<div class="info">
+											<div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
+											<div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
+										</div>
+										<div class="sum_info">
+											<div class="title">일반 상해 사항후유장해</div>
+											<div class="sum">
+												보장금액 : <strong>1,270,600</strong>원
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="state_item">
+								<button class="btn_info enough">
+									<div class="info">
+										<div class="sort_tit">
+											<span class="tit">상해사망</span>
+											<span class="count_info">
                         <strong>3</strong>건
                       </span>
-                    </div>
-                    <div class="count_bar_box">
-                      <div class="bar_rail">
-                        <div class="bar" data-value="100%"><span class="percent"><em class="count">100</em>%</span></div>
-                      </div>
-                      <div class="txt_box">
-                        <span class="left_txt">가입금액<strong>1,000</strong>만 원</span>
-                        <span class="right_txt">권장금액<strong>2,000</strong>만 원</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="state">
-                    <span class="icon"></span>
-                    <span class="txt"><strong>충분</strong></span>
-                  </div>
-                </button> 
-                <div class="insurance_list2">                  
-                  <div class="insurance">
-                    <div class="info">
-                      <div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
-                      <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
-                    </div>
-                    <div class="sum_info">
-                      <div class="title">일반 상해 사항후유장해</div>
-                      <div class="sum">
-                        보장금액 : <strong>1,270,600</strong>원
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- 운전자 : e --> 
-            
-            <!-- 배상책임 : s -->
-            <div class="state_info">
-              <div class="tit_area">
-                <h4 class="tit">배상책임 <span class="state lack">부족</span></h4>
-                <button class="btn_text_arr">
-                  <span>니즈환기</span>
-                </button>
-              </div>
-              <div class="state_item">
-                <button class="btn_info lack">
-                  <div class="info">
-                    <div class="sort_tit">
-                      <span class="tit">질병사망</span>
-                      <span class="count_info">
-                        <strong>3</strong>건
-                      </span>
-                    </div>
-                    <div class="count_bar_box">
-                      <div class="bar_rail">
-                        <div class="bar" data-value="50%"><span class="percent"><em class="count">50</em>%</span></div>
-                      </div>
-                      <div class="txt_box">
-                        <span class="left_txt">가입금액<strong>1,000</strong>만 원</span>
-                        <span class="right_txt">권장금액<strong>2,000</strong>만 원</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="state">
-                    <span class="icon"></span>
-                    <span class="txt"><strong>1,000</strong>만원 부족</span>
-                  </div>
-                </button> 
-                <div class="insurance_list2">                  
-                  <div class="insurance">
-                    <div class="info">
-                      <div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
-                      <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
-                    </div>
-                    <div class="sum_info">
-                      <div class="title">일반 상해 사항후유장해</div>
-                      <div class="sum">
-                        보장금액 : <strong>1,270,600</strong>원
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="state_item">
-                <button class="btn_info enough">
-                  <div class="info">
-                    <div class="sort_tit">
-                      <span class="tit">상해사망</span>
-                      <span class="count_info">
-                        <strong>3</strong>건
-                      </span>
-                    </div>
-                    <div class="count_bar_box">
-                      <div class="bar_rail">
-                        <div class="bar" data-value="100%"><span class="percent"><em class="count">100</em>%</span></div>
-                      </div>
-                      <div class="txt_box">
-                        <span class="left_txt">가입금액<strong>1,000</strong>만 원</span>
-                        <span class="right_txt">권장금액<strong>2,000</strong>만 원</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="state">
-                    <span class="icon"></span>
-                    <span class="txt"><strong>충분</strong></span>
-                  </div>
-                </button> 
-                <div class="insurance_list2">                  
-                  <div class="insurance">
-                    <div class="info">
-                      <div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
-                      <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
-                    </div>
-                    <div class="sum_info">
-                      <div class="title">일반 상해 사항후유장해</div>
-                      <div class="sum">
-                        보장금액 : <strong>1,270,600</strong>원
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- 배상책임 : e -->
+										</div>
+										<div class="count_bar_box">
+											<div class="bar_rail">
+												<div class="bar" data-value="100%"><span class="percent"><em class="count">100</em>%</span>
+												</div>
+											</div>
+											<div class="txt_box">
+												<span class="left_txt">가입금액<strong>1,000</strong>만 원</span>
+												<span class="right_txt">권장금액<strong>2,000</strong>만 원</span>
+											</div>
+										</div>
+									</div>
+									<div class="state">
+										<span class="icon"></span>
+										<span class="txt"><strong>충분</strong></span>
+									</div>
+								</button>
+								<div class="insurance_list2">
+									<div class="insurance">
+										<div class="info">
+											<div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
+											<div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
+										</div>
+										<div class="sum_info">
+											<div class="title">일반 상해 사항후유장해</div>
+											<div class="sum">
+												보장금액 : <strong>1,270,600</strong>원
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- 치매 : e -->
 
-            <!-- 치아,화상,골절 : s -->
-            <div class="state_info">
-              <div class="tit_area">
-                <h4 class="tit">치아,화상,골절 <span class="state lack">부족</span></h4>
-                <button class="btn_text_arr">
-                  <span>니즈환기</span>
-                </button>
-              </div>
-              <div class="state_item">
-                <button class="btn_info lack">
-                  <div class="info">
-                    <div class="sort_tit">
-                      <span class="tit">질병사망</span>
-                      <span class="count_info">
+						<!-- 운전자 : s -->
+						<div class="state_info">
+							<div class="tit_area">
+								<h4 class="tit">운전자 <span class="state lack">부족</span></h4>
+								<button class="btn_text_arr">
+									<span>니즈환기</span>
+								</button>
+							</div>
+							<div class="state_item">
+								<button class="btn_info lack">
+									<div class="info">
+										<div class="sort_tit">
+											<span class="tit">질병사망</span>
+											<span class="count_info">
                         <strong>3</strong>건
                       </span>
-                    </div>
-                    <div class="count_bar_box">
-                      <div class="bar_rail">
-                        <div class="bar" data-value="50%"><span class="percent"><em class="count">50</em>%</span></div>
-                      </div>
-                      <div class="txt_box">
-                        <span class="left_txt">가입금액<strong>1,000</strong>만 원</span>
-                        <span class="right_txt">권장금액<strong>2,000</strong>만 원</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="state">
-                    <span class="icon"></span>
-                    <span class="txt"><strong>1,000</strong>만원 부족</span>
-                  </div>
-                </button> 
-                <div class="insurance_list2">                  
-                  <div class="insurance">
-                    <div class="info">
-                      <div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
-                      <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
-                    </div>
-                    <div class="sum_info">
-                      <div class="title">일반 상해 사항후유장해</div>
-                      <div class="sum">
-                        보장금액 : <strong>1,270,600</strong>원
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="state_item">
-                <button class="btn_info enough">
-                  <div class="info">
-                    <div class="sort_tit">
-                      <span class="tit">상해사망</span>
-                      <span class="count_info">
+										</div>
+										<div class="count_bar_box">
+											<div class="bar_rail">
+												<div class="bar" data-value="50%"><span class="percent"><em class="count">50</em>%</span></div>
+											</div>
+											<div class="txt_box">
+												<span class="left_txt">가입금액<strong>1,000</strong>만 원</span>
+												<span class="right_txt">권장금액<strong>2,000</strong>만 원</span>
+											</div>
+										</div>
+									</div>
+									<div class="state">
+										<span class="icon"></span>
+										<span class="txt"><strong>1,000</strong>만원 부족</span>
+									</div>
+								</button>
+								<div class="insurance_list2">
+									<div class="insurance">
+										<div class="info">
+											<div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
+											<div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
+										</div>
+										<div class="sum_info">
+											<div class="title">일반 상해 사항후유장해</div>
+											<div class="sum">
+												보장금액 : <strong>1,270,600</strong>원
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="state_item">
+								<button class="btn_info enough">
+									<div class="info">
+										<div class="sort_tit">
+											<span class="tit">상해사망</span>
+											<span class="count_info">
                         <strong>3</strong>건
                       </span>
-                    </div>
-                    <div class="count_bar_box">
-                      <div class="bar_rail">
-                        <div class="bar" data-value="100%"><span class="percent"><em class="count">100</em>%</span></div>
-                      </div>
-                      <div class="txt_box">
-                        <span class="left_txt">가입금액<strong>1,000</strong>만 원</span>
-                        <span class="right_txt">권장금액<strong>2,000</strong>만 원</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="state">
-                    <span class="icon"></span>
-                    <span class="txt"><strong>충분</strong></span>
-                  </div>
-                </button> 
-                <div class="insurance_list2">                  
-                  <div class="insurance">
-                    <div class="info">
-                      <div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
-                      <div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
-                    </div>
-                    <div class="sum_info">
-                      <div class="title">일반 상해 사항후유장해</div>
-                      <div class="sum">
-                        보장금액 : <strong>1,270,600</strong>원
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- 치아,화상,골절 : e --> 
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- content_radius_box : e-->
-  </div>
+										</div>
+										<div class="count_bar_box">
+											<div class="bar_rail">
+												<div class="bar" data-value="100%"><span class="percent"><em class="count">100</em>%</span>
+												</div>
+											</div>
+											<div class="txt_box">
+												<span class="left_txt">가입금액<strong>1,000</strong>만 원</span>
+												<span class="right_txt">권장금액<strong>2,000</strong>만 원</span>
+											</div>
+										</div>
+									</div>
+									<div class="state">
+										<span class="icon"></span>
+										<span class="txt"><strong>충분</strong></span>
+									</div>
+								</button>
+								<div class="insurance_list2">
+									<div class="insurance">
+										<div class="info">
+											<div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
+											<div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
+										</div>
+										<div class="sum_info">
+											<div class="title">일반 상해 사항후유장해</div>
+											<div class="sum">
+												보장금액 : <strong>1,270,600</strong>원
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- 운전자 : e -->
+
+						<!-- 배상책임 : s -->
+						<div class="state_info">
+							<div class="tit_area">
+								<h4 class="tit">배상책임 <span class="state lack">부족</span></h4>
+								<button class="btn_text_arr">
+									<span>니즈환기</span>
+								</button>
+							</div>
+							<div class="state_item">
+								<button class="btn_info lack">
+									<div class="info">
+										<div class="sort_tit">
+											<span class="tit">질병사망</span>
+											<span class="count_info">
+                        <strong>3</strong>건
+                      </span>
+										</div>
+										<div class="count_bar_box">
+											<div class="bar_rail">
+												<div class="bar" data-value="50%"><span class="percent"><em class="count">50</em>%</span></div>
+											</div>
+											<div class="txt_box">
+												<span class="left_txt">가입금액<strong>1,000</strong>만 원</span>
+												<span class="right_txt">권장금액<strong>2,000</strong>만 원</span>
+											</div>
+										</div>
+									</div>
+									<div class="state">
+										<span class="icon"></span>
+										<span class="txt"><strong>1,000</strong>만원 부족</span>
+									</div>
+								</button>
+								<div class="insurance_list2">
+									<div class="insurance">
+										<div class="info">
+											<div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
+											<div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
+										</div>
+										<div class="sum_info">
+											<div class="title">일반 상해 사항후유장해</div>
+											<div class="sum">
+												보장금액 : <strong>1,270,600</strong>원
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="state_item">
+								<button class="btn_info enough">
+									<div class="info">
+										<div class="sort_tit">
+											<span class="tit">상해사망</span>
+											<span class="count_info">
+                        <strong>3</strong>건
+                      </span>
+										</div>
+										<div class="count_bar_box">
+											<div class="bar_rail">
+												<div class="bar" data-value="100%"><span class="percent"><em class="count">100</em>%</span>
+												</div>
+											</div>
+											<div class="txt_box">
+												<span class="left_txt">가입금액<strong>1,000</strong>만 원</span>
+												<span class="right_txt">권장금액<strong>2,000</strong>만 원</span>
+											</div>
+										</div>
+									</div>
+									<div class="state">
+										<span class="icon"></span>
+										<span class="txt"><strong>충분</strong></span>
+									</div>
+								</button>
+								<div class="insurance_list2">
+									<div class="insurance">
+										<div class="info">
+											<div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
+											<div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
+										</div>
+										<div class="sum_info">
+											<div class="title">일반 상해 사항후유장해</div>
+											<div class="sum">
+												보장금액 : <strong>1,270,600</strong>원
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- 배상책임 : e -->
+
+						<!-- 치아,화상,골절 : s -->
+						<div class="state_info">
+							<div class="tit_area">
+								<h4 class="tit">치아,화상,골절 <span class="state lack">부족</span></h4>
+								<button class="btn_text_arr">
+									<span>니즈환기</span>
+								</button>
+							</div>
+							<div class="state_item">
+								<button class="btn_info lack">
+									<div class="info">
+										<div class="sort_tit">
+											<span class="tit">질병사망</span>
+											<span class="count_info">
+                        <strong>3</strong>건
+                      </span>
+										</div>
+										<div class="count_bar_box">
+											<div class="bar_rail">
+												<div class="bar" data-value="50%"><span class="percent"><em class="count">50</em>%</span></div>
+											</div>
+											<div class="txt_box">
+												<span class="left_txt">가입금액<strong>1,000</strong>만 원</span>
+												<span class="right_txt">권장금액<strong>2,000</strong>만 원</span>
+											</div>
+										</div>
+									</div>
+									<div class="state">
+										<span class="icon"></span>
+										<span class="txt"><strong>1,000</strong>만원 부족</span>
+									</div>
+								</button>
+								<div class="insurance_list2">
+									<div class="insurance">
+										<div class="info">
+											<div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
+											<div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
+										</div>
+										<div class="sum_info">
+											<div class="title">일반 상해 사항후유장해</div>
+											<div class="sum">
+												보장금액 : <strong>1,270,600</strong>원
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="state_item">
+								<button class="btn_info enough">
+									<div class="info">
+										<div class="sort_tit">
+											<span class="tit">상해사망</span>
+											<span class="count_info">
+                        <strong>3</strong>건
+                      </span>
+										</div>
+										<div class="count_bar_box">
+											<div class="bar_rail">
+												<div class="bar" data-value="100%"><span class="percent"><em class="count">100</em>%</span>
+												</div>
+											</div>
+											<div class="txt_box">
+												<span class="left_txt">가입금액<strong>1,000</strong>만 원</span>
+												<span class="right_txt">권장금액<strong>2,000</strong>만 원</span>
+											</div>
+										</div>
+									</div>
+									<div class="state">
+										<span class="icon"></span>
+										<span class="txt"><strong>충분</strong></span>
+									</div>
+								</button>
+								<div class="insurance_list2">
+									<div class="insurance">
+										<div class="info">
+											<div class="logo"><img alt="한화생명" src="../images/gu.renew.logo/logo_hanwha_life.png"></div>
+											<div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904 무배당 알파 Plus 보장보험</div>
+										</div>
+										<div class="sum_info">
+											<div class="title">일반 상해 사항후유장해</div>
+											<div class="sum">
+												보장금액 : <strong>1,270,600</strong>원
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- 치아,화상,골절 : e -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- content_radius_box : e-->
+	</div>
 </div>
 
 </body>
