@@ -3,10 +3,10 @@
 <head>
 	<meta charset="UTF-8">
 	<title>컨설팅</title>
-	<link href="../css/gu.renew.style.css" rel="stylesheet">
-	<script src="../js/lib/jquery.min.js"></script>
-	<script src="../js/lib/jquery.nice-select.min.js"></script>
-	<script src="../js/gu.renew.common.ui.js"></script>
+	<link href="/resources/css/gu.renew.style.css" rel="stylesheet">
+	<script src="/resources/js/lib/jquery.min.js"></script>
+	<script src="/resources/js/lib/jquery.nice-select.min.js"></script>
+	<script src="/resources/js/gu.renew.common.ui.js"></script>
 	<script>
 		$(function () {
 			$(".table_scroll").mCustomScrollbar({
@@ -21,6 +21,9 @@
 				target.addClass("on").siblings().removeClass("on");
 				targetCont.eq(idx).addClass('on').siblings('.tab_content').removeClass("on");
 			})
+
+			var varValue = $(".bar_rail .bar").attr("data-value");
+			$(".bar_rail .bar").width(varValue);
 			counterStart()
 		})
 	</script>
@@ -35,24 +38,40 @@
 		<div class="insurance_detail_info">
 			<div class="insurance_detail">
 				<div class="insurance_info">
-					<div class="logo"><img alt="삼성생명" src="../images/gu.renew.logo/logo_samsung_life.png"></div>
+					<div class="logo"><img alt="삼성생명" src="/resources/images/gu.renew.logo/logo_samsung_life.png"></div>
 					<div class="tit">무배당 알파 Plus 보장보험(Ⅱ)0904</div>
 					<div class="number"><span class="tit">증권번호</span> 6MA86MA86MA86MA8***</div>
-					<div class="date"><span class="state cancel">해지</span> 2009.07.17 ~ 2082.07.17</div>
+					<div class="date"><span class="state">정상</span> 2009.07.17 ~ 2082.07.17</div>
 					<div class="payment">
 						<span class="tit">매월납20년</span>
 						<div class="price"><strong class="count">60660</strong>원</div>
 					</div>
 				</div>
 				<div class="payment_info">
-					<!--  실효해지시 노출 : s -->
-					<div class="cancel">
-						<div class="text">
-							<span class="title">계약상태</span>
-							유효한 보장이 없습니다.
+					<!-- 정상 : s -->
+					<div class="normal">
+						<div class="pay_count">
+							<div class="count_bar_box">
+								<div class="bar_rail">
+									<div class="bar" data-value="56%"><span class="percent"><em class="count">56</em>%</span></div>
+								</div>
+								<span class="now"><strong>122</strong>회</span>
+								<span class="last"><strong>240</strong>회</span>
+							</div>
 						</div>
+						<ul class="pay_list">
+							<li>
+								<span class="tit">납입완료</span>
+								<span class="txt complete"><strong class="count">1559720</strong>원</span>
+							</li>
+							<li>
+								<span class="tit">납입횟수</span>
+								<span class="txt"><strong class="count">800748</strong>원</span>
+							</li>
+						</ul>
+						<p class="text">갱신 등이 반영되지 않은 단순 예상 보험료</p>
 					</div>
-					<!-- 실효해지시 노출 : e -->
+					<!-- 정상 : e -->
 				</div>
 			</div>
 			<div class="tab_wrap">

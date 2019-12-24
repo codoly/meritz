@@ -5,4 +5,4 @@ node_modules
 css/*.css
 web/resources/css/gu.renew.style.css
 web/resources/css/style.css
-mobile/css/gu.renew.style.css
+mobile/resources/css/gu.renew.style.css

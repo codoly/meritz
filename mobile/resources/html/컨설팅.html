@@ -2,15 +2,11 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>그레프</title>
-	<link href="../css/gu.renew.style.css" rel="stylesheet">
-	<script src="../js/lib/jquery.min.js"></script>
-	<script src="../js/lib/jquery.nice-select.min.js"></script>
-	<script src="../js/lib/core.js"></script>
-	<script src="../js/lib/charts.js"></script>
-	<script src="../js/lib/animated.js"></script>
-	<script src="../js/gu.renew.common.ui.js"></script>
-
+	<title>컨설팅</title>
+	<link href="/resources/css/gu.renew.style.css" rel="stylesheet">
+	<script src="/resources/js/lib/jquery.min.js"></script>
+	<script src="/resources/js/lib/jquery.nice-select.min.js"></script>
+	<script src="/resources/js/gu.renew.common.ui.js"></script>
 </head>
 <body>
 <div class="wrap sub">
@@ -466,19 +462,19 @@
 						</div>
 						<div class="contract">
 							<dl>
-								<dt>정상계약</dt>
+								<dt class="new">정상계약</dt><!-- 계약 체크값 수정시 클래스 new 추가 -->
 								<dd><strong>11</strong>건</dd>
 							</dl>
 						</div>
 						<div class="payment">
 							<dl>
-								<dt>월보험료</dt>
+								<dt class="new">월보험료</dt>
 								<dd><strong class="count active">1,264,530</strong>원</dd>
 							</dl>
 						</div>
 						<div class="state">
 							<dl>
-								<dt>보장현황</dt>
+								<dt class="new">보장현황</dt>
 								<dd>
 									<span class="no_join"><strong>9</strong>미가입</span>
 									<span class="shortage"><strong>14</strong>부족</span>
@@ -493,238 +489,125 @@
 				</div>
 				<!-- customer_state_info : e -->
 
-				<div class="content_scroll consulting_list_scroll">
-					<ul class="consulting_list">
-						<li>
-							<div class="item">
-								<div class="title">사망·후유장해</div>
-								<div class="graph_area" id="chartdiv1"></div>
-								<ul class="bottom_info">
-									<li>컨설팅 전</li>
-									<li class="color_point">컨설팅 후</li>
-									<li class="payment">권장금액</li>
-								</ul>
+				<!-- insurance_list_box : s -->
+				<div class="insurance_list_box consulting">
+					<!-- scroll_area : s -->
+					<div class="content_scroll">
+						<!-- insurance_list : s -->
+						<div class="insurance_list check_list">
+							<div class="tit_box">
+								<h3 class="sort_tit">가계약</h3><span class="number">+2</span>
 							</div>
-						</li>
-						<li>
-							<div class="item">
-								<div class="title">진단비</div>
-								<div class="graph_area" id="chartdiv2"></div>
-								<ul class="bottom_info">
-									<li>컨설팅 전</li>
-									<li class="color_point">컨설팅 후</li>
-									<li class="payment">권장금액</li>
-								</ul>
+							<button class="insurance checked">
+								<div class="info">
+									<div class="inner">
+										<div class="logo"><img alt="한화생명" src="/resources/images/gu.renew.logo/logo_hanwha_life.png"></div>
+										<div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904</div>
+										<div class="date"><span class="state">정상</span>2009.07.17~2082.07.17</div>
+									</div>
+								</div>
+								<div class="payment">
+									<ul>
+										<li class="top">
+											<span class="th">매월납20년</span>
+											<span class="td"><strong class="count">1270660</strong>원</span>
+										</li>
+									</ul>
+								</div>
+							</button>
+							<button class="insurance">
+								<div class="info">
+									<div class="inner">
+										<div class="logo"><img alt="삼성생명" src="/resources/images/gu.renew.logo/logo_samsung_life.png"></div>
+										<div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904</div>
+										<div class="date"><span class="state">정상</span>2009.07.17~2082.07.17</div>
+									</div>
+								</div>
+								<div class="payment">
+									<ul>
+										<li class="top">
+											<span class="th">매월납20년</span>
+											<span class="td"><strong class="count">1270660</strong>원</span>
+										</li>
+									</ul>
+								</div>
+							</button>
+							<button class="btn_contract_add">
+								<div>가계약을 추가해주세요.</div>
+							</button>
+						</div>
+						<!-- insurance_list : e -->
+
+						<!-- insurance_list : s -->
+						<div class="insurance_list check_list">
+							<div class="tit_box">
+								<h3 class="sort_tit">정상계약</h3><span class="number">+5</span>
 							</div>
-						</li>
-						<li>
-							<div class="item">
-								<div class="title">의료비·수술·입원</div>
-								<div class="graph_area" id="chartdiv3"></div>
-								<ul class="bottom_info">
-									<li>컨설팅 전</li>
-									<li class="color_point">컨설팅 후</li>
-									<li class="payment">권장금액</li>
-								</ul>
-							</div>
-						</li>
-						<li>
-							<div class="item">
-								<div class="title">운전자·기타 비용</div>
-								<div class="graph_area" id="chartdiv4"></div>
-								<ul class="bottom_info">
-									<li>컨설팅 전</li>
-									<li class="color_point">컨설팅 후</li>
-									<li class="payment">권장금액</li>
-								</ul>
-							</div>
-						</li>
-					</ul>
+							<button class="insurance checked">
+								<div class="info">
+									<div class="inner">
+										<div class="logo"><img alt="한화생명" src="/resources/images/gu.renew.logo/logo_hanwha_life.png"></div>
+										<div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904</div>
+										<div class="date"><span class="state">정상</span>2009.07.17~2082.07.17</div>
+									</div>
+								</div>
+								<div class="payment">
+									<ul>
+										<li class="top">
+											<span class="th">일시납20년</span>
+											<span class="td"><strong class="count">1270660</strong>원</span>
+										</li>
+										<li>
+											<span class="th">차량번호</span>
+											<span class="td">76마 1234</span>
+										</li>
+										<li>
+											<span class="th">종료일</span>
+											<span class="td">2019.11.11</span>
+										</li>
+										<li>
+											<span class="th">남은기간</span>
+											<span class="td">D-43</span>
+										</li>
+									</ul>
+								</div>
+							</button>
+							<button class="insurance">
+								<div class="info">
+									<div class="inner">
+										<div class="logo"><img alt="한화생명" src="/resources/images/gu.renew.logo/logo_hanwha_life.png"></div>
+										<div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904</div>
+										<div class="date"><span class="state">정상</span>2009.07.17~2082.07.17</div>
+									</div>
+								</div>
+								<div class="payment">
+									<ul>
+										<li class="top">
+											<span class="th">일시납20년</span>
+											<span class="td"><strong class="count">1270660</strong>원</span>
+										</li>
+										<li>
+											<span class="th">차량번호</span>
+											<span class="td">76마 1234</span>
+										</li>
+										<li>
+											<span class="th">종료일</span>
+											<span class="td">2019.11.11</span>
+										</li>
+										<li>
+											<span class="th">남은기간</span>
+											<span class="td">D-43</span>
+										</li>
+									</ul>
+								</div>
+							</button>
+						</div>
+						<!-- insurance_list : e -->
+					</div>
+					<!-- scroll_area : e -->
 				</div>
+				<!-- insurance_list_box : e -->
 				<script>
-					function makeChart(target) {
-
-						// Create chart instance
-						am4core.useTheme(am4themes_animated);
-						//amchart 라이센스
-						am4core.options.commercialLicense = true;
-						var chart = am4core.create(target, am4charts.RadarChart);
-						chart.padding(30, 0, 50, 0);
-						/* Add data */
-						if (target = 'chartdiv1') {
-							chart.data = [{
-								"title": "상해사망",
-								"before": 10,
-								"after": 95
-							}, {
-								"title": "질병사망",
-								"before": 15,
-								"after": 85
-							}, {
-								"title": "상해장해\n3~79%",
-								"before": 18,
-								"after": 90
-							}, {
-								"title": "상해장해\n80% 이상",
-								"before": 30,
-								"after": 80
-							}, {
-								"title": "질병장해\n3~79%",
-								"before": 40,
-								"after": 80
-							}, {
-								"title": "질병장해\n80% 이상",
-								"before": 25,
-								"after": 80
-							}, {
-								"title": "질병장해\n80% 이상",
-								"before": 40,
-								"after": 80
-							}];
-						}
-
-						if (target = 'chartdiv2') {
-							chart.data = [{
-								"title": "상해사망",
-								"before": 10,
-								"after": 95
-							}, {
-								"title": "질병사망",
-								"before": 15,
-								"after": 85
-							}, {
-								"title": "상해장해\n3~79%",
-								"before": 18,
-								"after": 90
-							}, {
-								"title": "상해장해\n80% 이상",
-								"before": 30,
-								"after": 80
-							}, {
-								"title": "질병장해\n3~79%",
-								"before": 40,
-								"after": 80
-							}, {
-								"title": "질병장해\n80% 이상",
-								"before": 25,
-								"after": 80
-							}, {
-								"title": "질병장해\n80% 이상",
-								"before": 40,
-								"after": 80
-							}];
-						}
-
-						if (target = 'chartdiv3') {
-							chart.data = [{
-								"title": "상해사망",
-								"before": 10,
-								"after": 95
-							}, {
-								"title": "질병사망",
-								"before": 15,
-								"after": 85
-							}, {
-								"title": "상해장해\n3~79%",
-								"before": 18,
-								"after": 90
-							}, {
-								"title": "상해장해\n80% 이상",
-								"before": 30,
-								"after": 80
-							}, {
-								"title": "질병장해\n3~79%",
-								"before": 40,
-								"after": 80
-							}, {
-								"title": "질병장해\n80% 이상",
-								"before": 25,
-								"after": 80
-							}, {
-								"title": "질병장해\n80% 이상",
-								"before": 40,
-								"after": 80
-							}];
-						}
-
-						if (target = 'chartdiv4') {
-							chart.data = [{
-								"title": "상해사망",
-								"before": 10,
-								"after": 95
-							}, {
-								"title": "질병사망",
-								"before": 15,
-								"after": 85
-							}, {
-								"title": "상해장해\n3~79%",
-								"before": 18,
-								"after": 90
-							}, {
-								"title": "상해장해\n80% 이상",
-								"before": 30,
-								"after": 80
-							}, {
-								"title": "질병장해\n3~79%",
-								"before": 40,
-								"after": 80
-							}, {
-								"title": "질병장해\n80% 이상",
-								"before": 25,
-								"after": 80
-							}, {
-								"title": "질병장해\n80% 이상",
-								"before": 40,
-								"after": 80
-							}];
-						}
-
-						/* Create axes */
-						var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
-						categoryAxis.dataFields.category = "title";
-						categoryAxis.renderer.labels.template.fontSize = "14px";
-						categoryAxis.renderer.labels.template.fill = am4core.color("#888888");
-
-
-						var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
-						valueAxis.renderer.axisFills.template.fill = chart.colors.getIndex(2);
-						valueAxis.renderer.axisFills.template.fillOpacity = 1;
-						valueAxis.strokeWidth = 1;
-						valueAxis.stroke = am4core.color("#e6f4f3");
-						valueAxis.renderer.labels.template.disabled = true;
-						valueAxis.min = 0;
-						valueAxis.max = 100;
-
-						/* Create and configure series */
-						var series = chart.series.push(new am4charts.RadarSeries());
-						series.dataFields.valueY = "before";
-						series.dataFields.categoryX = "title";
-						series.strokeWidth = 0;
-						series.fillOpacity = 0.15;
-						series.fill = am4core.color("#3c444d");
-
-						var seriesBullet = series.bullets.push(new am4charts.CircleBullet());
-						seriesBullet.circle.radius = 2;
-						seriesBullet.circle.fill = am4core.color("#aaaaaa");
-						seriesBullet.circle.strokeWidth = 0;
-
-
-						/* Create and configure series */
-						var series2 = chart.series.push(new am4charts.RadarSeries());
-						series2.dataFields.valueY = "after";
-						series2.dataFields.categoryX = "title";
-						series2.strokeWidth = 3;
-						series2.fillOpacity = 0.15;
-						series2.stroke = am4core.color("#fe5855");
-						series2.fill = am4core.color("#fe5855");
-
-						var seriesBullet2 = series2.bullets.push(new am4charts.CircleBullet());
-						seriesBullet2.circle.radius = 3;
-						seriesBullet2.circle.fill = am4core.color("#fe5855");
-						seriesBullet2.circle.strokeWidth = 0;
-
-					}
-
 					$(function () {
 						$(".content_scroll").mCustomScrollbar({
 							scrollInertia: 150,
@@ -740,25 +623,33 @@
 						$(".member_list").mCustomScrollbar({
 							scrollInertia: 150
 						});
-						//차트 그리기
-						makeChart('chartdiv1');
-						makeChart('chartdiv2');
-						makeChart('chartdiv3');
-						makeChart('chartdiv4');
-						//차트 클릭시 크게 보기
-						$(document).on("click", ".item", function () {
-							$(".consulting_list").addClass("full")
+
+						//보험 체크
+
+						$(document).on("click", ".insurance_list.check_list .insurance", function () {
+							var total = 0;
+							var target = $(this);
+							if (!target.hasClass("checked")) {
+								target.addClass("checked");
+							} else {
+								target.removeClass("checked");
+							}
+							$(".insurance.checked .payment .count").each(function () {
+								total = total + Number($(this).text().replace(/,/gi, ""));
+							})
+							$(".customer_state_info .payment .count").removeClass("active").attr("data-value", total);
+							counterStart();
 						})
 						changeLayout("sub");
-						subMenuActive(4);
 						counterStart();
+						subMenuActive(3);
 					})
 				</script>
 			</div>
-
 			<button class="btn_top">상단으로</button>
 		</div>
 		<!-- content_area : e -->
+		<a class="btn_close" href="#"><span>닫기</span></a>
 	</div>
 </div>
 

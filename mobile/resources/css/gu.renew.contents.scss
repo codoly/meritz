@@ -93,12 +93,12 @@
 			&.grid {
 				margin-right: -1px;
 				border-radius: 5px 0 0 5px;
-				background-image: url(../images/gu.renew.common/icon_type_grid.png);
+				background-image: url(/resources/images/gu.renew.common/icon_type_grid.png);
 			}
 
 			&.list {
 				border-radius: 0 5px 5px 0;
-				background-image: url(../images/gu.renew.common/icon_type_list.png);
+				background-image: url(/resources/images/gu.renew.common/icon_type_list.png);
 			}
 
 			&.active {
@@ -152,7 +152,7 @@
 				margin: 0 auto 8px;
 				border: 1px solid #dfe3eb;
 				border-radius: 50%;
-				background: url(../images/gu.renew.common/icon_add.png) no-repeat center center;
+				background: url(/resources/images/gu.renew.common/icon_add.png) no-repeat center center;
 				background-size: 14px 14px;
 				content: "";
 			}
@@ -558,7 +558,7 @@
 				left: 0;
 				width: 41px;
 				height: 41px;
-				background: url(../images/gu.renew.common/checkbox02_off.png) no-repeat 0 0;
+				background: url(/resources/images/gu.renew.common/checkbox02_off.png) no-repeat 0 0;
 				content: "";
 			}
 
@@ -578,7 +578,7 @@
 				}
 
 				&:after {
-					background: url(../images/gu.renew.common/checkbox02_on.png) no-repeat 0 0;
+					background: url(/resources/images/gu.renew.common/checkbox02_on.png) no-repeat 0 0;
 				}
 			}
 		}
@@ -752,7 +752,7 @@
 			margin: 0 auto 12px;
 			border: 1px solid #e0e4eb;
 			border-radius: 50%;
-			background: url(../images/gu.renew.common/icon_add.png) no-repeat center center;
+			background: url(/resources/images/gu.renew.common/icon_add.png) no-repeat center center;
 			content: "";
 		}
 	}
@@ -1227,7 +1227,7 @@
 					right: -20px;
 					width: 16px;
 					height: 12px;
-					background: url(../images/gu.renew.common/icon_checked.png) no-repeat 0 0;
+					background: url(/resources/images/gu.renew.common/icon_checked.png) no-repeat 0 0;
 					content: "";
 				}
 			}
@@ -1407,27 +1407,27 @@
 	}
 
 	&.like {
-		background-image: url(../images/gu.renew.common/icon_like_off.png);
+		background-image: url(/resources/images/gu.renew.common/icon_like_off.png);
 	}
 
 	&.like.on {
-		background-image: url(../images/gu.renew.common/icon_like_on.png);
+		background-image: url(/resources/images/gu.renew.common/icon_like_on.png);
 	}
 
 	&.analysis {
-		background-image: url(../images/gu.renew.common/icon_analysis_off.png);
+		background-image: url(/resources/images/gu.renew.common/icon_analysis_off.png);
 	}
 
 	&.analysis.on {
-		background-image: url(../images/gu.renew.common/icon_analysis_on.png);
+		background-image: url(/resources/images/gu.renew.common/icon_analysis_on.png);
 	}
 
 	&.agree {
-		background-image: url(../images/gu.renew.common/icon_agree_off.png);
+		background-image: url(/resources/images/gu.renew.common/icon_agree_off.png);
 	}
 
 	&.agree.on {
-		background-image: url(../images/gu.renew.common/icon_agree_on.png);
+		background-image: url(/resources/images/gu.renew.common/icon_agree_on.png);
 	}
 }
 
@@ -1441,7 +1441,7 @@
 		width: 18px;
 		height: 21px;
 		margin-right: 8px;
-		background: url(../images/gu.renew.common/icon_edit_off.png) no-repeat 0 0;
+		background: url(/resources/images/gu.renew.common/icon_edit_off.png) no-repeat 0 0;
 		content: "";
 		vertical-align: top;
 	}
@@ -1450,7 +1450,7 @@
 		color: #01a7c4;
 
 		&:before {
-			background: url(../images/gu.renew.common/icon_edit_on.png) no-repeat 0 0;
+			background: url(/resources/images/gu.renew.common/icon_edit_on.png) no-repeat 0 0;
 		}
 	}
 }
@@ -2184,7 +2184,7 @@
 						color: #ff4858;
 
 						.icon {
-							background: url(../images/gu.renew.contents/icon_all_state_lack.png) no-repeat 0 0;
+							background: url(/resources/images/gu.renew.contents/icon_all_state_lack.png) no-repeat 0 0;
 							background-size: 100%;
 						}
 					}
@@ -2207,7 +2207,7 @@
 						color: #01a7c4;
 
 						.icon {
-							background: url(../images/gu.renew.contents/icon_all_state_enough.png) no-repeat 0 0;
+							background: url(/resources/images/gu.renew.contents/icon_all_state_enough.png) no-repeat 0 0;
 							background-size: 100%;
 						}
 					}
@@ -2232,7 +2232,7 @@
 						color: #777;
 
 						.icon {
-							background: url(../images/gu.renew.contents/icon_all_state_no_join.png) no-repeat 0 0;
+							background: url(/resources/images/gu.renew.contents/icon_all_state_no_join.png) no-repeat 0 0;
 							background-size: 100%;
 						}
 					}

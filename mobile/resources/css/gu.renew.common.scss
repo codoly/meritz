@@ -439,10 +439,10 @@ button div, button:active div, button:before, button:focus div {
 	@include bg_btn;
 	width: 35px;
 	height: 35px;
-	background: url("../images/gu.renew.common/btn_close.png") no-repeat;
+	background: url("/resources/images/gu.renew.common/btn_close.png") no-repeat;
 
 	&.white {
-		background: url("../images/gu.renew.common/btn_close_w.png") no-repeat;
+		background: url("/resources/images/gu.renew.common/btn_close_w.png") no-repeat;
 	}
 }
 
@@ -492,7 +492,7 @@ button div, button:active div, button:before, button:focus div {
 		right: 0;
 		width: 53px;
 		height: 33px;
-		background: url("../images/gu.renew.common/btn_main_search_off.png") no-repeat center center;
+		background: url("/resources/images/gu.renew.common/btn_main_search_off.png") no-repeat center center;
 		background-size: 15px auto;
 	}
 
@@ -500,7 +500,7 @@ button div, button:active div, button:before, button:focus div {
 		border: 1px solid #01a7c4;
 
 		.btn_search {
-			background: url("../images/gu.renew.common/btn_main_search_on.png") no-repeat center center;
+			background: url("/resources/images/gu.renew.common/btn_main_search_on.png") no-repeat center center;
 			background-size: 15px auto;
 		}
 	}
@@ -526,7 +526,7 @@ button div, button:active div, button:before, button:focus div {
 			right: 0;
 			width: 38px;
 			height: 38px;
-			background: url("../images/gu.renew.common/btn_main_search_off.png") no-repeat center center;
+			background: url("/resources/images/gu.renew.common/btn_main_search_off.png") no-repeat center center;
 			background-size: 15px auto;
 		}
 
@@ -534,7 +534,7 @@ button div, button:active div, button:before, button:focus div {
 			border: 1px solid #01a7c4;
 
 			.btn_search {
-				background: url("../images/gu.renew.common/btn_main_search_on.png") no-repeat center center;
+				background: url("/resources/images/gu.renew.common/btn_main_search_on.png") no-repeat center center;
 				background-size: 15px auto;
 			}
 		}
@@ -553,7 +553,7 @@ button div, button:active div, button:before, button:focus div {
 		height: 0;
 
 		&:checked + label:after {
-			background: url("../images/gu.renew.common/checkbox_on.png") no-repeat;
+			background: url("/resources/images/gu.renew.common/checkbox_on.png") no-repeat;
 		}
 	}
 
@@ -572,7 +572,7 @@ button div, button:active div, button:before, button:focus div {
 			width: 20px;
 			height: 20px;
 			border-radius: 3px;
-			background: url("../images/gu.renew.common/checkbox_off.png") no-repeat;
+			background: url("/resources/images/gu.renew.common/checkbox_off.png") no-repeat;
 			box-sizing: border-box;
 			content: "";
 		}
@@ -583,7 +583,7 @@ button div, button:active div, button:before, button:focus div {
 			color: #fff;
 
 			&:after {
-				background: url("../images/gu.renew.common/main_checkbox_on.png") no-repeat center center;
+				background: url("/resources/images/gu.renew.common/main_checkbox_on.png") no-repeat center center;
 				background-size: 20px auto;
 			}
 		}
@@ -594,7 +594,7 @@ button div, button:active div, button:before, button:focus div {
 			&:after {
 				border: 0;
 				border-radius: 0;
-				background: url("../images/gu.renew.common/main_checkbox_off.png") no-repeat center center;
+				background: url("/resources/images/gu.renew.common/main_checkbox_off.png") no-repeat center center;
 				background-size: 20px auto;
 			}
 		}
@@ -620,7 +620,7 @@ button div, button:active div, button:before, button:focus div {
 		height: 0;
 
 		&:checked + label:after {
-			background: url("../images/gu.renew.common/radio_on.png") no-repeat;
+			background: url("/resources/images/gu.renew.common/radio_on.png") no-repeat;
 		}
 	}
 
@@ -639,7 +639,7 @@ button div, button:active div, button:before, button:focus div {
 			width: 24px;
 			height: 24px;
 			border-radius: 3px;
-			background: url("../images/gu.renew.common/radio_off.png") no-repeat;
+			background: url("/resources/images/gu.renew.common/radio_off.png") no-repeat;
 			box-sizing: border-box;
 			content: "";
 		}
