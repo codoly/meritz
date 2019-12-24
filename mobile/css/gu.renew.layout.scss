@@ -10,7 +10,7 @@
     z-index:10;
     width: 100%;
     padding-top: 21px;
-    ul{
+    .menu_area{
       display: flex;
       padding:0 20px;
       li{
@@ -79,12 +79,15 @@
     position: relative;
     z-index:4;
     padding-top: 104px;
+    &.bgWhite{
+      background: #ffffff;
+    }
     .search_box{
       position: absolute;
       left: 0;
       top: 0;
       width: 100%;
-      background: #5d33c0;
+      background: #333333;
       border-radius:10px 10px 0 0;
       padding:15px 20px 25px 20px;
       z-index:10;
@@ -125,6 +128,143 @@
   &.main {
     padding-top: 129px;
 
+  }
+  &.sub{
+    .top_area{
+      height: 104px;
+      background: #333333;
+      .member_info_area{
+        padding:0 20px;
+        margin-top: 20px;
+        display: flex;
+        line-height: 16px;
+        .name{
+          flex:1;
+          font-size: $fz16px;
+          color: #ffffff;
+          strong  {
+            font-weight: 600;
+          }
+          .btn_like{
+            @include bg_btn;
+            background: url("../images/gu.renew.contents/btn_like_off.png") no-repeat;
+            background-size: 12px auto;
+            width: 12px;
+            height: 12px;
+            &.on{
+              background-image: url("../images/gu.renew.contents/btn_like_on.png");
+            }
+          }
+        }
+        .info{
+          color: $color_level4;
+          font-size: $fz12px;
+          display: flex;
+          height: 16px;
+          li{
+            position: relative;
+            padding-right: 6px;
+            margin-right: 6px;
+            &:after{
+              content:"";
+              display: block;
+              position: absolute;
+              right: 0;
+              top: 50%;
+              width: 1px;
+              height: 10px;
+              background: #4d4d4d;
+              margin-top:-5px;
+            }
+            &:last-child{
+              padding-right: 0;
+              margin-right: 0;
+              &:after{
+                display: none;
+              }
+            }
+            span{
+              vertical-align: top;
+              display: inline-block;
+              margin-right: 4px;
+              &:last-child{
+                margin-right: 0;
+              }
+            }
+            .btn_alert{
+              color: $color_level4;
+              font-size: $fz12px;
+              vertical-align: top;
+              line-height: 16px;
+              padding-right: 14px;
+              background: url("../images/gu.renew.contents/icon_alert.png") no-repeat right 2px;
+              background-size: 11px auto;
+            }
+          }
+        }
+      }
+    }
+    .top_info_fixed{
+      border-radius:10px 10px 0 0;
+      position: fixed;
+      left: 0;
+      top: 94px;
+      background: #f3f3f3;
+      padding:20px 22px;
+      z-index:11;
+      width: 100%;
+      ul{
+        display: flex;
+        width: 100%;
+        li{
+          line-height: 1;
+          &.default{
+            padding-right: 30px;
+          }
+          &.month{
+            flex:1;
+          }
+          &.list{
+            flex:none;
+            text-align: center;
+            padding-right:19px;
+            &:last-child{
+              padding-right: 0;
+            }
+            &.no{
+              .title,
+              .result{
+                color: #777777 !important;
+              }
+            }
+            &.lack{
+              .title,
+              .result{
+                color: #ff4858 !important;
+              }
+            }
+            &.good{
+              .title,
+              .result{
+                color: #00a8c3 !important;
+              }
+            }
+          }
+          .title{
+            color: $color_level3;
+            font-size: $fz12px;
+            margin-bottom: 10px;
+          }
+          .result{
+            color: $color_level2;
+            font-size: $fz15px;
+            strong{
+              font-size: $fz18px;
+            }
+          }
+        }
+      }
+    }
   }
   &.fixed{
     .search_box{
