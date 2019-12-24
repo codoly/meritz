@@ -11,6 +11,17 @@
 	clip: rect(0 0 0 0);
 }
 
+@mixin state{
+display: inline-block;
+color: #ff4858;
+background: #ffe4e3;
+height: 18px;
+line-height: 20px;
+padding: 0 10px;
+border-radius: 3px;
+font-size: $fz12px;
+}
+
 /* customer_sort */
 .customer_sort {
 	position: absolute;
@@ -626,8 +637,8 @@
 			@include clearline();
 
 			.state {
-				display: inline-block;
 				float: left;
+				display: inline-block;
 				height: 18px;
 				margin-right: 10px;
 				padding: 0 10px;
@@ -2246,10 +2257,217 @@
 }
 
 /* 가입현황 - 상세내역 */
+.full_pop{	
+	background: #f3f3f3;
+	.top_area{	
+		padding-top: 0;	
+		background: #666;
+		.inner{
+			position: relative;
+			padding:18px 40px 0;
+			height:48px;
+			.btn_prev{
+				position: absolute;
+				top:50%;
+				left:10px;
+				display: block;
+				width:25px;
+				height: 25px;
+				background: url(/resources/images/gu.renew.common/btn_icon_prev.png) no-repeat 0 0;
+				background-size:100% auto;
+				margin-top:-12px;
+			}
+			.title{
+				font-size:$fz17px;
+				color:#f0f3f8;
+				text-align: center;
+				line-height: 1;
+				@include ellipsis();
+			}
+		}
+		&:after{
+			display:block;
+			content: "";
+			height:15px;
+			background: #f3f3f3;
+			border-radius: 15px 15px 0 0;
+		}
+	}
+}
+.insurance_detail_info{
+	padding: 0 15px 25px;
+	.inner{
+		background: #fff;
+		border-radius: 8px;
+		padding:15px;
+		
+		.payment_info{
+			.payment{
+				display: inline-block;
+				font-size: $fz15px;
+				color: $color_level1;
+				margin-right: 5px;
+				vertical-align: top;
+				strong{
+					font-size: $fz20px;
+					font-weight: 700;
+				}
+			}
+			.info{
+				display: inline-block;
+				font-size: $fz12px;
+				color: $color_level4;
+				vertical-align: top;
+				margin-top:2px;
+				.txt{
+					color: $color_level1;
+					strong{
+						font-size: $fz13px;
+						font-weight: 400;
+					}
+				}
+			}
+			.logo{
+				float: right;
+				display: inline-block;
+				height:18px;
+				margin-top:3px;
+				img{
+					height:100%;
+				}
+			}
+		}
+		.count_bar_box {
+			margin: 5px 0 0px;
+
+			.bar_rail {
+				position: relative;
+				border-radius: 8px;
+				background: #eee;
+
+				.bar {
+					position: relative;
+					width: 0;
+					height: 17px;
+					border-radius: 8px;
+					background: #02a7c5;
+					transition: all 1.2s;
+					text-align: right;
+					line-height: 1;
+					font-size: $fz12px;
+				}
+
+				.percent {
+					height: 17px;
+					font-weight: 500;
+					line-height: 18px;
+					padding-right: 10px;
+					text-align: center;
+					color: #fff;
+				}
+			}
+			
+			.txt_box {
+				margin: 5px 0 3px;
+				line-height: 1;
+				@include clearline();
+
+				.left_txt {
+					float: left;
+					width:50%;
+					font-size: $fz12px;
+					color: $color_level2;
+					.no{
+						color:#01a7c4;
+					}
+				}
+
+				.right_txt {
+					float: right;
+					width:50%;
+					font-size: $fz12px;
+					color: $color_level2;
+					text-align: right;
+					.no{
+						color:$color_level4;
+					}
+				}
+
+				.no{					
+					margin-bottom:8px;
+					strong{
+						font-weight: 700;
+						font-size:$fz13px;
+					}
+				}
+				.txt{
+					color: $color_level3;
+					font-size:$fz12px;					
+					letter-spacing: -0.05em;
+					strong{
+						color: $color_level2;
+						margin-left:3px;
+						font-weight: 400;
+					}
+				}
+			}
+			.point_txt{
+				font-size:$fz10px;
+				color:$color_level4;
+				letter-spacing: -0.05em;
+				line-height: 17px;
+			}
+		}
+		.etc_info{	
+			position: relative;		
+			@include clearline();
+			padding-top:10px;
+			margin-top:10px;
+			&:before{
+				position: absolute;
+				top:0px;
+				left:-15px;
+				display: block;
+				content: "";
+				width:calc(100% + 30px);
+				border-top: 1px dotted #d8d8d8;
+			}
+
+			>div{
+				>div{
+					font-size:$fz12px;
+					color:$color_level4;
+					letter-spacing: normal;
+					line-height: 1;
+					margin-top: 5px;
+				}
+			}
+			.left_txt{
+				float: left;
+				width:50%;
+				.state{
+					@include state();
+				}
+			}
+			.right_txt{				
+				float: left;
+				width:50%;
+				padding-left:8px;
+				.tit{
+					@include state();
+					background: #eee;
+					color:$color_level4;
+				}
+			}
+		}
+	}
+}
+
 .insurance_detail_tab{
 	.tab_list{	
 		padding:0 15px;
 		border-bottom: 1px solid #d5d5d5;
+		background: #f3f3f3;
 		ul{
 			@include clearline();
 			margin-bottom: -1px;
@@ -2302,7 +2520,7 @@
 			@include clearline();
 			.tit_info{
 				float: left;
-				width:70%;
+				width:75%;
 				font-size: $fz12px;
 				color: #555;
 				letter-spacing: -0.05em;
@@ -2327,7 +2545,7 @@
 			}
 			.state_info{
 				float: right;
-				width:30%;
+				width:25%;
 				text-align:right;
 				font-size: $fz12px;
 				span{

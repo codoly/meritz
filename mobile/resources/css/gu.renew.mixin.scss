@@ -69,3 +69,10 @@ $bgcolor: #e6edf8;
 	}
 }
 
+@mixin ellipsis(){
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	word-wrap:normal;
+	overflow:hidden;
+}
+
