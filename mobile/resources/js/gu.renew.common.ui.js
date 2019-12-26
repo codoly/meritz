@@ -43,17 +43,6 @@ $(function () {
 		}
 	});
 
-	//스코롤 위아래 체크
-	$(window).scroll(function(){
-		var top = $(window).scrollTop()
-		if (scrollCheck > top){
-			$("body").removeClass("scroll_down").addClass("scroll_up");
-		}else{
-			$("body").removeClass("scroll_up").addClass("scroll_down");
-		}
-		scrollCheck = top
-	})
-
 })
 
 function formatNumber(num) {
