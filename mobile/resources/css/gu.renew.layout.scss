@@ -2,7 +2,7 @@
 	position: relative;
 	min-height: 100%;
 
-	.top_area {
+	> .top_area {
 		position: sticky;
 		z-index: 10;
 		top: 0;
@@ -87,9 +87,13 @@
 	.content_area {
 		position: relative;
 		z-index: 4;
+		min-height:calc(100vh - 154px);
 
-		&.bgWhite {
+		&.bg_white {
 			background: #ffffff;
+		}
+		&.bg_gray {
+			background: #f3f3f3;
 		}
 
 		.search_box {
@@ -154,7 +158,7 @@
 
 	&.sub {
 		padding-bottom: 66px;
-		.top_area {
+		> .top_area {
 			background: #333333;
 			&.tab{
 				height: 137px;
@@ -211,7 +215,7 @@
 						font-weight: 600;
 					}
 
-					.btn_like {
+					.favorites {
 						@include bg_btn;
 						width: 12px;
 						height: 12px;
@@ -584,6 +588,7 @@
 			text-align: center;
 			.bottom_menu{
 				span{
+					position: relative;
 					display: block;
 					color: $color_level4;
 					font-size: $fz11px;
@@ -626,6 +631,16 @@
 				&.menu05.on span{
 					background-image:url("/resources/images/gu.renew.common/bottom_menu_01_on.png");
 				}
+				&.new span:after{
+					content: "";
+					position: absolute;
+					right: -5px;
+					top: 27px;
+					background: #ff4858;
+					width: 4px;
+					height: 4px;
+					border-radius: 4px;
+				}
 			}
 		}
 	}
@@ -644,285 +659,168 @@
 }
 
 .submain_wrap {
-	width: 781px;
-
+	padding:0 17px;
 	.top_area {
-		@include clearline;
-		position: relative;
-		z-index: 1;
-		border-bottom: 1px solid $line_color1;
-
-		.img_area {
-			float: left;
-			width: 295px;
-		}
-
-		.info_area {
-			float: left;
-			width: 486px;
-			padding-top: 102px;
-
-			.favorites {
-				display: inline-block;
-				padding-right: 26px;
-				background: url("/resources/images/gu.renew.contents/icon_heart_off.png") no-repeat right top;
-				background-size: 19px 17px;
-				line-height: 17px;
-				color: $color_level2;
-
-				&.on {
-					background: url("/resources/images/gu.renew.contents/icon_heart_on.png") no-repeat right top;
-				}
-			}
-
+		background: url("/resources/images/gu.renew.contents/main_top_img.png") no-repeat;
+		background-size: auto 159px;
+		height: 159px;
+		text-align: right;
+		.info_grid {
+			float: right;
+			margin:30px 20px 0 0;
 			.title {
-				margin-top: 7px;
-				font-size: $fz34px;
-				font-weight: 300;
-				line-height: $fz40px;
-				letter-spacing: -1px;
-				color: $color_level1;
-
-				strong {
-					font-weight: 500;
-				}
+				font-size: $fz12px;
+				line-height: 1;
+				text-align: right;
+				color: $color_level2;
 			}
 
 			.text {
-				@include clearline;
-				margin-top: 20px;
-
-				span,
-				button {
-					float: left;
-					margin-right: 20px;
-					font-size: $fz17px;
-					line-height: $fz22px;
-					color: $color_level4;
-				}
-
-				.alert {
-					margin-right: 10px;
-					padding-right: 27px;
-					background: url("/resources/images/gu.renew.contents/icon_alert.png") no-repeat right top;
-
-					span {
-						margin: 0;
-					}
+				position: relative;
+				margin-top: 8px;
+				font-size: $fz20px;
+				line-height: 1;
+				text-align: right;
+				color: $color_level2;
+				strong{
+					font-size: $fz24px;
 				}
 			}
-		}
-
-		.layer_pop_box {
-			top: 265px;
-			left: 260px;
 		}
 	}
-
-	.more_content {
-		@include clearline;
-		position: relative;
-		height: 599px;
-		margin-top: 20px;
-
-		.box {
-			border-radius: 5px;
-			background: #ffffff;
-
-			&.box1 {
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 386px;
-				height: 284px;
-
-				> .title {
-					padding-top: 34px;
-					font-size: $fz30px;
-					font-weight: 300;
-					line-height: $fz36px;
-					text-align: center;
-					color: $color_level2;
+	.box {
+		border-radius: 5px;
+		background: #ffffff;
+		margin-bottom: 10px;
+		&.box1 {
+			display: flex;
+			.graph_area {
+				position: relative;
+				#chartdiv1 {
+					width: 150px;
+					height: 130px;
 				}
 
-				> .text {
-					position: relative;
-					margin-top: 17px;
-					margin-bottom: 37px;
-					padding-bottom: 42px;
-					font-size: $fz20px;
-					line-height: 1;
-					text-align: center;
-					color: $color_level2;
+				.counter_number {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					font-size: $fz18px;
+					transform: translate(-50%, -50%);
+					letter-spacing: -1px;
+					color: #42b4cc;
 
-					&:after {
-						display: block;
-						position: absolute;
-						right: 0;
-						bottom: 0;
-						left: 0;
-						width: 36px;
-						height: 3px;
-						margin: 0 auto;
-						border-radius: 3px;
-						background: #01a7c4;
-						content: "";
+					strong {
+						font-weight: 700;
 					}
-				}
-
-				.info_grid {
-					width: 250px;
-					margin: 0 auto;
 				}
 			}
 
-			&.box2 {
-				position: absolute;
-				bottom: 0;
-				left: 0;
-				width: 386px;
-				height: 304px;
+			.info_grid {
+				flex:1;
+				align-self:center;
+				padding-right: 20px;
+			}
+		}
 
-				.graph_area {
-					position: relative;
-
-					#chartdiv1 {
-						height: 200px;
-					}
-
-					.counter_number {
-						position: absolute;
-						top: 50%;
-						left: 50%;
-						font-size: $fz30px;
-						transform: translate(-50%, -50%);
-						letter-spacing: -1px;
-						color: #42b4cc;
-
-						strong {
-							font-weight: 700;
-						}
-					}
-				}
-
-				.info_grid {
-					width: 250px;
-					margin: -12px auto 0 auto;
+		&.box2 {
+			display: flex;
+			flex-wrap: wrap;
+			.graph_area {
+				position: relative;
+				#chartdiv2 {
+					width: 150px;
+					height: 135px;
 				}
 			}
 
-			&.box3 {
-				position: absolute;
-				top: 0;
-				right: 0;
-				width: 385px;
-				height: 599px;
-
+			.info_content_area{
+				flex:1;
+				padding-right: 20px;
 				> .title {
-					padding-top: 34px;
-					font-size: $fz30px;
-					font-weight: 300;
-					line-height: $fz36px;
-					text-align: center;
-					letter-spacing: -1px;
-					color: $color_level2;
-				}
-
-				> .text {
-					position: relative;
-					margin-top: 20px;
-					font-size: $fz20px;
+					padding-top: 18px;
+					font-size: $fz15px;
+					font-weight: 700;
 					line-height: 1;
 					text-align: center;
-					letter-spacing: -1px;
+					letter-spacing: -2px;
 					color: $color_level2;
+					margin-bottom: 8px;
 				}
-
-				.graph_area {
-					position: relative;
-					padding-top: 10px;
-
-					&:after {
-						display: block;
-						position: absolute;
-						z-index: 1;
-						top: 0;
-						left: 0;
-						width: 100%;
-						height: 100%;
-						background: #fff;
-						content: "";
-						opacity: 0;
-					}
-
-					#chartdiv2 {
-						height: 220px;
-					}
-				}
-
 				.info_box {
-					display: table;
-					width: 285px;
-					margin: 25px auto 0 auto;
-					padding: 15px 0 14px 0;
+					padding: 8px 0 8px 0;
 					border: 1px solid $line_color2;
 					border-radius: 13px;
-					font-size: 0;
 					line-height: 1;
 					text-align: center;
-
-					& + .text {
-						margin-top: 25px;
+					letter-spacing:-1px;
+					.info_title{
+						font-size: $fz12px;
+						color: $color_level2;
+						margin-bottom: 8px;
 					}
+					ul{
+						display: table;
+						font-size: 0;
+						width: 100%;
+						li {
+							display: inline-block;
+							padding: 0 10px;
+							line-height: 1;
+							text-align: center;
 
-					li {
-						display: inline-block;
-						padding: 0 25px;
-						line-height: 1;
-						text-align: center;
+							.tit {
+								display: block;
+								font-size: $fz12px;
+								color: #777777;
+							}
 
-						.tit {
-							display: block;
-							font-size: $fz16px;
-							color: #777777;
-						}
+							.number {
+								display: block;
+								margin-top: 4px;
+								font-size: $fz16px;
+								font-weight: 700;
+							}
 
-						.number {
-							display: block;
-							margin-top: 4px;
-							font-size: $fz24px;
-							font-weight: 700;
-						}
 
-						&.all {
-							color: $color_level2;
-						}
+							&.no {
+								.tit,
+								.number{
+									color: #777777;
+								}
+							}
 
-						&.no {
-							color: #6a8db3;
-						}
+							&.lack {
+								.tit,
+								.number{
+									color: $color_button_red;
+								}
 
-						&.lack {
-							color: $color_button_red;
-						}
+							}
 
-						&.good {
-							color: #5bd1e6;
+							&.good {
+								.tit,
+								.number {
+									color: #5bd1e6;
+								}
+							}
 						}
 					}
 				}
+			}
 
-				.result {
-					margin-top: -10px;
-					font-size: $fz20px;
-					line-height: $fz30px;
-					text-align: center;
-					letter-spacing: -1px;
-					color: $color_level2;
 
-					span {
-						color: $color_button_red;
-					}
+			.result {
+				padding-bottom: 10px;
+				flex:none;
+				width: 100%;
+				font-size: $fz14px;
+				line-height:1;
+				text-align: center;
+				letter-spacing: -1px;
+				color: $color_level2;
+				span {
+					color: $color_button_red;
 				}
 			}
 		}

@@ -133,7 +133,7 @@ function changeLayout(type, file) {
 
 //서브메뉴 활성화
 function subMenuActive(idx) {
-	$(".menu_area .menu_set .menu").removeClass("on").eq(idx).addClass("on");
+	$(".bottom_fixed_menu_area .bottom_menu").removeClass("on").eq(idx).addClass("on");
 }
 
 //서브메뉴 상단 페딩계산산

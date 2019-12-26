@@ -1627,86 +1627,20 @@ font-size: $fz12px;
 
 /*그래프*/
 .consulting_list {
-	width: 792px;
-	margin: -5px;
-
-	&.full {
-		width: 782px;
-		margin: 0;
-
-		> li {
-			float: none;
-			width: 100%;
-			margin-bottom: 10px;
-			padding: 0;
-
-			.item {
-				height: 610px;
-
-				> .title {
-					padding-top: 45px;
-					font-size: $fz30px;
-				}
-
-				.graph_area {
-					height: 450px;
-
-					&:after {
-						display: block;
-						position: absolute;
-						top: 50%;
-						left: 50%;
-						width: 298px;
-						height: 298px;
-						border: 2px solid #b4dad7;
-						border-radius: 50%;
-						box-sizing: border-box;
-						content: "";
-						transform: translate(-50.3%, -53.4%);
-					}
-				}
-
-				.bottom_info {
-					right: 0;
-					left: 0;
-					width: 680px;
-					margin: 0 auto;
-					padding: 15px 0 30px 0;
-					text-align: center;
-
-					li {
-						display: inline-block;
-						float: none;
-						margin: 0 10px;
-
-						&.payment {
-							position: absolute;
-							top: 12px;
-							right: 0;
-							margin: 0;
-						}
-					}
-				}
-
-			}
-		}
-	}
-
+	padding:0 17px;
 	> li {
-		float: left;
-		width: 50%;
-		padding: 5px;
+		padding-bottom: 15px;
 	}
 
 	.item {
 		position: relative;
-		height: 350px;
+		height: 325px;
 		border-radius: 5px;
 		background: #ffffff;
 
 		> .title {
 			padding-top: 20px;
-			font-size: $fz20px;
+			font-size: $fz16px;
 			line-height: 1;
 			text-align: center;
 			color: $color_level2;
@@ -1721,13 +1655,13 @@ font-size: $fz12px;
 				position: absolute;
 				top: 50%;
 				left: 50%;
-				width: 158px;
-				height: 158px;
+				width: 44.1vw;
+				height: 44.1vw;
 				border: 2px solid #b4dad7;
 				border-radius: 50%;
 				box-sizing: border-box;
 				content: "";
-				transform: translate(-51%, -57%);
+				transform: translate(-50.5%, -56.6%);
 			}
 		}
 
@@ -1737,25 +1671,43 @@ font-size: $fz12px;
 			bottom: 0;
 			left: 0;
 			width: 100%;
-			padding: 10px 20px 10px 40px;
-			border-top: 1px solid #eeedf5;
+			padding: 5px 20px 5px 40px;
+			text-align: center;
+			display:table;
+			font-size: 0;
 
 			li {
-				float: left;
-				margin-right: 22px;
-				line-height: 22px;
+				display: inline-block;
+				margin-right: 10px;
+				line-height: 18px;
+				letter-spacing: -1px;
 
 				&:last-child {
 					margin-right: 0;
 				}
 
+				&.before {
+					padding-left: 18px;
+					background: url("/resources/images/gu.renew.contents/icon_before.png") no-repeat left center;
+					font-size: $fz11px;
+					color: $color_level2;
+				}
+
+				&.after {
+					margin-right: 15px;
+					padding-left: 18px;
+					background: url("/resources/images/gu.renew.contents/icon_after.png") no-repeat left center;
+					font-size: $fz11px;
+					color: $color_level2;
+				}
+
 				&.payment {
-					float: right;
-					padding: 0 10px;
+					padding: 0 5px;
 					border-radius: 3px;
-					background: #b9ece6;
-					font-size: $fz14px;
-					color: #4ca399;
+					border:1px solid #b8e0dc;
+					font-size: $fz11px;
+					color: #01a7c4;
+					line-height: 16px;
 				}
 			}
 		}
