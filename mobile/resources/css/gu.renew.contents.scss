@@ -503,6 +503,10 @@ font-size: $fz12px;
 					background-size:100% auto;
 				}
 			}
+			
+			.name {
+				font-weight: 700;
+			}
 		}
 	}
 
@@ -552,7 +556,7 @@ font-size: $fz12px;
 					}
 
 					span {
-						margin-left: 10px;
+						margin-left: 6px;
 						color: $color_level4;
 					}
 				}
@@ -577,6 +581,46 @@ font-size: $fz12px;
 			}
 		}
 
+		.etc_info{
+			position: relative;
+			margin-top:8px;
+			padding-top:10px;
+			text-align: center;
+			&:before{
+				position: absolute;
+				top: 0px;
+				left: -20px;
+				display: block;
+				content: "";
+				width: calc(100% + 35px);
+				border-top: 1px dotted #d8d8d8;
+			}
+			ul{
+				overflow: hidden;
+				margin:0 -15px 0 -20px;
+				li{
+					float: left;
+					width:33.33%;
+					border-right:1px solid #ededed;
+					&:last-child{
+						border-right: none;
+					}
+					.tit{
+						font-size:12px;
+						color: #777;
+						margin-bottom: 5px;
+						display: block;
+					}
+					.txt{
+						font-size:12px;
+						strong{
+							font-size:13px;
+							font-weight: normal;
+						}
+					}
+				}
+			}
+		}
 
 		&.disabled {
 			.logo {
@@ -633,25 +677,27 @@ font-size: $fz12px;
 
 	.btn_contract_add {
 		display: block;
+		width: 100%;
 		position: relative;
 		margin-bottom: 10px;
-		padding: 28px 0 25px;
+		padding: 15px 0 15px;
 		border: 1px solid #ededf4;
 		border-radius: 10px;
 		background: #fff;
-		font-size: $fz20px;
+		font-size: $fz14px;
 		text-align: center;
 		letter-spacing: -0.075em;
 		color: $color_level2;
 
 		&:before {
 			display: block;
-			width: 38px;
-			height: 38px;
-			margin: 0 auto 12px;
-			border: 1px solid #e0e4eb;
+			width: 29px;
+			height: 29px;
+			margin: 0 auto 8px;
+			border: 1px solid #dfe3eb;
 			border-radius: 50%;
 			background: url(/resources/images/gu.renew.common/icon_add.png) no-repeat center center;
+			background-size: 14px 14px;
 			content: "";
 		}
 	}
@@ -1605,7 +1651,7 @@ font-size: $fz12px;
 	}
 }
 
-/* 진단/상세 */
+/* 진단상세 */
 .insurance_all_state {
 	.all_state_icon {
 		padding: 20px 16px;
@@ -2033,7 +2079,7 @@ font-size: $fz12px;
 				&.no_join {
 					.info {
 						.percent {
-							right: -26px !important;
+							right: -20px !important;
 							color: #777;
 
 						}
@@ -2300,7 +2346,6 @@ font-size: $fz12px;
 		}
 	}
 }
-
 .insurance_detail_tab{
 	.tab_list{	
 		padding:0 15px;
@@ -2340,6 +2385,15 @@ font-size: $fz12px;
 			}
 		}
 	}
+	.note_box{		
+		margin-top:20px;
+		padding:0 15px;
+		background: #f3f3f3;
+		border-top: none;
+		dd{
+			font-size: $fz12px;
+		}
+	}
 }
 .insurance_detail_tab_cont{
 	background: #fff;
@@ -2351,6 +2405,11 @@ font-size: $fz12px;
 		}
 	}
 	.list{
+		li:last-child{
+			.item{
+				border-bottom:none;
+			}
+		}
 		.item{
 			border-bottom: 1px solid #ededed;
 			padding: 10px 0 10px;
@@ -2403,3 +2462,4 @@ font-size: $fz12px;
 		}
 	}
 }
+

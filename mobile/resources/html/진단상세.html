@@ -48,13 +48,20 @@
 				if (idx == 1){//보장상세일 경우
 					$(".sub_tab_menu .sub_menu").show();
 					$(".wrap.sub, .wrap.sub .top_area").removeClass("tab").addClass("tab_open");
+					//가로 막대 그래프
+					$('.bar_rail .bar').each(function () {
+						var varValue = $(this).attr("data-value");
+						$(this).width(varValue);
+						counterStart();
+						//숫자 관련 count script 실행 class="count" 에있는 것들 실행
+					});
 				}else{
 					$(".sub_tab_menu .sub_menu").hide();
 					$(".wrap.sub, .wrap.sub .top_area").removeClass("tab_open").addClass("tab");
 					$(".btn_sub_menu_toggle.open").click();
 				}
-				subMenuActive(2)
 			});
+			subMenuActive(2)
 		})
 	</script>
 </head>
