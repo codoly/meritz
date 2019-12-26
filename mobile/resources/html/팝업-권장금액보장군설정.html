@@ -2,278 +2,387 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>컨설팅</title>
+	<meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+	<title>Title</title>
 	<link href="/resources/css/gu.renew.style.css" rel="stylesheet">
 	<script src="/resources/js/lib/jquery.min.js"></script>
 	<script src="/resources/js/lib/jquery.nice-select.min.js"></script>
+	<script src="/resources/js/lib/core.js"></script>
+	<script src="/resources/js/lib/charts.js"></script>
+	<script src="/resources/js/lib/animated.js"></script>
 	<script src="/resources/js/gu.renew.common.ui.js"></script>
-	<script>
-		$(function () {
-			$(".table_scroll").mCustomScrollbar({
-				scrollInertia: 150
-			});
-		})
-	</script>
 </head>
 <body style="background: rgba(0,0,0,0.5);">
 <!-- layer_pop_wrap: s -->
 <div class="layer_pop_wrap pop_security_set">
 	<div class="layer_pop_header">
-		<h2>권장금액<span class="dot">&#46</span>보장군 설정</h2>
+		<h2 class="title">권장금액/보장군 설정</h2>
 	</div>
 	<div class="layer_pop_content">
-		<table class="basic_type">
-			<colgroup>
-				<col style="width:9%">
-				<col style="width:20%">
-				<col style="width:auto">
-				<col style="width:21%">
-				<col style="width:21%">
-			</colgroup>
-			<thead>
-			<tr>
-				<th><span class="select">선택</span></th>
-				<th>보장명</th>
-				<th>보장분류</th>
-				<th>권장금액(만원)</th>
-				<th>설정금액(만원)</th>
-			</tr>
-			</thead>
-		</table>
-		<div class="table_scroll">
-			<table class="basic_type">
-				<colgroup>
-					<col style="width:9%">
-					<col style="width:20%">
-					<col style="width:auto">
-					<col style="width:21%">
-					<col style="width:21%">
-				</colgroup>
-				<thead>
-				<tr>
-					<th>선택</th>
-					<th>보장명</th>
-					<th>보장분류</th>
-					<th>권장금액(만원)</th>
-					<th>설정금액(만원)</th>
-				</tr>
-				</thead>
-				<tbody>
-				<tr>
-					<td class="align_c">
-						<div class="check_box_set no_label">
-							<input checked id="checkbox1" type="checkbox">
-							<label for="checkbox1"></label>
-						</div>
-					</td>
-					<th>치아,화상,골절</th>
-					<td>질병 간병인 지원 입원일당</td>
-					<td class="align_c">100,000</td>
-					<td class="align_c">
-						<div class="input_set right"><input data-value="100,000" style="width: 95px;" type="text" value="100,000">
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td class="align_c">
-						<div class="check_box_set no_label">
-							<input id="checkbox2" type="checkbox">
-							<label for="checkbox2"></label>
-						</div>
-					</td>
-					<th>사망</th>
-					<td>상해 간병인 지원 입원일당</td>
-					<td class="align_c">100,000</td>
-					<td class="align_c">
-						<div class="input_set right"><input data-value="100,000" style="width: 95px;" type="text" value="100,000">
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td class="align_c">
-						<div class="check_box_set no_label">
-							<input id="checkbox3" type="checkbox">
-							<label for="checkbox3"></label>
-						</div>
-					</td>
-					<th>후유장해</th>
-					<td>상해사망</td>
-					<td class="align_c">100,000</td>
-					<td class="align_c">
-						<div class="input_set right"><input data-value="100,000" style="width: 95px;" type="text" value="100,000">
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td class="align_c">
-						<div class="check_box_set no_label">
-							<input id="checkbox4" type="checkbox">
-							<label for="checkbox4"></label>
-						</div>
-					</td>
-					<th>치아,화상,골절</th>
-					<td>질병 간병인 지원 입원일당</td>
-					<td class="align_c">100,000</td>
-					<td class="align_c">
-						<div class="input_set right"><input data-value="100,000" style="width: 95px;" type="text" value="100,000">
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td class="align_c">
-						<div class="check_box_set no_label">
-							<input checked id="checkbox5" type="checkbox">
-							<label for="checkbox5"></label>
-						</div>
-					</td>
-					<th>치아,화상,골절</th>
-					<td>질병 간병인 지원 입원일당</td>
-					<td class="align_c">100,000</td>
-					<td class="align_c">
-						<div class="input_set right"><input data-value="100,000" style="width: 95px;" type="text" value="100,000">
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td class="align_c">
-						<div class="check_box_set no_label">
-							<input id="checkbox6" type="checkbox">
-							<label for="checkbox6"></label>
-						</div>
-					</td>
-					<th>사망</th>
-					<td>상해 간병인 지원 입원일당</td>
-					<td class="align_c">100,000</td>
-					<td class="align_c">
-						<div class="input_set right"><input data-value="100,000" style="width: 95px;" type="text" value="100,000">
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td class="align_c">
-						<div class="check_box_set no_label">
-							<input id="checkbox7" type="checkbox">
-							<label for="checkbox7"></label>
-						</div>
-					</td>
-					<th>후유장해</th>
-					<td>상해사망</td>
-					<td class="align_c">100,000</td>
-					<td class="align_c">
-						<div class="input_set right"><input data-value="100,000" style="width: 95px;" type="text" value="100,000">
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td class="align_c">
-						<div class="check_box_set no_label">
-							<input id="checkbox8" type="checkbox">
-							<label for="checkbox8"></label>
-						</div>
-					</td>
-					<th>치아,화상,골절</th>
-					<td>질병 간병인 지원 입원일당</td>
-					<td class="align_c">100,000</td>
-					<td class="align_c">
-						<div class="input_set right"><input data-value="100,000" style="width: 95px;" type="text" value="100,000">
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td class="align_c">
-						<div class="check_box_set no_label">
-							<input checked id="checkbox9" type="checkbox">
-							<label for="checkbox9"></label>
-						</div>
-					</td>
-					<th>치아,화상,골절</th>
-					<td>질병 간병인 지원 입원일당</td>
-					<td class="align_c">100,000</td>
-					<td class="align_c">
-						<div class="input_set right"><input data-value="100,000" style="width: 95px;" type="text" value="100,000">
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td class="align_c">
-						<div class="check_box_set no_label">
-							<input id="checkbox10" type="checkbox">
-							<label for="checkbox10"></label>
-						</div>
-					</td>
-					<th>사망</th>
-					<td>상해 간병인 지원 입원일당</td>
-					<td class="align_c">100,000</td>
-					<td class="align_c">
-						<div class="input_set right"><input data-value="100,000" style="width: 95px;" type="text" value="100,000">
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td class="align_c">
-						<div class="check_box_set no_label">
-							<input id="checkbox11" type="checkbox">
-							<label for="checkbox11"></label>
-						</div>
-					</td>
-					<th>후유장해</th>
-					<td>상해사망</td>
-					<td class="align_c">100,000</td>
-					<td class="align_c">
-						<div class="input_set right"><input data-value="100,000" style="width: 95px;" type="text" value="100,000">
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td class="align_c">
-						<div class="check_box_set no_label">
-							<input id="checkbox12" type="checkbox">
-							<label for="checkbox12"></label>
-						</div>
-					</td>
-					<th>치아,화상,골절</th>
-					<td>질병 간병인 지원 입원일당</td>
-					<td class="align_c">100,000</td>
-					<td class="align_c">
-						<div class="input_set right"><input data-value="100,000" style="width: 95px;" type="text" value="100,000">
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td class="align_c">
-						<div class="check_box_set no_label">
-							<input id="checkbox11" type="checkbox">
-							<label for="checkbox11"></label>
-						</div>
-					</td>
-					<th>후유장해</th>
-					<td>상해사망</td>
-					<td class="align_c">100,000</td>
-					<td class="align_c">
-						<div class="input_set right"><input data-value="100,000" style="width: 95px;" type="text" value="100,000">
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td class="align_c">
-						<div class="check_box_set no_label">
-							<input id="checkbox12" type="checkbox">
-							<label for="checkbox12"></label>
-						</div>
-					</td>
-					<th>치아,화상,골절</th>
-					<td>질병 간병인 지원 입원일당</td>
-					<td class="align_c">100,000</td>
-					<td class="align_c">
-						<div class="input_set right"><input data-value="100,000" style="width: 95px;" type="text" value="100,000">
-						</div>
-					</td>
-				</tr>
-				</tbody>
-			</table>
+		<div class="tab_list">
+			<ul>
+				<li><button class="tab"><span>권장금액 설정</span></button></li>
+				<li><button class="tab"><span>보장군 설정</span></button></li>
+			</ul>
 		</div>
+		<div class="tab_cont_box">
+			<div class="tab_cont">
+				<table class="basic_type">
+					<colgroup>
+						<col style="width:auto">
+						<col style="width:20%">
+						<col style="width:20%">
+					</colgroup>
+					<thead>
+					<tr>
+						<th>보장명</th>
+						<th>기준금액(만원)</th>
+						<th>설정금액(만원)</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td>질병 간병인 지원 입원일당</td>
+						<td class="align_c">100,000</td>
+						<td class="align_c">
+							<div class="input_set right"><input data-value="100,000" style="width: 95px;" type="text" value="100,000">
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>상해 간병인 지원 입원일당</td>
+						<td class="align_c">100,000</td>
+						<td class="align_c">
+							<div class="input_set right"><input data-value="100,000" style="width: 95px;" type="text" value="100,000">
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>상해사망</td>
+						<td class="align_c">100,000</td>
+						<td class="align_c">
+							<div class="input_set right"><input data-value="100,000" style="width: 95px;" type="text" value="100,000">
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>질병 간병인 지원 입원일당</td>
+						<td class="align_c">100,000</td>
+						<td class="align_c">
+							<div class="input_set right"><input data-value="100,000" style="width: 95px;" type="text" value="100,000">
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>질병 간병인 지원 입원일당</td>
+						<td class="align_c">100,000</td>
+						<td class="align_c">
+							<div class="input_set right"><input data-value="100,000" style="width: 95px;" type="text" value="100,000">
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>상해 간병인 지원 입원일당</td>
+						<td class="align_c">100,000</td>
+						<td class="align_c">
+							<div class="input_set right"><input data-value="100,000" style="width: 95px;" type="text" value="100,000">
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>상해사망</td>
+						<td class="align_c">100,000</td>
+						<td class="align_c">
+							<div class="input_set right"><input data-value="100,000" style="width: 95px;" type="text" value="100,000">
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>질병 간병인 지원 입원일당</td>
+						<td class="align_c">100,000</td>
+						<td class="align_c">
+							<div class="input_set right"><input data-value="100,000" style="width: 95px;" type="text" value="100,000">
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>질병 간병인 지원 입원일당</td>
+						<td class="align_c">100,000</td>
+						<td class="align_c">
+							<div class="input_set right"><input data-value="100,000" style="width: 95px;" type="text" value="100,000">
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>상해 간병인 지원 입원일당</td>
+						<td class="align_c">100,000</td>
+						<td class="align_c">
+							<div class="input_set right"><input data-value="100,000" style="width: 95px;" type="text" value="100,000">
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>상해사망</td>
+						<td class="align_c">100,000</td>
+						<td class="align_c">
+							<div class="input_set right"><input data-value="100,000" style="width: 95px;" type="text" value="100,000">
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>질병 간병인 지원 입원일당</td>
+						<td class="align_c">100,000</td>
+						<td class="align_c">
+							<div class="input_set right"><input data-value="100,000" style="width: 95px;" type="text" value="100,000">
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td class="align_c">100,000</td>
+						<td class="align_c">
+							<div class="input_set right"><input data-value="100,000" style="width: 95px;" type="text" value="100,000">
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>질병 간병인 지원 입원일당</td>
+						<td class="align_c">100,000</td>
+						<td class="align_c">
+							<div class="input_set right"><input data-value="100,000" style="width: 95px;" type="text" value="100,000">
+							</div>
+						</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="tab_cont">
+				<table class="basic_type">
+					<colgroup>
+						<col style="width:20%">
+						<col style="width:auto">
+						<col style="width:20%">
+					</colgroup>
+					<thead>
+					<tr>
+						<th>보장구분</th>
+						<th>보장명</th>
+						<th>선택</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td>사망</td>
+						<td>질병사망</td>
+						<td class="align_c">
+							<div class="check_box_set no_label">
+								<input checked id="checkbox1" type="checkbox">
+								<label for="checkbox1"></label>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td class="align_c">
+							<div class="check_box_set no_label">
+								<input id="checkbox2" type="checkbox">
+								<label for="checkbox2"></label>
+							</div>
+						</td>
+						<th>사망</th>
+						<td>상해 간병인 지원 입원일당</td>
+						<td class="align_c">100,000</td>
+						<td class="align_c">
+							<div class="input_set right"><input data-value="100,000" style="width: 95px;" type="text" value="100,000">
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td class="align_c">
+							<div class="check_box_set no_label">
+								<input id="checkbox3" type="checkbox">
+								<label for="checkbox3"></label>
+							</div>
+						</td>
+						<th>후유장해</th>
+						<td>상해사망</td>
+						<td class="align_c">100,000</td>
+						<td class="align_c">
+							<div class="input_set right"><input data-value="100,000" style="width: 95px;" type="text" value="100,000">
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td class="align_c">
+							<div class="check_box_set no_label">
+								<input id="checkbox4" type="checkbox">
+								<label for="checkbox4"></label>
+							</div>
+						</td>
+						<th>치아,화상,골절</th>
+						<td>질병 간병인 지원 입원일당</td>
+						<td class="align_c">100,000</td>
+						<td class="align_c">
+							<div class="input_set right"><input data-value="100,000" style="width: 95px;" type="text" value="100,000">
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td class="align_c">
+							<div class="check_box_set no_label">
+								<input checked id="checkbox5" type="checkbox">
+								<label for="checkbox5"></label>
+							</div>
+						</td>
+						<th>치아,화상,골절</th>
+						<td>질병 간병인 지원 입원일당</td>
+						<td class="align_c">100,000</td>
+						<td class="align_c">
+							<div class="input_set right"><input data-value="100,000" style="width: 95px;" type="text" value="100,000">
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td class="align_c">
+							<div class="check_box_set no_label">
+								<input id="checkbox6" type="checkbox">
+								<label for="checkbox6"></label>
+							</div>
+						</td>
+						<th>사망</th>
+						<td>상해 간병인 지원 입원일당</td>
+						<td class="align_c">100,000</td>
+						<td class="align_c">
+							<div class="input_set right"><input data-value="100,000" style="width: 95px;" type="text" value="100,000">
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td class="align_c">
+							<div class="check_box_set no_label">
+								<input id="checkbox7" type="checkbox">
+								<label for="checkbox7"></label>
+							</div>
+						</td>
+						<th>후유장해</th>
+						<td>상해사망</td>
+						<td class="align_c">100,000</td>
+						<td class="align_c">
+							<div class="input_set right"><input data-value="100,000" style="width: 95px;" type="text" value="100,000">
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td class="align_c">
+							<div class="check_box_set no_label">
+								<input id="checkbox8" type="checkbox">
+								<label for="checkbox8"></label>
+							</div>
+						</td>
+						<th>치아,화상,골절</th>
+						<td>질병 간병인 지원 입원일당</td>
+						<td class="align_c">100,000</td>
+						<td class="align_c">
+							<div class="input_set right"><input data-value="100,000" style="width: 95px;" type="text" value="100,000">
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td class="align_c">
+							<div class="check_box_set no_label">
+								<input checked id="checkbox9" type="checkbox">
+								<label for="checkbox9"></label>
+							</div>
+						</td>
+						<th>치아,화상,골절</th>
+						<td>질병 간병인 지원 입원일당</td>
+						<td class="align_c">100,000</td>
+						<td class="align_c">
+							<div class="input_set right"><input data-value="100,000" style="width: 95px;" type="text" value="100,000">
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td class="align_c">
+							<div class="check_box_set no_label">
+								<input id="checkbox10" type="checkbox">
+								<label for="checkbox10"></label>
+							</div>
+						</td>
+						<th>사망</th>
+						<td>상해 간병인 지원 입원일당</td>
+						<td class="align_c">100,000</td>
+						<td class="align_c">
+							<div class="input_set right"><input data-value="100,000" style="width: 95px;" type="text" value="100,000">
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td class="align_c">
+							<div class="check_box_set no_label">
+								<input id="checkbox11" type="checkbox">
+								<label for="checkbox11"></label>
+							</div>
+						</td>
+						<th>후유장해</th>
+						<td>상해사망</td>
+						<td class="align_c">100,000</td>
+						<td class="align_c">
+							<div class="input_set right"><input data-value="100,000" style="width: 95px;" type="text" value="100,000">
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td class="align_c">
+							<div class="check_box_set no_label">
+								<input id="checkbox12" type="checkbox">
+								<label for="checkbox12"></label>
+							</div>
+						</td>
+						<th>치아,화상,골절</th>
+						<td>질병 간병인 지원 입원일당</td>
+						<td class="align_c">100,000</td>
+						<td class="align_c">
+							<div class="input_set right"><input data-value="100,000" style="width: 95px;" type="text" value="100,000">
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td class="align_c">
+							<div class="check_box_set no_label">
+								<input id="checkbox11" type="checkbox">
+								<label for="checkbox11"></label>
+							</div>
+						</td>
+						<th>후유장해</th>
+						<td>상해사망</td>
+						<td class="align_c">100,000</td>
+						<td class="align_c">
+							<div class="input_set right"><input data-value="100,000" style="width: 95px;" type="text" value="100,000">
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td class="align_c">
+							<div class="check_box_set no_label">
+								<input id="checkbox12" type="checkbox">
+								<label for="checkbox12"></label>
+							</div>
+						</td>
+						<th>치아,화상,골절</th>
+						<td>질병 간병인 지원 입원일당</td>
+						<td class="align_c">100,000</td>
+						<td class="align_c">
+							<div class="input_set right"><input data-value="100,000" style="width: 95px;" type="text" value="100,000">
+							</div>
+						</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		
+	</div>
+	<div class="layer_pop_bottom">		
 		<div class="btn_area">
-			<a class="btn_text" href="#"><span>설정 초기화</span></a>
 			<a class="btn_text fill_red" href="#"><span>저장</span></a>
 		</div>
 	</div>

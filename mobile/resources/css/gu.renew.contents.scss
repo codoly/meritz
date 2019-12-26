@@ -1189,26 +1189,23 @@
 	}
 }
 
+/* 권장금액/보장군 설정 */
 .pop_security_set {
-	width: 660px;
-
+	width: 100%;
+	height: 100%;
 	.layer_pop_content {
-		padding: 20px 40px 30px;
-	}
-
-	.table_scroll {
-		height: 535px;
-
-		.basic_type {
-			thead {
-				position: absolute;
-				left: -9999px;
-			}
+		display: flex;
+		flex-direction: column;
+		.tab_list{
+			flex: none;
+		}
+		.tab_cont_box{
+			flex:1;
+			overflow: auto;
 		}
 	}
-
+	
 	.basic_type {
-		width: 580px;
 
 		th, td {
 			vertical-align: middle;
@@ -1234,12 +1231,6 @@
 		.check_box_set {
 			line-height: 1;
 		}
-	}
-
-	.btn_area {
-		margin-top: 20px;
-		padding-top: 20px;
-		border-top: 1px solid $line_color1
 	}
 }
 
