@@ -2,24 +2,21 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>컨설팅</title>
+	<meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+	<title>Title</title>
 	<link href="/resources/css/gu.renew.style.css" rel="stylesheet">
 	<script src="/resources/js/lib/jquery.min.js"></script>
 	<script src="/resources/js/lib/jquery.nice-select.min.js"></script>
+	<script src="/resources/js/lib/core.js"></script>
+	<script src="/resources/js/lib/charts.js"></script>
+	<script src="/resources/js/lib/animated.js"></script>
 	<script src="/resources/js/gu.renew.common.ui.js"></script>
-	<script>
-		$(function () {
-			$(".contract_scroll").mCustomScrollbar({
-				scrollInertia: 150
-			});
-		})
-	</script>
 </head>
 <body style="background: rgba(0,0,0,0.5);">
 <!-- layer_pop_wrap : s -->
 <div class="layer_pop_wrap pop_conditional_contract">
 	<div class="layer_pop_header">
-		<h2>가계약 조회 리스트</h2>
+		<h2 class="title">가계약 조회 리스트</h2>
 	</div>
 	<div class="layer_pop_content">
 		<div class="search_condition">
@@ -50,138 +47,186 @@
 				</li>
 			</ul>
 			<div class="date">2019.09.25 ~2019.10.25</div>
-		</div>
-		<div class="contract_scroll">
-			<!-- insurance_list : s -->
-			<div class="insurance_list">
-				<div class="insurance" href="#">
-					<div class="info">
-						<div class="inner">
-							<div class="name">(무)메리츠 케어프리보험 M-Basket1910</div>
-							<div class="date"><span class="state">심사대상</span>106200573201910141</div>
-							<button class="btn_edit"><span>편집</span></button>
+		</div>	
+		<!-- insurance_list : s -->
+		<div class="insurance_list check_list">			
+			<div class="list_box">
+				<div class="item">
+					<button class="insurance"><!-- 체크시 class 'checked' 추가  -->
+						<div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904</div>
+						<div class="payment_info">
+							<span class="state">심사대상</span>
+							<div class="info">
+								<span class="no">106200573201910141</span>
+							</div>
 						</div>
-					</div>
-					<div class="payment">
-						<ul>
-							<li class="top">
-								<span class="th">보험료</span>
-								<span class="td"><strong>1,000,000</strong>원</span>
-							</li>
-							<li>
-								<span class="th">납입만기</span>
-								<span class="td">20년(100세)</span>
-							</li>
-							<li>
-								<span class="th">청약일</span>
-								<span class="td">2019.10.14</span>
-							</li>
-						</ul>
-					</div>
+						<div class="etc_info">
+							<ul>
+								<li>
+									<span class="tit">보험료</span>
+									<div class="txt"><strong>50,000</strong>원</div>
+								</li>
+								<li>
+									<span class="tit">납기/만기</span>
+									<div class="txt"><strong>20</strong>년/<strong>100</strong>년</div>
+								</li>
+								<li>
+									<span class="tit">청약일</span>
+									<div class="txt"><strong>2019.10.14</strong></div>
+								</li>
+							</ul>
+						</div>
+					</button>
+					<button class="btn_edit"><span>편집</span></button>
 				</div>
-				<div class="insurance" href="#">
-					<div class="info">
-						<div class="inner">
-							<div class="name">(무)메리츠 케어프리보험 M-Basket1910</div>
-							<div class="date"><span class="state">심사대상</span>106200573201910141</div>
-							<button class="btn_edit"><span>편집</span></button>
+
+				<div class="item">
+					<button class="insurance checked">
+						<div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904</div>
+						<div class="payment_info">
+							<span class="state">심사대상</span>
+							<div class="info">
+								<span class="no">106200573201910141</span>
+							</div>
 						</div>
-					</div>
-					<div class="payment">
-						<ul>
-							<li class="top">
-								<span class="th">보험료</span>
-								<span class="td"><strong>1,000,000</strong>원</span>
-							</li>
-							<li>
-								<span class="th">납입만기</span>
-								<span class="td">20년(100세)</span>
-							</li>
-							<li>
-								<span class="th">청약일</span>
-								<span class="td">2019.10.14</span>
-							</li>
-						</ul>
-					</div>
+						<div class="etc_info">
+							<ul>
+								<li>
+									<span class="tit">보험료</span>
+									<div class="txt"><strong>50,000</strong>원</div>
+								</li>
+								<li>
+									<span class="tit">납기/만기</span>
+									<div class="txt"><strong>20</strong>년/<strong>100</strong>년</div>
+								</li>
+								<li>
+									<span class="tit">청약일</span>
+									<div class="txt"><strong>2019.10.14</strong></div>
+								</li>
+							</ul>
+						</div>
+					</button>
+					<button class="btn_edit"><span>편집</span></button>
 				</div>
-				<div class="insurance" href="#">
-					<div class="info">
-						<div class="inner">
-							<div class="name">(무)메리츠 케어프리보험 M-Basket1910</div>
-							<div class="date"><span class="state">심사대상</span>106200573201910141</div>
-							<button class="btn_edit"><span>편집</span></button>
+				<div class="item">
+					<button class="insurance"><!-- 체크시 class 'checked' 추가  -->
+						<div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904</div>
+						<div class="payment_info">
+							<span class="state">심사대상</span>
+							<div class="info">
+								<span class="no">106200573201910141</span>
+							</div>
 						</div>
-					</div>
-					<div class="payment">
-						<ul>
-							<li class="top">
-								<span class="th">보험료</span>
-								<span class="td"><strong>1,000,000</strong>원</span>
-							</li>
-							<li>
-								<span class="th">납입만기</span>
-								<span class="td">20년(100세)</span>
-							</li>
-							<li>
-								<span class="th">청약일</span>
-								<span class="td">2019.10.14</span>
-							</li>
-						</ul>
-					</div>
+						<div class="etc_info">
+							<ul>
+								<li>
+									<span class="tit">보험료</span>
+									<div class="txt"><strong>50,000</strong>원</div>
+								</li>
+								<li>
+									<span class="tit">납기/만기</span>
+									<div class="txt"><strong>20</strong>년/<strong>100</strong>년</div>
+								</li>
+								<li>
+									<span class="tit">청약일</span>
+									<div class="txt"><strong>2019.10.14</strong></div>
+								</li>
+							</ul>
+						</div>
+					</button>
+					<button class="btn_edit"><span>편집</span></button>
 				</div>
-				<div class="insurance" href="#">
-					<div class="info">
-						<div class="inner">
-							<div class="name">(무)메리츠 케어프리보험 M-Basket1910</div>
-							<div class="date"><span class="state">심사대상</span>106200573201910141</div>
-							<button class="btn_edit"><span>편집</span></button>
+
+				<div class="item">
+					<button class="insurance checked">
+						<div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904</div>
+						<div class="payment_info">
+							<span class="state">심사대상</span>
+							<div class="info">
+								<span class="no">106200573201910141</span>
+							</div>
 						</div>
-					</div>
-					<div class="payment">
-						<ul>
-							<li class="top">
-								<span class="th">보험료</span>
-								<span class="td"><strong>1,000,000</strong>원</span>
-							</li>
-							<li>
-								<span class="th">납입만기</span>
-								<span class="td">20년(100세)</span>
-							</li>
-							<li>
-								<span class="th">청약일</span>
-								<span class="td">2019.10.14</span>
-							</li>
-						</ul>
-					</div>
+						<div class="etc_info">
+							<ul>
+								<li>
+									<span class="tit">보험료</span>
+									<div class="txt"><strong>50,000</strong>원</div>
+								</li>
+								<li>
+									<span class="tit">납기/만기</span>
+									<div class="txt"><strong>20</strong>년/<strong>100</strong>년</div>
+								</li>
+								<li>
+									<span class="tit">청약일</span>
+									<div class="txt"><strong>2019.10.14</strong></div>
+								</li>
+							</ul>
+						</div>
+					</button>
+					<button class="btn_edit"><span>편집</span></button>
 				</div>
-				<div class="insurance" href="#">
-					<div class="info">
-						<div class="inner">
-							<div class="name">(무)메리츠 케어프리보험 M-Basket1910</div>
-							<div class="date"><span class="state">심사대상</span>106200573201910141</div>
-							<button class="btn_edit"><span>편집</span></button>
+				<div class="item">
+					<button class="insurance"><!-- 체크시 class 'checked' 추가  -->
+						<div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904</div>
+						<div class="payment_info">
+							<span class="state">심사대상</span>
+							<div class="info">
+								<span class="no">106200573201910141</span>
+							</div>
 						</div>
-					</div>
-					<div class="payment">
-						<ul>
-							<li class="top">
-								<span class="th">보험료</span>
-								<span class="td"><strong>1,000,000</strong>원</span>
-							</li>
-							<li>
-								<span class="th">납입만기</span>
-								<span class="td">20년(100세)</span>
-							</li>
-							<li>
-								<span class="th">청약일</span>
-								<span class="td">2019.10.14</span>
-							</li>
-						</ul>
-					</div>
+						<div class="etc_info">
+							<ul>
+								<li>
+									<span class="tit">보험료</span>
+									<div class="txt"><strong>50,000</strong>원</div>
+								</li>
+								<li>
+									<span class="tit">납기/만기</span>
+									<div class="txt"><strong>20</strong>년/<strong>100</strong>년</div>
+								</li>
+								<li>
+									<span class="tit">청약일</span>
+									<div class="txt"><strong>2019.10.14</strong></div>
+								</li>
+							</ul>
+						</div>
+					</button>
+					<button class="btn_edit"><span>편집</span></button>
+				</div>
+
+				<div class="item">
+					<button class="insurance checked">
+						<div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904</div>
+						<div class="payment_info">
+							<span class="state">심사대상</span>
+							<div class="info">
+								<span class="no">106200573201910141</span>
+							</div>
+						</div>
+						<div class="etc_info">
+							<ul>
+								<li>
+									<span class="tit">보험료</span>
+									<div class="txt"><strong>50,000</strong>원</div>
+								</li>
+								<li>
+									<span class="tit">납기/만기</span>
+									<div class="txt"><strong>20</strong>년/<strong>100</strong>년</div>
+								</li>
+								<li>
+									<span class="tit">청약일</span>
+									<div class="txt"><strong>2019.10.14</strong></div>
+								</li>
+							</ul>
+						</div>
+					</button>
+					<button class="btn_edit"><span>편집</span></button>
 				</div>
 			</div>
-			<!-- insurance_list : e -->
 		</div>
+		<!-- insurance_list : e -->
+	</div>
+	<div class="layer_pop_bottom">		
 		<div class="btn_area">
 			<a class="btn_text fill_red" href="#"><span>확인</span></a>
 		</div>

@@ -2,24 +2,33 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>submain</title>
+	<meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+	<title>Title</title>
 	<link href="/resources/css/gu.renew.style.css" rel="stylesheet">
 	<script src="/resources/js/lib/jquery.min.js"></script>
 	<script src="/resources/js/lib/jquery.nice-select.min.js"></script>
+	<script src="/resources/js/lib/core.js"></script>
+	<script src="/resources/js/lib/charts.js"></script>
+	<script src="/resources/js/lib/animated.js"></script>
 	<script src="/resources/js/gu.renew.common.ui.js"></script>
 </head>
 <body style="background:rgba(0,0,0,0.5)">
 <!-- layer_pop_wrap : s -->
 <div class="layer_pop_wrap pop_alert">
 	<div class="layer_pop_header">
-		<h2>고객등록<span class="dot">&#46</span>동의 문자 발송</h2>
+		<h2 class="title">고객등록/동의 문자 발송</h2>
 	</div>
 	<div class="layer_pop_content">
 		<div class="center_box">
 			<div>
-				<div class="input_set"><input placeholder="휴대폰번호를 입력해주세요.('-'없이 입력)" type="text"></div>
+				<div class="input_set">
+					<input placeholder="휴대폰번호를 입력해주세요.('-'없이 입력)" type="text">
+					<button class="del"><span>삭제</span></button>
+				</div>
 			</div>
 		</div>
+	</div>
+	<div class="layer_pop_bottom">		
 		<div class="btn_area">
 			<a class="btn_text fill_red" href="#"><span>보내기</span></a>
 		</div>

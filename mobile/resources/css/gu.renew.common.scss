@@ -406,6 +406,12 @@ button div, button:active div, button:before, button:focus div {
 		color: #fff;
 	}
 
+	&.fill_gray2 {
+		border: 1px solid #d5d5d5;
+		background: #d5d5d5;
+		color: $color_level3;
+	}
+
 	&.fill_red {
 		border: 1px solid $color_button_red;
 		background: $color_button_red;
@@ -620,25 +626,27 @@ button div, button:active div, button:before, button:focus div {
 
 		&:checked + label:after {
 			background: url("/resources/images/gu.renew.common/radio_on.png") no-repeat;
+			background-size: 100% auto;
 		}
 	}
 
 	label {
 		display: inline-block;
 		position: relative;
-		padding-left: 33px;
+		padding-left: 25px;
 		font-size: $fz14px;
-		line-height: 24px;
+		line-height: 20px;
 
 		&:after {
 			display: block;
 			position: absolute;
 			top: 0;
 			left: 0;
-			width: 24px;
-			height: 24px;
+			width: 19px;
+			height: 19px;
 			border-radius: 3px;
-			background: url("/resources/images/gu.renew.common/radio_off.png") no-repeat;
+			background: url("/resources/images/gu.renew.common/radio_off.png") no-repeat;			
+			background-size: 100% auto;
 			box-sizing: border-box;
 			content: "";
 		}
@@ -646,7 +654,7 @@ button div, button:active div, button:before, button:focus div {
 
 	&.no_label {
 		label {
-			height: 24px;
+			height: 19px;
 			padding-left: 24px;
 		}
 	}
