@@ -21,6 +21,15 @@
 					$(".wrap").removeClass("fixed")
 				}
 			})
+			//고객리스트 타입 뷰
+			$(document).on("click", ".list_type_select .btn", function () {
+				var target = $(this);
+				var targetCont = $('.customer_list_box .customer_list');
+				var idx = $(this).index();
+				targetCont.hide();
+				targetCont.eq(idx).show();
+				target.addClass('active').siblings().removeClass('active');
+			});
 		})
 	</script>
 </head>
@@ -85,88 +94,18 @@
 					</div>
 
 					<div class="list_type_select">
-						<button class="grid">
-							<span>그리드형</span>
+						<button class="btn grid active">
+							<span class="blind">그리드형</span>
 						</button>
-						<button class="list">
-							<span>리스트형</span>
+						<button class="btn list">
+							<span class="blind">리스트형</span>
 						</button>
 					</div>
 				</div>
 			</div>
 			<div class="customer_list_box">
-				<!-- 리스트형 -->
-				<div class="list_table_type">
-					<div class="tbody_box load">
-						<a class="item" href="#">
-							<div class="tr">
-								<div class="td name">독고영재</div>
-								<div class="td gender">남</div>
-								<div class="td birth">1981.05.30</div>
-								<div class="td old">32세</div>
-							</div>
-						</a>
-						<a class="item" href="#">
-							<div class="tr">
-								<div class="td name">독고영재</div>
-								<div class="td gender">남</div>
-								<div class="td birth">1981.05.30</div>
-								<div class="td old">32세</div>
-							</div>
-						</a>
-						<a class="item" href="#">
-							<div class="tr">
-								<div class="td name">김창열</div>
-								<div class="td gender">남</div>
-								<div class="td birth">1981.05.30</div>
-								<div class="td old">32세</div>
-							</div>
-						</a>
-						<a class="item" href="#">
-							<div class="tr">
-								<div class="td name">송혜교</div>
-								<div class="td gender">여</div>
-								<div class="td birth">1981.05.30</div>
-								<div class="td old">32세</div>
-							</div>
-						</a>
-						<a class="item" href="#">
-							<div class="tr">
-								<div class="td name">독고영재</div>
-								<div class="td gender">남</div>
-								<div class="td birth">1981.05.30</div>
-								<div class="td old">32세</div>
-							</div>
-						</a>
-						<a class="item" href="#">
-							<div class="tr">
-								<div class="td name">독고영재</div>
-								<div class="td gender">남</div>
-								<div class="td birth">1981.05.30</div>
-								<div class="td old">32세</div>
-							</div>
-						</a>
-						<a class="item" href="#">
-							<div class="tr">
-								<div class="td name">김창열</div>
-								<div class="td gender">남</div>
-								<div class="td birth">1981.05.30</div>
-								<div class="td old">32세</div>
-							</div>
-						</a>
-						<a class="item" href="#">
-							<div class="tr">
-								<div class="td name">송혜교</div>
-								<div class="td gender">여</div>
-								<div class="td birth">1981.05.30</div>
-								<div class="td old">32세</div>
-							</div>
-						</a>
-					</div>
-				</div>
-
-				<!-- 그리드형 -->
-				<div class="grid_type">
+				<!-- 그리드형 : s -->
+				<div class="customer_list grid_type">
 					<div class="item">
 						<a class="customer_info" href="#">
 							<div class="name">독고영재</div>
@@ -250,6 +189,78 @@
 						</div>
 					</div>
 				</div>
+				<!-- 그리드형 : e -->
+
+				<!-- 리스트형 : s -->
+				<div class="customer_list list_table_type">
+					<div class="tbody_box load">
+						<a class="item" href="#">
+							<div class="tr">
+								<div class="td name">독고영재</div>
+								<div class="td gender">남</div>
+								<div class="td birth">1981.05.30</div>
+								<div class="td old">32세</div>
+							</div>
+						</a>
+						<a class="item" href="#">
+							<div class="tr">
+								<div class="td name">독고영재</div>
+								<div class="td gender">남</div>
+								<div class="td birth">1981.05.30</div>
+								<div class="td old">32세</div>
+							</div>
+						</a>
+						<a class="item" href="#">
+							<div class="tr">
+								<div class="td name">김창열</div>
+								<div class="td gender">남</div>
+								<div class="td birth">1981.05.30</div>
+								<div class="td old">32세</div>
+							</div>
+						</a>
+						<a class="item" href="#">
+							<div class="tr">
+								<div class="td name">송혜교</div>
+								<div class="td gender">여</div>
+								<div class="td birth">1981.05.30</div>
+								<div class="td old">32세</div>
+							</div>
+						</a>
+						<a class="item" href="#">
+							<div class="tr">
+								<div class="td name">독고영재</div>
+								<div class="td gender">남</div>
+								<div class="td birth">1981.05.30</div>
+								<div class="td old">32세</div>
+							</div>
+						</a>
+						<a class="item" href="#">
+							<div class="tr">
+								<div class="td name">독고영재</div>
+								<div class="td gender">남</div>
+								<div class="td birth">1981.05.30</div>
+								<div class="td old">32세</div>
+							</div>
+						</a>
+						<a class="item" href="#">
+							<div class="tr">
+								<div class="td name">김창열</div>
+								<div class="td gender">남</div>
+								<div class="td birth">1981.05.30</div>
+								<div class="td old">32세</div>
+							</div>
+						</a>
+						<a class="item" href="#">
+							<div class="tr">
+								<div class="td name">송혜교</div>
+								<div class="td gender">여</div>
+								<div class="td birth">1981.05.30</div>
+								<div class="td old">32세</div>
+							</div>
+						</a>
+					</div>
+				</div>
+				<!-- 리스트형 : e -->
 
 				<!-- 고객등록 버튼 : s -->
 				<div class="customer_add">

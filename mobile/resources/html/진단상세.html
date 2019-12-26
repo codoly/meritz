@@ -47,18 +47,19 @@
 				tabContent.removeClass("on").eq(idx).addClass("on");
 				if (idx == 1){//보장상세일 경우
 					$(".sub_tab_menu .sub_menu").show();
-					$(".wrap.sub .top_area").removeClass("tab").addClass("tab_open");
+					$(".wrap.sub, .wrap.sub .top_area").removeClass("tab").addClass("tab_open");
 				}else{
 					$(".sub_tab_menu .sub_menu").hide();
-					$(".wrap.sub .top_area").removeClass("tab_open").addClass("tab");
+					$(".wrap.sub, .wrap.sub .top_area").removeClass("tab_open").addClass("tab");
 					$(".btn_sub_menu_toggle.open").click();
 				}
+				subMenuActive(2)
 			});
 		})
 	</script>
 </head>
 <body>
-<div class="wrap sub">
+<div class="wrap sub tab">
 	<div class="top_area tab">
 		<ul class="menu_area">
 			<li class="home"><a class="home" href="#">홈으로</a></li>
@@ -72,7 +73,7 @@
 			<div class="name">
 				<strong>권은아</strong>
 				고객님
-				<button class="btn_like">즐겨찾기</button><!--활성화 class="btn_like on"-->
+				<button class="favorites">즐겨찾기</button><!--활성화 class="btn_like on"-->
 			</div>
 			<ul class="info">
 				<li>

@@ -2093,13 +2093,43 @@ font-size: $fz12px;
 				@include ellipsis();
 			}
 		}
-		&:after{
-			display:block;
-			content: "";
-			height:15px;
-			background: #f3f3f3;
-			border-radius: 15px 15px 0 0;
+		.conner_left{
+			display: block;
+			width: 10px;
+			height: 10px;
+			position: absolute;
+			left: 0;
+			bottom: -10px;
+			overflow: hidden;
+			&:after{
+				content:"";
+				display: block;
+				width: 10px;
+				height: 10px;
+				border-radius:10px 0 0 0;
+				box-shadow:0 0 0 10px #666;
+			}
 		}
+		.conner_right{
+			display: block;
+			width: 10px;
+			height: 10px;
+			position: absolute;
+			right: 0;
+			bottom: -10px;
+			overflow: hidden;
+			&:after{
+				content:"";
+				display: block;
+				width: 10px;
+				height: 10px;
+				border-radius:0 10px 0 0;
+				box-shadow:0 0 0 10px #666;
+			}
+		}
+	}
+	.content_area_sub{
+		padding-top: 15px;
 	}
 }
 .insurance_detail_info{

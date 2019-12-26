@@ -371,6 +371,12 @@
 				}
 			}
 		}
+		&.tab .content_area{
+			min-height: calc(100vh - 203px);
+		}
+		&.tab_open .content_area{
+			min-height: calc(100vh - 244px);
+		}
 	}
 	&.fixed {
 		.search_box {
