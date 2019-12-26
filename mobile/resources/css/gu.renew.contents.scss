@@ -2170,6 +2170,10 @@
 					padding: 0 10px;
 					border-radius: 3px;
 					font-size: $fz12px;
+					&.cancel{
+						background: #e7e7e7;
+						color:#777;
+					}
 				}
 			}
 			.right_txt{				
@@ -2179,7 +2183,6 @@
 				.tit{
 					display: inline-block;
 					background: #eee;
-					background: #ffe4e3;
 					height: 18px;
 					line-height: 20px;
 					padding: 0 10px;
@@ -2304,6 +2307,10 @@
 						padding:0 10px;
 						border-radius: 3px;
 						margin-bottom: 8px;
+						&.cancel{
+							background: #e7e7e7;
+							color:#777;
+						}
 					}
 				}
 			}
