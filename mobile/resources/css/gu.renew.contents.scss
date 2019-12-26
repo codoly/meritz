@@ -11,17 +11,6 @@
 	clip: rect(0 0 0 0);
 }
 
-@mixin state{
-display: inline-block;
-color: #ff4858;
-background: #ffe4e3;
-height: 18px;
-line-height: 20px;
-padding: 0 10px;
-border-radius: 3px;
-font-size: $fz12px;
-}
-
 /* customer_sort */
 .customer_sort {
 	position: absolute;
@@ -2173,7 +2162,14 @@ font-size: $fz12px;
 				float: left;
 				width:50%;
 				.state{
-					@include state();
+					display: inline-block;
+					color: #ff4858;
+					background: #ffe4e3;
+					height: 18px;
+					line-height: 20px;
+					padding: 0 10px;
+					border-radius: 3px;
+					font-size: $fz12px;
 				}
 			}
 			.right_txt{				
@@ -2181,8 +2177,14 @@ font-size: $fz12px;
 				width:50%;
 				padding-left:8px;
 				.tit{
-					@include state();
+					display: inline-block;
 					background: #eee;
+					background: #ffe4e3;
+					height: 18px;
+					line-height: 20px;
+					padding: 0 10px;
+					border-radius: 3px;
+					font-size: $fz12px;
 					color:$color_level4;
 				}
 			}
@@ -2235,6 +2237,9 @@ font-size: $fz12px;
 		border-top: none;
 		dd{
 			font-size: $fz12px;
+			&:last-child{
+				margin-bottom: 0;
+			}
 		}
 	}
 }
@@ -2306,8 +2311,6 @@ font-size: $fz12px;
 	}
 }
 
-<<<<<<< HEAD
-=======
 
 /*팝업 컨설팅 전후 비교*/
 .consulting_wrap {
@@ -2614,4 +2617,3 @@ font-size: $fz12px;
 		}
 	}
 }
->>>>>>> 93e573d3d0ad3ca124feb55e5c6437048669ec3b
