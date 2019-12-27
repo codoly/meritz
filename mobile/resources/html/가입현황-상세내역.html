@@ -19,8 +19,8 @@
 				var targetCont = $('.insurance_detail_tab_cont .tab_cont');
 				var idx = $(this).parent().index();
 				target.addClass('active').parent().siblings().children().removeClass('active');
-				targetCont.hide();
-				targetCont.eq(idx).show();
+				targetCont.removeClass('active');
+				targetCont.eq(idx).addClass('active');
 			});
 			//가로 막대 그래프
 			$('.bar_rail .bar').each(function () {

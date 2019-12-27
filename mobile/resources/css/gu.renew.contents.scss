@@ -1,6 +1,12 @@
 .align_c {
 	text-align: center;
 }
+.align_l {
+	text-align: left;
+}
+.align_r {
+	text-align: right;
+}
 
 .blind {
 	position: absolute;
@@ -1198,38 +1204,96 @@
 		flex-direction: column;
 		.tab_list{
 			flex: none;
+			margin-bottom: 15px;
+			margin-top:-1px;
+			ul{
+				display: flex;
+				line-height: 1;
+				li{
+					flex: 1;
+					.tab{
+						width: 100%;
+						background: #eee;
+						text-align: center;
+						font-size:$fz15px;
+						color: $color_level4;
+						height: 40px;
+						line-height: 40px;
+						letter-spacing: -0.05em;						
+						border-top: 1px solid #d5d5d5;
+						border-bottom: 1px solid #d5d5d5;	
+						&.active{
+							color:#fff;
+							background: #333;
+							border-top: 1px solid #333;
+							border-bottom: 1px solid #333;	
+						}				
+					}
+				}
+			}
 		}
 		.tab_cont_box{
 			flex:1;
 			overflow: auto;
-		}
-	}
-	
-	.basic_type {
-
-		th, td {
-			vertical-align: middle;
-		}
-
-		th {
-			.select {
-				position: relative;
-
-				&::after {
-					display: inline-block;
-					position: absolute;
-					top: 3px;
-					right: -20px;
-					width: 16px;
-					height: 12px;
-					background: url(/resources/images/gu.renew.common/icon_checked.png) no-repeat 0 0;
-					content: "";
+			padding: 0 16px;
+			.tab_cont{
+				display: none;
+				&.active{
+					display:block;
+				}
+				
+				.top_btn_box{
+					text-align: right;
+					margin-bottom: 10px;
+				}
+				.basic_type {
+					margin-bottom:20px;
+					th {
+						.select {
+							position: relative;
+			
+							&::after {
+								display: inline-block;
+								position: absolute;
+								top: 3px;
+								right: -20px;
+								width: 16px;
+								height: 12px;
+								background: url(/resources/images/gu.renew.common/icon_checked.png) no-repeat 0 0;
+								content: "";
+							}
+						}
+					}
+			
+					td{			
+						padding: 5px 10px;
+						.input_set{
+							margin-right:-10px;
+							input{
+								height: 28px;
+								font-size: $fz12px;
+								padding: 0 8px
+							}
+						}
+					}
+					.check_box_set {
+						line-height: 1;
+						&.no_label label{
+							width: 20px;
+							height: 20px;
+							padding-left: 20px;
+						}
+						input[type='checkbox'] + label:after{
+							background: url(/resources/images/gu.renew.common/checkbox_off_gray.png) no-repeat;
+							background-size:100% auto;
+						}
+						input[type='checkbox']:checked + label:after{
+							background: url(/resources/images/gu.renew.common/checkbox_on_red.png) no-repeat;
+							background-size:100% auto;
+						}
+					}
 				}
 			}
-		}
-
-		.check_box_set {
-			line-height: 1;
 		}
 	}
 }
@@ -1304,32 +1368,35 @@
 
 /* basic_type */
 .basic_type {
+	border-top:1px solid #3c444d;
 	thead {
 		th {
-			padding: 9px 10px;
-			border-bottom: 1px solid $line_color1;
-			font-size: $fz14px;
+			padding: 9px 5px;
+			border-bottom: 1px solid #d5d5d5;
+			border-right: 1px solid #d5d5d5;
+			font-size: $fz12px;
 			text-align: center;
 			color: $color_level2;
+			background: #eee;
+			vertical-align: middle;
+			&:last-child{
+				border-right: none;
+			}
 		}
 	}
 
 	tbody {
-		th {
-			padding: 9px 10px;
-			border-bottom: 1px solid #ededf4;
-			font-size: $fz14px;
-			font-weight: 500;
-			letter-spacing: -0.05em;
-			color: $color_level4;
-		}
-
 		td {
-			padding: 9px 10px;
-			border-bottom: 1px solid #ededf4;
-			font-size: $fz14px;
+			padding: 8px 10px;
+			border-bottom: 1px solid #d5d5d5;
+			border-right: 1px solid #d5d5d5;
+			font-size: $fz12px;
 			letter-spacing: -0.05em;
-			color: $color_level4;
+			color: $color_level3;	
+			vertical-align: middle;		
+			&:last-child{
+				border-right: none;
+			}
 		}
 	}
 }
@@ -1425,6 +1492,40 @@
 		transform-origin: 66% 66%;
 		vertical-align: middle;
 		pointer-events: none;
+	}
+}
+.btn_round{	
+	font-size: $fz12px;
+	letter-spacing: -0.05em;
+	color: $color_level1;
+	border: 1px solid #d5d5d5;
+	border-radius: 13px;
+	padding: 5px 9px;
+}
+.icon_reset{
+
+	&:before {
+		display: inline-block;
+		width: 12px;
+		height: 11px;
+		margin: 3px 5px 0 0;
+		background: url(/resources/images/gu.renew.common/icon_reset.png) no-repeat 0 0;
+		background-size: 100% auto;
+		content: "";
+		vertical-align: top;
+	}
+}
+.icon_all_select{
+
+	&:before {
+		display: inline-block;
+		width: 10px;
+		height: 8px;
+		margin: 5px 5px 0 0;
+		background: url(/resources/images/gu.renew.common/icon_checked_gray.png) no-repeat 0 0;
+		background-size: 100% auto;
+		content: "";
+		vertical-align: top;
 	}
 }
 
