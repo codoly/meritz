@@ -523,6 +523,14 @@
 
 		&.open{
 			margin-bottom: 10px;
+			
+			.tit_box {
+				.btn_text_arr {
+					&:after{
+						transform: rotate(-135deg);
+					}
+				}
+			}
 		}
 
 		.tit_box{
@@ -2610,6 +2618,17 @@
 					}
 				}
 			}
+		}
+	}
+
+	.no_data{
+		padding: 24px 0;
+		text-align: center;
+		border-bottom: 1px solid #ededed;
+		.txt{
+			font-size: $fz14px;
+			color: $color_level4;
+			letter-spacing: -0.05em;
 		}
 	}
 }
