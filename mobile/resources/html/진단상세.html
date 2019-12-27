@@ -45,7 +45,7 @@
 				var idx = $(this).closest("li").index();
 				target.removeClass("on").eq(idx).addClass("on");
 				tabContent.removeClass("on").eq(idx).addClass("on");
-				if (idx == 1){//보장상세일 경우
+				if (idx == 1) {//보장상세일 경우
 					$(".sub_tab_menu .sub_menu").show();
 					$(".wrap.sub, .wrap.sub .top_area").removeClass("tab").addClass("tab_open");
 					//가로 막대 그래프
@@ -55,7 +55,7 @@
 						counterStart();
 						//숫자 관련 count script 실행 class="count" 에있는 것들 실행
 					});
-				}else{
+				} else {
 					$(".sub_tab_menu .sub_menu").hide();
 					$(".wrap.sub, .wrap.sub .top_area").removeClass("tab_open").addClass("tab");
 					$(".btn_sub_menu_toggle.open").click();
@@ -71,22 +71,17 @@
 		<ul class="menu_area">
 			<li class="home"><a class="home" href="#">홈으로</a></li>
 			<li class="util">
-				<a class="menu01" href="#">등록</a>
-				<a class="menu02" href="#">컨컬팅</a>
-				<a class="menu03" href="#">pdf sample</a>
+				<a class="menu01" href="#">등록</a> <a class="menu02" href="#">컨컬팅</a> <a class="menu03" href="#">pdf sample</a>
 			</li>
 		</ul>
 		<div class="member_info_area">
 			<div class="name">
-				<strong>권은아</strong>
-				고객님
+				<strong>권은아</strong> 고객님
 				<button class="favorites">즐겨찾기</button><!--활성화 class="btn_like on"-->
 			</div>
 			<ul class="info">
 				<li>
-					<span class="sex">여</span>
-					<span class="bday">1981.05.30</span>
-					<span class="age">32세</span>
+					<span class="sex">여</span> <span class="bday">1981.05.30</span> <span class="age">32세</span>
 				</li>
 				<li>
 					<button class="btn_alert">상령일</button>
@@ -96,43 +91,47 @@
 		</div>
 		<div class="sub_tab_menu">
 			<ul class="tab_area">
-				<li><button class="tab on"><span>보장진단</span></button></li>
-				<li><button class="tab"><span>보장상세</span></button></li>
+				<li>
+					<button class="tab on"><span>보장진단</span></button>
+				</li>
+				<li>
+					<button class="tab"><span>보장상세</span></button>
+				</li>
 			</ul>
 			<div class="sub_menu">
 				<div class="scroll_area">
 					<ul>
-						<li><a href="#" class="text on">전체현황</a></li>
-						<li><a href="#" class="text">사망</a></li>
-						<li><a href="#" class="text">휴유장해</a></li>
-						<li><a href="#" class="text">암</a></li>
-						<li><a href="#" class="text">뇌혈관질환</a></li>
-						<li><a href="#" class="text">심장질환</a></li>
-						<li><a href="#" class="text">의료비</a></li>
-						<li><a href="#" class="text">수술비</a></li>
-						<li><a href="#" class="text">입원비(일당)</a></li>
-						<li><a href="#" class="text">치매</a></li>
-						<li><a href="#" class="text">운전자</a></li>
-						<li><a href="#" class="text">배상책임</a></li>
-						<li><a href="#" class="text">치아·골절·화상</a></li>
+						<li><a class="text on" href="#">전체현황</a></li>
+						<li><a class="text" href="#">사망</a></li>
+						<li><a class="text" href="#">휴유장해</a></li>
+						<li><a class="text" href="#">암</a></li>
+						<li><a class="text" href="#">뇌혈관질환</a></li>
+						<li><a class="text" href="#">심장질환</a></li>
+						<li><a class="text" href="#">의료비</a></li>
+						<li><a class="text" href="#">수술비</a></li>
+						<li><a class="text" href="#">입원비(일당)</a></li>
+						<li><a class="text" href="#">치매</a></li>
+						<li><a class="text" href="#">운전자</a></li>
+						<li><a class="text" href="#">배상책임</a></li>
+						<li><a class="text" href="#">치아·골절·화상</a></li>
 					</ul>
 				</div>
 				<button class="btn_sub_menu_toggle">열기</button>
 				<div class="all_menu_area">
 					<ul>
-						<li><a href="#" class="text on">전체현황</a></li>
-						<li><a href="#" class="text">사망</a></li>
-						<li><a href="#" class="text">휴유장해</a></li>
-						<li><a href="#" class="text">암</a></li>
-						<li><a href="#" class="text">뇌혈관질환</a></li>
-						<li><a href="#" class="text">심장질환</a></li>
-						<li><a href="#" class="text">의료비</a></li>
-						<li><a href="#" class="text">수술비</a></li>
-						<li><a href="#" class="text">입원비(일당)</a></li>
-						<li><a href="#" class="text">치매</a></li>
-						<li><a href="#" class="text">운전자</a></li>
-						<li><a href="#" class="text">배상책임</a></li>
-						<li><a href="#" class="text">치아·골절·화상</a></li>
+						<li><a class="text on" href="#">전체현황</a></li>
+						<li><a class="text" href="#">사망</a></li>
+						<li><a class="text" href="#">휴유장해</a></li>
+						<li><a class="text" href="#">암</a></li>
+						<li><a class="text" href="#">뇌혈관질환</a></li>
+						<li><a class="text" href="#">심장질환</a></li>
+						<li><a class="text" href="#">의료비</a></li>
+						<li><a class="text" href="#">수술비</a></li>
+						<li><a class="text" href="#">입원비(일당)</a></li>
+						<li><a class="text" href="#">치매</a></li>
+						<li><a class="text" href="#">운전자</a></li>
+						<li><a class="text" href="#">배상책임</a></li>
+						<li><a class="text" href="#">치아·골절·화상</a></li>
 					</ul>
 				</div>
 			</div>
@@ -282,8 +281,7 @@
 							<button class="btn_info lack">
 								<div class="info">
 									<div class="sort_tit">
-										<span class="tit">질병사망</span>
-										<span class="count_info">
+										<span class="tit">질병사망</span> <span class="count_info">
 											<strong>3</strong>건
 										</span>
 									</div>
@@ -298,8 +296,7 @@
 									</div>
 								</div>
 								<div class="state">
-									<span class="icon"></span>
-									<span class="txt"><strong>1,000</strong>만원 부족</span>
+									<span class="icon"></span> <span class="txt"><strong>1,000</strong>만원 부족</span>
 								</div>
 							</button>
 							<div class="insurance_list2">
@@ -345,8 +342,7 @@
 							<button class="btn_info enough">
 								<div class="info">
 									<div class="sort_tit">
-										<span class="tit">상해사망</span>
-										<span class="count_info">
+										<span class="tit">상해사망</span> <span class="count_info">
 											<strong>3</strong>건
 										</span>
 									</div>
@@ -362,8 +358,7 @@
 									</div>
 								</div>
 								<div class="state">
-									<span class="icon"></span>
-									<span class="txt">충분</span>
+									<span class="icon"></span> <span class="txt">충분</span>
 								</div>
 							</button>
 							<div class="insurance_list2">
@@ -385,8 +380,7 @@
 							<button class="btn_info no_join">
 								<div class="info">
 									<div class="sort_tit">
-										<span class="tit">상해사망</span>
-										<span class="count_info">
+										<span class="tit">상해사망</span> <span class="count_info">
 											<strong>0</strong>건
 										</span>
 									</div>
@@ -401,8 +395,7 @@
 									</div>
 								</div>
 								<div class="state">
-									<span class="icon"></span>
-									<span class="txt"><strong>미가입</strong></span>
+									<span class="icon"></span> <span class="txt"><strong>미가입</strong></span>
 								</div>
 							</button>
 							<div class="insurance_list2">
@@ -435,8 +428,7 @@
 							<button class="btn_info lack">
 								<div class="info">
 									<div class="sort_tit">
-										<span class="tit">질병사망</span>
-										<span class="count_info">
+										<span class="tit">질병사망</span> <span class="count_info">
 											<strong>3</strong>건
 										</span>
 									</div>
@@ -451,8 +443,7 @@
 									</div>
 								</div>
 								<div class="state">
-									<span class="icon"></span>
-									<span class="txt"><strong>1,000</strong>만원 부족</span>
+									<span class="icon"></span> <span class="txt"><strong>1,000</strong>만원 부족</span>
 								</div>
 							</button>
 							<div class="insurance_list2">
@@ -474,8 +465,7 @@
 							<button class="btn_info enough">
 								<div class="info">
 									<div class="sort_tit">
-										<span class="tit">상해사망</span>
-										<span class="count_info">
+										<span class="tit">상해사망</span> <span class="count_info">
 											<strong>3</strong>건
 										</span>
 									</div>
@@ -491,8 +481,7 @@
 									</div>
 								</div>
 								<div class="state">
-									<span class="icon"></span>
-									<span class="txt"><strong>충분</strong></span>
+									<span class="icon"></span> <span class="txt"><strong>충분</strong></span>
 								</div>
 							</button>
 							<div class="insurance_list2">
@@ -525,8 +514,7 @@
 							<button class="btn_info lack">
 								<div class="info">
 									<div class="sort_tit">
-										<span class="tit">질병사망</span>
-										<span class="count_info">
+										<span class="tit">질병사망</span> <span class="count_info">
 											<strong>3</strong>건
 										</span>
 									</div>
@@ -541,8 +529,7 @@
 									</div>
 								</div>
 								<div class="state">
-									<span class="icon"></span>
-									<span class="txt"><strong>1,000</strong>만원 부족</span>
+									<span class="icon"></span> <span class="txt"><strong>1,000</strong>만원 부족</span>
 								</div>
 							</button>
 							<div class="insurance_list2">
@@ -588,8 +575,7 @@
 							<button class="btn_info enough">
 								<div class="info">
 									<div class="sort_tit">
-										<span class="tit">상해사망</span>
-										<span class="count_info">
+										<span class="tit">상해사망</span> <span class="count_info">
 											<strong>3</strong>건
 										</span>
 									</div>
@@ -605,8 +591,7 @@
 									</div>
 								</div>
 								<div class="state">
-									<span class="icon"></span>
-									<span class="txt"><strong>충분</strong></span>
+									<span class="icon"></span> <span class="txt"><strong>충분</strong></span>
 								</div>
 							</button>
 							<div class="insurance_list2">
@@ -639,8 +624,7 @@
 							<button class="btn_info lack">
 								<div class="info">
 									<div class="sort_tit">
-										<span class="tit">질병사망</span>
-										<span class="count_info">
+										<span class="tit">질병사망</span> <span class="count_info">
 											<strong>3</strong>건
 										</span>
 									</div>
@@ -655,8 +639,7 @@
 									</div>
 								</div>
 								<div class="state">
-									<span class="icon"></span>
-									<span class="txt"><strong>1,000</strong>만원 부족</span>
+									<span class="icon"></span> <span class="txt"><strong>1,000</strong>만원 부족</span>
 								</div>
 							</button>
 							<div class="insurance_list2">
@@ -678,8 +661,7 @@
 							<button class="btn_info enough">
 								<div class="info">
 									<div class="sort_tit">
-										<span class="tit">상해사망</span>
-										<span class="count_info">
+										<span class="tit">상해사망</span> <span class="count_info">
 											<strong>3</strong>건
 										</span>
 									</div>
@@ -695,8 +677,7 @@
 									</div>
 								</div>
 								<div class="state">
-									<span class="icon"></span>
-									<span class="txt"><strong>충분</strong></span>
+									<span class="icon"></span> <span class="txt"><strong>충분</strong></span>
 								</div>
 							</button>
 							<div class="insurance_list2">
@@ -729,8 +710,7 @@
 							<button class="btn_info lack">
 								<div class="info">
 									<div class="sort_tit">
-										<span class="tit">질병사망</span>
-										<span class="count_info">
+										<span class="tit">질병사망</span> <span class="count_info">
 											<strong>3</strong>건
 										</span>
 									</div>
@@ -745,8 +725,7 @@
 									</div>
 								</div>
 								<div class="state">
-									<span class="icon"></span>
-									<span class="txt"><strong>1,000</strong>만원 부족</span>
+									<span class="icon"></span> <span class="txt"><strong>1,000</strong>만원 부족</span>
 								</div>
 							</button>
 							<div class="insurance_list2">
@@ -768,8 +747,7 @@
 							<button class="btn_info enough">
 								<div class="info">
 									<div class="sort_tit">
-										<span class="tit">상해사망</span>
-										<span class="count_info">
+										<span class="tit">상해사망</span> <span class="count_info">
 											<strong>3</strong>건
 										</span>
 									</div>
@@ -785,8 +763,7 @@
 									</div>
 								</div>
 								<div class="state">
-									<span class="icon"></span>
-									<span class="txt"><strong>충분</strong></span>
+									<span class="icon"></span> <span class="txt"><strong>충분</strong></span>
 								</div>
 							</button>
 							<div class="insurance_list2">
@@ -819,8 +796,7 @@
 							<button class="btn_info lack">
 								<div class="info">
 									<div class="sort_tit">
-										<span class="tit">질병사망</span>
-										<span class="count_info">
+										<span class="tit">질병사망</span> <span class="count_info">
 											<strong>3</strong>건
 										</span>
 									</div>
@@ -835,8 +811,7 @@
 									</div>
 								</div>
 								<div class="state">
-									<span class="icon"></span>
-									<span class="txt"><strong>1,000</strong>만원 부족</span>
+									<span class="icon"></span> <span class="txt"><strong>1,000</strong>만원 부족</span>
 								</div>
 							</button>
 							<div class="insurance_list2">
@@ -858,8 +833,7 @@
 							<button class="btn_info enough">
 								<div class="info">
 									<div class="sort_tit">
-										<span class="tit">상해사망</span>
-										<span class="count_info">
+										<span class="tit">상해사망</span> <span class="count_info">
 											<strong>3</strong>건
 										</span>
 									</div>
@@ -875,8 +849,7 @@
 									</div>
 								</div>
 								<div class="state">
-									<span class="icon"></span>
-									<span class="txt"><strong>충분</strong></span>
+									<span class="icon"></span> <span class="txt"><strong>충분</strong></span>
 								</div>
 							</button>
 							<div class="insurance_list2">
@@ -909,8 +882,7 @@
 							<button class="btn_info lack">
 								<div class="info">
 									<div class="sort_tit">
-										<span class="tit">질병사망</span>
-										<span class="count_info">
+										<span class="tit">질병사망</span> <span class="count_info">
 											<strong>3</strong>건
 										</span>
 									</div>
@@ -925,8 +897,7 @@
 									</div>
 								</div>
 								<div class="state">
-									<span class="icon"></span>
-									<span class="txt"><strong>1,000</strong>만원 부족</span>
+									<span class="icon"></span> <span class="txt"><strong>1,000</strong>만원 부족</span>
 								</div>
 							</button>
 							<div class="insurance_list2">
@@ -950,8 +921,7 @@
 									<div class="sum_info">
 										<div class="title">일반 상해 사항후유장해</div>
 										<div class="txt">
-											<span class="tit">보장금액</span>
-											<span class="sum"><strong>1,270,600</strong>원</span>
+											<span class="tit">보장금액</span> <span class="sum"><strong>1,270,600</strong>원</span>
 										</div>
 									</div>
 								</div>
@@ -973,8 +943,7 @@
 							<button class="btn_info enough">
 								<div class="info">
 									<div class="sort_tit">
-										<span class="tit">상해사망</span>
-										<span class="count_info">
+										<span class="tit">상해사망</span> <span class="count_info">
 											<strong>3</strong>건
 										</span>
 									</div>
@@ -990,8 +959,7 @@
 									</div>
 								</div>
 								<div class="state">
-									<span class="icon"></span>
-									<span class="txt"><strong>충분</strong></span>
+									<span class="icon"></span> <span class="txt"><strong>충분</strong></span>
 								</div>
 							</button>
 							<div class="insurance_list2">
@@ -1024,8 +992,7 @@
 							<button class="btn_info lack">
 								<div class="info">
 									<div class="sort_tit">
-										<span class="tit">질병사망</span>
-										<span class="count_info">
+										<span class="tit">질병사망</span> <span class="count_info">
 											<strong>3</strong>건
 										</span>
 									</div>
@@ -1040,8 +1007,7 @@
 									</div>
 								</div>
 								<div class="state">
-									<span class="icon"></span>
-									<span class="txt"><strong>1,000</strong>만원 부족</span>
+									<span class="icon"></span> <span class="txt"><strong>1,000</strong>만원 부족</span>
 								</div>
 							</button>
 							<div class="insurance_list2">
@@ -1063,8 +1029,7 @@
 							<button class="btn_info enough">
 								<div class="info">
 									<div class="sort_tit">
-										<span class="tit">상해사망</span>
-										<span class="count_info">
+										<span class="tit">상해사망</span> <span class="count_info">
 											<strong>3</strong>건
 										</span>
 									</div>
@@ -1080,8 +1045,7 @@
 									</div>
 								</div>
 								<div class="state">
-									<span class="icon"></span>
-									<span class="txt"><strong>충분</strong></span>
+									<span class="icon"></span> <span class="txt"><strong>충분</strong></span>
 								</div>
 							</button>
 							<div class="insurance_list2">
@@ -1114,8 +1078,7 @@
 							<button class="btn_info lack">
 								<div class="info">
 									<div class="sort_tit">
-										<span class="tit">질병사망</span>
-										<span class="count_info">
+										<span class="tit">질병사망</span> <span class="count_info">
 											<strong>3</strong>건
 										</span>
 									</div>
@@ -1130,8 +1093,7 @@
 									</div>
 								</div>
 								<div class="state">
-									<span class="icon"></span>
-									<span class="txt"><strong>1,000</strong>만원 부족</span>
+									<span class="icon"></span> <span class="txt"><strong>1,000</strong>만원 부족</span>
 								</div>
 							</button>
 							<div class="insurance_list2">
@@ -1155,8 +1117,7 @@
 									<div class="sum_info">
 										<div class="title">일반 상해 사항후유장해</div>
 										<div class="txt">
-											<span class="tit">보장금액</span>
-											<span class="sum"><strong>1,270,600</strong>원</span>
+											<span class="tit">보장금액</span> <span class="sum"><strong>1,270,600</strong>원</span>
 										</div>
 									</div>
 								</div>
@@ -1178,8 +1139,7 @@
 							<button class="btn_info enough">
 								<div class="info">
 									<div class="sort_tit">
-										<span class="tit">상해사망</span>
-										<span class="count_info">
+										<span class="tit">상해사망</span> <span class="count_info">
 											<strong>3</strong>건
 										</span>
 									</div>
@@ -1195,8 +1155,7 @@
 									</div>
 								</div>
 								<div class="state">
-									<span class="icon"></span>
-									<span class="txt"><strong>충분</strong></span>
+									<span class="icon"></span> <span class="txt"><strong>충분</strong></span>
 								</div>
 							</button>
 							<div class="insurance_list2">
@@ -1229,8 +1188,7 @@
 							<button class="btn_info lack">
 								<div class="info">
 									<div class="sort_tit">
-										<span class="tit">질병사망</span>
-										<span class="count_info">
+										<span class="tit">질병사망</span> <span class="count_info">
 											<strong>3</strong>건
 										</span>
 									</div>
@@ -1245,8 +1203,7 @@
 									</div>
 								</div>
 								<div class="state">
-									<span class="icon"></span>
-									<span class="txt"><strong>1,000</strong>만원 부족</span>
+									<span class="icon"></span> <span class="txt"><strong>1,000</strong>만원 부족</span>
 								</div>
 							</button>
 							<div class="insurance_list2">
@@ -1268,8 +1225,7 @@
 							<button class="btn_info enough">
 								<div class="info">
 									<div class="sort_tit">
-										<span class="tit">상해사망</span>
-										<span class="count_info">
+										<span class="tit">상해사망</span> <span class="count_info">
 											<strong>3</strong>건
 										</span>
 									</div>
@@ -1285,8 +1241,7 @@
 									</div>
 								</div>
 								<div class="state">
-									<span class="icon"></span>
-									<span class="txt"><strong>충분</strong></span>
+									<span class="icon"></span> <span class="txt"><strong>충분</strong></span>
 								</div>
 							</button>
 							<div class="insurance_list2">
@@ -1319,8 +1274,7 @@
 							<button class="btn_info lack">
 								<div class="info">
 									<div class="sort_tit">
-										<span class="tit">질병사망</span>
-										<span class="count_info">
+										<span class="tit">질병사망</span> <span class="count_info">
 											<strong>3</strong>건
 										</span>
 									</div>
@@ -1335,8 +1289,7 @@
 									</div>
 								</div>
 								<div class="state">
-									<span class="icon"></span>
-									<span class="txt"><strong>1,000</strong>만원 부족</span>
+									<span class="icon"></span> <span class="txt"><strong>1,000</strong>만원 부족</span>
 								</div>
 							</button>
 							<div class="insurance_list2">
@@ -1358,8 +1311,7 @@
 							<button class="btn_info enough">
 								<div class="info">
 									<div class="sort_tit">
-										<span class="tit">상해사망</span>
-										<span class="count_info">
+										<span class="tit">상해사망</span> <span class="count_info">
 											<strong>3</strong>건
 										</span>
 									</div>
@@ -1375,8 +1327,7 @@
 									</div>
 								</div>
 								<div class="state">
-									<span class="icon"></span>
-									<span class="txt"><strong>충분</strong></span>
+									<span class="icon"></span> <span class="txt"><strong>충분</strong></span>
 								</div>
 							</button>
 							<div class="insurance_list2">
@@ -1409,8 +1360,7 @@
 							<button class="btn_info lack">
 								<div class="info">
 									<div class="sort_tit">
-										<span class="tit">질병사망</span>
-										<span class="count_info">
+										<span class="tit">질병사망</span> <span class="count_info">
 											<strong>3</strong>건
 										</span>
 									</div>
@@ -1425,8 +1375,7 @@
 									</div>
 								</div>
 								<div class="state">
-									<span class="icon"></span>
-									<span class="txt"><strong>1,000</strong>만원 부족</span>
+									<span class="icon"></span> <span class="txt"><strong>1,000</strong>만원 부족</span>
 								</div>
 							</button>
 							<div class="insurance_list2">
@@ -1448,8 +1397,7 @@
 							<button class="btn_info enough">
 								<div class="info">
 									<div class="sort_tit">
-										<span class="tit">상해사망</span>
-										<span class="count_info">
+										<span class="tit">상해사망</span> <span class="count_info">
 											<strong>3</strong>건
 										</span>
 									</div>
@@ -1465,8 +1413,7 @@
 									</div>
 								</div>
 								<div class="state">
-									<span class="icon"></span>
-									<span class="txt"><strong>충분</strong></span>
+									<span class="icon"></span> <span class="txt"><strong>충분</strong></span>
 								</div>
 							</button>
 							<div class="insurance_list2">
@@ -1495,11 +1442,21 @@
 	<div class="bottom_fixed_menu_area">
 		<button class="home"><span>고객리스트</span></button>
 		<ul>
-			<li><button class="bottom_menu menu01 on"><span>전체현황</span></button></li>
-			<li><button class="bottom_menu menu02"><span>가입현황</span></button></li>
-			<li><button class="bottom_menu menu03"><span>진단상세</span></button></li>
-			<li><button class="bottom_menu menu04"><span>컨설팅</span></button></li>
-			<li><button class="bottom_menu menu05"><span>그레프</span></button></li>
+			<li>
+				<button class="bottom_menu menu01 on"><span>전체현황</span></button>
+			</li>
+			<li>
+				<button class="bottom_menu menu02"><span>가입현황</span></button>
+			</li>
+			<li>
+				<button class="bottom_menu menu03"><span>진단상세</span></button>
+			</li>
+			<li>
+				<button class="bottom_menu menu04"><span>컨설팅</span></button>
+			</li>
+			<li>
+				<button class="bottom_menu menu05"><span>그레프</span></button>
+			</li>
 		</ul>
 	</div>
 	<!-- bottom_fixed_menu_area : e	-->

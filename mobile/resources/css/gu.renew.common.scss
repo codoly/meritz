@@ -645,7 +645,7 @@ button div, button:active div, button:before, button:focus div {
 			width: 19px;
 			height: 19px;
 			border-radius: 3px;
-			background: url("/resources/images/gu.renew.common/radio_off.png") no-repeat;			
+			background: url("/resources/images/gu.renew.common/radio_off.png") no-repeat;
 			background-size: 100% auto;
 			box-sizing: border-box;
 			content: "";
@@ -706,16 +706,18 @@ input[type=text]::-ms-clear {
 
 		li {
 			font-size: $fz12px;
+
 			&.title {
 				width: 60px;
-				flex:none;
+				flex: none;
+
 				&.black {
 					color: $color_level2;
 				}
 			}
 
 			&.text {
-				flex:1;
+				flex: 1;
 				color: $color_point1;
 			}
 		}
@@ -751,6 +753,7 @@ input[type=text]::-ms-clear {
 				font-size: $fz24px;
 				line-height: $fz24px;
 				letter-spacing: -0.05em;
+
 				&.title {
 					width: auto;
 					font-size: $fz16px;
@@ -777,7 +780,7 @@ input[type=text]::-ms-clear {
 			}
 
 			li {
-				line-height:14px;
+				line-height: 14px;
 				letter-spacing: -0.05em;
 
 				&.title {
@@ -787,9 +790,10 @@ input[type=text]::-ms-clear {
 				}
 
 				&.text {
-					text-align: right;
 					font-size: $fz14px;
+					text-align: right;
 					color: $color_level2;
+
 					strong {
 						font-weight: 500;
 					}
@@ -807,6 +811,7 @@ input[type=text]::-ms-clear {
 .color_point {
 	color: $color_button_red;
 }
-.bg_f3f3f3{
+
+.bg_f3f3f3 {
 	background: #f3f3f3;
 }

@@ -87,11 +87,12 @@
 	.content_area {
 		position: relative;
 		z-index: 4;
-		min-height:calc(100vh - 154px);
+		min-height: calc(100vh - 154px);
 
 		&.bg_white {
 			background: #ffffff;
 		}
+
 		&.bg_gray {
 			background: #f3f3f3;
 		}
@@ -147,10 +148,12 @@
 
 	&.main {
 		padding-top: 129px;
-		.content_area{
+
+		.content_area {
 			padding-top: 114px;
 		}
-		.top_area{
+
+		.top_area {
 			position: fixed;
 		}
 
@@ -158,48 +161,56 @@
 
 	&.sub {
 		padding-bottom: 66px;
+
 		> .top_area {
 			background: #333333;
-			&.tab{
+
+			&.tab {
 				height: 137px;
 			}
-			&.tab_open{
+
+			&.tab_open {
 				height: 179px;
 			}
-			.conner_left{
+
+			.conner_left {
 				display: block;
+				position: absolute;
+				bottom: -10px;
+				left: 0;
 				width: 10px;
 				height: 10px;
-				position: absolute;
-				left: 0;
-				bottom: -10px;
 				overflow: hidden;
-				&:after{
-					content:"";
+
+				&:after {
 					display: block;
 					width: 10px;
 					height: 10px;
-					border-radius:10px 0 0 0;
-					box-shadow:0 0 0 10px #333333;
+					border-radius: 10px 0 0 0;
+					content: "";
+					box-shadow: 0 0 0 10px #333333;
 				}
 			}
-			.conner_right{
+
+			.conner_right {
 				display: block;
-				width: 10px;
-				height: 10px;
 				position: absolute;
 				right: 0;
 				bottom: -10px;
+				width: 10px;
+				height: 10px;
 				overflow: hidden;
-				&:after{
-					content:"";
+
+				&:after {
 					display: block;
 					width: 10px;
 					height: 10px;
-					border-radius:0 10px 0 0;
-					box-shadow:0 0 0 10px #333333;
+					border-radius: 0 10px 0 0;
+					content: "";
+					box-shadow: 0 0 0 10px #333333;
 				}
 			}
+
 			.member_info_area {
 				display: flex;
 				margin-top: 20px;
@@ -291,6 +302,7 @@
 			padding: 20px 22px;
 			border-radius: 10px 10px 0 0;
 			background: #f3f3f3;
+
 			ul {
 				display: flex;
 				width: 100%;
@@ -353,31 +365,37 @@
 					}
 				}
 			}
-			.btn_area{
+
+			.btn_area {
 				margin: 12px -8px 0 -8px;
-				.btn_inner{
+
+				.btn_inner {
 					display: block;
-					border:1px solid #d5d5d5;
-					border-radius:28px;
 					height: 26px;
-					padding:0 12px;
-					span{
+					padding: 0 12px;
+					border: 1px solid #d5d5d5;
+					border-radius: 28px;
+
+					span {
 						display: block;
-						font-size: $fz12px;
-						color: $color_level1;
 						background: url("/resources/images/gu.renew.common/btn_arr.png") no-repeat right center;
 						background-size: auto 10px;
+						font-size: $fz12px;
+						color: $color_level1;
 					}
 				}
 			}
 		}
-		&.tab .content_area{
+
+		&.tab .content_area {
 			min-height: calc(100vh - 203px);
 		}
-		&.tab_open .content_area{
+
+		&.tab_open .content_area {
 			min-height: calc(100vh - 244px);
 		}
 	}
+
 	&.fixed {
 		.search_box {
 			position: fixed;
@@ -388,147 +406,169 @@
 		}
 	}
 }
+
 //상단 텝메뉴
-.sub_tab_menu{
-	margin-top: 5px;
+.sub_tab_menu {
 	position: relative;
-	.tab_area{
+	margin-top: 5px;
+
+	.tab_area {
 		display: flex;
 		position: relative;
-		z-index:2;
-		li{
+		z-index: 2;
+
+		li {
+			position: relative;
 			width: 50%;
 			height: 54px;
 			overflow: hidden;
-			position: relative;
-			.tab{
-				width: 100%;
+
+			.tab {
 				display: block;
+				width: 100%;
 				height: 44px;
-				text-align: center;
-				font-size: $fz15px;
-				border-radius:10px 10px 0 0;
-				color: #ffffff;
+				border-radius: 10px 10px 0 0;
 				background: #4d4d4d;
+				font-size: $fz15px;
+				text-align: center;
 				vertical-align: top;
-				&:after{
-					content:"";
+				color: #ffffff;
+
+				&:after {
 					display: block;
 					position: absolute;
-					left: 0;
 					bottom: 0;
+					left: 0;
 					width: 100%;
 					height: 10px;
+					content: "";
 				}
-				&.on{
-					color: $color_level2;
+
+				&.on {
 					background: #ffffff;
 					font-weight: bold;
-					&:after{
-						box-shadow:none !important;
-						border-radius:0 !important;
+					color: $color_level2;
+
+					&:after {
+						border-radius: 0 !important;
+						box-shadow: none !important;
 					}
 				}
 			}
-			&:first-child{
-				.tab:after{
-					border-radius:10px 0 0 0;
-					box-shadow:0 0 0 10px #4d4d4d;
+
+			&:first-child {
+				.tab:after {
+					border-radius: 10px 0 0 0;
+					box-shadow: 0 0 0 10px #4d4d4d;
 				}
 			}
-			&:last-child{
-				.tab:after{
-					border-radius:0 10px 0 0;
-					box-shadow:0 0 0 10px #4d4d4d;
+
+			&:last-child {
+				.tab:after {
+					border-radius: 0 10px 0 0;
+					box-shadow: 0 0 0 10px #4d4d4d;
 				}
 			}
 		}
 	}
-	.sub_menu{
+
+	.sub_menu {
 		display: none;
-		margin-top: -10px;
-		height: 42px;
-		background: #ffffff;
 		position: relative;
-		z-index:3;
-		.scroll_area{
-			overflow:auto;
-			border-bottom: 1px solid #d5d5d5;
-			box-shadow:0 2px 2px 1px rgba(100, 100, 100, 0.12);
-			padding-right: 35px;
+		z-index: 3;
+		height: 42px;
+		margin-top: -10px;
+		background: #ffffff;
+
+		.scroll_area {
 			position: relative;
-			z-index:1;
-			ul{
+			z-index: 1;
+			padding-right: 35px;
+			border-bottom: 1px solid #d5d5d5;
+			overflow: auto;
+			box-shadow: 0 2px 2px 1px rgba(100, 100, 100, 0.12);
+
+			ul {
 				display: table;
-				font-size: 0;
-				white-space:nowrap;
 				padding-left: 17px;
-				li{
+				font-size: 0;
+				white-space: nowrap;
+
+				li {
 					display: inline-block;
 					margin-right: 25px;
 					font-size: $fz12px;
 					line-height: 40px;
-					.on{
+
+					.on {
 						font-weight: bold;
 						color: #fe5855;
 					}
 				}
 			}
 		}
-		.btn_sub_menu_toggle{
+
+		.btn_sub_menu_toggle {
 			@include bg_btn;
 			position: absolute;
-			right: 0;
+			z-index: 2;
 			top: 0;
+			right: 0;
 			width: 35px;
 			height: 40px;
-			z-index:2;
-			background:#ffffff url("/resources/images/gu.renew.common/btn_sub_menu_open.png") no-repeat center center;
+			outline: none;
+			background: #ffffff url("/resources/images/gu.renew.common/btn_sub_menu_open.png") no-repeat center center;
 			background-size: 16px auto;
-			outline:none;
-			&.open{
-				transform:rotate(180deg);
+
+			&.open {
+				transform: rotate(180deg);
 			}
 		}
 	}
-	.all_menu_area{
+
+	.all_menu_area {
+		display: none;
 		display: none;
 		position: absolute;
-		left: 0;
 		top: 42px;
+		left: 0;
+		padding: 0 17px;
 		background: #ffffff;
-		padding:0 17px;
-		display: none;
-		&:after{
-			content:"";
+
+		&:after {
 			display: block;
 			position: absolute;
-			left: 0;
+			z-index: 1;
 			bottom: 0;
-			width: 100%	;
+			left: 0;
+			width: 100%;
 			height: 1px;
 			background: #cad2db;
-			z-index:1;
+			content: "";
 		}
-		ul{
+
+		ul {
 			overflow: hidden;
-			li{
-				float: left;
+
+			li {
 				position: relative;
+				float: left;
 				margin-right: 25px;
 				font-size: $fz12px;
 				line-height: 42px;
-				&:after{
-					content:"";
+
+				&:after {
 					display: block;
 					position: absolute;
-					left: 0;
 					bottom: 0;
+					left: 0;
 					width: 100vw;
 					height: 1px;
 					background: #eaeaea;
+					content: "";
 				}
-				.on{
+
+				.on {
 					font-weight: bold;
 					color: #fe5855;
 				}
@@ -536,116 +576,136 @@
 		}
 	}
 }
-.dim_bg{
+
+.dim_bg {
 	display: none;
 	position: fixed;
-	left: 0;
+	z-index: 9;
 	top: 0;
+	left: 0;
 	width: 100%;
 	height: 100%;
-	z-index:9;
-	background: rgba(0,0,0,0.7);
+	background: rgba(0, 0, 0, 0.7);
 }
+
 //하단메뉴
-.bottom_fixed_menu_area{
+.bottom_fixed_menu_area {
+	display: flex;
 	position: fixed;
-	left: 0;
+	z-index: 20;
 	bottom: 0;
-	z-index:20;
-	width: 100%;
+	left: 0;
 	//transition:all 0.2s;
+	width: 100%;
 	border-top: 1px solid #ededed;
 	background: #ffffff;
-	display: flex;
-	.home{
-		flex:none;
-		padding:10px 23px 10px 10px;
-		background: #333333;
+
+	.home {
 		position: relative;
+		padding: 10px 23px 10px 10px;
+		background: #333333;
 		overflow: hidden;
-		span{
-			position: relative;
-			z-index:1;
+		flex: none;
+
+		span {
 			display: block;
-			color: #ffffff;
-			font-size: $fz11px;
+			position: relative;
+			z-index: 1;
+			padding-top: 30px;
 			background: url("/resources/images/gu.renew.common/bottom_menu_home.png") no-repeat center top;
 			background-size: 25px auto;
-			padding-top: 30px;
+			font-size: $fz11px;
+			color: #ffffff;
 		}
-		&:after{
-			content: "";
+
+		&:after {
 			display: block;
+			position: absolute;
+			top: -7px;
+			right: -18px;
 			width: 25px;
 			height: 120%;
 			background: #ffffff;
-			position: absolute;
-			right: -18px;
-			top: -7px;
+			content: "";
 			transform: rotate(10deg);
 		}
 	}
-	ul{
+
+	ul {
 		display: flex;
-		flex:1;
-		li{
-			flex:1;
-			align-self:center;
+		flex: 1;
+
+		li {
+			align-self: center;
+			flex: 1;
 			text-align: center;
-			.bottom_menu{
-				span{
-					position: relative;
+
+			.bottom_menu {
+				span {
 					display: block;
-					color: $color_level4;
-					font-size: $fz11px;
-					background-position: center top;
-					background-repeat: no-repeat;
-					background-size: auto 20px;
+					position: relative;
 					padding-top: 30px;
-					letter-spacing:-1px;
+					background-repeat: no-repeat;
+					background-position: center top;
+					background-size: auto 20px;
+					font-size: $fz11px;
+					letter-spacing: -1px;
+					color: $color_level4;
 				}
-				&.on span{
+
+				&.on span {
 					color: #ff4858;
 				}
-				&.menu01 span{
-					background-image:url("/resources/images/gu.renew.common/bottom_menu_01_off.png");
+
+				&.menu01 span {
+					background-image: url("/resources/images/gu.renew.common/bottom_menu_01_off.png");
 				}
-				&.menu01.on span{
-					background-image:url("/resources/images/gu.renew.common/bottom_menu_01_on.png");
+
+				&.menu01.on span {
+					background-image: url("/resources/images/gu.renew.common/bottom_menu_01_on.png");
 				}
-				&.menu02 span{
-					background-image:url("/resources/images/gu.renew.common/bottom_menu_02_off.png");
+
+				&.menu02 span {
+					background-image: url("/resources/images/gu.renew.common/bottom_menu_02_off.png");
 				}
-				&.menu02.on span{
-					background-image:url("/resources/images/gu.renew.common/bottom_menu_01_on.png");
+
+				&.menu02.on span {
+					background-image: url("/resources/images/gu.renew.common/bottom_menu_01_on.png");
 				}
-				&.menu03 span{
-					background-image:url("/resources/images/gu.renew.common/bottom_menu_03_off.png");
+
+				&.menu03 span {
+					background-image: url("/resources/images/gu.renew.common/bottom_menu_03_off.png");
 				}
-				&.menu03.on span{
-					background-image:url("/resources/images/gu.renew.common/bottom_menu_01_on.png");
+
+				&.menu03.on span {
+					background-image: url("/resources/images/gu.renew.common/bottom_menu_01_on.png");
 				}
-				&.menu04 span{
-					background-image:url("/resources/images/gu.renew.common/bottom_menu_04_off.png");
+
+				&.menu04 span {
+					background-image: url("/resources/images/gu.renew.common/bottom_menu_04_off.png");
 				}
-				&.menu04.on span{
-					background-image:url("/resources/images/gu.renew.common/bottom_menu_01_on.png");
+
+				&.menu04.on span {
+					background-image: url("/resources/images/gu.renew.common/bottom_menu_01_on.png");
 				}
-				&.menu05 span{
-					background-image:url("/resources/images/gu.renew.common/bottom_menu_05_off.png");
+
+				&.menu05 span {
+					background-image: url("/resources/images/gu.renew.common/bottom_menu_05_off.png");
 				}
-				&.menu05.on span{
-					background-image:url("/resources/images/gu.renew.common/bottom_menu_01_on.png");
+
+				&.menu05.on span {
+					background-image: url("/resources/images/gu.renew.common/bottom_menu_01_on.png");
 				}
-				&.new span:after{
-					content: "";
+
+				&.new span:after {
 					position: absolute;
-					right: -5px;
 					top: 27px;
-					background: #ff4858;
+					right: -5px;
 					width: 4px;
 					height: 4px;
 					border-radius: 4px;
+					background: #ff4858;
+					content: "";
 				}
 			}
 		}
@@ -665,15 +725,18 @@
 }
 
 .submain_wrap {
-	padding:0 17px;
+	padding: 0 17px;
+
 	.top_area {
+		height: 159px;
 		background: url("/resources/images/gu.renew.contents/main_top_img.png") no-repeat;
 		background-size: auto 159px;
-		height: 159px;
 		text-align: right;
+
 		.info_grid {
 			float: right;
-			margin:30px 20px 0 0;
+			margin: 30px 20px 0 0;
+
 			.title {
 				font-size: $fz12px;
 				line-height: 1;
@@ -688,20 +751,25 @@
 				line-height: 1;
 				text-align: right;
 				color: $color_level2;
-				strong{
+
+				strong {
 					font-size: $fz24px;
 				}
 			}
 		}
 	}
+
 	.box {
+		margin-bottom: 10px;
 		border-radius: 5px;
 		background: #ffffff;
-		margin-bottom: 10px;
+
 		&.box1 {
 			display: flex;
+
 			.graph_area {
 				position: relative;
+
 				#chartdiv1 {
 					width: 150px;
 					height: 130px;
@@ -723,27 +791,31 @@
 			}
 
 			.info_grid {
-				flex:1;
-				align-self:center;
 				padding-right: 20px;
+				align-self: center;
+				flex: 1;
 			}
 		}
 
 		&.box2 {
 			display: flex;
 			flex-wrap: wrap;
+
 			.graph_area {
 				position: relative;
+
 				#chartdiv2 {
 					width: 150px;
 					height: 135px;
 				}
 			}
 
-			.info_content_area{
-				flex:1;
+			.info_content_area {
 				padding-right: 20px;
+				flex: 1;
+
 				> .title {
+					margin-bottom: 8px;
 					padding-top: 18px;
 					font-size: $fz15px;
 					font-weight: 700;
@@ -751,24 +823,27 @@
 					text-align: center;
 					letter-spacing: -2px;
 					color: $color_level2;
-					margin-bottom: 8px;
 				}
+
 				.info_box {
 					padding: 8px 0 8px 0;
 					border: 1px solid $line_color2;
 					border-radius: 13px;
 					line-height: 1;
 					text-align: center;
-					letter-spacing:-1px;
-					.info_title{
+					letter-spacing: -1px;
+
+					.info_title {
+						margin-bottom: 8px;
 						font-size: $fz12px;
 						color: $color_level2;
-						margin-bottom: 8px;
 					}
-					ul{
+
+					ul {
 						display: table;
-						font-size: 0;
 						width: 100%;
+						font-size: 0;
+
 						li {
 							display: inline-block;
 							padding: 0 10px;
@@ -791,14 +866,14 @@
 
 							&.no {
 								.tit,
-								.number{
+								.number {
 									color: #777777;
 								}
 							}
 
 							&.lack {
 								.tit,
-								.number{
+								.number {
 									color: $color_button_red;
 								}
 
@@ -817,14 +892,15 @@
 
 
 			.result {
-				padding-bottom: 10px;
-				flex:none;
 				width: 100%;
+				padding-bottom: 10px;
 				font-size: $fz14px;
-				line-height:1;
+				line-height: 1;
+				flex: none;
 				text-align: center;
 				letter-spacing: -1px;
 				color: $color_level2;
+
 				span {
 					color: $color_button_red;
 				}

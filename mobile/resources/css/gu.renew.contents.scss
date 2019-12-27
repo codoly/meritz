@@ -1,9 +1,11 @@
 .align_c {
 	text-align: center;
 }
+
 .align_l {
 	text-align: left;
 }
+
 .align_r {
 	text-align: right;
 }
@@ -384,8 +386,8 @@
 }
 
 .insurance_list_box {
-	padding: 10px 15px;
 	margin-top: 5px;
+	padding: 10px 15px;
 	background: #fff;
 
 	.note_box {
@@ -397,72 +399,76 @@
 	margin-bottom: 20px;
 
 	.tit_box {
-		margin-bottom: 10px;	
-		text-align: center;
+		margin-bottom: 10px;
 		line-height: 1;
+		text-align: center;
 
 		.sort_tit {
 			display: inline-block;
-			vertical-align: top;
 			font-size: $fz16px;
-			color: $color_level1;
 			font-weight: 700;
+			vertical-align: top;
+			color: $color_level1;
 		}
 
 		.number {
 			display: inline-block;
 			margin-left: 10px;
 			font-size: $fz14px;
+			font-weight: 400;
 			vertical-align: top;
 			color: #777;
-			font-weight: 400;
-			strong{
+
+			strong {
 				font-size: $fz15px;
 				font-weight: 700;
 			}
 		}
 	}
 
-	.list_box{
-		border:1px solid #d5d5d5;
+	.list_box {
+		border: 1px solid #d5d5d5;
 		border-radius: 8px;
-		.insurance{
+
+		.insurance {
 			margin-bottom: -1px;
-			border-bottom:1px solid #ededed;
-			&:last-child{
+			border-bottom: 1px solid #ededed;
+
+			&:last-child {
 				border-bottom: none;
 			}
-			.logo{
-				&:after{
+
+			.logo {
+				&:after {
+					display: inline-block;
 					position: absolute;
 					top: -18px;
-					right:0px;
-					display: inline-block;
-					content: "";
+					right: 0px;
 					width: 24px;
 					height: 9px;
 					background: url(/resources/images/gu.renew.contents/icon_arrow.png) no-repeat 0 0;
 					background-size: 100% auto;
+					content: "";
 				}
 			}
 		}
 	}
 
 	&.check_list {
-		.list_box{
-			border:none;
+		.list_box {
+			border: none;
 			border-radius: 0;
 		}
 
 		.insurance {
-			width:100%;
+			width: 100%;
 			margin-bottom: 0px;
-			border: 1px solid #d5d5d5;
-			border-radius: 8px;
 			margin-bottom: 10px;
 			padding: 10px 15px 10px 20px;
+			border: 1px solid #d5d5d5;
+			border-radius: 8px;
 
-			&:last-child{
+			&:last-child {
 				border-bottom: 1px solid #d5d5d5;
 			}
 
@@ -474,7 +480,7 @@
 				width: 31px;
 				height: 31px;
 				background: url(/resources/images/gu.renew.common/checkbox02_off.png) no-repeat 0 0;
-				background-size:100% auto;
+				background-size: 100% auto;
 				content: "";
 			}
 
@@ -489,15 +495,15 @@
 					height: 100%;
 					border: 1px solid #fd5856;
 					border-radius: 8px;
-					content: "";				
+					content: "";
 				}
 
 				&:after {
 					background: url(/resources/images/gu.renew.common/checkbox02_on.png) no-repeat 0 0;
-					background-size:100% auto;
+					background-size: 100% auto;
 				}
 			}
-			
+
 			.name {
 				font-weight: 700;
 			}
@@ -508,8 +514,8 @@
 		display: block;
 		position: relative;
 		padding: 10px 15px;
-		
-		
+
+
 		&:last-child {
 			margin-bottom: 0;
 		}
@@ -525,8 +531,8 @@
 			@include clearline();
 
 			.state {
-				float: left;
 				display: inline-block;
+				float: left;
 				height: 18px;
 				margin-right: 10px;
 				padding: 0 10px;
@@ -556,8 +562,8 @@
 				}
 
 				.date {
-					letter-spacing: -0.05em;
 					font-size: $fz12px;
+					letter-spacing: -0.05em;
 					color: $color_level4;
 				}
 			}
@@ -566,8 +572,8 @@
 		.logo {
 			display: block;
 			position: absolute;
-			right: 15px;
 			top: 55px;
+			right: 15px;
 			height: 18px;
 
 			img {
@@ -575,40 +581,47 @@
 			}
 		}
 
-		.etc_info{
+		.etc_info {
 			position: relative;
-			margin-top:8px;
-			padding-top:10px;
+			margin-top: 8px;
+			padding-top: 10px;
 			text-align: center;
-			&:before{
+
+			&:before {
+				display: block;
 				position: absolute;
 				top: 0px;
 				left: -20px;
-				display: block;
-				content: "";
 				width: calc(100% + 35px);
 				border-top: 1px dotted #d8d8d8;
+				content: "";
 			}
-			ul{
+
+			ul {
+				margin: 0 -15px 0 -20px;
 				overflow: hidden;
-				margin:0 -15px 0 -20px;
-				li{
+
+				li {
 					float: left;
-					width:33.33%;
-					border-right:1px solid #ededed;
-					&:last-child{
+					width: 33.33%;
+					border-right: 1px solid #ededed;
+
+					&:last-child {
 						border-right: none;
 					}
-					.tit{
-						font-size:12px;
-						color: #777;
-						margin-bottom: 5px;
+
+					.tit {
 						display: block;
+						margin-bottom: 5px;
+						font-size: 12px;
+						color: #777;
 					}
-					.txt{
-						font-size:12px;
-						strong{
-							font-size:13px;
+
+					.txt {
+						font-size: 12px;
+
+						strong {
+							font-size: 13px;
 							font-weight: normal;
 						}
 					}
@@ -632,15 +645,17 @@
 				color: $color_level5;
 			}
 
-			.payment_info{
+			.payment_info {
 				.state {
 					background: #e7e7e7;
 					color: $color_level5;
 				}
+
 				.date {
 					color: $color_level5;
 				}
-				.payment{
+
+				.payment {
 					color: $color_level4;
 				}
 			}
@@ -650,7 +665,7 @@
 			display: table;
 			width: 100%;
 			height: 80px;
-			border:1px solid #d5d5d5;
+			border: 1px solid #d5d5d5;
 			border-radius: 8px;
 			text-align: center;
 
@@ -671,8 +686,8 @@
 
 	.btn_contract_add {
 		display: block;
-		width: 100%;
 		position: relative;
+		width: 100%;
 		margin-bottom: 10px;
 		padding: 15px 0 15px;
 		border: 1px solid #ededf4;
@@ -779,49 +794,52 @@
 
 /* layer_pop_wrap */
 .layer_pop_wrap {
+	display: flex;
 	position: absolute;
 	z-index: 10;
 	top: 0;
 	left: 0;
 	background: #fff;
-	display: flex;
-	flex-direction: column;
 	overflow: hidden;
+	flex-direction: column;
 
 	.layer_pop_header {
-		flex: none;
 		height: 48px;
 		padding-top: 13px;
-		border-bottom: 1px solid #d5d5d5;		
+		border-bottom: 1px solid #d5d5d5;
+		flex: none;
 		text-align: center;
-		.title{
+
+		.title {
 			font-size: $fz18px;
-			color: $color_level2;
 			font-weight: 700;
+			color: $color_level2;
 		}
 	}
 
 	.layer_pop_content {
-		flex: 1;
 		overflow: auto;
+		flex: 1;
 	}
 
-	.layer_pop_bottom{
-		flex: none;
+	.layer_pop_bottom {
 		height: 45px;
+		flex: none;
+
 		.btn_area {
-			text-align: center;
-			height:100%;
-			width:100%;
 			display: flex;
-			.btn_text{
-				flex: 1;
-				height:100%;
+			width: 100%;
+			height: 100%;
+			text-align: center;
+
+			.btn_text {
+				height: 100%;
+				border: none;
 				border-radius: 0;
 				font-size: $fz15px;
-				border:none;
-				line-height: 45px;
 				font-weight: 700;
+				line-height: 45px;
+				flex: 1;
 			}
 		}
 	}
@@ -830,8 +848,8 @@
 		position: absolute;
 		top: 13px;
 		right: 13px;
-		width:20px;
-		height:20px;
+		width: 20px;
+		height: 20px;
 		background: url(/resources/images/gu.renew.common/btn_close_gray.png) no-repeat;
 		background-size: 100% auto;
 	}
@@ -845,15 +863,16 @@
 			font-size: $fz12px;
 		}
 	}
-	
+
 }
 
 .pop_alert {
 	width: 285px;
-	height: 172px;	
+	height: 172px;
 	border-radius: 8px;
-	.layer_pop_header{
-		.title{
+
+	.layer_pop_header {
+		.title {
 			font-size: $fz16px;
 		}
 	}
@@ -868,11 +887,12 @@
 		> div {
 			display: table-cell;
 			font-size: $fz16px;
+			font-weight: 700;
 			vertical-align: middle;
 			letter-spacing: -0.05em;
 			color: $color_level2;
-			font-weight: 700;
-			&.txt{
+
+			&.txt {
 				padding-top: 10px;
 			}
 		}
@@ -886,8 +906,8 @@
 				padding: 0 0 0 15px;
 				outline: none;
 				background: transparent;
-				line-height: 38px;
 				font-size: $fz13px;
+				line-height: 38px;
 				letter-spacing: -0.05em;
 
 				&:focus {
@@ -896,50 +916,55 @@
 					color: $color_level2;
 				}
 
-				&:focus + .del{
+				&:focus + .del {
 					display: block;
 				}
+
 				&.placeholder {
-					color: $color_level4;
-					letter-spacing: -0.05em;
 					font-size: $fz12px;
-				}	
-				&::placeholder {
-					color: $color_level4;
 					letter-spacing: -0.05em;
-					font-size: $fz12px;
-				}	
-				&::-ms-input-placeholder {
 					color: $color_level4;
-					letter-spacing: -0.05em;
-					font-size: $fz12px;
-				}	
-				&::-webkit-input-placeholder {
-					color: $color_level4;
-					letter-spacing: -0.05em;
-					font-size: $fz12px;
-				}	
-				&::-moz-placeholder {
-					color: $color_level4;
-					letter-spacing: -0.05em;
-					font-size: $fz12px;
 				}
-			}	
+
+				&::placeholder {
+					font-size: $fz12px;
+					letter-spacing: -0.05em;
+					color: $color_level4;
+				}
+
+				&::-ms-input-placeholder {
+					font-size: $fz12px;
+					letter-spacing: -0.05em;
+					color: $color_level4;
+				}
+
+				&::-webkit-input-placeholder {
+					font-size: $fz12px;
+					letter-spacing: -0.05em;
+					color: $color_level4;
+				}
+
+				&::-moz-placeholder {
+					font-size: $fz12px;
+					letter-spacing: -0.05em;
+					color: $color_level4;
+				}
+			}
 
 			&.change {
-				.del{
+				.del {
 					display: block;
 				}
 			}
-			
-			.del{
+
+			.del {
 				display: none;
 				position: absolute;
-				top:50%;
-				right:8px;
-				width:24px;
-				height:24px;
-				margin-top:-12px;
+				top: 50%;
+				right: 8px;
+				width: 24px;
+				height: 24px;
+				margin-top: -12px;
 				background: url(/resources/images/gu.renew.common/btn_del.png) no-repeat 0 0;
 				background-size: 100% auto;
 				text-indent: -9999px;
@@ -1199,59 +1224,70 @@
 .pop_security_set {
 	width: 100%;
 	height: 100%;
+
 	.layer_pop_content {
 		display: flex;
 		flex-direction: column;
-		.tab_list{
-			flex: none;
+
+		.tab_list {
+			margin-top: -1px;
 			margin-bottom: 15px;
-			margin-top:-1px;
-			ul{
+			flex: none;
+
+			ul {
 				display: flex;
 				line-height: 1;
-				li{
+
+				li {
 					flex: 1;
-					.tab{
+
+					.tab {
 						width: 100%;
-						background: #eee;
-						text-align: center;
-						font-size:$fz15px;
-						color: $color_level4;
 						height: 40px;
-						line-height: 40px;
-						letter-spacing: -0.05em;						
 						border-top: 1px solid #d5d5d5;
-						border-bottom: 1px solid #d5d5d5;	
-						&.active{
-							color:#fff;
-							background: #333;
+						border-bottom: 1px solid #d5d5d5;
+						background: #eee;
+						font-size: $fz15px;
+						line-height: 40px;
+						text-align: center;
+						letter-spacing: -0.05em;
+						color: $color_level4;
+
+						&.active {
 							border-top: 1px solid #333;
-							border-bottom: 1px solid #333;	
-						}				
+							border-bottom: 1px solid #333;
+							background: #333;
+							color: #fff;
+						}
 					}
 				}
 			}
 		}
-		.tab_cont_box{
-			flex:1;
-			overflow: auto;
+
+		.tab_cont_box {
 			padding: 0 16px;
-			.tab_cont{
+			overflow: auto;
+			flex: 1;
+
+			.tab_cont {
 				display: none;
-				&.active{
-					display:block;
+
+				&.active {
+					display: block;
 				}
-				
-				.top_btn_box{
-					text-align: right;
+
+				.top_btn_box {
 					margin-bottom: 10px;
+					text-align: right;
 				}
+
 				.basic_type {
-					margin-bottom:20px;
+					margin-bottom: 20px;
+
 					th {
 						.select {
 							position: relative;
-			
+
 							&::after {
 								display: inline-block;
 								position: absolute;
@@ -1264,32 +1300,38 @@
 							}
 						}
 					}
-			
-					td{			
+
+					td {
 						padding: 5px 10px;
-						.input_set{
-							margin-right:-10px;
-							input{
+
+						.input_set {
+							margin-right: -10px;
+
+							input {
 								height: 28px;
-								font-size: $fz12px;
 								padding: 0 8px
+								font-size: $fz12px;
 							}
 						}
 					}
+
 					.check_box_set {
 						line-height: 1;
-						&.no_label label{
+
+						&.no_label label {
 							width: 20px;
 							height: 20px;
 							padding-left: 20px;
 						}
-						input[type='checkbox'] + label:after{
+
+						input[type='checkbox'] + label:after {
 							background: url(/resources/images/gu.renew.common/checkbox_off_gray.png) no-repeat;
-							background-size:100% auto;
+							background-size: 100% auto;
 						}
-						input[type='checkbox']:checked + label:after{
+
+						input[type='checkbox']:checked + label:after {
 							background: url(/resources/images/gu.renew.common/checkbox_on_red.png) no-repeat;
-							background-size:100% auto;
+							background-size: 100% auto;
 						}
 					}
 				}
@@ -1300,17 +1342,18 @@
 
 /* 가계약조회리스트 */
 .pop_conditional_contract {
-	width:100%;
+	width: 100%;
 	height: 100%;
 
-	.layer_pop_content{
+	.layer_pop_content {
 		display: flex;
 		flex-direction: column;
+
 		.search_condition {
-			flex: none;
 			margin: 0 0px 10px;
 			padding: 15px 12px;
 			background: #f0f3f8;
+			flex: none;
 			text-align: center;
 
 			.sorting_list {
@@ -1324,31 +1367,33 @@
 
 					label {
 						font-size: $fz14px;
-						color: $color_level2;
 						letter-spacing: -0.075em;
+						color: $color_level2;
 					}
 				}
 			}
 
 			.date {
 				font-size: $fz15px;
-				color: $color_level2;
 				line-height: 1;
+				color: $color_level2;
 			}
 		}
 
 		.insurance_list {
-			flex: 1;
-			overflow: auto;
+			margin: 0;
 			padding: 0 12px 0;
-			margin:0;
-			.item{
+			overflow: auto;
+			flex: 1;
+
+			.item {
 				position: relative;
-				.btn_edit{
+
+				.btn_edit {
 					position: absolute;
-					top:40px;
-					right:20px;
-					z-index:10;
+					z-index: 10;
+					top: 40px;
+					right: 20px;
 				}
 			}
 		}
@@ -1368,18 +1413,20 @@
 
 /* basic_type */
 .basic_type {
-	border-top:1px solid #3c444d;
+	border-top: 1px solid #3c444d;
+
 	thead {
 		th {
 			padding: 9px 5px;
-			border-bottom: 1px solid #d5d5d5;
 			border-right: 1px solid #d5d5d5;
+			border-bottom: 1px solid #d5d5d5;
+			background: #eee;
 			font-size: $fz12px;
 			text-align: center;
-			color: $color_level2;
-			background: #eee;
 			vertical-align: middle;
-			&:last-child{
+			color: $color_level2;
+
+			&:last-child {
 				border-right: none;
 			}
 		}
@@ -1388,13 +1435,14 @@
 	tbody {
 		td {
 			padding: 8px 10px;
-			border-bottom: 1px solid #d5d5d5;
 			border-right: 1px solid #d5d5d5;
+			border-bottom: 1px solid #d5d5d5;
 			font-size: $fz12px;
+			vertical-align: middle;
 			letter-spacing: -0.05em;
-			color: $color_level3;	
-			vertical-align: middle;		
-			&:last-child{
+			color: $color_level3;
+
+			&:last-child {
 				border-right: none;
 			}
 		}
@@ -1494,15 +1542,17 @@
 		pointer-events: none;
 	}
 }
-.btn_round{	
+
+.btn_round {
+	padding: 5px 9px;
+	border: 1px solid #d5d5d5;
+	border-radius: 13px;
 	font-size: $fz12px;
 	letter-spacing: -0.05em;
 	color: $color_level1;
-	border: 1px solid #d5d5d5;
-	border-radius: 13px;
-	padding: 5px 9px;
 }
-.icon_reset{
+
+.icon_reset {
 
 	&:before {
 		display: inline-block;
@@ -1515,7 +1565,8 @@
 		vertical-align: top;
 	}
 }
-.icon_all_select{
+
+.icon_all_select {
 
 	&:before {
 		display: inline-block;
@@ -1532,7 +1583,8 @@
 
 /*그래프*/
 .consulting_list {
-	padding:0 17px;
+	padding: 0 17px;
+
 	> li {
 		padding-bottom: 15px;
 	}
@@ -1572,14 +1624,14 @@
 
 		.bottom_info {
 			@include clearline;
+			display: table;
 			position: absolute;
 			bottom: 0;
 			left: 0;
 			width: 100%;
 			padding: 5px 20px 5px 40px;
-			text-align: center;
-			display:table;
 			font-size: 0;
+			text-align: center;
 
 			li {
 				display: inline-block;
@@ -1608,11 +1660,11 @@
 
 				&.payment {
 					padding: 0 5px;
+					border: 1px solid #b8e0dc;
 					border-radius: 3px;
-					border:1px solid #b8e0dc;
 					font-size: $fz11px;
-					color: #01a7c4;
 					line-height: 16px;
+					color: #01a7c4;
 				}
 			}
 		}
@@ -2079,117 +2131,135 @@
 }
 
 /* 가입현황 - 상세내역 */
-.full_pop{	
+.full_pop {
 	background: #f3f3f3;
-	.top_area{	
-		padding-top: 0;	
+
+	.top_area {
+		padding-top: 0;
 		background: #666;
-		.inner{
+
+		.inner {
 			position: relative;
-			padding:18px 40px 0;
-			height:48px;
-			.btn_prev{
-				position: absolute;
-				top:50%;
-				left:10px;
+			height: 48px;
+			padding: 18px 40px 0;
+
+			.btn_prev {
 				display: block;
-				width:25px;
+				position: absolute;
+				top: 50%;
+				left: 10px;
+				width: 25px;
 				height: 25px;
+				margin-top: -12px;
 				background: url(/resources/images/gu.renew.common/btn_icon_prev.png) no-repeat 0 0;
-				background-size:100% auto;
-				margin-top:-12px;
+				background-size: 100% auto;
 			}
-			.title{
-				font-size:$fz17px;
-				color:#f0f3f8;
-				text-align: center;
+
+			.title {
+				font-size: $fz17px;
 				line-height: 1;
+				text-align: center;
+				color: #f0f3f8;
 				@include ellipsis();
 			}
 		}
-		.conner_left{
+
+		.conner_left {
 			display: block;
+			position: absolute;
+			bottom: -10px;
+			left: 0;
 			width: 10px;
 			height: 10px;
-			position: absolute;
-			left: 0;
-			bottom: -10px;
 			overflow: hidden;
-			&:after{
-				content:"";
+
+			&:after {
 				display: block;
 				width: 10px;
 				height: 10px;
-				border-radius:10px 0 0 0;
-				box-shadow:0 0 0 10px #666;
+				border-radius: 10px 0 0 0;
+				content: "";
+				box-shadow: 0 0 0 10px #666;
 			}
 		}
-		.conner_right{
+
+		.conner_right {
 			display: block;
-			width: 10px;
-			height: 10px;
 			position: absolute;
 			right: 0;
 			bottom: -10px;
+			width: 10px;
+			height: 10px;
 			overflow: hidden;
-			&:after{
-				content:"";
+
+			&:after {
 				display: block;
 				width: 10px;
 				height: 10px;
-				border-radius:0 10px 0 0;
-				box-shadow:0 0 0 10px #666;
+				border-radius: 0 10px 0 0;
+				content: "";
+				box-shadow: 0 0 0 10px #666;
 			}
 		}
 	}
-	.content_area_sub{
+
+	.content_area_sub {
 		padding-top: 15px;
 		padding-bottom: 15px;
 	}
 }
-.insurance_detail_info{
+
+.insurance_detail_info {
 	padding: 0 15px 25px;
-	.inner{
-		background: #fff;
+
+	.inner {
+		padding: 15px;
 		border-radius: 8px;
-		padding:15px;
-		
-		.payment_info{
-			.payment{
+		background: #fff;
+
+		.payment_info {
+			.payment {
 				display: inline-block;
-				font-size: $fz15px;
-				color: $color_level1;
 				margin-right: 5px;
+				font-size: $fz15px;
 				vertical-align: top;
-				strong{
+				color: $color_level1;
+
+				strong {
 					font-size: $fz20px;
 					font-weight: 700;
 				}
 			}
-			.info{
+
+			.info {
 				display: inline-block;
+				margin-top: 2px;
 				font-size: $fz12px;
-				color: $color_level4;
 				vertical-align: top;
-				margin-top:2px;
-				.txt{
+				color: $color_level4;
+
+				.txt {
 					color: $color_level1;
-					strong{
+
+					strong {
 						font-size: $fz13px;
 						font-weight: 400;
 					}
 				}
 			}
-			.logo{
-				float: right;
+
+			.logo {
 				display: inline-block;
-				height:18px;
-				margin-top:3px;
-				img{
-					height:100%;
+				float: right;
+				height: 18px;
+				margin-top: 3px;
+
+				img {
+					height: 100%;
 				}
 			}
 		}
+
 		.count_bar_box {
 			margin: 5px 0 0px;
 
@@ -2204,22 +2274,22 @@
 					height: 17px;
 					border-radius: 8px;
 					background: #02a7c5;
+					font-size: $fz12px;
+					line-height: 1;
 					transition: all 1.2s;
 					text-align: right;
-					line-height: 1;
-					font-size: $fz12px;
 				}
 
 				.percent {
 					height: 17px;
+					padding-right: 10px;
 					font-weight: 500;
 					line-height: 18px;
-					padding-right: 10px;
 					text-align: center;
 					color: #fff;
 				}
 			}
-			
+
 			.txt_box {
 				margin: 5px 0 3px;
 				line-height: 1;
@@ -2227,226 +2297,261 @@
 
 				.left_txt {
 					float: left;
-					width:50%;
+					width: 50%;
 					font-size: $fz12px;
 					color: $color_level2;
-					.no{
-						color:#01a7c4;
+
+					.no {
+						color: #01a7c4;
 					}
 				}
 
 				.right_txt {
 					float: right;
-					width:50%;
+					width: 50%;
 					font-size: $fz12px;
-					color: $color_level2;
 					text-align: right;
-					.no{
-						color:$color_level4;
+					color: $color_level2;
+
+					.no {
+						color: $color_level4;
 					}
 				}
 
-				.no{					
-					margin-bottom:8px;
-					strong{
+				.no {
+					margin-bottom: 8px;
+
+					strong {
+						font-size: $fz13px;
 						font-weight: 700;
-						font-size:$fz13px;
 					}
 				}
-				.txt{
-					color: $color_level3;
-					font-size:$fz12px;					
+
+				.txt {
+					font-size: $fz12px;
 					letter-spacing: -0.05em;
-					strong{
-						color: $color_level2;
-						margin-left:3px;
+					color: $color_level3;
+
+					strong {
+						margin-left: 3px;
 						font-weight: 400;
+						color: $color_level2;
 					}
 				}
 			}
-			.point_txt{
-				font-size:$fz10px;
-				color:$color_level4;
-				letter-spacing: -0.05em;
+
+			.point_txt {
+				font-size: $fz10px;
 				line-height: 17px;
+				letter-spacing: -0.05em;
+				color: $color_level4;
 			}
 		}
-		.etc_info{	
-			position: relative;		
+
+		.etc_info {
+			position: relative;
 			@include clearline();
-			padding-top:10px;
-			margin-top:10px;
-			&:before{
-				position: absolute;
-				top:0px;
-				left:-15px;
+			margin-top: 10px;
+			padding-top: 10px;
+
+			&:before {
 				display: block;
-				content: "";
-				width:calc(100% + 30px);
+				position: absolute;
+				top: 0px;
+				left: -15px;
+				width: calc(100% + 30px);
 				border-top: 1px dotted #d8d8d8;
+				content: "";
 			}
 
-			>div{
-				>div{
-					font-size:$fz12px;
-					color:$color_level4;
-					letter-spacing: normal;
-					line-height: 1;
+			> div {
+				> div {
 					margin-top: 5px;
+					font-size: $fz12px;
+					line-height: 1;
+					letter-spacing: normal;
+					color: $color_level4;
 				}
 			}
-			.left_txt{
+
+			.left_txt {
 				float: left;
-				width:50%;
-				.state{
+				width: 50%;
+
+				.state {
 					display: inline-block;
-					color: #ff4858;
-					background: #ffe4e3;
 					height: 18px;
-					line-height: 20px;
 					padding: 0 10px;
 					border-radius: 3px;
+					background: #ffe4e3;
 					font-size: $fz12px;
-					&.cancel{
+					line-height: 20px;
+					color: #ff4858;
+
+					&.cancel {
 						background: #e7e7e7;
-						color:#777;
+						color: #777;
 					}
 				}
 			}
-			.right_txt{				
+
+			.right_txt {
 				float: left;
-				width:50%;
-				padding-left:8px;
-				.tit{
+				width: 50%;
+				padding-left: 8px;
+
+				.tit {
 					display: inline-block;
-					background: #eee;
 					height: 18px;
-					line-height: 20px;
 					padding: 0 10px;
 					border-radius: 3px;
+					background: #eee;
 					font-size: $fz12px;
-					color:$color_level4;
+					line-height: 20px;
+					color: $color_level4;
 				}
 			}
 		}
 	}
 }
-.insurance_detail_tab{
-	.tab_list{	
-		padding:0 15px;
+
+.insurance_detail_tab {
+	.tab_list {
+		padding: 0 15px;
 		border-bottom: 1px solid #d5d5d5;
 		background: #f3f3f3;
-		ul{
+
+		ul {
 			@include clearline();
 			margin-bottom: -1px;
-			li{			
+
+			li {
 				float: left;
-				margin-right:17px;			
+				margin-right: 17px;
 				line-height: 1;
-				&:last-child{
+
+				&:last-child {
 					margin-right: 0;
 				}
-				.tab{
+
+				.tab {
 					position: relative;
-					font-size:$fz15px;
-					color:$color_level4;
-					letter-spacing: -0.05em;
 					padding-bottom: 8px;
-					&.active{
+					font-size: $fz15px;
+					letter-spacing: -0.05em;
+					color: $color_level4;
+
+					&.active {
 						font-weight: 700;
-						color:$color_level2;
-						&:after{
-							position: absolute;
-							left:0;
-							bottom:0;
+						color: $color_level2;
+
+						&:after {
 							display: block;
-							content:"";
-							width:100%;
-							height:2px;
+							position: absolute;
+							bottom: 0;
+							left: 0;
+							width: 100%;
+							height: 2px;
 							background: #333;
+							content: "";
 						}
 					}
 				}
 			}
 		}
 	}
-	.note_box{		
-		margin-top:20px;
-		padding:0 15px;
-		background: #f3f3f3;
+
+	.note_box {
+		margin-top: 20px;
+		padding: 0 15px;
 		border-top: none;
-		dd{
+		background: #f3f3f3;
+
+		dd {
 			font-size: $fz12px;
-			&:last-child{
+
+			&:last-child {
 				margin-bottom: 0;
 			}
 		}
 	}
 }
-.insurance_detail_tab_cont{
+
+.insurance_detail_tab_cont {
+	padding: 0 15px;
 	background: #fff;
-	padding:0 15px;
-	.tab_cont{
+
+	.tab_cont {
 		display: none;
-		&.active{
-			display:block;
+
+		&.active {
+			display: block;
 		}
 	}
-	.list{
-		li:last-child{
-			.item{
-				border-bottom:none;
+
+	.list {
+		li:last-child {
+			.item {
+				border-bottom: none;
 			}
 		}
-		.item{
-			border-bottom: 1px solid #ededed;
+
+		.item {
 			padding: 10px 0 10px;
+			border-bottom: 1px solid #ededed;
 			line-height: 1;
 			@include clearline();
-			.tit_info{
+
+			.tit_info {
 				float: left;
-				width:75%;
-				font-size: $fz12px;
-				color: #555;
-				letter-spacing: -0.05em;
-				line-height: 20px;
+				width: 75%;
 				padding-left: 9px;
-				.tit{
-					position: relative;
+				font-size: $fz12px;
+				line-height: 20px;
+				letter-spacing: -0.05em;
+				color: #555;
+
+				.tit {
 					display: block;
+					position: relative;
 					font-weight: 700;
-					&:before{
+
+					&:before {
+						display: inline-block;
 						position: absolute;
 						top: 50%;
 						left: -7px;
-						margin-top: -1px;
-						display: inline-block;
-						content: "";
 						width: 2px;
 						height: 2px;
+						margin-top: -1px;
 						background: #555;
+						content: "";
 					}
 				}
 			}
-			.state_info{
+
+			.state_info {
 				float: right;
-				width:25%;
-				text-align:right;
+				width: 25%;
 				font-size: $fz12px;
-				span{
+				text-align: right;
+
+				span {
 					display: block;
-					&.state{
+
+					&.state {
 						display: inline-block;
-						color: #ff4858;
-						background: #ffe4e3;
 						height: 18px;
-						line-height: 20px;
-						padding:0 10px;
-						border-radius: 3px;
 						margin-bottom: 8px;
-						&.cancel{
+						padding: 0 10px;
+						border-radius: 3px;
+						background: #ffe4e3;
+						line-height: 20px;
+						color: #ff4858;
+
+						&.cancel {
 							background: #e7e7e7;
-							color:#777;
+							color: #777;
 						}
 					}
 				}
@@ -2458,29 +2563,33 @@
 
 /*팝업 컨설팅 전후 비교*/
 .consulting_wrap {
-	padding:0 17px;
-	>.name {
-		text-align: center;
+	padding: 0 17px;
+
+	> .name {
+		margin-bottom: 20px;
 		font-size: $fz16px;
 		line-height: $fz20px;
+		text-align: center;
 		letter-spacing: -1px;
 		color: $color_level2;
-		margin-bottom: 20px;
 	}
+
 	.consulting_top_box {
 		display: flex;
 		width: 100%;
 		margin-bottom: 10px;
+		border-radius: 10px;
 		background: #ffffff;
-		border-radius:10px;
+
 		> li {
 			&.before,
 			&.after {
-				width: 50%;
 				position: relative;
+				width: 50%;
 				padding: 20px 0;
 				line-height: 1;
 				vertical-align: top;
+
 				> .title {
 					margin-bottom: 19px;
 					font-size: $fz14px;
@@ -2489,26 +2598,28 @@
 				}
 
 				> .list {
-					padding:0 20px 0 15px;
-					letter-spacing:-1px;
+					padding: 0 20px 0 15px;
+					letter-spacing: -1px;
 					color: $color_level4;
 
 					> li {
+						display: flex;
 						margin-bottom: 14px;
 						line-height: 16px;
-						display: flex;
+
 						&:last-child {
 							margin-bottom: 0;
 						}
+
 						.title {
 							font-size: $fz12px;
 							text-align: left;
 						}
 
 						.result {
-							flex:1;
-							text-align: right;
 							font-size: $fz16px;
+							flex: 1;
+							text-align: right;
 						}
 					}
 				}
@@ -2518,6 +2629,7 @@
 				> .list {
 					padding: 0 15px 0 20px;
 				}
+
 				&:before {
 					display: block;
 					position: absolute;
@@ -2555,39 +2667,46 @@
 			}
 		}
 	}
-	.consulting_item_box{
-		border-radius:10px;
+
+	.consulting_item_box {
+		border-radius: 10px;
 		background: #ffffff;
-		&.nodata{
+
+		&.nodata {
+			padding: 20px 0;
+			border: 1px solid #d5d5d5;
 			background: none;
-			border:1px solid #d5d5d5;
 			font-size: $fz16px;
 			line-height: 23px;
 			text-align: center;
-			padding:20px 0;
 			color: $color_level4;
 		}
-		.sort_title{
-			line-height: 36px;
-			border-bottom: 1px solid #d5d5d5;
-			padding:0 29px 0 0;
-			text-align: right;
+
+		.sort_title {
 			display: table;
-			font-size: 0;
 			width: 100%;
-			li{
-				vertical-align: top;
+			padding: 0 29px 0 0;
+			border-bottom: 1px solid #d5d5d5;
+			font-size: 0;
+			line-height: 36px;
+			text-align: right;
+
+			li {
 				display: inline-block;
 				width: 90px;
-				text-align: center;
 				font-size: $fz12px;
+				text-align: center;
+				vertical-align: top;
 				color: $color_level2;
 			}
 		}
-		.consulting_item_area{
-			padding:0 15px;
+
+		.consulting_item_area {
+			padding: 0 15px;
+
 			.consulting_item {
 				border-bottom: 1px solid #ededed;
+
 				.toggle_btn_area {
 					display: block;
 					position: relative;
@@ -2623,30 +2742,31 @@
 
 				.list_item {
 					display: flex;
-					align-self:center;
 					width: 100%;
 					padding-right: 13px;
+					align-self: center;
+
 					> li {
 						position: relative;
 						vertical-align: middle;
 						letter-spacing: -1px;
 
 						&.title {
-							flex:1;
 							padding-left: 25px;
 							font-size: $fz14px;
 							line-height: 1;
+							flex: 1;
 							color: $color_level2;
 						}
 
 						&.before,
 						&.after {
-							flex:none;
 							position: relative;
 							width: 90px;
 							padding-right: 12px;
 							font-size: $fz16px;
 							line-height: 1;
+							flex: none;
 							text-align: right;
 							color: $color_level4;
 						}
@@ -2696,17 +2816,20 @@
 			.small {
 				.list_item {
 					height: 23px;
+
 					li.title {
 						position: relative;
 						font-size: $fz12px;
+						align-self: center;
 						color: $color_level4;
-						align-self:center;
 					}
+
 					li.before,
-					li.after{
-						align-self:center;
+					li.after {
 						font-size: $fz14px;
-						strong{
+						align-self: center;
+
+						strong {
 							font-weight: 400;
 						}
 					}
