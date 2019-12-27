@@ -84,7 +84,16 @@
 					<span class="sex">여</span> <span class="bday">1981.05.30</span> <span class="age">32세</span>
 				</li>
 				<li>
-					<button class="btn_alert">상령일</button>
+					<button class="btn_alert" onclick="layerPopBoxOpen('popup_info1')">상령일</button>
+					<div class="layer_pop_box" id="popup_info1">
+						<div class="layer_pop_content">
+							<div class="title">상령일이란?</div>
+							<div class="text">
+								보험회사에서 정하는 보험나이로 생년월일에서 6개월 경과시점이 상령일이 되며, 보험연령 증가에 따라 상령일 이후 보험료가 증가될수 있습니다.
+							</div>
+						</div>
+						<button class="btn_close white" onclick="layerPopBoxClose('popup_info1')"><span>닫기</span></button>
+					</div>
 					<span>11.30</span>
 				</li>
 			</ul>
