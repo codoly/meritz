@@ -213,7 +213,11 @@
 		<ul class="menu_area">
 			<li class="home"><a class="home" href="#">홈으로</a></li>
 			<li class="util">
-				<a class="menu01" href="#">등록</a> <a class="menu02" href="#">컨컬팅</a> <a class="menu03" href="#">pdf sample</a>
+				<a class="menu01" href="#"><span>고객<br>등록</span></a> 
+				<a class="menu02" href="#"><span>권장금액<br>보장군 설정</span></a> 
+				<a class="menu03" href="#"><span>가계약<br>조회</span></a> 
+				<a class="menu04" href="#"><span>PDF<br>샘플보기</span></a>
+				<a class="menu05" href="#"><span>PDF<br>보기</span></a>
 			</li>
 		</ul>
 		<div class="member_info_area">
@@ -226,7 +230,16 @@
 					<span class="sex">여</span> <span class="bday">1981.05.30</span> <span class="age">32세</span>
 				</li>
 				<li>
-					<button class="btn_alert">상령일</button>
+					<button class="btn_alert" onclick="layerPopBoxOpen('popup_info1')">상령일</button>
+					<div class="layer_pop_box" id="popup_info1">
+						<div class="layer_pop_content">
+							<div class="title">상령일이란?</div>
+							<div class="text">
+								보험회사에서 정하는 보험나이로 생년월일에서 6개월 경과시점이 상령일이 되며, 보험연령 증가에 따라 상령일 이후 보험료가 증가될수 있습니다.
+							</div>
+						</div>
+						<button class="btn_close white" onclick="layerPopBoxClose('popup_info1')"><span>닫기</span></button>
+					</div>
 					<span>11.30</span>
 				</li>
 			</ul>
@@ -238,12 +251,12 @@
 		<div class="top_info">
 			<ul>
 				<li class="default">
-					<div class="title">정상계약</div>
+					<div class="title new">정상계약</div>
 					<div class="result"><strong>113</strong>건</div>
 				</li>
 				<li class="month">
-					<div class="title">정상계약</div>
-					<div class="result"><strong>11,264,530</strong>건</div>
+					<div class="title">월보험료</div>
+					<div class="result"><strong>11,264,530</strong>원</div>
 				</li>
 				<li class="list no">
 					<div class="title">미가입</div>
@@ -254,7 +267,7 @@
 					<div class="result"><strong>13</strong></div>
 				</li>
 				<li class="list good">
-					<div class="title">충분</div>
+					<div class="title new">충분</div>
 					<div class="result"><strong>13</strong></div>
 				</li>
 			</ul>

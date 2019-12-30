@@ -13,7 +13,21 @@
 	<script src="/resources/js/gu.renew.common.ui.js"></script>
 	<script>
 		$(function () {
-			subMenuActive(1)
+			subMenuActive(1);
+
+			//state_info button click event
+			$(document).on("click", ".cancel_list .btn_text_arr", function () {
+				var target = $(this).closest(".cancel_list");
+				if (!target.hasClass("open")) {
+					target.addClass("open");
+					target.find(".list_box").slideDown();
+					target.find(".btn_text_arr > span").text('접기');
+				} else {
+					target.removeClass("open");
+					target.find(".list_box").slideUp();					
+					target.find(".btn_text_arr > span").text('펼쳐보기');
+				}
+			});
 		})
 	</script>
 </head>
@@ -23,7 +37,11 @@
 		<ul class="menu_area">
 			<li class="home"><a class="home" href="#">홈으로</a></li>
 			<li class="util">
-				<a class="menu01" href="#">등록</a> <a class="menu02" href="#">컨컬팅</a> <a class="menu03" href="#">pdf sample</a>
+				<a class="menu01" href="#"><span>고객<br>등록</span></a> 
+				<a class="menu02" href="#"><span>권장금액<br>보장군 설정</span></a> 
+				<a class="menu03" href="#"><span>가계약<br>조회</span></a> 
+				<a class="menu04" href="#"><span>PDF<br>샘플보기</span></a>
+				<a class="menu05" href="#"><span>PDF<br>보기</span></a>
 			</li>
 		</ul>
 		<div class="member_info_area">
@@ -36,7 +54,16 @@
 					<span class="sex">여</span> <span class="bday">1981.05.30</span> <span class="age">32세</span>
 				</li>
 				<li>
-					<button class="btn_alert">상령일</button>
+					<button class="btn_alert" onclick="layerPopBoxOpen('popup_info1')">상령일</button>
+					<div class="layer_pop_box" id="popup_info1">
+						<div class="layer_pop_content">
+							<div class="title">상령일이란?</div>
+							<div class="text">
+								보험회사에서 정하는 보험나이로 생년월일에서 6개월 경과시점이 상령일이 되며, 보험연령 증가에 따라 상령일 이후 보험료가 증가될수 있습니다.
+							</div>
+						</div>
+						<button class="btn_close white" onclick="layerPopBoxClose('popup_info1')"><span>닫기</span></button>
+					</div>
 					<span>11.30</span>
 				</li>
 			</ul>
@@ -89,37 +116,35 @@
 							</div>
 						</div>
 						<div class="logo"><img alt="한화생명" src="/resources/images/gu.renew.logo/logo_hanwha_life.png"></div>
-					</a> <a class="insurance" href="#">
-					<div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904</div>
-					<div class="payment_info">
-						<span class="state">정상</span>
-						<div class="info">
-							<div class="payment"><strong>69,030</strong>원 <span>매월납/12년</span></div>
-							<div class="date">2009.07.17~2082.07.17</div>
+					</a> 
+					<a class="insurance" href="#">
+						<div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904</div>
+						<div class="payment_info">
+							<span class="state">정상</span>
+							<div class="info">
+								<div class="payment"><strong>69,030</strong>원 <span>매월납/12년</span></div>
+								<div class="date">2009.07.17~2082.07.17</div>
+							</div>
 						</div>
-					</div>
-					<div class="logo"><img alt="한화생명" src="/resources/images/gu.renew.logo/logo_bnp_life.png"></div>
-				</a>
-				</div>
-			</div>
-			<!-- insurance_list : e -->
-
-			<!-- insurance_list : s -->
-			<div class="insurance_list">
-				<div class="tit_box">
-					<h3 class="sort_tit">자동차보험</h3><span class="number">1</span>
+						<div class="logo"><img alt="한화생명" src="/resources/images/gu.renew.logo/logo_bnp_life.png"></div>
+					</a>
 				</div>
 
+				<!-- 가입내역 없음 : s -->
+				<!--
 				<div class="insurance no_insurance">
 					<div>가입내역이 없습니다.</div>
 				</div>
+				-->
+				<!-- 가입내역 없음 : e -->
 			</div>
 			<!-- insurance_list : e -->
 
 			<!-- insurance_list : s -->
-			<div class="insurance_list">
+			<div class="insurance_list cancel_list">
 				<div class="tit_box">
-					<h3 class="sort_tit">실효해지</h3><span class="number"><strong>2</strong>건</span>
+					<h3 class="sort_tit">실효해지</h3><span class="number"><strong>1</strong>건</span>
+					<button class="btn_text_arr"><span>펼쳐보기</span></button>
 				</div>
 				<div class="list_box">
 					<a class="insurance disabled" href="#">
@@ -139,6 +164,17 @@
 			<!-- insurance_list : e -->
 		</div>
 		<!-- insurance_list_box : e -->
+
+		<!-- 유의사항 : s -->
+		<div class="note_box">
+			<dl>
+				<dt>유의사항</dt>
+				<dd>상기 내용 중 보험료에 대한 분석은 초회보험료를 납입만기까지 계속 납입하는 기준으로 산출한 것으로 중도에 계약이 변경되거나 특약의 납입기간이 상이할 경우 차이가 발생할 수 있습니다. 정확한 내용은 해당 보험회사에 문의해주시기 바랍니다.
+				</dd>
+				<dd>실손형보장의 보험료는 제외된 금액입니다. 실손형의 경우 갱신형으로 되어 있어 초회보험료와 향후 보험료가 상이하여 책정이 불가능 합니다.</dd>
+			</dl>
+		</div>
+		<!-- 유의사항 : e -->
 	</div>
 
 	<!-- bottom_fixed_menu_area : s	-->

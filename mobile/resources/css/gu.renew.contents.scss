@@ -398,7 +398,11 @@
 .insurance_list {
 	margin-bottom: 20px;
 
+	&:last-child{
+		margin-bottom: 0;
+	}
 	.tit_box {
+		position: relative;
 		margin-bottom: 10px;
 		line-height: 1;
 		text-align: center;
@@ -508,6 +512,43 @@
 				font-weight: 700;
 			}
 		}
+		
+		.btn_contract_add{
+			padding: 28px 0;
+		}
+	}
+
+	&.cancel_list{
+		margin-bottom: -10px;
+
+		&.open{
+			margin-bottom: 10px;
+			
+			.tit_box {
+				.btn_text_arr {
+					&:after{
+						transform: rotate(-135deg);
+					}
+				}
+			}
+		}
+
+		.tit_box{
+			.btn_text_arr{
+				position: absolute;
+				top: 0;
+				right: 3px;
+				color: $color_level4;
+
+				&:after{
+					transform: rotate(45deg);
+				}
+			}
+		}
+
+		.list_box{
+			display: none;
+		}
 	}
 
 	.insurance {
@@ -531,7 +572,7 @@
 			@include clearline();
 
 			.state {
-				display: inline-block;
+				display: block;
 				float: left;
 				height: 18px;
 				margin-right: 10px;
@@ -771,21 +812,22 @@
 
 /* 유의사항 */
 .note_box {
-	padding: 15px 0 0;
+	padding: 15px 0;
+	margin: 0 15px; 
 	border-top: 1px solid #cad2db;
 
 	dl {
 		letter-spacing: -0.075em;
 
 		dt {
-			margin-bottom: 5px;
-			font-size: $fz14px;
-			color: $color_level2;
+			font-size: $fz12px;
+			color: $color_level1;
+			font-weight: 700;
 		}
 
 		dd {
 			margin-bottom: 5px;
-			font-size: $fz14px;
+			font-size: $fz12px;
 			line-height: 20px;
 			color: $color_level4;
 		}
@@ -1524,13 +1566,13 @@
 	font-size: $fz12px;
 	color: #3c444d;
 
-	:after {
+	&:after {
 		display: inline-block;
 		width: 6px;
 		height: 6px;
 		margin: -6px 0 0 5px;
-		border-right: 1.5px solid #9a9fa6;
-		border-bottom: 1.5px solid #9a9fa6;
+		border-right: 1px solid #9a9fa6;
+		border-bottom: 1px solid #9a9fa6;
 		content: "";
 		-webkit-transition: all 0.15s ease-in-out;
 		transition: all 0.15s ease-in-out;
@@ -2249,7 +2291,7 @@
 			}
 
 			.logo {
-				display: inline-block;
+				display: block;
 				float: right;
 				height: 18px;
 				margin-top: 3px;
@@ -2344,7 +2386,7 @@
 				font-size: $fz10px;
 				line-height: 17px;
 				letter-spacing: -0.05em;
-				color: $color_level4;
+				color: #fd795b;
 			}
 		}
 
@@ -2389,8 +2431,8 @@
 					color: #ff4858;
 
 					&.cancel {
-						background: #e7e7e7;
-						color: #777;
+						background: #eee;
+						color: $color_level4
 					}
 				}
 			}
@@ -2409,6 +2451,19 @@
 					font-size: $fz12px;
 					line-height: 20px;
 					color: $color_level4;
+				}
+			}
+		}
+
+		.car_info{
+			>div{
+				display:inline-block;
+				font-size:$fz12px;
+				color: $color_level3;
+				margin-right: 15px;
+				letter-spacing: -0.05em;
+				.txt{
+					color: $color_level2;
 				}
 			}
 		}
@@ -2462,10 +2517,10 @@
 	}
 
 	.note_box {
-		margin-top: 20px;
-		padding: 0 15px;
+		padding: 20px 15px;
 		border-top: none;
-		background: #f3f3f3;
+		background: #fff;
+		margin: 0 0px -15px;
 
 		dd {
 			font-size: $fz12px;
@@ -2490,11 +2545,6 @@
 	}
 
 	.list {
-		li:last-child {
-			.item {
-				border-bottom: none;
-			}
-		}
 
 		.item {
 			padding: 10px 0 10px;
@@ -2504,7 +2554,7 @@
 
 			.tit_info {
 				float: left;
-				width: 75%;
+				width: 64%;
 				padding-left: 9px;
 				font-size: $fz12px;
 				line-height: 20px;
@@ -2515,6 +2565,7 @@
 					display: block;
 					position: relative;
 					font-weight: 700;
+					margin-bottom: 4px;
 
 					&:before {
 						display: inline-block;
@@ -2528,11 +2579,14 @@
 						content: "";
 					}
 				}
+				.info{
+					line-height: 14px;
+				}
 			}
 
 			.state_info {
 				float: right;
-				width: 25%;
+				width: 36%;
 				font-size: $fz12px;
 				text-align: right;
 
@@ -2550,12 +2604,31 @@
 						color: #ff4858;
 
 						&.cancel {
-							background: #e7e7e7;
-							color: #777;
+							background: #eee;
+							color: $color_level4;
 						}
+					}
+
+					&.date {
+						color: $color_level4;
+						letter-spacing: -0.025em;
+						font-size: $fz12px;						
+						margin-bottom: 6px;						
+						line-height: 20px;
 					}
 				}
 			}
+		}
+	}
+
+	.no_data{
+		padding: 24px 0;
+		text-align: center;
+		border-bottom: 1px solid #ededed;
+		.txt{
+			font-size: $fz14px;
+			color: $color_level4;
+			letter-spacing: -0.05em;
 		}
 	}
 }
