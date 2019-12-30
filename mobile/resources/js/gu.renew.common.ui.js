@@ -43,6 +43,11 @@ $(function () {
 		}
 	});
 
+	//탑버튼 액션
+	$(document).on("click", ".btn_top", function () {
+		$("html, body").animate({"scrollTop" : 0},300)
+	})
+
 })
 
 function formatNumber(num) {
@@ -87,18 +92,7 @@ function layerPopBoxClose(target) {
 	;
 }
 
-//탑버튼 유무
-function btnTop(obj) {
-	var btnTop = $(".btn_top");
-	if ($(obj).height() < $(obj).find(".mCSB_container").height()) {
-		btnTop.show();
-		btnTop.on("click", function () {
-			$(obj).mCustomScrollbar("scrollTo", "0")
-		})
-	} else {
-		btnTop.hide();
-	}
-}
+
 
 //레이아웃 바꾸기
 function changeLayout(type, file) {

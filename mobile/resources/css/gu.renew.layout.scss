@@ -820,8 +820,21 @@
 	height: 44px;
 	background: url("/resources/images/gu.renew.common/btn_top.png") no-repeat;
 }
-
+.btn_top {
+	overflow: hidden;
+	text-indent: -99999px;
+	display: inline-block;
+	z-index: 10;
+	position: fixed;
+	right: 10px;
+	bottom: 76px;
+	width: 22px;
+	height: 22px;
+	background: url(/resources/images/gu.renew.common/btn_top.png) no-repeat;
+	background-size: 22px auto;
+}
 .submain_wrap {
+	overflow: hidden;
 	padding: 0 17px;
 
 	.top_area {
