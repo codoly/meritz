@@ -552,7 +552,8 @@ button div, button:active div, button:before, button:focus div {
     width: 33px;
     height: 33px;
     background: url(/resources/images/gu.renew.common/btn_del.png) no-repeat center center;
-    background-size: 20px auto;
+		background-size: 20px auto;
+		opacity: 0.5;
 	}
 }
 
