@@ -84,7 +84,6 @@ function layerPopBoxOpen(target) {
 
 function layerPopBoxClose(target) {
 	$("#" + target).hide().removeClass("open");
-	;
 }
 
 //탑버튼 유무
@@ -119,7 +118,6 @@ function changeLayout(type, file) {
 			$(".left_area .main_area").addClass("active");
 		}, 10)
 	}
-	/*
 	if (file) {
 		$.get(file, function (data) {
 			var data = $(data);
@@ -130,7 +128,6 @@ function changeLayout(type, file) {
 			}, 300)
 		});
 	}
-	*/
 }
 
 //서브메뉴 활성화
