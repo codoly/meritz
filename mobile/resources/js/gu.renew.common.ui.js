@@ -46,9 +46,18 @@ $(function () {
 	//탑버튼 액션
 	$(document).on("click", ".btn_top", function () {
 		$("html, body").animate({"scrollTop" : 0},300)
-	})
-
+	});
 })
+
+$(window).scroll(function () {
+	var scr_top = $(window).scrollTop();
+	if (scr_top > 50) {
+		$(".btn_top").show();
+	} else {		
+		$(".btn_top").hide();
+	}
+})
+
 
 function formatNumber(num) {
 	return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')

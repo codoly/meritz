@@ -11,6 +11,23 @@
 	<script src="/resources/js/lib/charts.js"></script>
 	<script src="/resources/js/lib/animated.js"></script>
 	<script src="/resources/js/gu.renew.common.ui.js"></script>
+	<script>
+		$(function () {
+			//input 텍스트 삭제
+			var $ipt = $('.input_set input[type="text"]'),
+			$clearIpt = $('.input_set .del');
+
+			$ipt.keyup(function(){
+				$clearIpt.toggle(Boolean($(this).val()));
+			});
+
+			$clearIpt.toggle(Boolean($ipt.val()));
+			$clearIpt.click(function(){
+				$ipt.val('').focus();
+				$(this).hide();
+			});	
+		});
+	</script>
 </head>
 <body style="background:rgba(0,0,0,0.5)">
 <!-- layer_pop_wrap : s -->

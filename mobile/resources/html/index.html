@@ -30,6 +30,19 @@
 				targetCont.eq(idx).show();
 				target.addClass('active').siblings().removeClass('active');
 			});
+			//input 텍스트 삭제
+			var $ipt = $('.search_area input'),
+			$clearIpt = $('.search_area .btn_del');
+
+			$ipt.keyup(function(){
+				$clearIpt.toggle(Boolean($(this).val()));
+			});
+
+			$clearIpt.toggle(Boolean($ipt.val()));
+			$clearIpt.click(function(){
+				$ipt.val('').focus();
+				$(this).hide();
+			});	
 		})
 	</script>
 </head>
@@ -55,7 +68,7 @@
 	<div class="content_area">
 		<!-- search_box : s-->
 		<div class="search_box">
-			<div class="search_area"><input placeholder="고객 검색" type="text"><a class="btn_search" href="#">검색</a></div>
+			<div class="search_area"><input placeholder="고객 검색" type="text"><button class="btn_del"><span class="blind">삭제</span></button><a class="btn_search" href="#">검색</a></div>
 			<ul class="sorting_list">
 				<li>
 					<div class="check_box_set bg_type">
