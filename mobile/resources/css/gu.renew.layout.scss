@@ -309,6 +309,25 @@
 
 				li {
 					line-height: 1;
+					&.new {
+						.title{
+							position: relative;
+							display: inline-block;
+							vertical-align: top;
+							&:after{
+								content:"";
+								display: block;
+								position: absolute;
+								right: -13px;
+								top: -8px;
+								background: url("/resources/images/gu.renew.contents/icon_new.png") no-repeat;
+								background-size: 11px auto;
+								width: 11px;
+								height: 11px;
+							}
+
+						}
+					}
 
 					&.default {
 						padding-right: 30px;
