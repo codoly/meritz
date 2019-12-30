@@ -112,7 +112,7 @@
 	.content_area {
 		position: relative;
 		z-index: 4;
-		min-height: calc(100vh - 154px);
+		min-height: calc(100vh - 158px);
 
 		&.bg_white {
 			background: #ffffff;
@@ -832,6 +832,7 @@
 	background: url(/resources/images/gu.renew.common/btn_top.png) no-repeat;
 	background-size: 22px auto;
 }
+
 .submain_wrap {
 	overflow: hidden;
 	padding: 0 17px;
@@ -1012,6 +1013,44 @@
 
 				span {
 					color: $color_button_red;
+				}
+			}
+		}
+	}
+}
+@media screen and (min-height:735px){
+	.submain_wrap {
+		.box {
+
+			&.box1 {
+				padding:10px 0;
+				.graph_area {
+					#chartdiv1 {
+						width: 150px;
+						height: 150px;
+					}
+				}
+			}
+
+			&.box2 {
+				padding: 10px 0;
+
+				.graph_area {
+					#chartdiv2 {
+						width: 150px;
+						height: 125px;
+					}
+				}
+
+				.info_content_area {
+					align-self: center;
+
+					> .title {
+						padding-top: 0;
+					}
+				}
+				.result{
+					padding-top: 10px;
 				}
 			}
 		}
