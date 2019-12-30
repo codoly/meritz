@@ -511,6 +511,12 @@
 			.name {
 				font-weight: 700;
 			}
+
+			.logo{
+				&:after{
+					display: none;
+				}
+			}
 		}
 		
 		.btn_contract_add{
