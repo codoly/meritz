@@ -517,6 +517,11 @@
 					display: none;
 				}
 			}
+			.etc_info{
+				.txt{
+					color:$color_level1;
+				}
+			}
 		}
 		
 		.btn_contract_add{
@@ -1400,7 +1405,7 @@
 		.search_condition {
 			margin: 0 0px 10px;
 			padding: 15px 12px;
-			background: #f0f3f8;
+			background: #f3f3f3;
 			flex: none;
 			text-align: center;
 
@@ -1411,7 +1416,7 @@
 
 				li {
 					display: inline-block;
-					margin: 0 12px;
+					margin: 0 10px;
 
 					label {
 						font-size: $fz14px;
@@ -1440,8 +1445,9 @@
 				.btn_edit {
 					position: absolute;
 					z-index: 10;
-					top: 40px;
-					right: 20px;
+					top: 30px;
+					right: 10px;
+					padding:10px;
 				}
 			}
 		}
@@ -2713,11 +2719,10 @@
 					display: block;
 					position: absolute;
 					z-index: 1;
-					top: 50%;
+					top: 13px;
 					left: -13px;
 					width: 26px;
 					height: 26px;
-					margin-top: -13px;
 					background: url("/resources/images/gu.renew.contents/icon_consulting_after.png") no-repeat;
 					background-size: 100% auto;
 					content: "";
