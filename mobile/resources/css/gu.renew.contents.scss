@@ -2274,7 +2274,17 @@
 		padding-bottom: 15px;
 	}
 }
-
+@media screen and (min-height:735px) {
+	.insurance_all_state {
+		.all_state_icon {
+			.list {
+				> li {
+					margin-bottom: 40px;
+				}
+			}
+		}
+	}
+}
 .insurance_detail_info {
 	padding: 0 15px 25px;
 
