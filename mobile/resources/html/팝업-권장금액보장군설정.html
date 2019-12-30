@@ -22,6 +22,18 @@
 				targetCont.removeClass('active');
 				targetCont.eq(idx).addClass('active');
 			});
+
+
+			$(document).on("focus", ".input_set.right input", function () {
+				var _this = $(this);
+				setTimeout(function(){
+					_this.setCursorPosition(_this.val().length);
+				},10)
+			});
+			$(document).on("keyup", ".input_set.right input", function () {
+				var _this = $(this).val().replace(/,/gi, "");
+				$(this).val(formatNumber(_this));
+			});
 		});
 	</script>
 </head>
