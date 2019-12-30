@@ -593,6 +593,10 @@
 					font-size: $fz12px;
 					line-height: 40px;
 
+					&:last-child{
+						margin-right: 40px;
+					}
+
 					.on {
 						font-weight: bold;
 						color: #fe5855;
@@ -685,7 +689,7 @@
 .bottom_fixed_menu_area {
 	display: flex;
 	position: fixed;
-	z-index: 20;
+	z-index: 8;
 	bottom: 0;
 	left: 0;
 	//transition:all 0.2s;
