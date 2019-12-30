@@ -22,6 +22,10 @@
 				targetCont.removeClass('active');
 				targetCont.eq(idx).addClass('active');
 			});
+			//전체선택버튼 클릭시 checked 추가
+			$(document).on("click", ".top_btn_box .icon_all_select", function () {
+				$(this).toggleClass('checked');
+			});
 		});
 	</script>
 </head>
