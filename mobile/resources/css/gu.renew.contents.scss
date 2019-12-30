@@ -1618,6 +1618,9 @@
 		content: "";
 		vertical-align: top;
 	}
+	&:active{
+		background: #eee;
+	}
 }
 
 .icon_all_select {
@@ -1631,6 +1634,15 @@
 		background-size: 100% auto;
 		content: "";
 		vertical-align: top;
+	}
+
+	&.checked{
+		color:#ff4858;
+		border: 1px solid #ff4858;
+		&:before {
+			background: url(/resources/images/gu.renew.common/icon_checked_red.png) no-repeat 0 0;
+			background-size: 100% auto;
+		}
 	}
 }
 
