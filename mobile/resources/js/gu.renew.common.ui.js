@@ -49,6 +49,7 @@ $(function () {
 	});
 })
 
+//탑버튼 스크롤 노출
 $(window).scroll(function () {
 	var scr_top = $(window).scrollTop();
 	if (scr_top > 50) {
