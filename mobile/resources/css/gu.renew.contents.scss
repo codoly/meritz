@@ -2501,6 +2501,19 @@
 				}
 			}
 		}
+
+		.cancel_insurance{
+			display: table;
+			width: 100%;
+			height: 75px;
+			text-align: center;
+			.txt{
+				display: table-cell;
+				font-size: $fz16px;
+				vertical-align: middle;
+				color: $color_level4;
+			}
+		}
 	}
 }
 

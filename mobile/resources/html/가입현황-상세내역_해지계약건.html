@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+	<title>Title</title>
+	<link href="/resources/css/gu.renew.style.css" rel="stylesheet">
+	<script src="/resources/js/lib/jquery.min.js"></script>
+	<script src="/resources/js/lib/jquery.nice-select.min.js"></script>
+	<script src="/resources/js/lib/core.js"></script>
+	<script src="/resources/js/lib/charts.js"></script>
+	<script src="/resources/js/lib/animated.js"></script>
+	<script src="/resources/js/gu.renew.common.ui.js"></script>
+	<script>
+		$(function () {
+			//가입현황 상세내역 탭
+			$(document).on("click", ".tab_list .tab", function () {
+				var target = $(this);
+				var targetCont = $('.insurance_detail_tab_cont .tab_cont');
+				var idx = $(this).parent().index();
+				target.addClass('active').parent().siblings().children().removeClass('active');
+				targetCont.removeClass('active');
+				targetCont.eq(idx).addClass('active');
+			});			
+		})
+	</script>
+</head>
+<body>
+<div class="wrap full_pop">
+	<div class="top_area">
+		<div class="inner">
+			<a class="btn_prev" href="#"><span class="blind">이전페이지 이동</span></a>
+			<h1 class="title">무배당 알파 Plus 보장보험(Ⅱ) 0904</h1>
+		</div>
+		<div class="conner_left"></div>
+		<div class="conner_right"></div>
+	</div>
+	<div class="content_wrap">
+		<!-- content_area : s -->
+		<div class="content_area_sub">
+			<!-- insurance_detail_info : s -->
+			<div class="insurance_detail_info">
+				<div class="inner">
+					<div class="payment_info">
+						<div class="payment"><strong>69,030</strong>원</div>
+						<div class="info"><span class="tit">매월납</span> <span class="txt"><strong>12</strong>년</span></div>
+						<div class="logo">
+							<img alt="한화생명" class="grayscale" src="/resources/images/gu.renew.logo/logo_lifeplanet_life.png"></div>
+					</div>
+					<div class="cancel_insurance">
+						<div class="txt">계약상태<br>유효한 보장이 없습니다.</div>
+					</div>
+					<div class="etc_info">
+						<div class="left_txt">
+							<span class="state">정상</span><!-- 해지시 class 'cancel' 추가-->
+							<div class="date">2009.07.17 ~ 2082.07.17</div>
+						</div>
+						<div class="right_txt">
+							<span class="tit">증권번호</span>
+							<div class="no">6MA8sd234451212***</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- insurance_detail_info : e-->
+			<!-- insurance_detail_tab : s-->
+			<div class="insurance_detail_tab">
+				<div class="tab_list">
+					<ul>
+						<li>
+							<button class="tab active"><span>정액형 보장</span></button>
+						</li>
+						<li>
+							<button class="tab"><span>실손형 보장</span></button>
+						</li>
+					</ul>
+				</div>
+				<div class="insurance_detail_tab_cont">
+					<div class="tab_cont active">
+						<ul class="list">
+							<li>
+								<div class="item">
+									<div class="tit_info">
+										<strong class="tit">질병입원일당</strong>
+										<div class="info">상해+질병 외래의료비</div>
+									</div>
+									<div class="state_info">
+										<span class="state">정상</span> <span class="info">2천만원</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="item">
+									<div class="tit_info">
+										<strong class="tit">질병입원일당</strong>
+										<div class="info">상해+질병 외래의료비</div>
+									</div>
+									<div class="state_info">
+										<span class="state cancel">해지</span> <span class="info">2천만원</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="item">
+									<div class="tit_info">
+										<strong class="tit">질병입원일당</strong>
+										<div class="info">상해+질병 외래의료비</div>
+									</div>
+									<div class="state_info">
+										<span class="state">정상</span> <span class="info">2천만원</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="item">
+									<div class="tit_info">
+										<strong class="tit">질병입원일당</strong>
+										<div class="info">상해+질병 외래의료비</div>
+									</div>
+									<div class="state_info">
+										<span class="state">정상</span> <span class="info">2천만원</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="item">
+									<div class="tit_info">
+										<strong class="tit">질병입원일당</strong>
+										<div class="info">상해+질병 외래의료비</div>
+									</div>
+									<div class="state_info">
+										<span class="state">정상</span> <span class="info">2천만원</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="item">
+									<div class="tit_info">
+										<strong class="tit">질병입원일당</strong>
+										<div class="info">상해+질병 외래의료비</div>
+									</div>
+									<div class="state_info">
+										<span class="state">정상</span> <span class="info">2천만원</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="item">
+									<div class="tit_info">
+										<strong class="tit">질병입원일당</strong>
+										<div class="info">상해+질병 외래의료비</div>
+									</div>
+									<div class="state_info">
+										<span class="state">정상</span> <span class="info">2천만원</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="item">
+									<div class="tit_info">
+										<strong class="tit">질병입원일당</strong>
+										<div class="info">상해+질병 외래의료비</div>
+									</div>
+									<div class="state_info">
+										<span class="state">정상</span> <span class="info">2천만원</span>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="tab_cont">
+						<ul class="list">
+							<li>
+								<div class="item">
+									<div class="tit_info">
+										<strong class="tit">질병입원일당</strong>
+										<div class="info">상해+질병 외래의료비</div>
+									</div>
+									<div class="state_info">
+										<span class="date">2000.01.01~2099.12.31</span> <span class="info">2천만원</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="item">
+									<div class="tit_info">
+										<strong class="tit">질병입원일당</strong>
+										<div class="info">상해+질병 외래의료비</div>
+									</div>
+									<div class="state_info">
+										<span class="date">2000.01.01~2099.12.31</span> <span class="info">2천만원</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="item">
+									<div class="tit_info">
+										<strong class="tit">질병입원일당</strong>
+										<div class="info">상해+질병 외래의료비</div>
+									</div>
+									<div class="state_info">
+										<span class="date">2000.01.01~2099.12.31</span> <span class="info">2천만원</span>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- 유의사항 : s -->
+				<div class="note_box">
+					<dl>
+						<dt class="blind">유의사항</dt>
+						<dd>* 상기 내용 중 보험료에 대한 분석은 초회보험료를 납입만기까지 계속 납입하는 기준으로 산출한 것으로 중도에 계약이 변경되거나 특약의 납입기간이 상이할 경우 차이가 발생할 수 있습니다. 정확한 내용은 해당 보험회사에 문의해주시기 바랍니다.
+						</dd>
+						<dd>* 실손형보장의 보험료는 제외된 금액입니다. 실손형의 경우 갱신형으로 되어 있어 초회보험료와 향후 보험료가 상이하여 책정이 불가능 합니다.</dd>
+					</dl>
+				</div>
+				<!-- 유의사항 : e -->
+			</div>
+			<!-- insurance_detail_tab : e-->
+		</div>
+		<!-- content_area : e -->
+	</div>
+</div>
+</body>
+</html>
