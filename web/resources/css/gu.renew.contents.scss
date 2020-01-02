@@ -81,21 +81,23 @@
 		padding-top: 1px;
 		border-radius: 8px;
 		background: #fff;
-		@for $i from 1 through 50 {
+		@for $i from 1 through 50 {			
 			> div:nth-child(#{$i}) {
 				transform: translate(0, (1500+($i*30))+px);
+			}
+			&.load > div:nth-child(#{$i}) {
 				transition-delay: (0.1*$i)+s;
 			}
 		}
-
 		&.load {
 			> div {
+				transition: all 1s;
 				transform: translate(0, 0);
 			}
 		}
 
 		> div {
-			transition: all 1s;
+			
 		}
 
 		.link {
