@@ -707,10 +707,8 @@
 
 /* layer_pop_wrap */
 .layer_pop_wrap {
-	position: absolute;
+	position: relative;
 	z-index: 10;
-	top: 0;
-	left: 0;
 	border-radius: 10px;
 	background: #fff;
 
