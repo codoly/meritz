@@ -13,21 +13,7 @@
 	<script src="/resources/js/gu.renew.common.ui.js"></script>
 	<script>
 		$(function () {
-			subMenuActive(1);
-
-			//state_info button click event
-			$(document).on("click", ".cancel_list .btn_text_arr", function () {
-				var target = $(this).closest(".cancel_list");
-				if (!target.hasClass("open")) {
-					target.addClass("open");
-					target.find(".list_box").slideDown();
-					target.find(".btn_text_arr > span").text('접기');
-				} else {
-					target.removeClass("open");
-					target.find(".list_box").slideUp();
-					target.find(".btn_text_arr > span").text('펼쳐보기');
-				}
-			});
+			subMenuActive(3)
 		})
 	</script>
 </head>
@@ -36,10 +22,9 @@
 	<div class="top_area">
 		<ul class="menu_area">
 			<li class="home"><a class="home" href="#">홈으로</a></li>
-			<li class="util">
+			<li class="util">				
 				<a class="menu01" href="#"><span>고객<br>등록</span></a> 
-				<!-- 202001017 -->
-				<a class="menu02" href="#"><span>권장금액<br> 설정</span></a> 
+				<a class="menu02" href="#"><span>권장금액<br>보장군 설정</span></a> 
 				<a class="menu03" href="#"><span>가계약<br>조회</span></a> 
 				<a class="menu04" href="#"><span>PDF<br>샘플보기</span></a>
 				<a class="menu05" href="#"><span>PDF<br>보기</span></a>
@@ -72,83 +57,133 @@
 		<div class="conner_left"></div>
 		<div class="conner_right"></div>
 	</div>
-	<div class="content_area bgWhite">
+	<div class="content_area bg_white">
 		<div class="top_info">
 			<ul>
-				<li class="default">
+				<li class="default new">
 					<div class="title">정상계약</div>
 					<div class="result"><strong>113</strong>건</div>
 				</li>
-				<li class="month">
+				<li class="month new">
 					<div class="title">정상계약</div>
 					<div class="result"><strong>11,264,530</strong>건</div>
 				</li>
-				<li class="list no">
+				<li class="list no new">
 					<div class="title">미가입</div>
 					<div class="result"><strong>13</strong></div>
 				</li>
-				<li class="list lack">
+				<li class="list lack new">
 					<div class="title">부족</div>
 					<div class="result"><strong>13</strong></div>
 				</li>
-				<li class="list good">
+				<li class="list good new">
 					<div class="title">충분</div>
 					<div class="result"><strong>13</strong></div>
 				</li>
 			</ul>
+			<div class="btn_area"><a class="btn_inner new" href="#"><span>선택하신 컨설팅 전후 비교분석 결과를 확인해보세요!</span></a></div>
 		</div>
 
 		<!-- insurance_list_box : s -->
 		<div class="insurance_list_box">
 			<!-- insurance_list : s -->
-			<div class="insurance_list">
+			<div class="insurance_list check_list">
 				<div class="tit_box">
-					<h3 class="sort_tit">정상계약</h3><span class="number"><strong>0</strong>건</span>
+					<h3 class="sort_tit">가계약</h3><span class="number"><strong>2</strong>건</span>
 				</div>
 
-				<!-- 가입내역 없음 : s -->
-				<div class="insurance no_insurance">
-					<div>가입내역이 없습니다.</div>
-				</div>
-				<!-- 가입내역 없음 : e -->
-			</div>
-			<!-- insurance_list : e -->
-
-			<!-- insurance_list : s -->
-			<div class="insurance_list cancel_list">
-				<div class="tit_box">
-					<h3 class="sort_tit">실효해지</h3><span class="number"><strong>1</strong>건</span>
-					<button class="btn_text_arr"><span>펼쳐보기</span></button>
-				</div>
 				<div class="list_box">
-					<a class="insurance disabled" href="#">
+					<button class="insurance checked"><!-- 체크시 class 'checked' 추가  -->
 						<div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904</div>
 						<div class="payment_info">
-							<span class="state">실효</span>
+							<span class="state">정상</span>
 							<div class="info">
 								<div class="payment"><strong>69,030</strong>원 <span>매월납/12년</span></div>
 								<div class="date">2009.07.17~2082.07.17</div>
 							</div>
 						</div>
-						<div class="logo">
-							<img alt="한화생명" class="grayscale" src="/resources/images/gu.renew.logo/logo_lifeplanet_life.png"></div>
-					</a>
+						<div class="logo"><img alt="한화생명" src="/resources/images/gu.renew.logo/logo_hanwha_life.png"></div>
+					</button>
+					<button class="insurance">
+						<div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904</div>
+						<div class="payment_info">
+							<span class="state">정상</span>
+							<div class="info">
+								<div class="payment"><strong>69,030</strong>원 <span>매월납/12년</span></div>
+								<div class="date">2009.07.17~2082.07.17</div>
+							</div>
+						</div>
+						<div class="logo"><img alt="한화생명" src="/resources/images/gu.renew.logo/logo_bnp_life.png"></div>
+					</button>
+				</div>
+			</div>
+			<!-- insurance_list : e -->
+			<!-- insurance_list : s -->
+			<div class="insurance_list check_list">
+				<div class="tit_box">
+					<h3 class="sort_tit">정상계약</h3><span class="number"><strong>2</strong>건</span>
+				</div>
+
+				<div class="list_box">
+					<button class="insurance"><!-- 체크시 class 'checked' 추가  -->
+						<div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904</div>
+						<div class="payment_info">
+							<span class="state">정상</span>
+							<div class="info">
+								<div class="payment"><strong>69,030</strong>원 <span>매월납/12년</span></div>
+								<div class="date">2009.07.17~2082.07.17</div>
+							</div>
+						</div>
+						<div class="logo"><img alt="한화생명" src="/resources/images/gu.renew.logo/logo_hanwha_life.png"></div>
+						<div class="etc_info">
+							<ul>
+								<li>
+									<span class="tit">납입횟수</span>
+									<div class="txt"><strong>124/244</strong>회</div>
+								</li>
+								<li>
+									<span class="tit">납입률</span>
+									<div class="txt"><strong>51</strong>%</div>
+								</li>
+								<li>
+									<span class="tit">납입보험료</span>
+									<div class="txt"><strong>8,421,660</strong>원</div>
+								</li>
+							</ul>
+						</div>
+					</button>
+					<button class="insurance checked">
+						<div class="name">무배당 알파 Plus 보장보험(Ⅱ)0904</div>
+						<div class="payment_info">
+							<span class="state">정상</span>
+							<div class="info">
+								<div class="payment"><strong>69,030</strong>원 <span>매월납/12년</span></div>
+								<div class="date">2009.07.17~2082.07.17</div>
+							</div>
+						</div>
+						<div class="logo"><img alt="한화생명" src="/resources/images/gu.renew.logo/logo_bnp_life.png"></div>
+						<div class="etc_info">
+							<ul>
+								<li>
+									<span class="tit">납입횟수</span>
+									<div class="txt"><strong>124/244</strong>회</div>
+								</li>
+								<li>
+									<span class="tit">납입률</span>
+									<div class="txt"><strong>51</strong>%</div>
+								</li>
+								<li>
+									<span class="tit">납입보험료</span>
+									<div class="txt"><strong>8,421,660</strong>원</div>
+								</li>
+							</ul>
+						</div>
+					</button>
 				</div>
 			</div>
 			<!-- insurance_list : e -->
 		</div>
 		<!-- insurance_list_box : e -->
-
-		<!-- 유의사항 : s -->
-		<div class="note_box">
-			<dl>
-				<dt>유의사항</dt>
-				<dd>상기 내용 중 보험료에 대한 분석은 초회보험료를 납입만기까지 계속 납입하는 기준으로 산출한 것으로 중도에 계약이 변경되거나 특약의 납입기간이 상이할 경우 차이가 발생할 수 있습니다. 정확한 내용은 해당 보험회사에 문의해주시기 바랍니다.
-				</dd>
-				<dd>실손형보장의 보험료는 제외된 금액입니다. 실손형의 경우 갱신형으로 되어 있어 초회보험료와 향후 보험료가 상이하여 책정이 불가능 합니다.</dd>
-			</dl>
-		</div>
-		<!-- 유의사항 : e -->
 	</div>
 
 	<!-- bottom_fixed_menu_area : s	-->
@@ -173,6 +208,7 @@
 		</ul>
 	</div>
 	<!-- bottom_fixed_menu_area : e	-->
+	<button class="btn_top">상단으로</button>
 </div>
 
 </body>

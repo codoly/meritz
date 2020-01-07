@@ -406,7 +406,8 @@
 					<div class="bottom_position">
 						<ul class="util_menu">
 							<li><a class="btn" href="#">고객등록</a></li>
-							<li><a class="btn" href="#">권장금액 · 보장군 설정</a></li>
+							<!-- 202001017 -->
+							<li><a class="btn" href="#">권장금액 설정</a></li>
 							<li><a class="btn" href="#">가계약조회</a></li>
 						</ul>
 						<div class="btn_area">
@@ -685,12 +686,12 @@
 											<div class="info">
 												<div class="sort_tit">
 													<span class="tit">질병사망</span> <span class="count_info">
-                            <strong>3</strong>건
+                            <strong>5</strong>건
                           </span>
 												</div>
 												<div class="count_bar_box">
 													<div class="bar_rail">
-														<div class="bar" data-value="50%"><span class="percent"><em class="count">50</em>%</span>
+														<div class="bar" data-value="20%"><span class="percent"><em class="count">20</em>%</span>
 														</div>
 													</div>
 													<div class="txt_box">
@@ -1930,6 +1931,7 @@
 							target.addClass("active").siblings().removeClass("active");
 							if (idx == 0) {
 								targetCont.show();
+								
 							} else {
 								targetCont.eq(idx - 1).show().siblings('.state_info').hide();
 							}
