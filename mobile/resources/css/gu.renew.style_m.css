@@ -1,0 +1,3557 @@
+@charset "UTF-8";
+body, html {
+  height: 100%;
+  font-size: 16px; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+article, aside, audio, blockquote, body, canvas, code, dd, details, div, dl, dt, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, input, legend, li, mark, menu, nav, ol, p, pre, section, summary, td, textarea, th, time, ul, video {
+  margin: 0;
+  padding: 0; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
+  display: block; }
+
+body {
+  background-color: #fff;
+  font-family: 'Apple SD Gothic Neo', 'Droid Sans', 'Spoqa Han Sans', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: -0.03em;
+  color: #666666; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: 400; }
+
+img {
+  border: 0;
+  vertical-align: top; }
+
+button, input, select, textarea {
+  width: 100%;
+  margin: 0;
+  font-family: 'Apple SD Gothic Neo', 'Droid Sans', 'Spoqa Han Sans', Arial, sans-serif;
+  font-size: 100%;
+  vertical-align: middle;
+  color: #666666; }
+
+fieldset {
+  border: 0; }
+
+caption, legend {
+  width: 0;
+  height: 0;
+  font-size: 0;
+  line-height: 0; }
+
+address, cite, code, dfn, em, var {
+  font-weight: 400;
+  font-style: normal; }
+
+strong {
+  font-weight: 700; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse; }
+
+caption, hr, legend {
+  width: 0;
+  height: 0;
+  font-size: 1px;
+  line-height: 0;
+  text-indent: -9999em; }
+
+th {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
+  vertical-align: top;
+  color: #333; }
+
+td {
+  line-height: 22px;
+  text-align: left;
+  vertical-align: top;
+  color: #333; }
+
+dt {
+  font-weight: 400; }
+
+a, button {
+  width: auto;
+  border: 0;
+  background: 0 0;
+  cursor: pointer;
+  text-align: left;
+  text-decoration: none;
+  color: #333333; }
+
+button, button:active, .select_box button.nice-select.open, button:focus {
+  /*padding: 0*/ }
+
+button span, button:active span, .select_box button.nice-select.open span, button:focus span {
+  position: relative; }
+
+button div, button:active div, .select_box button.nice-select.open div, button:before, button:focus div {
+  position: relative; }
+
+.select_box {
+  display: inline-block; }
+  .select_box .nice-select {
+    display: inline-block;
+    position: relative;
+    clear: both;
+    width: auto;
+    height: 32px;
+    padding-right: 55px;
+    padding-left: 18px;
+    border: solid 1px #f0f3f8;
+    border-radius: 5px;
+    outline: none;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 30px;
+    box-sizing: border-box;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.2s ease-in-out;
+    text-align: left !important;
+    white-space: nowrap;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+    .select_box .nice-select:after {
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      width: 7px;
+      height: 7px;
+      margin-top: -6px;
+      border-right: 2px solid #a8b9e6;
+      border-bottom: 2px solid #a8b9e6;
+      content: '';
+      transition: all 0.15s ease-in-out;
+      transform: rotate(45deg);
+      transform-origin: 66% 66%;
+      pointer-events: none; }
+    .select_box .nice-select.open:after {
+      transform: rotate(-135deg); }
+    .select_box .nice-select.open .list {
+      top: 100%;
+      transform: scale(1) translate_y(0);
+      pointer-events: auto;
+      opacity: 1; }
+    .select_box .nice-select.disabled {
+      border-color: #f7f9fb;
+      pointer-events: none;
+      color: #999; }
+      .select_box .nice-select.disabled:after {
+        border-color: #f7f9fd; }
+    .select_box .nice-select.wide {
+      width: 100%; }
+      .select_box .nice-select.wide .list {
+        right: 0 !important;
+        left: 0 !important; }
+    .select_box .nice-select.right {
+      float: right; }
+      .select_box .nice-select.right .list {
+        right: 0;
+        left: auto; }
+    .select_box .nice-select.small {
+      height: 24px;
+      padding-right: 40px;
+      font-size: 14px;
+      line-height: 24px; }
+      .select_box .nice-select.small:after {
+        right: 0;
+        width: 7px;
+        height: 7px;
+        border-color: #3c444d; }
+      .select_box .nice-select.small.open:after {
+        border-color: #ff4858; }
+      .select_box .nice-select.small .option {
+        min-height: 32px;
+        line-height: 32px; }
+    .select_box .nice-select .list {
+      position: absolute;
+      z-index: 9;
+      top: -999999px;
+      left: 0;
+      min-width: 100%;
+      margin-top: 4px;
+      padding: 7px 0;
+      border-radius: 5px;
+      background-color: #fff;
+      overflow: hidden;
+      box-sizing: border-box;
+      transition: transform 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+      transform: scale(0.75) translate_y(-16px);
+      transform-origin: 50% 0;
+      pointer-events: none;
+      opacity: 0;
+      box-shadow: 1px 1px 3px 2px rgba(68, 68, 68, 0.08); }
+      .select_box .nice-select .list:hover .option:not(:hover) {
+        background-color: transparent !important; }
+    .select_box .nice-select .option {
+      min-height: 32px;
+      padding-right: 18px;
+      padding-left: 18px;
+      outline: none;
+      font-weight: 400;
+      line-height: 32px;
+      list-style: none;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-align: left;
+      color: #888888; }
+      .select_box .nice-select .option:hover, .select_box .nice-select .option.focus, .select_box .nice-select .option.selected.focus {
+        background-color: #f6f6f6;
+        color: #333333; }
+      .select_box .nice-select .option.disabled {
+        background-color: transparent;
+        cursor: default;
+        color: #999; }
+  .select_box.bg_type .nice-select {
+    height: 34px;
+    border: 0;
+    background: transparent;
+    line-height: 34px; }
+    .select_box.bg_type .nice-select > .current {
+      color: #fff; }
+    .select_box.bg_type .nice-select.open:after {
+      border-color: #ff4858; }
+
+.no-csspointerevents .nice-select .list {
+  display: none; }
+
+.no-csspointerevents .nice-select.open .list {
+  display: block; }
+
+/***************************가이드 관련****************************/
+.guide_title {
+  padding: 30px;
+  border-top: 1px solid #888888;
+  border-bottom: 1px solid #888888;
+  background: #f5f5f5;
+  font-size: 1.625rem;
+  font-weight: bold;
+  color: #000000; }
+
+.guide_content {
+  margin-bottom: 50px;
+  padding: 0 30px; }
+  .guide_content .in_title {
+    padding: 30px 0 10px 0;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #000000; }
+  .guide_content .sample_bg {
+    padding: 20px;
+    background: #3c444d; }
+  .guide_content .sorting_list:after {
+    content: "";
+    display: block;
+    clear: both; }
+  .guide_content .sorting_list li {
+    float: left;
+    margin-right: 20px; }
+
+/***************************button 관련*************************/
+.btn_text {
+  display: inline-block;
+  min-width: 130px;
+  padding: 0 10px;
+  border: 1px solid #e0e4ea;
+  border-radius: 5px;
+  font-size: 1.125rem;
+  line-height: 38px;
+  text-align: center;
+  letter-spacing: -1px;
+  color: #333333; }
+  .btn_text.fill_gray {
+    border: 1px solid #3c444d;
+    background: #3c444d;
+    color: #fff; }
+  .btn_text.fill_gray2 {
+    border: 1px solid #d5d5d5;
+    background: #d5d5d5;
+    color: #666666; }
+  .btn_text.fill_red {
+    border: 1px solid #fe5855;
+    background: #fe5855;
+    color: #fff; }
+  .btn_text.size_small {
+    min-width: 58px;
+    border-radius: 3px;
+    font-size: 0.75rem;
+    line-height: 23px; }
+  .btn_text.size_middle {
+    min-width: 70px;
+    border-radius: 3px;
+    font-size: 0.875rem;
+    line-height: 32px; }
+  .btn_text.size_big {
+    min-width: 174px;
+    border-radius: 0;
+    font-size: 1.125rem;
+    line-height: 53px; }
+
+.btn_close {
+  overflow: hidden;
+  text-indent: -99999px;
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background: url("/resources/images/gu.renew.common_m/btn_close.png") no-repeat; }
+  .btn_close.white {
+    background: url("/resources/images/gu.renew.common_m/btn_close_w.png") no-repeat; }
+
+.search_area {
+  position: relative;
+  padding-right: 53px;
+  border: 1px solid #888888;
+  border-radius: 5px; }
+  .search_area input {
+    width: 100%;
+    height: 33px;
+    padding: 0 30px 0 18px;
+    border: 0;
+    outline: none;
+    background: transparent;
+    font-size: 0.75rem;
+    color: #fff; }
+    .search_area input.placeholder {
+      color: #888888; }
+    .search_area input::placeholder {
+      color: #888888; }
+    .search_area input :-ms-input-placeholder {
+      color: #888888; }
+    .search_area input ::-webkit-input-placeholder {
+      color: #888888; }
+    .search_area input ::-moz-placeholder {
+      color: #888888; }
+  .search_area .btn_search {
+    overflow: hidden;
+    text-indent: -99999px;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 53px;
+    height: 33px;
+    background: url("/resources/images/gu.renew.common_m/btn_main_search_off.png") no-repeat center center;
+    background-size: 15px auto; }
+  .search_area.focus {
+    border: 1px solid #ffffff; }
+    .search_area.focus .btn_search {
+      background: url("/resources/images/gu.renew.common_m/btn_main_search_on.png") no-repeat center center;
+      background-size: 15px auto; }
+  .search_area.small {
+    position: relative;
+    padding-right: 40px;
+    border: 1px solid #7180a0;
+    border-radius: 5px; }
+    .search_area.small input {
+      width: 100%;
+      height: 38px;
+      padding: 0 0 0 15px;
+      font-size: 0.875rem;
+      line-height: 38px; }
+    .search_area.small .btn_search {
+      overflow: hidden;
+      text-indent: -99999px;
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 38px;
+      height: 38px;
+      background: url("/resources/images/gu.renew.common_m/btn_main_search_off.png") no-repeat center center;
+      background-size: 15px auto; }
+    .search_area.small.focus {
+      border: 1px solid #01a7c4; }
+      .search_area.small.focus .btn_search {
+        background: url("/resources/images/gu.renew.common_m/btn_main_search_on.png") no-repeat center center;
+        background-size: 15px auto; }
+  .search_area .btn_del {
+    position: absolute;
+    top: 0;
+    right: 53px;
+    width: 33px;
+    height: 33px;
+    background: url(/resources/images/gu.renew.common_m/btn_del.png) no-repeat center center;
+    background-size: 20px auto;
+    opacity: 0.5; }
+
+.check_box_set {
+  position: relative;
+  overflow: hidden; }
+  .check_box_set input[type='checkbox'] {
+    position: absolute;
+    top: 0;
+    left: -999999px;
+    width: 0;
+    height: 0; }
+    .check_box_set input[type='checkbox']:checked + label:after {
+      background: url("/resources/images/gu.renew.common_m/checkbox_on.png") no-repeat; }
+  .check_box_set label {
+    display: inline-block;
+    position: relative;
+    padding-left: 30px;
+    font-size: 0.75rem;
+    line-height: 20px; }
+    .check_box_set label:after {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 3px;
+      background: url("/resources/images/gu.renew.common_m/checkbox_off.png") no-repeat;
+      box-sizing: border-box;
+      content: ""; }
+  .check_box_set.bg_type input[type='checkbox']:checked + label {
+    color: #fff; }
+    .check_box_set.bg_type input[type='checkbox']:checked + label:after {
+      background: url("/resources/images/gu.renew.common_m/main_checkbox_on.png") no-repeat center center;
+      background-size: 20px auto; }
+  .check_box_set.bg_type label {
+    color: #888888; }
+    .check_box_set.bg_type label:after {
+      border: 0;
+      border-radius: 0;
+      background: url("/resources/images/gu.renew.common_m/main_checkbox_off.png") no-repeat center center;
+      background-size: 20px auto; }
+  .check_box_set.no_label label {
+    height: 24px;
+    padding-left: 24px; }
+
+.radio_set {
+  position: relative;
+  overflow: hidden; }
+  .radio_set input[type='radio'] {
+    position: absolute;
+    top: 0;
+    left: -999999px;
+    width: 0;
+    height: 0; }
+    .radio_set input[type='radio']:checked + label:after {
+      background: url("/resources/images/gu.renew.common_m/radio_on.png") no-repeat;
+      background-size: 100% auto; }
+  .radio_set label {
+    display: inline-block;
+    position: relative;
+    padding-left: 25px;
+    font-size: 0.875rem;
+    line-height: 20px; }
+    .radio_set label:after {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 19px;
+      height: 19px;
+      border-radius: 3px;
+      background: url("/resources/images/gu.renew.common_m/radio_off.png") no-repeat;
+      background-size: 100% auto;
+      box-sizing: border-box;
+      content: ""; }
+  .radio_set.no_label label {
+    height: 19px;
+    padding-left: 24px; }
+
+input[type=text]::-ms-clear {
+  display: none; }
+
+.input_set {
+  position: relative; }
+  .input_set input {
+    width: 100%;
+    padding: 0 10px;
+    border: 1px solid #e0e4ea;
+    border-radius: 5px;
+    outline: none;
+    font-size: 0.875rem;
+    overflow: hidden;
+    color: #888888; }
+    .input_set input:focus {
+      border: 1px solid #02a7c5;
+      font-weight: bold;
+      color: #333333; }
+  .input_set.right input {
+    text-align: right; }
+  .input_set.change input {
+    font-weight: bold;
+    color: #333333; }
+
+/*info_grid*/
+.info_grid ul {
+  display: flex; }
+  .info_grid ul:after {
+    content: "";
+    display: block;
+    clear: both; }
+  .info_grid ul li {
+    font-size: 0.75rem; }
+    .info_grid ul li.title {
+      width: 60px;
+      flex: none; }
+      .info_grid ul li.title.black {
+        color: #333333; }
+    .info_grid ul li.text {
+      flex: 1;
+      color: #3c444d; }
+
+.info_grid.small ul {
+  margin-bottom: 3px; }
+  .info_grid.small ul:last-child {
+    margin-bottom: 0; }
+  .info_grid.small ul li {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    letter-spacing: -0.05em; }
+
+.info_grid.big ul {
+  display: block;
+  margin-bottom: 20px; }
+  .info_grid.big ul:last-child {
+    margin-bottom: 0; }
+  .info_grid.big ul li {
+    float: none;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.05em; }
+    .info_grid.big ul li.title {
+      width: auto;
+      font-size: 1rem; }
+    .info_grid.big ul li.text {
+      width: 150px;
+      text-align: right; }
+      .info_grid.big ul li.text strong {
+        font-weight: 700; }
+
+.info_grid.right ul {
+  margin-bottom: 15px; }
+  .info_grid.right ul:last-child {
+    margin-bottom: 0; }
+  .info_grid.right ul li {
+    line-height: 14px;
+    letter-spacing: -0.05em; }
+    .info_grid.right ul li.title {
+      width: 60px;
+      font-size: 0.75rem;
+      color: #aaaaaa; }
+    .info_grid.right ul li.text {
+      font-size: 0.875rem;
+      text-align: right;
+      color: #333333; }
+      .info_grid.right ul li.text strong {
+        font-weight: 500; }
+
+/*color*/
+.skyblue {
+  color: #01a7c4 !important; }
+
+.color_point {
+  color: #fe5855; }
+
+.bg_f3f3f3 {
+  background: #f3f3f3; }
+
+.wrap {
+  position: relative;
+  min-height: 100%; }
+  .wrap > .top_area {
+    position: sticky;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%; }
+    .wrap > .top_area .menu_area {
+      display: flex;
+      padding: 20px 20px 0 20px; }
+      .wrap > .top_area .menu_area li.home {
+        flex: 1; }
+      .wrap > .top_area .menu_area li.util {
+        flex: none; }
+        .wrap > .top_area .menu_area li.util a {
+          display: none;
+          text-indent: 0;
+          color: #fff;
+          font-size: 0.6875rem;
+          letter-spacing: -0.075em;
+          line-height: 13px; }
+          .wrap > .top_area .menu_area li.util a:before {
+            display: inline-block;
+            content: '';
+            width: 24px;
+            height: 23px;
+            margin: 2px 5px 0 0;
+            vertical-align: top; }
+          .wrap > .top_area .menu_area li.util a span {
+            display: inline-block;
+            vertical-align: top; }
+      .wrap > .top_area .menu_area li a {
+        overflow: hidden;
+        text-indent: -99999px;
+        display: inline-block;
+        float: left;
+        margin-left: 15px; }
+        .wrap > .top_area .menu_area li a.home {
+          width: 24px;
+          height: 22px;
+          margin-left: 0;
+          background: url("/resources/images/gu.renew.common/btn_home.png") no-repeat;
+          background-size: 24px 22px; }
+        .wrap > .top_area .menu_area li a.menu01:before {
+          background: url("/resources/images/gu.renew.common/btn_mobile_menu_01.png") no-repeat;
+          background-size: 24px 23px; }
+        .wrap > .top_area .menu_area li a.menu02:before {
+          background: url("/resources/images/gu.renew.common/btn_mobile_menu_02.png") no-repeat;
+          background-size: 24px 22px; }
+        .wrap > .top_area .menu_area li a.menu03:before {
+          background: url("/resources/images/gu.renew.common/btn_mobile_menu_03.png") no-repeat;
+          background-size: 24px 23px; }
+        .wrap > .top_area .menu_area li a.menu04:before {
+          background: url("/resources/images/gu.renew.common/btn_mobile_menu_04.png") no-repeat;
+          background-size: 24px 23px; }
+        .wrap > .top_area .menu_area li a.menu05:before {
+          background: url("/resources/images/gu.renew.common/btn_mobile_menu_05.png") no-repeat;
+          background-size: 24px 23px; }
+  .wrap .top_bg_area {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 162px;
+    background: url("/resources/images/gu.renew.common/main_bg.jpg") no-repeat;
+    background-size: cover; }
+    .wrap .top_bg_area .name_area {
+      padding-top: 70px;
+      padding-left: 38px;
+      font-size: 0.875rem;
+      line-height: 21px;
+      color: #ffffff; }
+      .wrap .top_bg_area .name_area strong {
+        font-size: 1rem; }
+  .wrap .content_area {
+    position: relative;
+    z-index: 4;
+    min-height: calc(100vh - 158px); }
+    .wrap .content_area.bg_white {
+      background: #ffffff; }
+    .wrap .content_area.bg_gray {
+      background: #f3f3f3; }
+    .wrap .content_area .search_box {
+      position: absolute;
+      z-index: 10;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 15px 20px 25px 20px;
+      border-radius: 10px 10px 0 0;
+      background: #333333; }
+      .wrap .content_area .search_box:after {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 10px;
+        border-radius: 10px 10px 0 0;
+        background: #f3f3f3;
+        content: ''; }
+    .wrap .content_area .sorting_list {
+      display: flex;
+      margin-top: 15px;
+      padding: 0 15px; }
+      .wrap .content_area .sorting_list li {
+        margin-left: 25px;
+        letter-spacing: -1px; }
+        .wrap .content_area .sorting_list li:first-child {
+          margin-left: 0; }
+        .wrap .content_area .sorting_list li label {
+          font-size: 0.75rem; }
+    .wrap .content_area .content_radius_box {
+      position: relative;
+      border-radius: 10px 10px 0 0;
+      background: #f3f3f3; }
+  .wrap.main {
+    padding-top: 129px; }
+    .wrap.main .menu_area li a.menu01, .wrap.main .menu_area li a.menu02, .wrap.main .menu_area li a.menu04 {
+      display: block; }
+    .wrap.main .content_area {
+      padding-top: 114px; }
+    .wrap.main .top_area {
+      position: fixed; }
+  .wrap.sub {
+    padding-bottom: 66px; }
+    .wrap.sub > .top_area {
+      background: #333333; }
+      .wrap.sub > .top_area.tab {
+        height: 137px; }
+      .wrap.sub > .top_area.tab_open {
+        height: 179px; }
+      .wrap.sub > .top_area .menu_area li a.menu02, .wrap.sub > .top_area .menu_area li a.menu03, .wrap.sub > .top_area .menu_area li a.menu05 {
+        display: block; }
+      .wrap.sub > .top_area .conner_left {
+        display: block;
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 10px;
+        height: 10px;
+        overflow: hidden; }
+        .wrap.sub > .top_area .conner_left:after {
+          display: block;
+          width: 10px;
+          height: 10px;
+          border-radius: 10px 0 0 0;
+          content: "";
+          box-shadow: 0 0 0 10px #333333; }
+      .wrap.sub > .top_area .conner_right {
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: -10px;
+        width: 10px;
+        height: 10px;
+        overflow: hidden; }
+        .wrap.sub > .top_area .conner_right:after {
+          display: block;
+          width: 10px;
+          height: 10px;
+          border-radius: 0 10px 0 0;
+          content: "";
+          box-shadow: 0 0 0 10px #333333; }
+      .wrap.sub > .top_area .member_info_area {
+        display: flex;
+        margin-top: 20px;
+        padding: 0 20px 10px 20px;
+        line-height: 16px; }
+        .wrap.sub > .top_area .member_info_area .name {
+          font-size: 1rem;
+          flex: 1;
+          color: #ffffff; }
+          .wrap.sub > .top_area .member_info_area .name strong {
+            font-weight: 600; }
+          .wrap.sub > .top_area .member_info_area .name .favorites {
+            overflow: hidden;
+            text-indent: -99999px;
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background: url("/resources/images/gu.renew.contents/btn_like_off.png") no-repeat;
+            background-size: 12px auto; }
+            .wrap.sub > .top_area .member_info_area .name .favorites.on {
+              background-image: url("/resources/images/gu.renew.contents/btn_like_on.png"); }
+        .wrap.sub > .top_area .member_info_area .info {
+          display: flex;
+          height: 16px;
+          font-size: 0.75rem;
+          color: #888888; }
+          .wrap.sub > .top_area .member_info_area .info li {
+            position: relative;
+            margin-right: 6px;
+            padding-right: 6px; }
+            .wrap.sub > .top_area .member_info_area .info li:after {
+              display: block;
+              position: absolute;
+              top: 50%;
+              right: 0;
+              width: 1px;
+              height: 10px;
+              margin-top: -5px;
+              background: #4d4d4d;
+              content: ""; }
+            .wrap.sub > .top_area .member_info_area .info li:last-child {
+              margin-right: 0;
+              padding-right: 0; }
+              .wrap.sub > .top_area .member_info_area .info li:last-child:after {
+                display: none; }
+            .wrap.sub > .top_area .member_info_area .info li span {
+              display: inline-block;
+              margin-right: 4px;
+              vertical-align: top; }
+              .wrap.sub > .top_area .member_info_area .info li span:last-child {
+                margin-right: 0; }
+            .wrap.sub > .top_area .member_info_area .info li .btn_alert {
+              padding-right: 14px;
+              background: url("/resources/images/gu.renew.contents/icon_alert.png") no-repeat right 2px;
+              background-size: 11px auto;
+              font-size: 0.75rem;
+              line-height: 16px;
+              vertical-align: top;
+              color: #888888; }
+          .wrap.sub > .top_area .member_info_area .info .layer_pop_box {
+            top: 22px;
+            left: auto;
+            right: 0;
+            width: 265px; }
+    .wrap.sub .top_info {
+      position: relative;
+      z-index: 11;
+      width: 100%;
+      padding: 20px 22px;
+      border-radius: 10px 10px 0 0;
+      background: #f3f3f3; }
+      .wrap.sub .top_info ul {
+        display: flex;
+        width: 100%; }
+        .wrap.sub .top_info ul li {
+          line-height: 1; }
+          .wrap.sub .top_info ul li.new .title {
+            position: relative;
+            display: inline-block;
+            vertical-align: top; }
+            .wrap.sub .top_info ul li.new .title:after {
+              content: "";
+              display: block;
+              position: absolute;
+              right: -13px;
+              top: -8px;
+              background: url("/resources/images/gu.renew.contents/icon_new.png") no-repeat;
+              background-size: 11px auto;
+              width: 11px;
+              height: 11px; }
+          .wrap.sub .top_info ul li.default {
+            padding-right: 30px; }
+          .wrap.sub .top_info ul li.month {
+            flex: 1; }
+          .wrap.sub .top_info ul li.list {
+            padding-right: 19px;
+            flex: none;
+            text-align: center; }
+            .wrap.sub .top_info ul li.list:last-child {
+              padding-right: 0; }
+            .wrap.sub .top_info ul li.list.no .title,
+            .wrap.sub .top_info ul li.list.no .result {
+              color: #777777 !important; }
+            .wrap.sub .top_info ul li.list.lack .title,
+            .wrap.sub .top_info ul li.list.lack .result {
+              color: #ff4858 !important; }
+            .wrap.sub .top_info ul li.list.good .title,
+            .wrap.sub .top_info ul li.list.good .result {
+              color: #00a8c3 !important; }
+          .wrap.sub .top_info ul li .title {
+            position: relative;
+            margin-bottom: 10px;
+            font-size: 0.75rem;
+            color: #666666; }
+            .wrap.sub .top_info ul li .title.new:before {
+              position: absolute;
+              top: -10px;
+              right: -10px;
+              display: block;
+              content: "N";
+              width: 11px;
+              height: 11px;
+              line-height: 11px;
+              font-size: 0.5625rem;
+              background: #ff4858;
+              border-radius: 50%;
+              text-align: center;
+              color: #fff; }
+          .wrap.sub .top_info ul li .result {
+            font-size: 0.9375rem;
+            color: #333333; }
+            .wrap.sub .top_info ul li .result strong {
+              font-size: 1.125rem; }
+      .wrap.sub .top_info .btn_area {
+        margin: 12px -8px 0 -8px; }
+        .wrap.sub .top_info .btn_area .btn_inner {
+          display: block;
+          height: 26px;
+          padding: 0 12px;
+          border: 1px solid #d5d5d5;
+          border-radius: 28px; }
+          .wrap.sub .top_info .btn_area .btn_inner span {
+            display: block;
+            background: url("/resources/images/gu.renew.common/btn_arr.png") no-repeat right center;
+            background-size: auto 10px;
+            font-size: 0.75rem;
+            color: #000000; }
+          .wrap.sub .top_info .btn_area .btn_inner.new span {
+            color: #ff4858; }
+    .wrap.sub.tab .content_area {
+      min-height: calc(100vh - 203px); }
+    .wrap.sub.tab_open .content_area {
+      min-height: calc(100vh - 244px); }
+  .wrap.fixed .search_box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 60px;
+    border-radius: 0; }
+
+.sub_tab_menu {
+  position: relative;
+  margin-top: 5px; }
+  .sub_tab_menu .tab_area {
+    display: flex;
+    position: relative;
+    z-index: 2; }
+    .sub_tab_menu .tab_area li {
+      position: relative;
+      width: 50%;
+      height: 54px;
+      overflow: hidden; }
+      .sub_tab_menu .tab_area li .tab {
+        display: block;
+        width: 100%;
+        height: 44px;
+        border-radius: 10px 10px 0 0;
+        background: #4d4d4d;
+        font-size: 0.9375rem;
+        text-align: center;
+        vertical-align: top;
+        color: #ffffff; }
+        .sub_tab_menu .tab_area li .tab:after {
+          display: block;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 10px;
+          content: ""; }
+        .sub_tab_menu .tab_area li .tab.on {
+          background: #ffffff;
+          font-weight: bold;
+          color: #333333; }
+          .sub_tab_menu .tab_area li .tab.on:after {
+            border-radius: 0 !important;
+            box-shadow: none !important; }
+      .sub_tab_menu .tab_area li:first-child .tab:after {
+        border-radius: 10px 0 0 0;
+        box-shadow: 0 0 0 10px #4d4d4d; }
+      .sub_tab_menu .tab_area li:last-child .tab:after {
+        border-radius: 0 10px 0 0;
+        box-shadow: 0 0 0 10px #4d4d4d; }
+  .sub_tab_menu .sub_menu {
+    display: none;
+    position: relative;
+    z-index: 3;
+    height: 42px;
+    margin-top: -10px;
+    background: #ffffff; }
+    .sub_tab_menu .sub_menu .scroll_area {
+      position: relative;
+      z-index: 1;
+      padding-right: 35px;
+      border-bottom: 1px solid #d5d5d5;
+      overflow: auto;
+      box-shadow: 0 2px 2px 1px rgba(100, 100, 100, 0.12); }
+      .sub_tab_menu .sub_menu .scroll_area ul {
+        display: table;
+        padding-left: 17px;
+        font-size: 0;
+        white-space: nowrap; }
+        .sub_tab_menu .sub_menu .scroll_area ul li {
+          display: inline-block;
+          margin-right: 25px;
+          font-size: 0.75rem;
+          line-height: 40px; }
+          .sub_tab_menu .sub_menu .scroll_area ul li:last-child {
+            margin-right: 40px; }
+          .sub_tab_menu .sub_menu .scroll_area ul li .on {
+            font-weight: bold;
+            color: #fe5855; }
+    .sub_tab_menu .sub_menu .btn_sub_menu_toggle {
+      overflow: hidden;
+      text-indent: -99999px;
+      display: inline-block;
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      right: 0;
+      width: 35px;
+      height: 40px;
+      outline: none;
+      background: #ffffff url("/resources/images/gu.renew.common/btn_sub_menu_open.png") no-repeat center center;
+      background-size: 16px auto; }
+      .sub_tab_menu .sub_menu .btn_sub_menu_toggle.open {
+        transform: rotate(180deg); }
+  .sub_tab_menu .all_menu_area {
+    display: none;
+    display: none;
+    position: absolute;
+    top: 42px;
+    left: 0;
+    padding: 0 17px;
+    background: #ffffff; }
+    .sub_tab_menu .all_menu_area:after {
+      display: block;
+      position: absolute;
+      z-index: 1;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: #cad2db;
+      content: ""; }
+    .sub_tab_menu .all_menu_area ul {
+      overflow: hidden; }
+      .sub_tab_menu .all_menu_area ul li {
+        position: relative;
+        float: left;
+        margin-right: 25px;
+        font-size: 0.75rem;
+        line-height: 42px; }
+        .sub_tab_menu .all_menu_area ul li:after {
+          display: block;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100vw;
+          height: 1px;
+          background: #eaeaea;
+          content: ""; }
+        .sub_tab_menu .all_menu_area ul li .on {
+          font-weight: bold;
+          color: #fe5855; }
+
+.dim_bg {
+  display: none;
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); }
+
+.bottom_fixed_menu_area {
+  display: flex;
+  position: fixed;
+  z-index: 8;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-top: 1px solid #ededed;
+  background: #ffffff; }
+  .bottom_fixed_menu_area .home {
+    position: relative;
+    padding: 10px 23px 10px 10px;
+    background: #333333;
+    overflow: hidden;
+    flex: none; }
+    .bottom_fixed_menu_area .home span {
+      display: block;
+      position: relative;
+      z-index: 1;
+      padding-top: 30px;
+      background: url("/resources/images/gu.renew.common/bottom_menu_home.png") no-repeat center top;
+      background-size: 25px auto;
+      font-size: 0.6875rem;
+      color: #ffffff; }
+    .bottom_fixed_menu_area .home:after {
+      display: block;
+      position: absolute;
+      top: -7px;
+      right: -18px;
+      width: 25px;
+      height: 120%;
+      background: #ffffff;
+      content: "";
+      transform: rotate(10deg); }
+  .bottom_fixed_menu_area ul {
+    display: flex;
+    flex: 1; }
+    .bottom_fixed_menu_area ul li {
+      align-self: center;
+      flex: 1;
+      text-align: center; }
+      .bottom_fixed_menu_area ul li .bottom_menu span {
+        display: block;
+        position: relative;
+        padding-top: 30px;
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: auto 20px;
+        font-size: 0.6875rem;
+        letter-spacing: -1px;
+        color: #888888; }
+      .bottom_fixed_menu_area ul li .bottom_menu.on span {
+        color: #ff4858; }
+      .bottom_fixed_menu_area ul li .bottom_menu.menu01 span {
+        background-image: url("/resources/images/gu.renew.common/bottom_menu_01_off.png"); }
+      .bottom_fixed_menu_area ul li .bottom_menu.menu01.on span {
+        background-image: url("/resources/images/gu.renew.common/bottom_menu_01_on.png"); }
+      .bottom_fixed_menu_area ul li .bottom_menu.menu02 span {
+        background-image: url("/resources/images/gu.renew.common/bottom_menu_02_off.png"); }
+      .bottom_fixed_menu_area ul li .bottom_menu.menu02.on span {
+        background-image: url("/resources/images/gu.renew.common/bottom_menu_02_on.png"); }
+      .bottom_fixed_menu_area ul li .bottom_menu.menu03 span {
+        background-image: url("/resources/images/gu.renew.common/bottom_menu_03_off.png"); }
+      .bottom_fixed_menu_area ul li .bottom_menu.menu03.on span {
+        background-image: url("/resources/images/gu.renew.common/bottom_menu_03_on.png"); }
+      .bottom_fixed_menu_area ul li .bottom_menu.menu04 span {
+        background-image: url("/resources/images/gu.renew.common/bottom_menu_04_off.png"); }
+      .bottom_fixed_menu_area ul li .bottom_menu.menu04.on span {
+        background-image: url("/resources/images/gu.renew.common/bottom_menu_04_on.png"); }
+      .bottom_fixed_menu_area ul li .bottom_menu.menu05 span {
+        background-image: url("/resources/images/gu.renew.common/bottom_menu_05_off.png"); }
+      .bottom_fixed_menu_area ul li .bottom_menu.menu05.on span {
+        background-image: url("/resources/images/gu.renew.common/bottom_menu_05_on.png"); }
+      .bottom_fixed_menu_area ul li .bottom_menu.new span:after {
+        position: absolute;
+        top: 27px;
+        right: -5px;
+        width: 4px;
+        height: 4px;
+        border-radius: 4px;
+        background: #ff4858;
+        content: ""; }
+
+.btn_top {
+  overflow: hidden;
+  text-indent: -99999px;
+  display: inline-block;
+  display: none;
+  position: absolute;
+  right: 18px;
+  bottom: 20px;
+  width: 44px;
+  height: 44px;
+  background: url("/resources/images/gu.renew.common/btn_top.png") no-repeat; }
+
+.btn_top {
+  overflow: hidden;
+  text-indent: -99999px;
+  z-index: 10;
+  position: fixed;
+  right: 10px;
+  bottom: 76px;
+  width: 22px;
+  height: 22px;
+  background: url(/resources/images/gu.renew.common/btn_top.png) no-repeat;
+  background-size: 22px auto; }
+
+.submain_wrap {
+  overflow: hidden;
+  padding: 0 17px; }
+  .submain_wrap .top_area {
+    height: 159px;
+    background: url("/resources/images/gu.renew.contents/main_top_img.png") no-repeat;
+    background-size: auto 159px;
+    text-align: right; }
+    .submain_wrap .top_area .info_grid {
+      float: right;
+      margin: 30px 20px 0 0; }
+      .submain_wrap .top_area .info_grid .title {
+        font-size: 0.75rem;
+        line-height: 1;
+        text-align: right;
+        color: #333333; }
+      .submain_wrap .top_area .info_grid .text {
+        position: relative;
+        margin-top: 8px;
+        font-size: 1.25rem;
+        line-height: 1;
+        text-align: right;
+        color: #333333; }
+        .submain_wrap .top_area .info_grid .text strong {
+          font-size: 1.5rem; }
+  .submain_wrap .box {
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background: #ffffff; }
+    .submain_wrap .box.box1 {
+      display: flex; }
+      .submain_wrap .box.box1 .graph_area {
+        position: relative; }
+        .submain_wrap .box.box1 .graph_area #chartdiv1 {
+          width: 150px;
+          height: 130px; }
+        .submain_wrap .box.box1 .graph_area .counter_number {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          font-size: 1.125rem;
+          transform: translate(-50%, -50%);
+          letter-spacing: -1px;
+          color: #42b4cc; }
+          .submain_wrap .box.box1 .graph_area .counter_number strong {
+            font-weight: 700; }
+      .submain_wrap .box.box1 .info_grid {
+        padding-right: 20px;
+        align-self: center;
+        flex: 1; }
+    .submain_wrap .box.box2 {
+      display: flex;
+      flex-wrap: wrap; }
+      .submain_wrap .box.box2 .graph_area {
+        position: relative; }
+        .submain_wrap .box.box2 .graph_area #chartdiv2 {
+          width: 150px;
+          height: 135px; }
+      .submain_wrap .box.box2 .info_content_area {
+        padding-right: 20px;
+        flex: 1; }
+        .submain_wrap .box.box2 .info_content_area > .title {
+          margin-bottom: 8px;
+          padding-top: 18px;
+          font-size: 0.9375rem;
+          font-weight: 700;
+          line-height: 1;
+          text-align: center;
+          letter-spacing: -2px;
+          color: #333333; }
+        .submain_wrap .box.box2 .info_content_area .info_box {
+          padding: 8px 0 8px 0;
+          border: 1px solid #dfe3eb;
+          border-radius: 13px;
+          line-height: 1;
+          text-align: center;
+          letter-spacing: -1px; }
+          .submain_wrap .box.box2 .info_content_area .info_box .info_title {
+            margin-bottom: 8px;
+            font-size: 0.75rem;
+            color: #333333; }
+          .submain_wrap .box.box2 .info_content_area .info_box ul {
+            display: table;
+            width: 100%;
+            font-size: 0; }
+            .submain_wrap .box.box2 .info_content_area .info_box ul li {
+              display: inline-block;
+              padding: 0 10px;
+              line-height: 1;
+              text-align: center; }
+              .submain_wrap .box.box2 .info_content_area .info_box ul li .tit {
+                display: block;
+                font-size: 0.75rem;
+                color: #777777; }
+              .submain_wrap .box.box2 .info_content_area .info_box ul li .number {
+                display: block;
+                margin-top: 4px;
+                font-size: 1rem;
+                font-weight: 700; }
+              .submain_wrap .box.box2 .info_content_area .info_box ul li.no .tit,
+              .submain_wrap .box.box2 .info_content_area .info_box ul li.no .number {
+                color: #777777; }
+              .submain_wrap .box.box2 .info_content_area .info_box ul li.lack .tit,
+              .submain_wrap .box.box2 .info_content_area .info_box ul li.lack .number {
+                color: #fe5855; }
+              .submain_wrap .box.box2 .info_content_area .info_box ul li.good .tit,
+              .submain_wrap .box.box2 .info_content_area .info_box ul li.good .number {
+                color: #5bd1e6; }
+      .submain_wrap .box.box2 .result {
+        width: 100%;
+        padding-bottom: 10px;
+        font-size: 0.875rem;
+        line-height: 1;
+        flex: none;
+        text-align: center;
+        letter-spacing: -1px;
+        color: #333333; }
+        .submain_wrap .box.box2 .result span {
+          color: #fe5855; }
+
+@media screen and (min-height: 735px) {
+  .submain_wrap .box.box1 {
+    padding: 10px 0; }
+    .submain_wrap .box.box1 .graph_area #chartdiv1 {
+      width: 150px;
+      height: 150px; }
+  .submain_wrap .box.box2 {
+    padding: 10px 0; }
+    .submain_wrap .box.box2 .graph_area #chartdiv2 {
+      width: 150px;
+      height: 125px; }
+    .submain_wrap .box.box2 .info_content_area {
+      align-self: center; }
+      .submain_wrap .box.box2 .info_content_area > .title {
+        padding-top: 0; }
+    .submain_wrap .box.box2 .result {
+      padding-top: 10px; } }
+
+.sub_title {
+  margin-bottom: 15px;
+  font-size: 1.375rem;
+  line-height: 1.875rem;
+  text-align: center;
+  letter-spacing: -2px;
+  color: #000000; }
+
+/*정보성 layer_pop_box*/
+.layer_pop_box {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 14px 15px;
+  border-radius: 10px;
+  background: #ffffff;
+  transition: transform 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+  transform: scale(0.75);
+  transform-origin: 50% 0;
+  opacity: 0;
+  border: 1px solid #ddd;
+  z-index: 10; }
+  .layer_pop_box:before {
+    position: absolute;
+    top: -6px;
+    right: 28px;
+    content: "";
+    display: block;
+    width: 13px;
+    height: 7px;
+    background: url(/resources/images/gu.renew.contents/icon_layer_pop_arrow.png) no-repeat 0 0;
+    background-size: 100% auto; }
+  .layer_pop_box.open {
+    transform: scale(1);
+    opacity: 1; }
+  .layer_pop_box .layer_pop_content {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    letter-spacing: -0.03em; }
+    .layer_pop_box .layer_pop_content .icon_title {
+      margin-bottom: 10px;
+      padding-left: 27px;
+      background: url("/resources/images/gu.renew.contents/icon_alert.png") no-repeat left top;
+      font-size: 0.75rem;
+      line-height: 15px;
+      color: #333333; }
+    .layer_pop_box .layer_pop_content .title {
+      margin-bottom: 5px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      line-height: 15px;
+      color: #333333; }
+    .layer_pop_box .layer_pop_content .text {
+      font-size: 0.75rem;
+      line-height: 1.063rem;
+      color: #888888;
+      letter-spacing: -0.05em;
+      text-align: justify; }
+  .layer_pop_box .btn_close {
+    display: block;
+    position: absolute;
+    top: 11px;
+    right: 20px;
+    width: 13px;
+    height: 13px;
+    background: url("/resources/images/gu.renew.common/btn_close_gray.png") no-repeat;
+    background-size: 100% auto; }
+
+.count {
+  opacity: 0; }
+  .count.active {
+    opacity: 1; }
+
+.align_c {
+  text-align: center; }
+
+.align_l {
+  text-align: left; }
+
+.align_r {
+  text-align: right; }
+
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0); }
+
+/* customer_sort */
+.customer_sort {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 65px;
+  padding: 20px 20px 15px;
+  background: #f3f3f3; }
+  .customer_sort .customer_total {
+    float: left;
+    padding-top: 3px;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: -0.075em;
+    color: #333333; }
+    .customer_sort .customer_total strong {
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: #fe5855; }
+  .customer_sort .sorting {
+    float: right; }
+  .customer_sort .select_box {
+    display: inline-block; }
+    .customer_sort .select_box .nice-select {
+      height: 30px;
+      padding: 0 37px 0 10px;
+      border: 1px solid #e0e4ea;
+      border-radius: 5px;
+      background: #fff;
+      font-size: 0.75rem;
+      line-height: 28px;
+      letter-spacing: -0.075em;
+      color: #333333; }
+      .customer_sort .select_box .nice-select:after {
+        top: 50%;
+        right: 15px;
+        width: 7px;
+        height: 7px;
+        margin-top: -6px;
+        border-color: #3c444d; }
+      .customer_sort .select_box .nice-select .option {
+        min-height: 32px;
+        padding-right: 10px;
+        padding-left: 10px; }
+  .customer_sort .list_type_select {
+    display: inline-block;
+    font-size: 0;
+    vertical-align: top; }
+    .customer_sort .list_type_select .btn {
+      display: inline-block;
+      position: relative;
+      width: 37px;
+      height: 30px;
+      border: 1px solid #e0e4ea;
+      background-color: #fff;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 16px 16px;
+      vertical-align: top; }
+      .customer_sort .list_type_select .btn.grid {
+        margin-right: -1px;
+        border-radius: 5px 0 0 5px;
+        background-image: url(/resources/images/gu.renew.common_m/icon_type_grid.png); }
+      .customer_sort .list_type_select .btn.list {
+        border-radius: 0 5px 5px 0;
+        background-image: url(/resources/images/gu.renew.common_m/icon_type_list.png); }
+      .customer_sort .list_type_select .btn.active {
+        z-index: 5;
+        border: 1px solid #3c444d; }
+
+.fixed .customer_sort {
+  position: fixed;
+  top: 146px;
+  left: 0; }
+
+/* customer_list_box */
+.customer_list_box {
+  padding: 65px 20px 20px 20px; }
+  .customer_list_box .customer_list {
+    display: none; }
+    .customer_list_box .customer_list.grid_type {
+      display: block; }
+  .customer_list_box .customer_add {
+    width: 100%;
+    margin-top: 10px;
+    text-align: center; }
+    .customer_list_box .customer_add .btn_customer_add {
+      display: block;
+      position: relative;
+      padding: 45px 0 40px;
+      border-radius: 10px;
+      background: #fff;
+      font-size: 0.9375rem;
+      text-align: center;
+      letter-spacing: -0.075em;
+      color: #333333; }
+      .customer_list_box .customer_add .btn_customer_add:before {
+        display: block;
+        width: 29px;
+        height: 29px;
+        margin: 0 auto 8px;
+        border: 1px solid #dfe3eb;
+        border-radius: 50%;
+        background: url(/resources/images/gu.renew.common_m/icon_add.png) no-repeat center center;
+        background-size: 14px 14px;
+        content: ""; }
+      .customer_list_box .customer_add .btn_customer_add:active:after, .customer_list_box .customer_add .select_box .btn_customer_add.nice-select.open:after, .select_box .customer_list_box .customer_add .btn_customer_add.nice-select.open:after {
+        display: block;
+        position: absolute;
+        top: -1px;
+        left: 0;
+        width: calc(100% - 3px);
+        height: calc(100% - 1.5px);
+        border: 1.5px solid #fe5855;
+        border-radius: 8px;
+        content: "";
+        transition: none;
+        box-shadow: 4px 5px 5px 0px rgba(0, 0, 0, 0.15); }
+
+/* 테이블형 리스트 */
+.list_table_type .tbody_box {
+  padding-top: 1px;
+  border-radius: 10px;
+  background: #fff; }
+  .list_table_type .tbody_box > div:nth-child(1) {
+    transform: translate(0, 1530px);
+    transition-delay: 0.1s; }
+  .list_table_type .tbody_box > div:nth-child(2) {
+    transform: translate(0, 1560px);
+    transition-delay: 0.2s; }
+  .list_table_type .tbody_box > div:nth-child(3) {
+    transform: translate(0, 1590px);
+    transition-delay: 0.3s; }
+  .list_table_type .tbody_box > div:nth-child(4) {
+    transform: translate(0, 1620px);
+    transition-delay: 0.4s; }
+  .list_table_type .tbody_box > div:nth-child(5) {
+    transform: translate(0, 1650px);
+    transition-delay: 0.5s; }
+  .list_table_type .tbody_box > div:nth-child(6) {
+    transform: translate(0, 1680px);
+    transition-delay: 0.6s; }
+  .list_table_type .tbody_box > div:nth-child(7) {
+    transform: translate(0, 1710px);
+    transition-delay: 0.7s; }
+  .list_table_type .tbody_box > div:nth-child(8) {
+    transform: translate(0, 1740px);
+    transition-delay: 0.8s; }
+  .list_table_type .tbody_box > div:nth-child(9) {
+    transform: translate(0, 1770px);
+    transition-delay: 0.9s; }
+  .list_table_type .tbody_box > div:nth-child(10) {
+    transform: translate(0, 1800px);
+    transition-delay: 1s; }
+  .list_table_type .tbody_box > div:nth-child(11) {
+    transform: translate(0, 1830px);
+    transition-delay: 1.1s; }
+  .list_table_type .tbody_box > div:nth-child(12) {
+    transform: translate(0, 1860px);
+    transition-delay: 1.2s; }
+  .list_table_type .tbody_box > div:nth-child(13) {
+    transform: translate(0, 1890px);
+    transition-delay: 1.3s; }
+  .list_table_type .tbody_box > div:nth-child(14) {
+    transform: translate(0, 1920px);
+    transition-delay: 1.4s; }
+  .list_table_type .tbody_box > div:nth-child(15) {
+    transform: translate(0, 1950px);
+    transition-delay: 1.5s; }
+  .list_table_type .tbody_box > div:nth-child(16) {
+    transform: translate(0, 1980px);
+    transition-delay: 1.6s; }
+  .list_table_type .tbody_box > div:nth-child(17) {
+    transform: translate(0, 2010px);
+    transition-delay: 1.7s; }
+  .list_table_type .tbody_box > div:nth-child(18) {
+    transform: translate(0, 2040px);
+    transition-delay: 1.8s; }
+  .list_table_type .tbody_box > div:nth-child(19) {
+    transform: translate(0, 2070px);
+    transition-delay: 1.9s; }
+  .list_table_type .tbody_box > div:nth-child(20) {
+    transform: translate(0, 2100px);
+    transition-delay: 2s; }
+  .list_table_type .tbody_box > div:nth-child(21) {
+    transform: translate(0, 2130px);
+    transition-delay: 2.1s; }
+  .list_table_type .tbody_box > div:nth-child(22) {
+    transform: translate(0, 2160px);
+    transition-delay: 2.2s; }
+  .list_table_type .tbody_box > div:nth-child(23) {
+    transform: translate(0, 2190px);
+    transition-delay: 2.3s; }
+  .list_table_type .tbody_box > div:nth-child(24) {
+    transform: translate(0, 2220px);
+    transition-delay: 2.4s; }
+  .list_table_type .tbody_box > div:nth-child(25) {
+    transform: translate(0, 2250px);
+    transition-delay: 2.5s; }
+  .list_table_type .tbody_box > div:nth-child(26) {
+    transform: translate(0, 2280px);
+    transition-delay: 2.6s; }
+  .list_table_type .tbody_box > div:nth-child(27) {
+    transform: translate(0, 2310px);
+    transition-delay: 2.7s; }
+  .list_table_type .tbody_box > div:nth-child(28) {
+    transform: translate(0, 2340px);
+    transition-delay: 2.8s; }
+  .list_table_type .tbody_box > div:nth-child(29) {
+    transform: translate(0, 2370px);
+    transition-delay: 2.9s; }
+  .list_table_type .tbody_box > div:nth-child(30) {
+    transform: translate(0, 2400px);
+    transition-delay: 3s; }
+  .list_table_type .tbody_box > div:nth-child(31) {
+    transform: translate(0, 2430px);
+    transition-delay: 3.1s; }
+  .list_table_type .tbody_box > div:nth-child(32) {
+    transform: translate(0, 2460px);
+    transition-delay: 3.2s; }
+  .list_table_type .tbody_box > div:nth-child(33) {
+    transform: translate(0, 2490px);
+    transition-delay: 3.3s; }
+  .list_table_type .tbody_box > div:nth-child(34) {
+    transform: translate(0, 2520px);
+    transition-delay: 3.4s; }
+  .list_table_type .tbody_box > div:nth-child(35) {
+    transform: translate(0, 2550px);
+    transition-delay: 3.5s; }
+  .list_table_type .tbody_box > div:nth-child(36) {
+    transform: translate(0, 2580px);
+    transition-delay: 3.6s; }
+  .list_table_type .tbody_box > div:nth-child(37) {
+    transform: translate(0, 2610px);
+    transition-delay: 3.7s; }
+  .list_table_type .tbody_box > div:nth-child(38) {
+    transform: translate(0, 2640px);
+    transition-delay: 3.8s; }
+  .list_table_type .tbody_box > div:nth-child(39) {
+    transform: translate(0, 2670px);
+    transition-delay: 3.9s; }
+  .list_table_type .tbody_box > div:nth-child(40) {
+    transform: translate(0, 2700px);
+    transition-delay: 4s; }
+  .list_table_type .tbody_box > div:nth-child(41) {
+    transform: translate(0, 2730px);
+    transition-delay: 4.1s; }
+  .list_table_type .tbody_box > div:nth-child(42) {
+    transform: translate(0, 2760px);
+    transition-delay: 4.2s; }
+  .list_table_type .tbody_box > div:nth-child(43) {
+    transform: translate(0, 2790px);
+    transition-delay: 4.3s; }
+  .list_table_type .tbody_box > div:nth-child(44) {
+    transform: translate(0, 2820px);
+    transition-delay: 4.4s; }
+  .list_table_type .tbody_box > div:nth-child(45) {
+    transform: translate(0, 2850px);
+    transition-delay: 4.5s; }
+  .list_table_type .tbody_box > div:nth-child(46) {
+    transform: translate(0, 2880px);
+    transition-delay: 4.6s; }
+  .list_table_type .tbody_box > div:nth-child(47) {
+    transform: translate(0, 2910px);
+    transition-delay: 4.7s; }
+  .list_table_type .tbody_box > div:nth-child(48) {
+    transform: translate(0, 2940px);
+    transition-delay: 4.8s; }
+  .list_table_type .tbody_box > div:nth-child(49) {
+    transform: translate(0, 2970px);
+    transition-delay: 4.9s; }
+  .list_table_type .tbody_box > div:nth-child(50) {
+    transform: translate(0, 3000px);
+    transition-delay: 5s; }
+  .list_table_type .tbody_box.load > div {
+    transform: translate(0, 0); }
+  .list_table_type .tbody_box > div {
+    transition: all 1s; }
+  .list_table_type .tbody_box .item {
+    display: block;
+    position: relative;
+    padding: 0px 20px; }
+    .list_table_type .tbody_box .item:last-child .tr {
+      border-bottom: 0; }
+    .list_table_type .tbody_box .item:active, .list_table_type .tbody_box .select_box .item.nice-select.open, .select_box .list_table_type .tbody_box .item.nice-select.open {
+      z-index: 5;
+      transition: none; }
+      .list_table_type .tbody_box .item:active .tr, .list_table_type .tbody_box .select_box .item.nice-select.open .tr, .select_box .list_table_type .tbody_box .item.nice-select.open .tr {
+        border-bottom-color: transparent; }
+    .list_table_type .tbody_box .item:active::before, .list_table_type .tbody_box .select_box .item.nice-select.open::before, .select_box .list_table_type .tbody_box .item.nice-select.open::before {
+      display: block;
+      position: absolute;
+      z-index: -1;
+      top: -1px;
+      left: 0;
+      width: calc(100% - 3px);
+      height: calc(100% - 1.5px);
+      border: 1.5px solid #fe5855;
+      border-radius: 8px;
+      content: "";
+      transition: none;
+      box-shadow: 4px 5px 5px 0px rgba(0, 0, 0, 0.15); }
+  .list_table_type .tbody_box .tr {
+    display: table;
+    width: 100%;
+    border-bottom: 1px solid #ededf4;
+    text-align: center; }
+  .list_table_type .tbody_box .td {
+    display: table-cell;
+    padding: 8px 10px;
+    font-size: 0.8125rem;
+    vertical-align: middle;
+    letter-spacing: -0.025em;
+    color: #888888; }
+    .list_table_type .tbody_box .td.name {
+      width: auto;
+      padding-left: 0;
+      font-size: 0.9375rem;
+      text-align: left;
+      letter-spacing: -0.1em;
+      color: #333333; }
+    .list_table_type .tbody_box .td.birth {
+      width: 88px;
+      font-size: 0.875rem; }
+    .list_table_type .tbody_box .td.gender {
+      width: 40px; }
+    .list_table_type .tbody_box .td.old {
+      width: 50px; }
+
+/* 그리드형 리스트 */
+.grid_type .item {
+  position: relative;
+  margin: 0 0 10px;
+  overflow: hidden; }
+  .grid_type .item:last-child {
+    margin: 0; }
+
+.grid_type .customer_info {
+  display: block;
+  position: relative;
+  padding: 15px 20px 51px;
+  border-radius: 10px;
+  background: #fff; }
+  .grid_type .customer_info:active:before, .grid_type .select_box .customer_info.nice-select.open:before, .select_box .grid_type .customer_info.nice-select.open:before {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: calc(100% - 3px);
+    height: calc(100% - 3px);
+    border: 1.5px solid #fe5855;
+    border-radius: 8px;
+    content: "";
+    transition: none;
+    box-shadow: 4px 5px 5px 0px rgba(0, 0, 0, 0.15); }
+  .grid_type .customer_info .name {
+    padding-right: 105px;
+    font-size: 0.9375rem;
+    letter-spacing: -0.075em;
+    color: #333333; }
+  .grid_type .customer_info .info {
+    margin-bottom: 20px;
+    padding-right: 105px;
+    font-size: 0.875rem;
+    line-height: 1;
+    letter-spacing: -0.025em;
+    color: #888888; }
+    .grid_type .customer_info .info span {
+      display: inline-block;
+      margin-right: 10px; }
+      .grid_type .customer_info .info span:last-child {
+        margin-right: 0; }
+  .grid_type .customer_info .list:last-child:after {
+    content: "";
+    display: block;
+    clear: both; }
+  .grid_type .customer_info .list li {
+    display: block;
+    float: left;
+    width: 74px;
+    line-height: 15px; }
+    .grid_type .customer_info .list li .tit {
+      font-size: 0.6875rem;
+      letter-spacing: -0.075em;
+      color: #aaaaaa; }
+    .grid_type .customer_info .list li .txt {
+      font-size: 0.75rem;
+      letter-spacing: -0.025em;
+      color: #666666; }
+
+.grid_type .btn_util {
+  position: absolute;
+  top: 17px;
+  right: 20px; }
+
+.grid_type .btn_util2 {
+  position: absolute;
+  right: 20px;
+  bottom: 15px;
+  left: 20px; }
+  .grid_type .btn_util2 .btn_pdf {
+    float: right;
+    width: 118px; }
+
+.insurance_list_box {
+  margin-top: 5px;
+  padding: 10px 15px;
+  background: #fff; }
+  .insurance_list_box .note_box {
+    padding-bottom: 30px; }
+
+.insurance_list {
+  margin-bottom: 20px; }
+  .insurance_list:last-child {
+    margin-bottom: 0; }
+  .insurance_list .tit_box {
+    position: relative;
+    margin-bottom: 10px;
+    line-height: 1;
+    text-align: center; }
+    .insurance_list .tit_box .sort_tit {
+      display: inline-block;
+      font-size: 1rem;
+      font-weight: 700;
+      vertical-align: top;
+      color: #000000; }
+    .insurance_list .tit_box .number {
+      display: inline-block;
+      margin-left: 10px;
+      font-size: 0.875rem;
+      font-weight: 400;
+      vertical-align: top;
+      color: #777; }
+      .insurance_list .tit_box .number strong {
+        font-size: 0.9375rem;
+        font-weight: 700; }
+  .insurance_list .list_box {
+    border: 1px solid #d5d5d5;
+    border-radius: 8px; }
+    .insurance_list .list_box .insurance {
+      margin-bottom: -1px;
+      border-bottom: 1px solid #ededed; }
+      .insurance_list .list_box .insurance:last-child {
+        border-bottom: none; }
+      .insurance_list .list_box .insurance .logo:after {
+        display: inline-block;
+        position: absolute;
+        top: -18px;
+        right: 0px;
+        width: 24px;
+        height: 9px;
+        background: url(/resources/images/gu.renew.contents/icon_arrow.png) no-repeat 0 0;
+        background-size: 100% auto;
+        content: ""; }
+  .insurance_list.check_list .list_box {
+    border: none;
+    border-radius: 0; }
+  .insurance_list.check_list .insurance {
+    width: 100%;
+    margin-bottom: 0px;
+    margin-bottom: 10px;
+    padding: 10px 15px 10px 20px;
+    border: 1px solid #d5d5d5;
+    border-radius: 8px; }
+    .insurance_list.check_list .insurance:last-child {
+      border-bottom: 1px solid #d5d5d5; }
+    .insurance_list.check_list .insurance:after {
+      display: block;
+      position: absolute;
+      top: -1px;
+      left: -1px;
+      width: 31px;
+      height: 31px;
+      background: url(/resources/images/gu.renew.common_m/checkbox02_off.png) no-repeat 0 0;
+      background-size: 100% auto;
+      content: ""; }
+    .insurance_list.check_list .insurance.checked:before {
+      display: block;
+      position: absolute;
+      z-index: 10;
+      top: -1px;
+      left: -1px;
+      width: 100%;
+      height: 100%;
+      border: 1px solid #fd5856;
+      border-radius: 8px;
+      content: ""; }
+    .insurance_list.check_list .insurance.checked:after {
+      background: url(/resources/images/gu.renew.common_m/checkbox02_on.png) no-repeat 0 0;
+      background-size: 100% auto; }
+    .insurance_list.check_list .insurance .name {
+      font-weight: 700; }
+    .insurance_list.check_list .insurance .logo:after {
+      display: none; }
+    .insurance_list.check_list .insurance .etc_info .txt {
+      color: #000000; }
+  .insurance_list.check_list .btn_contract_add {
+    padding: 28px 0; }
+  .insurance_list.cancel_list {
+    margin-bottom: -10px; }
+    .insurance_list.cancel_list.open {
+      margin-bottom: 10px; }
+      .insurance_list.cancel_list.open .tit_box .btn_text_arr:after {
+        transform: rotate(-135deg); }
+    .insurance_list.cancel_list .tit_box .btn_text_arr {
+      position: absolute;
+      top: 0;
+      right: 3px;
+      color: #888888; }
+      .insurance_list.cancel_list .tit_box .btn_text_arr:after {
+        transform: rotate(45deg); }
+    .insurance_list.cancel_list .list_box {
+      display: none; }
+  .insurance_list .insurance {
+    display: block;
+    position: relative;
+    padding: 10px 15px; }
+    .insurance_list .insurance:last-child {
+      margin-bottom: 0; }
+    .insurance_list .insurance .name {
+      margin-bottom: 6px;
+      font-size: 0.9375rem;
+      letter-spacing: -0.05em;
+      color: #010101; }
+    .insurance_list .insurance .payment_info:after {
+      content: "";
+      display: block;
+      clear: both; }
+    .insurance_list .insurance .payment_info .state {
+      display: block;
+      float: left;
+      height: 18px;
+      margin-right: 10px;
+      padding: 0 10px;
+      border-radius: 5px;
+      background: #ffeceb;
+      font-size: 0.75rem;
+      line-height: 18px;
+      text-align: center;
+      color: #fd795b; }
+    .insurance_list .insurance .payment_info .info {
+      float: left;
+      line-height: 20px; }
+      .insurance_list .insurance .payment_info .info .payment {
+        font-size: 0.75rem; }
+        .insurance_list .insurance .payment_info .info .payment strong {
+          font-size: 0.9375rem; }
+        .insurance_list .insurance .payment_info .info .payment span {
+          margin-left: 6px;
+          color: #888888; }
+      .insurance_list .insurance .payment_info .info .date {
+        font-size: 0.75rem;
+        letter-spacing: -0.05em;
+        color: #888888; }
+    .insurance_list .insurance .logo {
+      display: block;
+      position: absolute;
+      top: 55px;
+      right: 15px;
+      height: 18px; }
+      .insurance_list .insurance .logo img {
+        height: 100%; }
+    .insurance_list .insurance .etc_info {
+      position: relative;
+      margin-top: 8px;
+      padding-top: 10px;
+      text-align: center; }
+      .insurance_list .insurance .etc_info:before {
+        display: block;
+        position: absolute;
+        top: 0px;
+        left: -20px;
+        width: calc(100% + 35px);
+        border-top: 1px dotted #d8d8d8;
+        content: ""; }
+      .insurance_list .insurance .etc_info ul {
+        margin: 0 -15px 0 -20px;
+        overflow: hidden; }
+        .insurance_list .insurance .etc_info ul li {
+          float: left;
+          width: 33.33%;
+          border-right: 1px solid #ededed; }
+          .insurance_list .insurance .etc_info ul li:last-child {
+            border-right: none; }
+          .insurance_list .insurance .etc_info ul li .tit {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 12px;
+            color: #777; }
+          .insurance_list .insurance .etc_info ul li .txt {
+            font-size: 12px; }
+            .insurance_list .insurance .etc_info ul li .txt strong {
+              font-size: 13px;
+              font-weight: normal; }
+    .insurance_list .insurance.disabled .logo {
+      /*! _gray v1.6.0 (https://github.com/karlhorky/gray) | _m_i_t */ }
+      .insurance_list .insurance.disabled .logo .grayscale {
+        opacity: 0.7;
+        filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><fe_color_matrix type='saturate' values='0'/></filter></svg>#grayscale");
+        -webkit-filter: grayscale(1);
+        filter: grayscale(1);
+        filter: gray; }
+    .insurance_list .insurance.disabled .name {
+      color: #aaaaaa; }
+    .insurance_list .insurance.disabled .payment_info .state {
+      background: #e7e7e7;
+      color: #aaaaaa; }
+    .insurance_list .insurance.disabled .payment_info .date {
+      color: #aaaaaa; }
+    .insurance_list .insurance.disabled .payment_info .payment {
+      color: #888888; }
+    .insurance_list .insurance.no_insurance {
+      display: table;
+      width: 100%;
+      height: 80px;
+      border: 1px solid #d5d5d5;
+      border-radius: 8px;
+      text-align: center; }
+      .insurance_list .insurance.no_insurance:hover:before {
+        display: none; }
+      .insurance_list .insurance.no_insurance > div {
+        display: table-cell;
+        font-size: 0.8125rem;
+        vertical-align: middle;
+        color: #aaaaaa; }
+  .insurance_list .btn_contract_add {
+    display: block;
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 15px 0 15px;
+    border: 1px solid #ededf4;
+    border-radius: 10px;
+    background: #fff;
+    font-size: 0.875rem;
+    text-align: center;
+    letter-spacing: -0.075em;
+    color: #333333; }
+    .insurance_list .btn_contract_add:before {
+      display: block;
+      width: 29px;
+      height: 29px;
+      margin: 0 auto 8px;
+      border: 1px solid #dfe3eb;
+      border-radius: 50%;
+      background: url(/resources/images/gu.renew.common_m/icon_add.png) no-repeat center center;
+      background-size: 14px 14px;
+      content: ""; }
+
+.insurance_list2 {
+  padding: 0 15px;
+  background: #fff; }
+  .insurance_list2 .insurance {
+    padding: 10px 0 15px;
+    border-top: 1px solid #f0f3f8;
+    letter-spacing: -0.05em; }
+    .insurance_list2 .insurance:last-child {
+      border-bottom: none; }
+    .insurance_list2 .insurance:after {
+      content: "";
+      display: block;
+      clear: both; }
+    .insurance_list2 .insurance .info .logo {
+      height: 20px;
+      margin-bottom: 5px; }
+      .insurance_list2 .insurance .info .logo img {
+        height: 100%; }
+    .insurance_list2 .insurance .info .name {
+      font-size: 0.8125rem;
+      line-height: 18px;
+      color: #666666; }
+    .insurance_list2 .insurance .sum_info {
+      margin-top: 5px; }
+      .insurance_list2 .insurance .sum_info .title {
+        display: inline-block;
+        height: 25px;
+        padding: 0 10px;
+        border-radius: 12px;
+        background: #f0f3f8;
+        font-size: 0.75rem;
+        line-height: 27px;
+        color: #3c444d; }
+      .insurance_list2 .insurance .sum_info .sum {
+        float: right;
+        font-size: 0.75rem;
+        line-height: 27px;
+        color: #666666; }
+
+/* 유의사항 */
+.note_box {
+  padding: 15px 0;
+  margin: 0 15px;
+  border-top: 1px solid #cad2db; }
+  .note_box dl {
+    letter-spacing: -0.075em; }
+    .note_box dl dt {
+      font-size: 0.75rem;
+      color: #000000;
+      font-weight: 700; }
+    .note_box dl dd {
+      margin-bottom: 5px;
+      font-size: 0.75rem;
+      line-height: 20px;
+      color: #888888; }
+
+/* layer_pop_wrap */
+.layer_pop_wrap {
+  display: flex;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  background: #fff;
+  overflow: hidden;
+  flex-direction: column; }
+  .layer_pop_wrap .layer_pop_header {
+    height: 48px;
+    padding-top: 13px;
+    border-bottom: 1px solid #d5d5d5;
+    flex: none;
+    text-align: center; }
+    .layer_pop_wrap .layer_pop_header .title {
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: #333333; }
+  .layer_pop_wrap .layer_pop_content {
+    overflow: auto;
+    flex: 1; }
+  .layer_pop_wrap .layer_pop_bottom {
+    height: 45px;
+    flex: none; }
+    .layer_pop_wrap .layer_pop_bottom .btn_area {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      text-align: center; }
+      .layer_pop_wrap .layer_pop_bottom .btn_area .btn_text {
+        height: 100%;
+        border: none;
+        border-radius: 0;
+        font-size: 0.9375rem;
+        font-weight: 700;
+        line-height: 45px;
+        flex: 1; }
+  .layer_pop_wrap .btn_close {
+    position: absolute;
+    top: 13px;
+    right: 13px;
+    width: 20px;
+    height: 20px;
+    background: url(/resources/images/gu.renew.common_m/btn_close_gray.png) no-repeat;
+    background-size: 100% auto; }
+  .layer_pop_wrap .note_box {
+    padding-top: 20px;
+    border-top: none; }
+    .layer_pop_wrap .note_box dd {
+      font-family: 'dotum';
+      font-size: 0.75rem; }
+
+.pop_alert {
+  width: 285px;
+  height: 172px;
+  border-radius: 8px; }
+  .pop_alert .layer_pop_header .title {
+    font-size: 1rem; }
+  .pop_alert .center_box {
+    display: table;
+    width: 100%;
+    height: 100%;
+    text-align: center; }
+    .pop_alert .center_box > div {
+      display: table-cell;
+      font-size: 1rem;
+      font-weight: 700;
+      vertical-align: middle;
+      letter-spacing: -0.05em;
+      color: #333333; }
+      .pop_alert .center_box > div.txt {
+        padding-top: 10px; }
+    .pop_alert .center_box .input_set {
+      margin: 0 15px; }
+      .pop_alert .center_box .input_set input {
+        width: 100%;
+        height: 38px;
+        padding: 0 0 0 15px;
+        outline: none;
+        background: transparent;
+        font-size: 0.8125rem;
+        line-height: 38px;
+        letter-spacing: -0.05em; }
+        .pop_alert .center_box .input_set input:focus {
+          border: 1px solid #e0e4ea;
+          font-weight: bold;
+          color: #333333; }
+        .pop_alert .center_box .input_set input:focus + .del {
+          display: block; }
+        .pop_alert .center_box .input_set input.placeholder {
+          font-size: 0.75rem;
+          letter-spacing: -0.05em;
+          color: #888888; }
+        .pop_alert .center_box .input_set input::placeholder {
+          font-size: 0.75rem;
+          letter-spacing: -0.05em;
+          color: #888888; }
+        .pop_alert .center_box .input_set input::-ms-input-placeholder {
+          font-size: 0.75rem;
+          letter-spacing: -0.05em;
+          color: #888888; }
+        .pop_alert .center_box .input_set input::-webkit-input-placeholder {
+          font-size: 0.75rem;
+          letter-spacing: -0.05em;
+          color: #888888; }
+        .pop_alert .center_box .input_set input::-moz-placeholder {
+          font-size: 0.75rem;
+          letter-spacing: -0.05em;
+          color: #888888; }
+      .pop_alert .center_box .input_set.change .del {
+        display: block; }
+      .pop_alert .center_box .input_set .del {
+        display: none;
+        position: absolute;
+        top: 50%;
+        right: 8px;
+        width: 24px;
+        height: 24px;
+        margin-top: -12px;
+        background: url(/resources/images/gu.renew.common_m/btn_del.png) no-repeat 0 0;
+        background-size: 100% auto;
+        text-indent: -9999px; }
+
+.pop_insurance_detail {
+  width: 782px; }
+  .pop_insurance_detail .insurance_detail {
+    height: 200px;
+    margin: 0 -40px;
+    border-bottom: 1px solid #e0e4ea;
+    overflow: hidden; }
+    .pop_insurance_detail .insurance_detail .insurance_info {
+      position: relative;
+      float: left;
+      width: 490px;
+      height: 100%;
+      padding: 34px 30px 0 40px;
+      border-right: 1px solid #e0e4ea; }
+      .pop_insurance_detail .insurance_detail .insurance_info .logo {
+        margin-bottom: 5px; }
+      .pop_insurance_detail .insurance_detail .insurance_info .tit {
+        margin-bottom: 5px;
+        font-size: 1.25rem;
+        color: #000; }
+      .pop_insurance_detail .insurance_detail .insurance_info .number {
+        margin-bottom: 10px;
+        font-size: 1rem;
+        line-height: 1;
+        color: #888888; }
+        .pop_insurance_detail .insurance_detail .insurance_info .number .tit {
+          margin-right: 6px;
+          font-size: 0.875rem;
+          color: #333333; }
+      .pop_insurance_detail .insurance_detail .insurance_info .date {
+        font-size: 1rem;
+        color: #888888; }
+        .pop_insurance_detail .insurance_detail .insurance_info .date .state {
+          display: inline-block;
+          width: 47px;
+          height: 22px;
+          margin-right: 10px;
+          border-radius: 5px;
+          background: #ffeeed;
+          font-size: 0.875rem;
+          line-height: 20px;
+          text-align: center;
+          color: #fd795c; }
+          .pop_insurance_detail .insurance_detail .insurance_info .date .state.cancel {
+            background: #e7e7e7;
+            color: #888888; }
+      .pop_insurance_detail .insurance_detail .insurance_info .payment {
+        position: absolute;
+        right: 30px;
+        bottom: 48px;
+        text-align: right;
+        letter-spacing: -0.075em; }
+        .pop_insurance_detail .insurance_detail .insurance_info .payment .tit {
+          font-size: 0.875rem;
+          color: #aaaaaa; }
+        .pop_insurance_detail .insurance_detail .insurance_info .payment .price {
+          font-size: 1.25rem;
+          font-weight: 500;
+          color: #333333; }
+          .pop_insurance_detail .insurance_detail .insurance_info .payment .price strong {
+            font-size: 1.375rem;
+            font-weight: 500; }
+    .pop_insurance_detail .insurance_detail .payment_info {
+      float: left;
+      width: 292px;
+      height: 100%;
+      padding: 22px 50px 0 30px; }
+      .pop_insurance_detail .insurance_detail .payment_info .normal .count_bar_box {
+        margin-bottom: 10px;
+        padding-top: 37px; }
+        .pop_insurance_detail .insurance_detail .payment_info .normal .count_bar_box .bar_rail {
+          position: relative;
+          border-radius: 5px;
+          background: #f0f3f8; }
+          .pop_insurance_detail .insurance_detail .payment_info .normal .count_bar_box .bar_rail .bar {
+            position: relative;
+            width: 0;
+            height: 6px;
+            border-radius: 5px;
+            background: #02a7c5;
+            transition: all 1.2s; }
+          .pop_insurance_detail .insurance_detail .payment_info .normal .count_bar_box .bar_rail .percent {
+            position: absolute;
+            right: 0;
+            bottom: 17px;
+            width: 50px;
+            height: 27px;
+            margin-right: -25px;
+            border-radius: 15px;
+            background: #02a7c5;
+            font-weight: 500;
+            line-height: 27px;
+            text-align: center;
+            color: #fff; }
+            .pop_insurance_detail .insurance_detail .payment_info .normal .count_bar_box .bar_rail .percent:after {
+              display: block;
+              position: absolute;
+              bottom: -4px;
+              left: 50%;
+              margin-left: -4px;
+              border-top: 4px solid #02a7c5;
+              border-right: 4px solid transparent;
+              border-left: 4px solid transparent;
+              content: ""; }
+        .pop_insurance_detail .insurance_detail .payment_info .normal .count_bar_box .now {
+          font-size: 0.875rem;
+          color: #02a7c5; }
+        .pop_insurance_detail .insurance_detail .payment_info .normal .count_bar_box .last {
+          float: right;
+          font-size: 0.875rem;
+          color: #888888; }
+      .pop_insurance_detail .insurance_detail .payment_info .normal .pay_list {
+        margin-bottom: 5px; }
+        .pop_insurance_detail .insurance_detail .payment_info .normal .pay_list li {
+          overflow: hidden; }
+          .pop_insurance_detail .insurance_detail .payment_info .normal .pay_list li .tit {
+            float: left;
+            font-size: 0.875rem;
+            letter-spacing: -0.075em;
+            color: #aaaaaa; }
+          .pop_insurance_detail .insurance_detail .payment_info .normal .pay_list li .txt {
+            float: right;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #888888; }
+            .pop_insurance_detail .insurance_detail .payment_info .normal .pay_list li .txt.complete {
+              color: #333333; }
+            .pop_insurance_detail .insurance_detail .payment_info .normal .pay_list li .txt strong {
+              font-weight: 500; }
+      .pop_insurance_detail .insurance_detail .payment_info .normal .text {
+        font-family: 'dotum';
+        font-size: 0.75rem;
+        letter-spacing: -0.06em;
+        color: #888888; }
+      .pop_insurance_detail .insurance_detail .payment_info .cancel {
+        display: table;
+        height: 100%;
+        padding: 0 0 20px 30px;
+        text-align: center;
+        letter-spacing: -0.075em; }
+        .pop_insurance_detail .insurance_detail .payment_info .cancel .text {
+          display: table-cell;
+          font-size: 1.125rem;
+          line-height: 28px;
+          vertical-align: middle;
+          color: #aaaaaa; }
+          .pop_insurance_detail .insurance_detail .payment_info .cancel .text .title {
+            display: block; }
+  .pop_insurance_detail .tab_wrap {
+    padding: 30px 0px 0px; }
+    .pop_insurance_detail .tab_wrap .tab_list {
+      width: 700px;
+      margin: 0 auto 20px; }
+    .pop_insurance_detail .tab_wrap .tab_content {
+      display: none;
+      width: 700px; }
+      .pop_insurance_detail .tab_wrap .tab_content.on {
+        display: block; }
+  .pop_insurance_detail .basic_type {
+    width: 700px; }
+  .pop_insurance_detail .table_scroll {
+    height: 370px; }
+    .pop_insurance_detail .table_scroll .basic_type thead {
+      position: absolute;
+      left: -9999px; }
+
+/* 권장금액/보장군 설정 */
+.pop_security_set {
+  width: 100%;
+  height: 100%; }
+  .pop_security_set .layer_pop_content {
+    display: flex;
+    flex-direction: column; }
+    .pop_security_set .layer_pop_content .tab_list {
+      margin-top: -1px;
+      margin-bottom: 15px;
+      flex: none; }
+      .pop_security_set .layer_pop_content .tab_list ul {
+        display: flex;
+        line-height: 1; }
+        .pop_security_set .layer_pop_content .tab_list ul li {
+          flex: 1; }
+          .pop_security_set .layer_pop_content .tab_list ul li .tab {
+            width: 100%;
+            height: 40px;
+            border-top: 1px solid #d5d5d5;
+            border-bottom: 1px solid #d5d5d5;
+            background: #eee;
+            font-size: 0.9375rem;
+            line-height: 40px;
+            text-align: center;
+            letter-spacing: -0.05em;
+            color: #888888; }
+            .pop_security_set .layer_pop_content .tab_list ul li .tab.active {
+              border-top: 1px solid #333;
+              border-bottom: 1px solid #333;
+              background: #333;
+              color: #fff; }
+    .pop_security_set .layer_pop_content .tab_cont_box {
+      padding: 0 16px;
+      overflow: auto;
+      flex: 1; }
+      .pop_security_set .layer_pop_content .tab_cont_box .tab_cont {
+        display: none; }
+        .pop_security_set .layer_pop_content .tab_cont_box .tab_cont.active {
+          display: block; }
+        .pop_security_set .layer_pop_content .tab_cont_box .tab_cont .top_btn_box {
+          margin-bottom: 10px;
+          text-align: right; }
+        .pop_security_set .layer_pop_content .tab_cont_box .tab_cont .basic_type {
+          margin-bottom: 20px; }
+          .pop_security_set .layer_pop_content .tab_cont_box .tab_cont .basic_type th .select {
+            position: relative; }
+            .pop_security_set .layer_pop_content .tab_cont_box .tab_cont .basic_type th .select::after {
+              display: inline-block;
+              position: absolute;
+              top: 3px;
+              right: -20px;
+              width: 16px;
+              height: 12px;
+              background: url(/resources/images/gu.renew.common_m/icon_checked.png) no-repeat 0 0;
+              content: ""; }
+          .pop_security_set .layer_pop_content .tab_cont_box .tab_cont .basic_type td {
+            padding: 5px 10px; }
+            .pop_security_set .layer_pop_content .tab_cont_box .tab_cont .basic_type td .input_set {
+              margin-right: -10px; }
+              .pop_security_set .layer_pop_content .tab_cont_box .tab_cont .basic_type td .input_set input {
+                height: 28px;
+                padding: 0 8px;
+                font-size: 0.75rem; }
+          .pop_security_set .layer_pop_content .tab_cont_box .tab_cont .basic_type .check_box_set {
+            line-height: 1; }
+            .pop_security_set .layer_pop_content .tab_cont_box .tab_cont .basic_type .check_box_set.no_label label {
+              width: 20px;
+              height: 20px;
+              padding-left: 20px; }
+            .pop_security_set .layer_pop_content .tab_cont_box .tab_cont .basic_type .check_box_set input[type='checkbox'] + label:after {
+              background: url(/resources/images/gu.renew.common_m/checkbox_off_gray.png) no-repeat;
+              background-size: 100% auto; }
+            .pop_security_set .layer_pop_content .tab_cont_box .tab_cont .basic_type .check_box_set input[type='checkbox']:checked + label:after {
+              background: url(/resources/images/gu.renew.common_m/checkbox_on_red.png) no-repeat;
+              background-size: 100% auto; }
+
+/* 가계약조회리스트 */
+.pop_conditional_contract {
+  width: 100%;
+  height: 100%; }
+  .pop_conditional_contract .layer_pop_content {
+    display: flex;
+    flex-direction: column; }
+    .pop_conditional_contract .layer_pop_content .search_condition {
+      margin: 0 0px 10px;
+      padding: 15px 12px;
+      background: #f3f3f3;
+      flex: none;
+      text-align: center; }
+      .pop_conditional_contract .layer_pop_content .search_condition .sorting_list {
+        margin-bottom: 8px;
+        line-height: 1;
+        overflow: hidden; }
+        .pop_conditional_contract .layer_pop_content .search_condition .sorting_list li {
+          display: inline-block;
+          margin: 0 10px; }
+          .pop_conditional_contract .layer_pop_content .search_condition .sorting_list li label {
+            font-size: 0.875rem;
+            letter-spacing: -0.075em;
+            color: #333333; }
+      .pop_conditional_contract .layer_pop_content .search_condition .date {
+        font-size: 0.9375rem;
+        line-height: 1;
+        color: #333333; }
+    .pop_conditional_contract .layer_pop_content .insurance_list {
+      margin: 0;
+      padding: 0 12px 0;
+      overflow: auto;
+      flex: 1; }
+      .pop_conditional_contract .layer_pop_content .insurance_list .item {
+        position: relative; }
+        .pop_conditional_contract .layer_pop_content .insurance_list .item .btn_edit {
+          position: absolute;
+          z-index: 10;
+          top: 30px;
+          right: 10px;
+          padding: 10px; }
+
+/* tab_content */
+.tab_content {
+  display: none; }
+  .tab_content.on {
+    display: block; }
+
+/* basic_type */
+.basic_type {
+  border-top: 1px solid #3c444d; }
+  .basic_type thead th {
+    padding: 9px 5px;
+    border-right: 1px solid #d5d5d5;
+    border-bottom: 1px solid #d5d5d5;
+    background: #eee;
+    font-size: 0.75rem;
+    text-align: center;
+    vertical-align: middle;
+    color: #333333; }
+    .basic_type thead th:last-child {
+      border-right: none; }
+  .basic_type tbody td {
+    padding: 8px 10px;
+    border-right: 1px solid #d5d5d5;
+    border-bottom: 1px solid #d5d5d5;
+    font-size: 0.75rem;
+    vertical-align: middle;
+    letter-spacing: -0.05em;
+    color: #666666; }
+    .basic_type tbody td:last-child {
+      border-right: none; }
+
+/* btn_circle */
+.btn_circle {
+  display: inline-block;
+  width: 29px;
+  height: 29px;
+  border-radius: 50%;
+  background-color: #f0f3f8;
+  background-position: 0 0;
+  background-size: 100%;
+  text-indent: -9999px; }
+  .btn_circle > span {
+    display: inline-block; }
+  .btn_circle.on {
+    border: none;
+    background-color: #ffe4e3; }
+  .btn_circle.like {
+    background-image: url(/resources/images/gu.renew.common_m/icon_like_off.png); }
+  .btn_circle.like.on {
+    background-image: url(/resources/images/gu.renew.common_m/icon_like_on.png); }
+  .btn_circle.analysis {
+    background-image: url(/resources/images/gu.renew.common_m/icon_analysis_off.png); }
+  .btn_circle.analysis.on {
+    background-image: url(/resources/images/gu.renew.common_m/icon_analysis_on.png); }
+  .btn_circle.agree {
+    background-image: url(/resources/images/gu.renew.common_m/icon_agree_off.png); }
+  .btn_circle.agree.on {
+    background-image: url(/resources/images/gu.renew.common_m/icon_agree_on.png); }
+
+.btn_edit {
+  font-size: 0.75rem;
+  letter-spacing: -0.025em;
+  color: #333333; }
+  .btn_edit:before {
+    display: inline-block;
+    width: 13px;
+    height: 16px;
+    margin-right: 4px;
+    background: url(/resources/images/gu.renew.common_m/icon_edit_off.png) no-repeat 0 0;
+    background-size: 100% auto;
+    content: "";
+    vertical-align: top; }
+  .btn_edit:active, .select_box .btn_edit.nice-select.open {
+    color: #01a7c4; }
+    .btn_edit:active:before, .select_box .btn_edit.nice-select.open:before {
+      background: url(/resources/images/gu.renew.common_m/icon_edit_on.png) no-repeat 0 0;
+      background-size: 100% auto; }
+
+.btn_text_arr {
+  font-size: 0.75rem;
+  color: #3c444d; }
+  .btn_text_arr:after {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin: -6px 0 0 5px;
+    border-right: 1px solid #9a9fa6;
+    border-bottom: 1px solid #9a9fa6;
+    content: "";
+    -webkit-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transform-origin: 66% 66%;
+    transform-origin: 66% 66%;
+    vertical-align: middle;
+    pointer-events: none; }
+
+.btn_round {
+  padding: 5px 9px;
+  border: 1px solid #d5d5d5;
+  border-radius: 13px;
+  font-size: 0.75rem;
+  letter-spacing: -0.05em;
+  color: #000000; }
+
+.icon_reset:before {
+  display: inline-block;
+  width: 12px;
+  height: 11px;
+  margin: 3px 5px 0 0;
+  background: url(/resources/images/gu.renew.common_m/icon_reset.png) no-repeat 0 0;
+  background-size: 100% auto;
+  content: "";
+  vertical-align: top; }
+
+.icon_reset:active, .select_box .icon_reset.nice-select.open {
+  background: #eee; }
+
+.icon_all_select:before {
+  display: inline-block;
+  width: 10px;
+  height: 8px;
+  margin: 5px 5px 0 0;
+  background: url(/resources/images/gu.renew.common_m/icon_checked_gray.png) no-repeat 0 0;
+  background-size: 100% auto;
+  content: "";
+  vertical-align: top; }
+
+.icon_all_select.checked {
+  color: #ff4858;
+  border: 1px solid #ff4858; }
+  .icon_all_select.checked:before {
+    background: url(/resources/images/gu.renew.common_m/icon_checked_red.png) no-repeat 0 0;
+    background-size: 100% auto; }
+
+/*그래프*/
+.consulting_list {
+  padding: 0 17px; }
+  .consulting_list > li {
+    padding-bottom: 15px; }
+  .consulting_list .item {
+    position: relative;
+    height: 325px;
+    border-radius: 5px;
+    background: #ffffff; }
+    .consulting_list .item > .title {
+      padding-top: 20px;
+      font-size: 1rem;
+      line-height: 1;
+      text-align: center;
+      color: #333333; }
+    .consulting_list .item .graph_area {
+      position: relative;
+      height: 275px; }
+      .consulting_list .item .graph_area:after {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 158.78px;
+        height: 158.78px;
+        border: 2px solid #b4dad7;
+        border-radius: 50%;
+        box-sizing: border-box;
+        content: "";
+        transform: translate(-50.5%, -56.6%); }
+    .consulting_list .item .bottom_info {
+      display: table;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 5px 20px 5px 40px;
+      font-size: 0;
+      text-align: center; }
+      .consulting_list .item .bottom_info:after {
+        content: "";
+        display: block;
+        clear: both; }
+      .consulting_list .item .bottom_info li {
+        display: inline-block;
+        margin-right: 10px;
+        line-height: 18px;
+        letter-spacing: -1px; }
+        .consulting_list .item .bottom_info li:last-child {
+          margin-right: 0; }
+        .consulting_list .item .bottom_info li.before {
+          padding-left: 18px;
+          background: url("/resources/images/gu.renew.contents/icon_before.png") no-repeat left center;
+          font-size: 0.6875rem;
+          color: #333333; }
+        .consulting_list .item .bottom_info li.after {
+          margin-right: 15px;
+          padding-left: 18px;
+          background: url("/resources/images/gu.renew.contents/icon_after.png") no-repeat left center;
+          font-size: 0.6875rem;
+          color: #333333; }
+        .consulting_list .item .bottom_info li.payment {
+          padding: 0 5px;
+          border: 1px solid #b8e0dc;
+          border-radius: 3px;
+          font-size: 0.6875rem;
+          line-height: 16px;
+          color: #01a7c4; }
+
+/* 진단상세 */
+.insurance_all_state .all_state_icon {
+  padding: 20px 16px;
+  background: #fff; }
+  .insurance_all_state .all_state_icon .list > li {
+    margin-bottom: 20px; }
+    .insurance_all_state .all_state_icon .list > li:last-child {
+      margin-bottom: 0; }
+    .insurance_all_state .all_state_icon .list > li .state_tit {
+      margin-bottom: 8px;
+      font-size: 0.8125rem;
+      line-height: 1;
+      letter-spacing: -0.075em;
+      color: #333333; }
+    .insurance_all_state .all_state_icon .list > li ul {
+      margin: -10px -10px 0 0; }
+      .insurance_all_state .all_state_icon .list > li ul:after {
+        content: "";
+        display: block;
+        clear: both; }
+    .insurance_all_state .all_state_icon .list > li li {
+      float: left;
+      margin: 10px 10px 0 0; }
+      .insurance_all_state .all_state_icon .list > li li:last-child {
+        margin-right: 0; }
+    .insurance_all_state .all_state_icon .list > li .btn_state {
+      position: relative;
+      width: 74px;
+      height: 64px; }
+      .insurance_all_state .all_state_icon .list > li .btn_state:active:before, .insurance_all_state .all_state_icon .list > li .select_box .btn_state.nice-select.open:before, .select_box .insurance_all_state .all_state_icon .list > li .btn_state.nice-select.open:before {
+        display: block;
+        position: absolute;
+        z-index: 5;
+        top: 0px;
+        left: 0;
+        width: calc(100% - 4px);
+        height: calc(100% - 4px);
+        border: 2px solid #fe5855;
+        border-radius: 10px;
+        content: "";
+        transition: none;
+        box-shadow: 7px 7px 9px 0px rgba(0, 0, 0, 0.12); }
+      .insurance_all_state .all_state_icon .list > li .btn_state > span {
+        display: block;
+        height: 100%;
+        padding: 15px 0px 0;
+        border-radius: 6px;
+        line-height: 1;
+        text-align: center; }
+      .insurance_all_state .all_state_icon .list > li .btn_state .tit {
+        display: block;
+        margin-bottom: 6px;
+        font-size: 0.75rem;
+        letter-spacing: -0.075em;
+        color: #000000; }
+      .insurance_all_state .all_state_icon .list > li .btn_state .state {
+        display: inline-block;
+        font-size: 1.125rem;
+        font-weight: 700; }
+      .insurance_all_state .all_state_icon .list > li .btn_state.lack > span {
+        background: #ffe4e3; }
+      .insurance_all_state .all_state_icon .list > li .btn_state.lack .state {
+        color: #ff4858; }
+      .insurance_all_state .all_state_icon .list > li .btn_state.no_join > span {
+        background: #cacaca; }
+      .insurance_all_state .all_state_icon .list > li .btn_state.no_join .state {
+        color: #777; }
+      .insurance_all_state .all_state_icon .list > li .btn_state.enough > span {
+        background: #c4f8f2; }
+      .insurance_all_state .all_state_icon .list > li .btn_state.enough .state {
+        color: #01a7c4; }
+
+.insurance_all_state .tab_type_list {
+  position: absolute;
+  top: 772px;
+  left: 0;
+  width: 782px;
+  background: #f0f3f8; }
+  .insurance_all_state .tab_type_list .sort_list ul {
+    margin: 1px 1px 0 0; }
+    .insurance_all_state .tab_type_list .sort_list ul:after {
+      content: "";
+      display: block;
+      clear: both; }
+    .insurance_all_state .tab_type_list .sort_list ul li {
+      position: relative;
+      float: left;
+      width: 131px;
+      margin: -1px -1px 0 0; }
+      .insurance_all_state .tab_type_list .sort_list ul li.active .sort {
+        z-index: 5; }
+      .insurance_all_state .tab_type_list .sort_list ul li.active:before {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 3px;
+        background: #3c444d;
+        content: ""; }
+      .insurance_all_state .tab_type_list .sort_list ul li.active .sort {
+        color: #fff; }
+      .insurance_all_state .tab_type_list .sort_list ul li .sort {
+        width: 100%;
+        padding: 5px;
+        border: 1px solid #e0e4ea;
+        background: #fff;
+        font-size: 0.875rem;
+        text-align: center;
+        vertical-align: top;
+        color: #333333; }
+
+.insurance_all_state .state_info {
+  padding: 20px 15px; }
+  .insurance_all_state .state_info .tit_area {
+    position: relative;
+    margin-bottom: 12px; }
+    .insurance_all_state .state_info .tit_area .tit {
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1;
+      text-align: center;
+      color: #333333; }
+      .insurance_all_state .state_info .tit_area .tit .state {
+        display: inline-block;
+        height: 18px;
+        margin-top: -1px;
+        padding: 0 10px;
+        border-radius: 8px;
+        font-size: 0.75rem;
+        line-height: 18px;
+        vertical-align: top;
+        letter-spacing: -0.025em;
+        color: #fff; }
+        .insurance_all_state .state_info .tit_area .tit .state.lack {
+          background: #fe5855; }
+        .insurance_all_state .state_info .tit_area .tit .state.enough {
+          background: #01a7c4; }
+        .insurance_all_state .state_info .tit_area .tit .state.no_join {
+          background: #cacaca; }
+    .insurance_all_state .state_info .tit_area .btn_text_arr {
+      position: absolute;
+      top: 0;
+      right: 0; }
+  .insurance_all_state .state_info .state_item {
+    margin-bottom: 10px;
+    border-radius: 8px;
+    overflow: hidden; }
+    .insurance_all_state .state_info .state_item:last-child {
+      margin-bottom: 0; }
+    .insurance_all_state .state_info .state_item.open .btn_info .info {
+      border-bottom: 1px solid #f0f3f8; }
+    .insurance_all_state .state_info .state_item.open .btn_info .state .txt:after {
+      border-color: #fd5854;
+      transform: rotate(-135deg); }
+    .insurance_all_state .state_info .state_item .btn_info {
+      width: 100%;
+      padding: 15px;
+      background: #fff;
+      overflow: hidden; }
+      .insurance_all_state .state_info .state_item .btn_info .info {
+        height: 100%; }
+        .insurance_all_state .state_info .state_item .btn_info .info .sort_tit {
+          line-height: 1; }
+          .insurance_all_state .state_info .state_item .btn_info .info .sort_tit .tit {
+            font-size: 0.9375rem;
+            font-weight: 500;
+            letter-spacing: -0.075em;
+            color: #000000; }
+          .insurance_all_state .state_info .state_item .btn_info .info .sort_tit .count_info {
+            float: right;
+            font-size: 0.9375rem;
+            letter-spacing: -0.075em;
+            color: #333333; }
+            .insurance_all_state .state_info .state_item .btn_info .info .sort_tit .count_info strong {
+              font-size: 1rem;
+              font-weight: 600; }
+        .insurance_all_state .state_info .state_item .btn_info .info .count_bar_box {
+          margin-bottom: 15px;
+          padding-top: 18px; }
+          .insurance_all_state .state_info .state_item .btn_info .info .count_bar_box:after {
+            content: "";
+            display: block;
+            clear: both; }
+          .insurance_all_state .state_info .state_item .btn_info .info .count_bar_box .bar_rail {
+            position: relative;
+            border-radius: 5px;
+            background: #eee; }
+            .insurance_all_state .state_info .state_item .btn_info .info .count_bar_box .bar_rail .bar {
+              position: relative;
+              width: 0;
+              height: 10px;
+              border-radius: 5px;
+              transition: all 1.2s; }
+            .insurance_all_state .state_info .state_item .btn_info .info .count_bar_box .bar_rail .percent {
+              position: absolute;
+              right: 0;
+              bottom: 12px;
+              font-size: 0.75rem;
+              font-weight: 600;
+              text-align: center;
+              letter-spacing: -0.025em; }
+              .insurance_all_state .state_info .state_item .btn_info .info .count_bar_box .bar_rail .percent em {
+                font-weight: 600; }
+          .insurance_all_state .state_info .state_item .btn_info .info .count_bar_box .txt_box {
+            margin-top: 8px;
+            line-height: 1; }
+            .insurance_all_state .state_info .state_item .btn_info .info .count_bar_box .txt_box .left_txt {
+              font-size: 0.75rem;
+              color: #333333; }
+            .insurance_all_state .state_info .state_item .btn_info .info .count_bar_box .txt_box .right_txt {
+              float: right;
+              font-size: 0.75rem;
+              color: #333333; }
+      .insurance_all_state .state_info .state_item .btn_info .state {
+        height: 42px;
+        padding: 10px 0 0;
+        border-radius: 8px;
+        font-size: 0;
+        text-align: center; }
+        .insurance_all_state .state_info .state_item .btn_info .state .icon {
+          display: inline-block;
+          width: 22px;
+          height: 22px;
+          margin: 0 10px 0 0;
+          vertical-align: middle; }
+        .insurance_all_state .state_info .state_item .btn_info .state .txt {
+          display: inline-block;
+          position: relative;
+          margin-top: 3px;
+          font-size: 1.063rem;
+          font-weight: 700;
+          line-height: 1;
+          vertical-align: middle;
+          letter-spacing: -0.05em; }
+          .insurance_all_state .state_info .state_item .btn_info .state .txt strong {
+            display: inline-block;
+            margin-top: -2px;
+            font-size: 1.25rem;
+            font-weight: 700;
+            vertical-align: top; }
+          .insurance_all_state .state_info .state_item .btn_info .state .txt:after {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            margin: -6px 0 0 10px;
+            border-right: 2px solid #3c444d;
+            border-bottom: 2px solid #3c444d;
+            content: "";
+            -webkit-transition: all 0.15s ease-in-out;
+            transition: all 0.15s ease-in-out;
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+            -webkit-transform-origin: 66% 66%;
+            transform-origin: 66% 66%;
+            vertical-align: middle;
+            pointer-events: none; }
+      .insurance_all_state .state_info .state_item .btn_info.lack .info .percent {
+        color: #ff4858; }
+      .insurance_all_state .state_info .state_item .btn_info.lack .info .bar {
+        background: #ff4858; }
+      .insurance_all_state .state_info .state_item .btn_info.lack .state {
+        background: #ffe4e3;
+        color: #ff4858; }
+        .insurance_all_state .state_info .state_item .btn_info.lack .state .icon {
+          background: url(/resources/images/gu.renew.contents/icon_all_state_lack.png) no-repeat 0 0;
+          background-size: 100%; }
+      .insurance_all_state .state_info .state_item .btn_info.enough .info .percent {
+        color: #01a7c4; }
+      .insurance_all_state .state_info .state_item .btn_info.enough .info .bar {
+        background: #01a7c4; }
+      .insurance_all_state .state_info .state_item .btn_info.enough .state {
+        background: #d2edff;
+        color: #01a7c4; }
+        .insurance_all_state .state_info .state_item .btn_info.enough .state .icon {
+          background: url(/resources/images/gu.renew.contents/icon_all_state_enough.png) no-repeat 0 0;
+          background-size: 100%; }
+      .insurance_all_state .state_info .state_item .btn_info.no_join .info .percent {
+        right: -20px !important;
+        color: #777; }
+      .insurance_all_state .state_info .state_item .btn_info.no_join .info .bar {
+        background: #eee; }
+      .insurance_all_state .state_info .state_item .btn_info.no_join .state {
+        background: #cacaca;
+        color: #777; }
+        .insurance_all_state .state_info .state_item .btn_info.no_join .state .icon {
+          background: url(/resources/images/gu.renew.contents/icon_all_state_no_join.png) no-repeat 0 0;
+          background-size: 100%; }
+    .insurance_all_state .state_info .state_item .insurance_list2 {
+      display: none; }
+
+/* 가입현황 - 상세내역 */
+.full_pop {
+  background: #f3f3f3; }
+  .full_pop .top_area {
+    padding-top: 0;
+    background: #666; }
+    .full_pop .top_area .inner {
+      position: relative;
+      height: 48px;
+      padding: 18px 40px 0; }
+      .full_pop .top_area .inner .btn_prev {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        width: 25px;
+        height: 25px;
+        margin-top: -12px;
+        background: url(/resources/images/gu.renew.common_m/btn_icon_prev.png) no-repeat 0 0;
+        background-size: 100% auto; }
+      .full_pop .top_area .inner .title {
+        font-size: 1.063rem;
+        line-height: 1;
+        text-align: center;
+        color: #f0f3f8;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        word-wrap: normal;
+        overflow: hidden; }
+    .full_pop .top_area .conner_left {
+      display: block;
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 10px;
+      height: 10px;
+      overflow: hidden; }
+      .full_pop .top_area .conner_left:after {
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-radius: 10px 0 0 0;
+        content: "";
+        box-shadow: 0 0 0 10px #666; }
+    .full_pop .top_area .conner_right {
+      display: block;
+      position: absolute;
+      right: 0;
+      bottom: -10px;
+      width: 10px;
+      height: 10px;
+      overflow: hidden; }
+      .full_pop .top_area .conner_right:after {
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-radius: 0 10px 0 0;
+        content: "";
+        box-shadow: 0 0 0 10px #666; }
+  .full_pop .content_area_sub {
+    padding-top: 15px;
+    padding-bottom: 15px; }
+
+@media screen and (min-height: 735px) {
+  .insurance_all_state .all_state_icon .list > li {
+    margin-bottom: 40px; } }
+
+.insurance_detail_info {
+  padding: 0 15px 25px; }
+  .insurance_detail_info .inner {
+    padding: 15px;
+    border-radius: 8px;
+    background: #fff; }
+    .insurance_detail_info .inner .payment_info .payment {
+      display: inline-block;
+      margin-right: 5px;
+      font-size: 0.9375rem;
+      vertical-align: top;
+      color: #000000; }
+      .insurance_detail_info .inner .payment_info .payment strong {
+        font-size: 1.25rem;
+        font-weight: 700; }
+    .insurance_detail_info .inner .payment_info .info {
+      display: inline-block;
+      margin-top: 2px;
+      font-size: 0.75rem;
+      vertical-align: top;
+      color: #888888; }
+      .insurance_detail_info .inner .payment_info .info .txt {
+        color: #000000; }
+        .insurance_detail_info .inner .payment_info .info .txt strong {
+          font-size: 0.8125rem;
+          font-weight: 400; }
+    .insurance_detail_info .inner .payment_info .logo {
+      display: block;
+      float: right;
+      height: 18px;
+      margin-top: 3px; }
+      .insurance_detail_info .inner .payment_info .logo img {
+        height: 100%; }
+    .insurance_detail_info .inner .count_bar_box {
+      margin: 5px 0 0px; }
+      .insurance_detail_info .inner .count_bar_box .bar_rail {
+        position: relative;
+        border-radius: 8px;
+        background: #eee; }
+        .insurance_detail_info .inner .count_bar_box .bar_rail .bar {
+          position: relative;
+          width: 0;
+          height: 17px;
+          border-radius: 8px;
+          background: #02a7c5;
+          font-size: 0.75rem;
+          line-height: 1;
+          transition: all 1.2s;
+          text-align: right; }
+        .insurance_detail_info .inner .count_bar_box .bar_rail .percent {
+          height: 17px;
+          padding-right: 10px;
+          font-weight: 500;
+          line-height: 18px;
+          text-align: center;
+          color: #fff; }
+      .insurance_detail_info .inner .count_bar_box .txt_box {
+        margin: 5px 0 3px;
+        line-height: 1; }
+        .insurance_detail_info .inner .count_bar_box .txt_box:after {
+          content: "";
+          display: block;
+          clear: both; }
+        .insurance_detail_info .inner .count_bar_box .txt_box .left_txt {
+          float: left;
+          width: 50%;
+          font-size: 0.75rem;
+          color: #333333; }
+          .insurance_detail_info .inner .count_bar_box .txt_box .left_txt .no {
+            color: #01a7c4; }
+        .insurance_detail_info .inner .count_bar_box .txt_box .right_txt {
+          float: right;
+          width: 50%;
+          font-size: 0.75rem;
+          text-align: right;
+          color: #333333; }
+          .insurance_detail_info .inner .count_bar_box .txt_box .right_txt .no {
+            color: #888888; }
+        .insurance_detail_info .inner .count_bar_box .txt_box .no {
+          margin-bottom: 8px; }
+          .insurance_detail_info .inner .count_bar_box .txt_box .no strong {
+            font-size: 0.8125rem;
+            font-weight: 700; }
+        .insurance_detail_info .inner .count_bar_box .txt_box .txt {
+          font-size: 0.75rem;
+          letter-spacing: -0.05em;
+          color: #666666; }
+          .insurance_detail_info .inner .count_bar_box .txt_box .txt strong {
+            margin-left: 3px;
+            font-weight: 400;
+            color: #333333; }
+      .insurance_detail_info .inner .count_bar_box .point_txt {
+        font-size: 0.625rem;
+        line-height: 17px;
+        letter-spacing: -0.05em;
+        color: #fd795b; }
+    .insurance_detail_info .inner .etc_info {
+      position: relative;
+      margin-top: 10px;
+      padding-top: 10px; }
+      .insurance_detail_info .inner .etc_info:after {
+        content: "";
+        display: block;
+        clear: both; }
+      .insurance_detail_info .inner .etc_info:before {
+        display: block;
+        position: absolute;
+        top: 0px;
+        left: -15px;
+        width: calc(100% + 30px);
+        border-top: 1px dotted #d8d8d8;
+        content: ""; }
+      .insurance_detail_info .inner .etc_info > div > div {
+        margin-top: 5px;
+        font-size: 0.75rem;
+        line-height: 1;
+        letter-spacing: normal;
+        color: #888888; }
+      .insurance_detail_info .inner .etc_info .left_txt {
+        float: left;
+        width: 50%; }
+        .insurance_detail_info .inner .etc_info .left_txt .state {
+          display: inline-block;
+          height: 18px;
+          padding: 0 10px;
+          border-radius: 3px;
+          background: #ffe4e3;
+          font-size: 0.75rem;
+          line-height: 20px;
+          color: #ff4858; }
+          .insurance_detail_info .inner .etc_info .left_txt .state.cancel {
+            background: #eee;
+            color: #888888; }
+      .insurance_detail_info .inner .etc_info .right_txt {
+        float: left;
+        width: 50%;
+        padding-left: 8px; }
+        .insurance_detail_info .inner .etc_info .right_txt .tit {
+          display: inline-block;
+          height: 18px;
+          padding: 0 10px;
+          border-radius: 3px;
+          background: #eee;
+          font-size: 0.75rem;
+          line-height: 20px;
+          color: #888888; }
+    .insurance_detail_info .inner .car_info > div {
+      display: inline-block;
+      font-size: 0.75rem;
+      color: #666666;
+      margin-right: 15px;
+      letter-spacing: -0.05em; }
+      .insurance_detail_info .inner .car_info > div .txt {
+        color: #333333; }
+    .insurance_detail_info .inner .cancel_insurance {
+      display: table;
+      width: 100%;
+      height: 75px;
+      text-align: center; }
+      .insurance_detail_info .inner .cancel_insurance .txt {
+        display: table-cell;
+        font-size: 1rem;
+        vertical-align: middle;
+        color: #888888; }
+
+.insurance_detail_tab .tab_list {
+  padding: 0 15px;
+  border-bottom: 1px solid #d5d5d5;
+  background: #f3f3f3; }
+  .insurance_detail_tab .tab_list ul {
+    margin-bottom: -1px; }
+    .insurance_detail_tab .tab_list ul:after {
+      content: "";
+      display: block;
+      clear: both; }
+    .insurance_detail_tab .tab_list ul li {
+      float: left;
+      margin-right: 17px;
+      line-height: 1; }
+      .insurance_detail_tab .tab_list ul li:last-child {
+        margin-right: 0; }
+      .insurance_detail_tab .tab_list ul li .tab {
+        position: relative;
+        padding-bottom: 8px;
+        font-size: 0.9375rem;
+        letter-spacing: -0.05em;
+        color: #888888; }
+        .insurance_detail_tab .tab_list ul li .tab.active {
+          font-weight: 700;
+          color: #333333; }
+          .insurance_detail_tab .tab_list ul li .tab.active:after {
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #333;
+            content: ""; }
+
+.insurance_detail_tab .note_box {
+  padding: 20px 15px;
+  border-top: none;
+  background: #fff;
+  margin: 0 0px -15px; }
+  .insurance_detail_tab .note_box dd {
+    font-size: 0.75rem; }
+    .insurance_detail_tab .note_box dd:last-child {
+      margin-bottom: 0; }
+
+.insurance_detail_tab_cont {
+  padding: 0 15px;
+  background: #fff; }
+  .insurance_detail_tab_cont .tab_cont {
+    display: none; }
+    .insurance_detail_tab_cont .tab_cont.active {
+      display: block; }
+  .insurance_detail_tab_cont .list .item {
+    padding: 10px 0 10px;
+    border-bottom: 1px solid #ededed;
+    line-height: 1; }
+    .insurance_detail_tab_cont .list .item:after {
+      content: "";
+      display: block;
+      clear: both; }
+    .insurance_detail_tab_cont .list .item .tit_info {
+      float: left;
+      width: 64%;
+      padding-left: 9px;
+      font-size: 0.75rem;
+      line-height: 20px;
+      letter-spacing: -0.05em;
+      color: #555; }
+      .insurance_detail_tab_cont .list .item .tit_info .tit {
+        display: block;
+        position: relative;
+        font-weight: 700;
+        margin-bottom: 4px; }
+        .insurance_detail_tab_cont .list .item .tit_info .tit:before {
+          display: inline-block;
+          position: absolute;
+          top: 50%;
+          left: -7px;
+          width: 2px;
+          height: 2px;
+          margin-top: -1px;
+          background: #555;
+          content: ""; }
+      .insurance_detail_tab_cont .list .item .tit_info .info {
+        line-height: 14px; }
+    .insurance_detail_tab_cont .list .item .state_info {
+      float: right;
+      width: 36%;
+      font-size: 0.75rem;
+      text-align: right; }
+      .insurance_detail_tab_cont .list .item .state_info span {
+        display: block; }
+        .insurance_detail_tab_cont .list .item .state_info span.state {
+          display: inline-block;
+          height: 18px;
+          margin-bottom: 8px;
+          padding: 0 10px;
+          border-radius: 3px;
+          background: #ffe4e3;
+          line-height: 20px;
+          color: #ff4858; }
+          .insurance_detail_tab_cont .list .item .state_info span.state.cancel {
+            background: #eee;
+            color: #888888; }
+        .insurance_detail_tab_cont .list .item .state_info span.date {
+          color: #888888;
+          letter-spacing: -0.025em;
+          font-size: 0.75rem;
+          margin-bottom: 6px;
+          line-height: 20px; }
+  .insurance_detail_tab_cont .no_data {
+    padding: 24px 0;
+    text-align: center;
+    border-bottom: 1px solid #ededed; }
+    .insurance_detail_tab_cont .no_data .txt {
+      font-size: 0.875rem;
+      color: #888888;
+      letter-spacing: -0.05em; }
+
+/*팝업 컨설팅 전후 비교*/
+.consulting_wrap {
+  padding: 0 17px; }
+  .consulting_wrap > .name {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    text-align: center;
+    letter-spacing: -1px;
+    color: #333333; }
+  .consulting_wrap .consulting_top_box {
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background: #ffffff; }
+    .consulting_wrap .consulting_top_box > li.before, .consulting_wrap .consulting_top_box > li.after {
+      position: relative;
+      width: 50%;
+      padding: 20px 0;
+      line-height: 1;
+      vertical-align: top; }
+      .consulting_wrap .consulting_top_box > li.before > .title, .consulting_wrap .consulting_top_box > li.after > .title {
+        margin-bottom: 19px;
+        font-size: 0.875rem;
+        text-align: center;
+        color: #333333; }
+      .consulting_wrap .consulting_top_box > li.before > .list, .consulting_wrap .consulting_top_box > li.after > .list {
+        padding: 0 20px 0 15px;
+        letter-spacing: -1px;
+        color: #888888; }
+        .consulting_wrap .consulting_top_box > li.before > .list > li, .consulting_wrap .consulting_top_box > li.after > .list > li {
+          display: flex;
+          margin-bottom: 14px;
+          line-height: 16px; }
+          .consulting_wrap .consulting_top_box > li.before > .list > li:last-child, .consulting_wrap .consulting_top_box > li.after > .list > li:last-child {
+            margin-bottom: 0; }
+          .consulting_wrap .consulting_top_box > li.before > .list > li .title, .consulting_wrap .consulting_top_box > li.after > .list > li .title {
+            font-size: 0.75rem;
+            text-align: left; }
+          .consulting_wrap .consulting_top_box > li.before > .list > li .result, .consulting_wrap .consulting_top_box > li.after > .list > li .result {
+            font-size: 1rem;
+            flex: 1;
+            text-align: right; }
+    .consulting_wrap .consulting_top_box > li.after > .list {
+      padding: 0 15px 0 20px; }
+    .consulting_wrap .consulting_top_box > li.after:before {
+      display: block;
+      position: absolute;
+      z-index: 1;
+      top: 13px;
+      left: -13px;
+      width: 26px;
+      height: 26px;
+      background: url("/resources/images/gu.renew.contents/icon_consulting_after.png") no-repeat;
+      background-size: 100% auto;
+      content: ""; }
+    .consulting_wrap .consulting_top_box > li.after:after {
+      display: block;
+      position: absolute;
+      top: -1px;
+      bottom: -1px;
+      left: 0;
+      width: calc(100% - 2px);
+      height: calc(100% - 2px);
+      border: 2px solid #fe5855;
+      border-radius: 5px;
+      content: ""; }
+    .consulting_wrap .consulting_top_box > li.after > .list > li .result {
+      color: #333333; }
+  .consulting_wrap .consulting_item_box {
+    border-radius: 10px;
+    background: #ffffff; }
+    .consulting_wrap .consulting_item_box.nodata {
+      padding: 20px 0;
+      border: 1px solid #d5d5d5;
+      background: none;
+      font-size: 1rem;
+      line-height: 23px;
+      text-align: center;
+      color: #888888; }
+    .consulting_wrap .consulting_item_box .sort_title {
+      display: table;
+      width: 100%;
+      padding: 0 29px 0 0;
+      border-bottom: 1px solid #d5d5d5;
+      font-size: 0;
+      line-height: 36px;
+      text-align: right; }
+      .consulting_wrap .consulting_item_box .sort_title li {
+        display: inline-block;
+        width: 90px;
+        font-size: 0.75rem;
+        text-align: center;
+        vertical-align: top;
+        color: #333333; }
+    .consulting_wrap .consulting_item_box .consulting_item_area {
+      padding: 0 15px; }
+      .consulting_wrap .consulting_item_box .consulting_item_area .consulting_item {
+        border-bottom: 1px solid #ededed; }
+        .consulting_wrap .consulting_item_box .consulting_item_area .consulting_item .toggle_btn_area {
+          display: block;
+          position: relative;
+          width: 100%;
+          height: 44px; }
+          .consulting_wrap .consulting_item_box .consulting_item_area .consulting_item .toggle_btn_area:after {
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: 0px;
+            width: 16px;
+            height: 9px;
+            margin-top: -4px;
+            background: url("/resources/images/gu.renew.contents/icon_toggle_arr_down.png") no-repeat;
+            background-size: 16px auto;
+            content: ''; }
+        .consulting_wrap .consulting_item_box .consulting_item_area .consulting_item.active .toggle_btn_area:after {
+          background-image: url("/resources/images/gu.renew.contents/icon_toggle_arr_up.png"); }
+        .consulting_wrap .consulting_item_box .consulting_item_area .consulting_item .toggle_content_area {
+          display: none;
+          border-top: 1px dotted #e0e4ea; }
+          .consulting_wrap .consulting_item_box .consulting_item_area .consulting_item .toggle_content_area .reslut_list {
+            padding: 10px 0; }
+        .consulting_wrap .consulting_item_box .consulting_item_area .consulting_item .list_item {
+          display: flex;
+          width: 100%;
+          padding-right: 13px;
+          align-self: center; }
+          .consulting_wrap .consulting_item_box .consulting_item_area .consulting_item .list_item > li {
+            position: relative;
+            vertical-align: middle;
+            letter-spacing: -1px; }
+            .consulting_wrap .consulting_item_box .consulting_item_area .consulting_item .list_item > li.title {
+              padding-left: 25px;
+              font-size: 0.875rem;
+              line-height: 1;
+              flex: 1;
+              color: #333333; }
+            .consulting_wrap .consulting_item_box .consulting_item_area .consulting_item .list_item > li.before, .consulting_wrap .consulting_item_box .consulting_item_area .consulting_item .list_item > li.after {
+              position: relative;
+              width: 90px;
+              padding-right: 12px;
+              font-size: 1rem;
+              line-height: 1;
+              flex: none;
+              text-align: right;
+              color: #888888; }
+          .consulting_wrap .consulting_item_box .consulting_item_area .consulting_item .list_item.down li.title:after {
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 14px;
+            height: 14px;
+            margin-top: -7px;
+            background: url("/resources/images/gu.renew.contents/icon_big_down.png") no-repeat;
+            background-size: 14px auto;
+            content: ''; }
+          .consulting_wrap .consulting_item_box .consulting_item_area .consulting_item .list_item.down li.after {
+            color: #01a7c4; }
+          .consulting_wrap .consulting_item_box .consulting_item_area .consulting_item .list_item.up li.title:after {
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 0px;
+            width: 14px;
+            height: 14px;
+            margin-top: -7px;
+            background: url("/resources/images/gu.renew.contents/icon_big_up.png") no-repeat;
+            background-size: 14px auto;
+            content: ''; }
+          .consulting_wrap .consulting_item_box .consulting_item_area .consulting_item .list_item.up li.after {
+            color: #fe5855; }
+      .consulting_wrap .consulting_item_box .consulting_item_area .small .list_item {
+        height: 23px; }
+        .consulting_wrap .consulting_item_box .consulting_item_area .small .list_item li.title {
+          position: relative;
+          font-size: 0.75rem;
+          align-self: center;
+          color: #888888; }
+        .consulting_wrap .consulting_item_box .consulting_item_area .small .list_item li.before,
+        .consulting_wrap .consulting_item_box .consulting_item_area .small .list_item li.after {
+          font-size: 0.875rem;
+          align-self: center; }
+          .consulting_wrap .consulting_item_box .consulting_item_area .small .list_item li.before strong,
+          .consulting_wrap .consulting_item_box .consulting_item_area .small .list_item li.after strong {
+            font-weight: 400; }
+        .consulting_wrap .consulting_item_box .consulting_item_area .small .list_item.same li.title:after {
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 0px;
+          width: 15px;
+          height: 15px;
+          margin-top: -8px;
+          background: url("/resources/images/gu.renew.contents/icon_small_same.png") no-repeat center center;
+          background-size: 15px auto;
+          content: ''; }
+        .consulting_wrap .consulting_item_box .consulting_item_area .small .list_item.down li.title:after {
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          width: 15px;
+          height: 15px;
+          margin-top: -8px;
+          background: url("/resources/images/gu.renew.contents/icon_small_down.png") no-repeat center center;
+          background-size: 15px auto;
+          content: ''; }
+        .consulting_wrap .consulting_item_box .consulting_item_area .small .list_item.up li.title:after {
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 0px;
+          width: 15px;
+          height: 15px;
+          margin-top: -8px;
+          background: url("/resources/images/gu.renew.contents/icon_small_up.png") no-repeat center center;
+          background-size: 15px auto;
+          content: ''; }

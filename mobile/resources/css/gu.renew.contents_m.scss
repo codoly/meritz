@@ -101,12 +101,12 @@
 			&.grid {
 				margin-right: -1px;
 				border-radius: 5px 0 0 5px;
-				background-image: url(/resources/images/gu.renew.common/icon_type_grid.png);
+				background-image: url(/resources/images/gu.renew.common_m/icon_type_grid.png);
 			}
 
 			&.list {
 				border-radius: 0 5px 5px 0;
-				background-image: url(/resources/images/gu.renew.common/icon_type_list.png);
+				background-image: url(/resources/images/gu.renew.common_m/icon_type_list.png);
 			}
 
 			&.active {
@@ -160,7 +160,7 @@
 				margin: 0 auto 8px;
 				border: 1px solid #dfe3eb;
 				border-radius: 50%;
-				background: url(/resources/images/gu.renew.common/icon_add.png) no-repeat center center;
+				background: url(/resources/images/gu.renew.common_m/icon_add.png) no-repeat center center;
 				background-size: 14px 14px;
 				content: "";
 			}
@@ -483,7 +483,7 @@
 				left: -1px;
 				width: 31px;
 				height: 31px;
-				background: url(/resources/images/gu.renew.common/checkbox02_off.png) no-repeat 0 0;
+				background: url(/resources/images/gu.renew.common_m/checkbox02_off.png) no-repeat 0 0;
 				background-size: 100% auto;
 				content: "";
 			}
@@ -503,7 +503,7 @@
 				}
 
 				&:after {
-					background: url(/resources/images/gu.renew.common/checkbox02_on.png) no-repeat 0 0;
+					background: url(/resources/images/gu.renew.common_m/checkbox02_on.png) no-repeat 0 0;
 					background-size: 100% auto;
 				}
 			}
@@ -757,7 +757,7 @@
 			margin: 0 auto 8px;
 			border: 1px solid #dfe3eb;
 			border-radius: 50%;
-			background: url(/resources/images/gu.renew.common/icon_add.png) no-repeat center center;
+			background: url(/resources/images/gu.renew.common_m/icon_add.png) no-repeat center center;
 			background-size: 14px 14px;
 			content: "";
 		}
@@ -903,7 +903,7 @@
 		right: 13px;
 		width: 20px;
 		height: 20px;
-		background: url(/resources/images/gu.renew.common/btn_close_gray.png) no-repeat;
+		background: url(/resources/images/gu.renew.common_m/btn_close_gray.png) no-repeat;
 		background-size: 100% auto;
 	}
 
@@ -1018,7 +1018,7 @@
 				width: 24px;
 				height: 24px;
 				margin-top: -12px;
-				background: url(/resources/images/gu.renew.common/btn_del.png) no-repeat 0 0;
+				background: url(/resources/images/gu.renew.common_m/btn_del.png) no-repeat 0 0;
 				background-size: 100% auto;
 				text-indent: -9999px;
 			}
@@ -1348,7 +1348,7 @@
 								right: -20px;
 								width: 16px;
 								height: 12px;
-								background: url(/resources/images/gu.renew.common/icon_checked.png) no-repeat 0 0;
+								background: url(/resources/images/gu.renew.common_m/icon_checked.png) no-repeat 0 0;
 								content: "";
 							}
 						}
@@ -1378,12 +1378,12 @@
 						}
 
 						input[type='checkbox'] + label:after {
-							background: url(/resources/images/gu.renew.common/checkbox_off_gray.png) no-repeat;
+							background: url(/resources/images/gu.renew.common_m/checkbox_off_gray.png) no-repeat;
 							background-size: 100% auto;
 						}
 
 						input[type='checkbox']:checked + label:after {
-							background: url(/resources/images/gu.renew.common/checkbox_on_red.png) no-repeat;
+							background: url(/resources/images/gu.renew.common_m/checkbox_on_red.png) no-repeat;
 							background-size: 100% auto;
 						}
 					}
@@ -1524,27 +1524,27 @@
 	}
 
 	&.like {
-		background-image: url(/resources/images/gu.renew.common/icon_like_off.png);
+		background-image: url(/resources/images/gu.renew.common_m/icon_like_off.png);
 	}
 
 	&.like.on {
-		background-image: url(/resources/images/gu.renew.common/icon_like_on.png);
+		background-image: url(/resources/images/gu.renew.common_m/icon_like_on.png);
 	}
 
 	&.analysis {
-		background-image: url(/resources/images/gu.renew.common/icon_analysis_off.png);
+		background-image: url(/resources/images/gu.renew.common_m/icon_analysis_off.png);
 	}
 
 	&.analysis.on {
-		background-image: url(/resources/images/gu.renew.common/icon_analysis_on.png);
+		background-image: url(/resources/images/gu.renew.common_m/icon_analysis_on.png);
 	}
 
 	&.agree {
-		background-image: url(/resources/images/gu.renew.common/icon_agree_off.png);
+		background-image: url(/resources/images/gu.renew.common_m/icon_agree_off.png);
 	}
 
 	&.agree.on {
-		background-image: url(/resources/images/gu.renew.common/icon_agree_on.png);
+		background-image: url(/resources/images/gu.renew.common_m/icon_agree_on.png);
 	}
 }
 
@@ -1558,7 +1558,7 @@
 		width: 13px;
 		height: 16px;
 		margin-right: 4px;
-		background: url(/resources/images/gu.renew.common/icon_edit_off.png) no-repeat 0 0;
+		background: url(/resources/images/gu.renew.common_m/icon_edit_off.png) no-repeat 0 0;
 		background-size: 100% auto;
 		content: "";
 		vertical-align: top;
@@ -1568,7 +1568,7 @@
 		color: #01a7c4;
 
 		&:before {
-			background: url(/resources/images/gu.renew.common/icon_edit_on.png) no-repeat 0 0;
+			background: url(/resources/images/gu.renew.common_m/icon_edit_on.png) no-repeat 0 0;
 			background-size: 100% auto;
 		}
 	}
@@ -1613,7 +1613,7 @@
 		width: 12px;
 		height: 11px;
 		margin: 3px 5px 0 0;
-		background: url(/resources/images/gu.renew.common/icon_reset.png) no-repeat 0 0;
+		background: url(/resources/images/gu.renew.common_m/icon_reset.png) no-repeat 0 0;
 		background-size: 100% auto;
 		content: "";
 		vertical-align: top;
@@ -1630,7 +1630,7 @@
 		width: 10px;
 		height: 8px;
 		margin: 5px 5px 0 0;
-		background: url(/resources/images/gu.renew.common/icon_checked_gray.png) no-repeat 0 0;
+		background: url(/resources/images/gu.renew.common_m/icon_checked_gray.png) no-repeat 0 0;
 		background-size: 100% auto;
 		content: "";
 		vertical-align: top;
@@ -1640,7 +1640,7 @@
 		color:#ff4858;
 		border: 1px solid #ff4858;
 		&:before {
-			background: url(/resources/images/gu.renew.common/icon_checked_red.png) no-repeat 0 0;
+			background: url(/resources/images/gu.renew.common_m/icon_checked_red.png) no-repeat 0 0;
 			background-size: 100% auto;
 		}
 	}
@@ -2217,7 +2217,7 @@
 				width: 25px;
 				height: 25px;
 				margin-top: -12px;
-				background: url(/resources/images/gu.renew.common/btn_icon_prev.png) no-repeat 0 0;
+				background: url(/resources/images/gu.renew.common_m/btn_icon_prev.png) no-repeat 0 0;
 				background-size: 100% auto;
 			}
 
